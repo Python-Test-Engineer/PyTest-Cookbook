@@ -1,6 +1,6 @@
 # The Pytest Cookbook - recipes with videos and repos
 
-## Purpose of this book - TEST DEPLOY!
+## Purpose of this book 
 
 To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.
 
