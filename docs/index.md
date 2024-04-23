@@ -6,7 +6,7 @@ To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step 
 
 To provide curated resources of articles, videos and books that I have found useful.
 
-Frameworks, apps and folders may well have additional README.md files to give more detailed instructions.
+The premise is that if a developer has an easy to set up test suite with example tests, combined with links to video and text resources, they can readily adapt the test suites as needed without having to set them up and coonfigure them.
 
 ## Test Suites
 *See the README.md in root of each Test Suite for detailed and up to date set up instructions.*
