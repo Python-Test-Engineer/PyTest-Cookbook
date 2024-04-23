@@ -1,0 +1,87 @@
+site_name: Python Testing
+site_description: "Python Testing"
+
+repo_url: https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK
+repo_name: Python-Test-Engineer/PYTHON-TEST-FRAMEWORK
+
+theme:
+  icon:
+    repo: fontawesome/brands/github
+  name: "material"
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: "blue"
+      accent: "grey"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: "blue"
+      accent: "white"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"
+extra_css:
+  - "assets/css/custom.css"
+extra:
+  manifest: "manifest.json"
+  social:
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/Python-Test-Engineer/"
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - attr_list
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+      separator: "_"
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+# Page tree
+nav:
+  - "Home": "index.md"
+
+  - "PyTest":
+      - "About": "pytest/index.md"
+      - "PyTest Basic": "pytest/pytest_basic.md"
+      - "PyTest": "pytest/pytest.md"
+  - "API Testing":
+      - "About": "playwright_api/api.md"
+  - "DB Testing":
+      - "About": "db_testing/testing.md"
+  - "CI Integration":
+      - "About": "ci_integration/ci_github.md"
+  - "End to End Testing":
+      - "About": "playwright_api/index.md"
+      - "Playwright": "playwright_api/playwright.md"
+      - "Testing Playgrounds": "playwright_api/testing_playgrounds.md"
+  - "Django Testing":
+      - "About": "django_testing/index.md"
+      - "Setup": "django_testing/setup.md"
+      - "Apps": "django_testing/apps.md"
+      - "Tests": "django_testing/tests.md"
+  - "Hypothesis":
+      - "About": "hypothesis/index.md"
+  - "About Craig":
+      - "Services": "craig/services.md"
+      - "CV": "craig/cv.md"
+      - "Contact": "craig/contact.md"
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/Python-Test-Engineer"  target="_blank" rel="noopener">Craig West - PythonTestEngineer.co.uk</a>
