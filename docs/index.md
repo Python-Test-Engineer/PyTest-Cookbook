@@ -9,12 +9,13 @@ To provide curated resources of articles, videos and books that I have found use
 Frameworks, apps and folders may well have additional README.md files to give more detailed instructions.
 
 ## Test Suites
+*See the README.md in root of each Test Suite for detailed and up to date set up instructions.*
 
 These four are incremental, with each suite adding more functionality to the previous one:
 
 - PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.
 - PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.
-- PyTest_02_API_PLAYWRIGHT - as above with API testing and Playwright e2e/functional testing.
+- PyTest_02_API - as above with API testing and Playwright e2e/functional testing.
 - PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.
 
 These are self-contained Test Suites:
