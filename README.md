@@ -1,60 +1,29 @@
-# FastVector
 
+# The Pytest Cookbook - *recipes with videos and repos*
 
-![Python](https://img.shields.io/badge/python-3.9+-blue)
-![License](https://camo.githubusercontent.com/890acbdcb87868b382af9a4b1fac507b9659d9bf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75652e737667)
-[![Build](https://github.com/franneck94/Python-Project-Template/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/franneck94/Python-Project-Template/actions/workflows/test.yml)
-[![codecov](https://codecov.io/gh/franneck94/Python-Project-Template-Eng/branch/master/graph/badge.svg)](https://codecov.io/gh/franneck94/Python-Project-Template-Eng)
-[![Documentation](https://img.shields.io/badge/ref-Documentation-blue)](https://franneck94.github.io/Python-Project-Template-Eng/)
+## Purpose of this book 
 
-## Template For Python Projects
+To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.
 
-This is a template for Python projects. What you get:
+To provide curated resources of articles, videos and books that I have found useful.
 
-- Source code and test code is seperated in different directories.
-- External libraries installed and managed by [Pip](https://pypi.org/project/pip/) and [setuptools](https://setuptools.pypa.io/en/latest/) in a pyproject.toml.
-- Setup for tests using [Pytest](https://docs.pytest.org/en/stable/) and coverage with [Pytest-Cov](https://github.com/pytest-dev/pytest-cov).
-- Continuous testing with [Github-Actions](https://github.com/features/actions/) including [pre-commit](https://github.com/pre-commit/pre-commit).
-- Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
-- Code documentation with [Mkdocs](https://www.mkdocs.org/).
+Frameworks, apps and folders may well have additional README.md files to give more detailed instructions.
 
-## Structure
+## Test Suites
 
-``` text
-├── pyproject.toml
-├── ... other config files ...
-├── tests
-│   ├── __init__.py
-│   └── test_vector.py
-├── docs
-│   ├── api.md
-│   └── index.md
-├── fastvector
-│   ├── __init__.py
-│   ├── vector.py
-│   └── version.py
-└── tests
-    ├── __init__.py
-    └── test_vector.py
-```
+These four are incremental, with each suite adding more functionality to the previous one:
 
-### Commands
+- PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.
+- PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.
+- PyTest_02_API_PLAYWRIGHT - as above with API testing and Playwright e2e/functional testing.
+- PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.
 
-```bash
-# Build and Install (local)
-pip install -e .  # OR
-pip install -e ../Python-Project-Template  # OR
-pip install -e ../Python-Project-Template[all]
-```
+These are self-contained Test Suites:
 
-```bash
-# Test
-pytest tests  # OR
-pytest .  # OR
-pytest
-```
-
-```bash
-# Code Coverage
-pytest --cov=fastvector tests --cov-report=html
-```
+- PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.
+- PyTest_05_DJANGO is its own unique testing suite built from a range of sources. 
+- PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.
+- PyTest_07_PLUGIN - this is a template PyTest plugin project for adaptation.
+- PyTest_08_HOOKS - a small project outputing information on hooks and what they provide.
+- PyTest_09_CLI - testing a Typer CLI project.
+- PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.
