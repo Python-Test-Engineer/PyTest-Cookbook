@@ -16,6 +16,9 @@ These four are incremental, with each suite adding more functionality to the pre
 - PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.
 - PyTest_02_API_PLAYWRIGHT - as above with API testing and Playwright e2e/functional testing.
 - PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.
+
+These are self-contained Test Suites:
+
 - PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh kets, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic)
 - PyTest__05_DJANGO is its own unique testing suite built from a range of sources.
 - PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing.
