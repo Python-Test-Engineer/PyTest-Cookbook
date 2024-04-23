@@ -11,6 +11,15 @@ Frameworks, apps and folders may well have additional README.md files to give mo
 
 ## Test Suites
 
+These can be set up as follow:
+
+`python -m venv venv`
+`pip install -r requirements.txt`
+`playwright install` for API and BDD suites as we need to load in browsers for Playwright
+`python -m pytest -vs` - there is pytest-sugar for prettier output
+
+*See the README.md in root of each Test Suite for detailed and up to date set up instructions.*
+
 These four are incremental, with each suite adding more functionality to the previous one:
 
 - PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.
