@@ -10,6 +10,8 @@ Frameworks, apps and folders may well have additional README.md files to give mo
 
 ## Test Suites
 
+These four are incremental, with each suite adding more functionality to the previous one:
+
 - PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.
 - PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.
 - PyTest_02_API_PLAYWRIGHT - as above with API testing and Playwright e2e/functional testing.
