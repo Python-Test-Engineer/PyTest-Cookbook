@@ -1,4 +1,4 @@
-# The Pytest Cookbook - recipes with videos and repos
+# The Pytest Cookbook - *recipes with videos and repos*
 
 ## Purpose of this book 
 
@@ -19,9 +19,13 @@ These four are incremental, with each suite adding more functionality to the pre
 
 These are self-contained Test Suites:
 
-- PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh kets, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic)
-- PyTest__05_DJANGO is its own unique testing suite built from a range of sources.
-- PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing.
+- PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.
+- PyTest_05_DJANGO is its own unique testing suite built from a range of sources. 
+- PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.
+- PyTest_07_PLUGIN - this is a template PyTest plugin project for adaptation.
+- PyTest_08_HOOKS - a small project outputing information on hooks and what they provide.
+- PyTest_09_CLI - testing a Typer CLI project.
+- PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.
 
 
 ## Installation

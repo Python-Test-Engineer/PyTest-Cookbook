@@ -301,9 +301,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose_of_this_book_-_test_deploy" class="md-nav__link">
+  <a href="#purpose_of_this_book" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose of this book - TEST DEPLOY!
+      Purpose of this book
     </span>
   </a>
   
@@ -1073,9 +1073,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose_of_this_book_-_test_deploy" class="md-nav__link">
+  <a href="#purpose_of_this_book" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose of this book - TEST DEPLOY!
+      Purpose of this book
     </span>
   </a>
   
@@ -1135,8 +1135,8 @@
   
 
 
-<h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - recipes with videos and repos<a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
-<h2 id="purpose_of_this_book_-_test_deploy">Purpose of this book - TEST DEPLOY!<a class="headerlink" href="#purpose_of_this_book_-_test_deploy" title="Permanent link">&para;</a></h2>
+<h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - <em>recipes with videos and repos</em><a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
+<h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
 <p>To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.</p>
 <p>To provide curated resources of articles, videos and books that I have found useful.</p>
 <p>Frameworks, apps and folders may well have additional README.md files to give more detailed instructions.</p>
@@ -1150,9 +1150,13 @@
 </ul>
 <p>These are self-contained Test Suites:</p>
 <ul>
-<li>PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh kets, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic)</li>
-<li>PyTest__05_DJANGO is its own unique testing suite built from a range of sources.</li>
-<li>PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing.</li>
+<li>PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.</li>
+<li>PyTest_05_DJANGO is its own unique testing suite built from a range of sources. </li>
+<li>PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.</li>
+<li>PyTest_07_PLUGIN - this is a template PyTest plugin project for adaptation.</li>
+<li>PyTest_08_HOOKS - a small project outputing information on hooks and what they provide.</li>
+<li>PyTest_09_CLI - testing a Typer CLI project.</li>
+<li>PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.</li>
 </ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <ul>
