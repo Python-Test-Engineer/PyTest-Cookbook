@@ -22,3 +22,10 @@ This has a large selection of tests, many linked to video series.
 ## Run Tests
 
 - run `python -m pytest -vs`
+
+
+## TODO
+
+https://www.youtube.com/watch?v=ujRo8n0LsU4&list=PLWBKAf81pmOaP9naRiNAqug6EBnkPakvY&index=95
+
+mock with lru_cache override.
