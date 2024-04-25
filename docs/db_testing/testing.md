@@ -1,6 +1,21 @@
 # Database structural testing
 
-Testing the structural integrity of a database. using SQLModels's `inspect` feature.
+## Location: 
+
+PyTest_04_DB
+
+## Purpose: 
+
+### DB integrity
+
+Test existence and integrity of tables, foreigh keys, constraints etc.
+
+## Uses: 
+
+### SQL Model
+SQLModels's `inspect` feature.
+
+## Information:
 
 SQLModel is a library for interacting with SQL databases from Python code, with Python objects. It is designed to be intuitive, easy to use, highly compatible, and robust.
 
@@ -14,6 +29,6 @@ We can get metadata on tables/views to check:
 
 We will work with an SQLite example but the SQLModel engine feature enables the same code to be used on a variety of databases.
 
-TODO
+## TODO
 
 Copy model tests from Very FastAPI
