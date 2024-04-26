@@ -1163,8 +1163,17 @@
 <h1 id="pytest_hooks">PyTest Hooks<a class="headerlink" href="#pytest_hooks" title="Permanent link">&para;</a></h1>
 <h2 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h2>
 <p>PyTest has many hooks that we can tap into such as 'seesion_start'. 'make_report'</p>
-<p>We can use conftest.py as a central location to add our own implementations when these hools run/</p>
+<p>We can use conftest.py as a central location to add our own implementations when these hooks run.</p>
+<ul>
+<li>pytest_sessionstart</li>
+<li>pytest_sessionstart</li>
+<li>pytest_collection_modifyitems - this gathers tests it will do and can display without running tests.</li>
+<li>pytest_sessionfinish</li>
+<li>pytest_runtest_makereport - we get test results and export to CSV.</li>
+</ul>
+<p>There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7</p>
 <h2 id="pytest_08_hooks">PyTest_08_HOOKS<a class="headerlink" href="#pytest_08_hooks" title="Permanent link">&para;</a></h2>
+<p>This is an isolated test suite to demonstrate variables etc accessible during a PyTest run.</p>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <ul>
 <li>move to <code>PyTest_08_HOOKS</code> </li>
