@@ -61,6 +61,7 @@ nav:
       - "About": "pytest/index.md"
       - "PyTest Basic": "pytest/pytest_basic.md"
       - "PyTest": "pytest/pytest.md"
+      - "PyTest Hooks": "pytest/pytest_hooks.md"
   - "API Testing":
       - "About": "playwright_api/api.md"
   - "DB Testing":
