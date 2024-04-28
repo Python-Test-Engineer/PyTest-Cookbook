@@ -36,4 +36,4 @@ python -m pytest
 python -m pytest -vs
 ```
 
-👉 [ PyTest_00_MINIMAL](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MINIMAL)
+👉 [ PyTest_00_MINIMAL](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MINIMAL){target="_blank"}

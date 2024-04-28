@@ -1,12 +1,17 @@
 # PyTest
 
-## Purpose of this book
+## If we din't have PyTest,  what might we do?
 
-To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.
+If we had to test a set of functions without PyTest, we might do the following:
 
-To provide curated resources of articles, videos and books that I have found useful.
+- Write code in a test function.
+- Have a naming convention to detect testing functions.
+- Execute the test functions and store the assert value.
+- Add in some useful helpers to create a report, to add makers so that we can run tests selectively.
+- etc
 
-Frameworks, apps and folders may well have additional README.md files to give more detailed instructions.
-ker(pytest.mark.unit)
-        if "unit_schema" in item.name:
-            item.add_marker(pytest.mark.unit_schema)
+PyTest does this and far more for us. It uses [Pluggy](https://github.com/pytest-dev/pluggy){target="_blank"}, to provide a plugin based architecture so that we can use a variety of plugins.
+
+[pytest-dev](https://github.com/pytest-dev){target="_blank"} hosts a vareity of plugins. 
+
+PyTest docs has a list of over 1000 plugins -  [PyTest Plugins](https://docs.pytest.org/en/7.1.x/reference/plugin_list.html){target="_blank"}.

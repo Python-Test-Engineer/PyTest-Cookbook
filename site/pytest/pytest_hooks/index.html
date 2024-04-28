@@ -458,15 +458,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
-    <span class="md-ellipsis">
-      TODO
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1133,15 +1124,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
-    <span class="md-ellipsis">
-      TODO
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1166,9 +1148,8 @@
 <p>We can use conftest.py as a central location to add our own implementations when these hooks run.</p>
 <ul>
 <li>pytest_sessionstart</li>
-<li>pytest_sessionstart</li>
-<li>pytest_collection_modifyitems - this gathers tests it will do and can display without running tests.</li>
 <li>pytest_sessionfinish</li>
+<li>pytest_collection_modifyitems - this gathers tests it will do and can display without running tests.</li>
 <li>pytest_runtest_makereport - we get test results and export to CSV.</li>
 </ul>
 <p>There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7</p>
@@ -1178,15 +1159,15 @@
 <ul>
 <li>move to <code>PyTest_08_HOOKS</code> </li>
 <li>create virtual environment as you wish</li>
-<li>run <code>pip install requirement.txt</code></li>
+<li>run <code>pip install requirements.txt</code></li>
 </ul>
 <h2 id="run_tests">Run Tests<a class="headerlink" href="#run_tests" title="Permanent link">&para;</a></h2>
 <ul>
-<li>run <code>python -m pytest -vs</code></li>
+<li>run <code>python -m pytest -vs</code>.</li>
 <li>you will se output of accessible variables in PyBoxen, (a console formatter based on Rich).</li>
-<li>Test restults are exported toa CSV in the <code>pytest_runtest_makereport</code> hook.</li>
+<li>some more verbose information has been commented out.</li>
+<li>Test results are exported toa CSV in the <code>pytest_runtest_makereport</code> hook. I have been able to add in the outer most marker where there are more than one marker for a test. It is <code>|</code> pipe delimited. One can read and extract relevant infomation of test that will be run.</li>
 </ul>
-<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
 
 
 

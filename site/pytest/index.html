@@ -360,9 +360,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose_of_this_book" class="md-nav__link">
+  <a href="#if_we_dint_have_pytest_what_might_we_do" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose of this book
+      If we din't have PyTest, what might we do?
     </span>
   </a>
   
@@ -1062,9 +1062,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose_of_this_book" class="md-nav__link">
+  <a href="#if_we_dint_have_pytest_what_might_we_do" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose of this book
+      If we din't have PyTest, what might we do?
     </span>
   </a>
   
@@ -1089,13 +1089,18 @@
 
 
 <h1 id="pytest">PyTest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h1>
-<h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
-<p>To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.</p>
-<p>To provide curated resources of articles, videos and books that I have found useful.</p>
-<p>Frameworks, apps and folders may well have additional README.md files to give more detailed instructions.
-ker(pytest.mark.unit)
-        if "unit_schema" in item.name:
-            item.add_marker(pytest.mark.unit_schema)</p>
+<h2 id="if_we_dint_have_pytest_what_might_we_do">If we din't have PyTest,  what might we do?<a class="headerlink" href="#if_we_dint_have_pytest_what_might_we_do" title="Permanent link">&para;</a></h2>
+<p>If we had to test a set of functions without PyTest, we might do the following:</p>
+<ul>
+<li>Write code in a test function.</li>
+<li>Have a naming convention to detect testing functions.</li>
+<li>Execute the test functions and store the assert value.</li>
+<li>Add in some useful helpers to create a report, to add makers so that we can run tests selectively.</li>
+<li>etc</li>
+</ul>
+<p>PyTest does this and far more for us. It uses <a href="https://github.com/pytest-dev/pluggy" target="_blank">Pluggy</a>, to provide a plugin based architecture so that we can use a variety of plugins.</p>
+<p><a href="https://github.com/pytest-dev" target="_blank">pytest-dev</a> hosts a vareity of plugins. </p>
+<p>PyTest docs has a list of over 1000 plugins -  <a href="https://docs.pytest.org/en/7.1.x/reference/plugin_list.html" target="_blank">PyTest Plugins</a>.</p>
 
 
 
