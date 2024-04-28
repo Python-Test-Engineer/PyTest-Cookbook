@@ -7,7 +7,7 @@ repo_name: Python-Test-Engineer/PYTHON-TEST-FRAMEWORK
 theme:
   icon:
     repo: fontawesome/brands/github
-  name: "material"
+  name: "material" # readthedocs
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: "blue"
