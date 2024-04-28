@@ -59,7 +59,7 @@ nav:
 
   - "PyTest":
       - "About": "pytest/index.md"
-      - "PyTest Basic": "pytest/pytest_basic.md"
+      - "PyTest Minimal": "pytest/pytest_basic.md"
       - "PyTest": "pytest/pytest.md"
       - "PyTest Hooks": "pytest/pytest_hooks.md"
   - "API Testing":

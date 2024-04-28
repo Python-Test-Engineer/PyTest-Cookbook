@@ -1,36 +1,32 @@
-# PyTest Basic
+# PyTest_00_MINIMAL
 
 ## Set up
 
-This uses TEST_SUITE_00 and is a simple wiring of src folder for your code and an tests folder for PyTest.
+This uses PyTest_00_MINIMAL and is a simple wiring of src folder for your code and an tests folder for PyTest.
 
-![test-suite](../assets/images/github-test-suite-00.png ){:style="width:520px;border-radius:10%;border: 5px solid #555;"}
+![test-suite](../assets/images/pytest-00-minimal.png ){:style="width:520px;border-radius:10%;border: 5px solid #555;"}
 
 There is custom logging defined in pytest.ini that outputs to a `log` folder.
 
-- move to `TEST_SUITE_00` folder and 
-```
-pip install -r requirements_00.txt
-```
-
-
-## Sample layout
-
-```bash
-├── docs
-│   ├── about.md
-│   └── index.md
-├── mkdocs.yml
-└── site
-    ├── 404.html
-    ├── about
-    │   └── search_index.json
-    ├── sitemap.xml
-    └── sitemap.xml.gz
+- move to `PyTest_00_MINIMAL` folder and create a virtual environment, then install requirements.txt:
 
 ```
+pip install -r requirements.txt
+```
+## Contents
 
+src/sample.py has a very simple function to test.
+
+```
+def add(a: int, b: int):
+    """basic function"""
+    return a + b
+```
 ## Tests
+
+There are a number to check everything is wired correctly as well as testing loggin and markers.
+
+`pytest.ini` has settings for test locations, markers, logging format. Further information is added in the file.
 
 pytest-sugar has been installed to provide prettier console output.
 
@@ -40,4 +36,4 @@ python -m pytest
 python -m pytest -vs
 ```
 
-👉 [Click me to download zip](https://github.com/peaceiris/mkdocs-material-boilerplate/archive/main.zip)
+👉 [ PyTest_00_MINIMAL](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MINIMAL)
