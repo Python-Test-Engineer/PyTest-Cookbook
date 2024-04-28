@@ -1,8 +1,10 @@
-# PyTest - TEST_SUITE_01
+# PyTest_01_PYTEST
 
 ## About
 
-This has a large selection of tests, many linked to video series.
+This has a large selection of tests, many linked to video series. 
+
+It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTest, mocking and async tests.
 
 ## Tutorials
 
@@ -15,9 +17,9 @@ This has a large selection of tests, many linked to video series.
 
 ## Install 
 
-- move to `TEST_SUITE_01` 
-- create virtual environment as you wish
-- run `pip install requirements_01.txt`
+- move to `PyTest_01_PYTEST`.
+- create virtual environment as you wish.
+- run `pip install requirements.txt`.
 
 ## Run Tests
 

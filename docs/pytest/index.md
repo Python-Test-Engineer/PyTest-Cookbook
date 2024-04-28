@@ -1,6 +1,6 @@
 # PyTest
 
-## If we din't have PyTest,  what might we do?
+## If we didn't have PyTest,  what might we do?
 
 If we had to test a set of functions without PyTest, we might do the following:
 
