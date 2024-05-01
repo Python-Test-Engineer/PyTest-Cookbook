@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytest_hooks" class="md-skip">
+        <a href="#pytest_08_hooks" class="md-skip">
           Skip to content
         </a>
       
@@ -432,15 +432,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytest_08_hooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyTest_08_HOOKS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
       Install
@@ -453,6 +444,15 @@
   <a href="#run_tests" class="md-nav__link">
     <span class="md-ellipsis">
       Run Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO:
     </span>
   </a>
   
@@ -1098,15 +1098,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytest_08_hooks" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyTest_08_HOOKS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
       Install
@@ -1119,6 +1110,15 @@
   <a href="#run_tests" class="md-nav__link">
     <span class="md-ellipsis">
       Run Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO:
     </span>
   </a>
   
@@ -1142,19 +1142,20 @@
   
 
 
-<h1 id="pytest_hooks">PyTest Hooks<a class="headerlink" href="#pytest_hooks" title="Permanent link">&para;</a></h1>
+<h1 id="pytest_08_hooks">PyTest_08_HOOKS<a class="headerlink" href="#pytest_08_hooks" title="Permanent link">&para;</a></h1>
+<p>This is an isolated test suite to demonstrate variables etc accessible during a PyTest run.</p>
 <h2 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h2>
 <p>PyTest has many hooks that we can tap into such as 'seesion_start'. 'make_report'</p>
 <p>We can use conftest.py as a central location to add our own implementations when these hooks run.</p>
+<p>In the conftest.py, we add hooks for:</p>
 <ul>
+<li>pytest_configure</li>
 <li>pytest_sessionstart</li>
 <li>pytest_sessionfinish</li>
-<li>pytest_collection_modifyitems - this gathers tests it will do and can display without running tests.</li>
+<li>pytest_collection_modifyitems - this gathers tests it will do and can display without running tests. One can sort by property as well as add markers dynamically</li>
 <li>pytest_runtest_makereport - we get test results and export to CSV.</li>
 </ul>
 <p>There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7</p>
-<h2 id="pytest_08_hooks">PyTest_08_HOOKS<a class="headerlink" href="#pytest_08_hooks" title="Permanent link">&para;</a></h2>
-<p>This is an isolated test suite to demonstrate variables etc accessible during a PyTest run.</p>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <ul>
 <li>move to <code>PyTest_08_HOOKS</code> </li>
@@ -1166,8 +1167,18 @@
 <li>run <code>python -m pytest -vs</code>.</li>
 <li>you will se output of accessible variables in PyBoxen, (a console formatter based on Rich).</li>
 <li>some more verbose information has been commented out.</li>
-<li>Test results are exported toa CSV in the <code>pytest_runtest_makereport</code> hook. I have been able to add in the outer most marker where there are more than one marker for a test. It is <code>|</code> pipe delimited. One can read and extract relevant infomation of test that will be run.</li>
+<li>Test results are exported to ab output file report_NNNN.tyt in the <code>pytest_runtest_makereport</code> hook. It is <code>|</code> pipe delimited. One can read and extract relevant infomation of test that will be run.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>test_division|tests/ex01/test_class.py::TestApp::test_division|PASSED|0.00011979998089373112|inner-db2-outer
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>test_example1_pass|tests/ex01/test_functions.py::test_example1_pass|PASSED|0.0009691999293863773|sanity-outer
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>test_example2_pass|tests/ex01/test_functions.py::test_example2_pass|PASSED|0.0006700998637825251|inner-sanity
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>test_example3_xfail|tests/ex01/test_functions.py::test_example3_xfail|FAILED|0.000541699817404151|inner-xfail-setup
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>test_multiplication|tests/ex01/test_class.py::TestApp::test_multiplication|PASSED|8.490006439387798e-05|inner-sanity-db2-db-outer
+</span></code></pre></div></li>
 </ul>
+<p><code>tests/ex01/test_class.py::TestApp::test_division</code> is the node of the test and has the full 'path' to the test that we might use in the CLI. The test duration in seconds is included too.</p>
+<p>We can detect xfail either via markers or if we include it in our test name,</p>
+<h2 id="todo">TODO:<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
+<p>Important ones are pytest_collection_modifyitems to reorder tests if needed or add markers and pytest_runtest_makereport which can create our own custom output file</p>
 
 
 
