@@ -18,7 +18,7 @@ Each test suite has a README.md and there are more details and information there
 
 For prettier console output Rich and PyBoxen, built on Rich, are used.
 
-There will be links to any relevant YT videos I have made and the channel link for all the videos is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74)
+There will be links to any relevant YT videos I have made and the channel link for all the videos is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74).
 
 Create a virtual environment and run `pip install -r requiements.txt`.
 
