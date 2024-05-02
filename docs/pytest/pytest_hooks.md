@@ -14,7 +14,7 @@ In the conftest.py, we add hooks for:
 - pytest_sessionstart
 - pytest_sessionfinish
 - pytest_collection_modifyitems - this gathers tests it will do and can display without running tests. One can sort by property as well as add markers dynamically
-- pytest_runtest_makereport - we get test results and export to CSV.
+- pytest_runtest_makereport - we get test results and export to CSV, (see below). This can be used to create simple summary reports.
 
 There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7
 

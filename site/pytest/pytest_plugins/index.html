@@ -922,7 +922,11 @@
 
 <h1 id="pytest_07_plugins">PyTest_07_PLUGINS<a class="headerlink" href="#pytest_07_plugins" title="Permanent link">&para;</a></h1>
 <h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>Creating local and distributable pluygins.</p>
+<p>When we create fixtures/hooks in Python, we can enable reuse by putting them in a separate file that is then shared. This is a local plugin ineffect.</p>
+<p>If we name the file <code>conftest.py</code>, PyTest will automatically digest this file and all files in that same folder will have access to these fixtures/hooks.</p>
+<p>Like CSS, we can have many conftest.py files and the child folder <code>conftest.py</code> file overrides the parent one.</p>
+<p>This file is thus an automatic local plugin.</p>
+<p>If we wish to make this distributable then we can create a plugin to upload to PyPi. PyTest_07_PLUGIN has a templated plugin plugin test of the correct form to upload to PyPi.</p>
 
 
 
