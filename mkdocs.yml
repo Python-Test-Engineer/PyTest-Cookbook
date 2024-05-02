@@ -64,6 +64,7 @@ nav:
       - "API Testing": "playwright_api/api.md"
       - "e2e Testing": "playwright_api/playwright.md"
       - "Testing Playgrounds": "playwright_api/testing_playgrounds.md"
+      - "Hypothesis": "hypothesis/index.md"
       - "Plugins": "pytest/pytest_plugins.md"
       - "Hooks": "pytest/pytest_hooks.md"
       - "CLI Apps": "pytest/cli.md"
@@ -75,8 +76,7 @@ nav:
       - "Setup": "django_testing/setup.md"
       - "Apps": "django_testing/apps.md"
       - "Tests": "django_testing/tests.md"
-  - "Hypothesis":
-      - "About": "hypothesis/index.md"
+
   - "About Craig":
       - "Services": "craig/services.md"
       - "CV": "craig/cv.md"
