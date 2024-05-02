@@ -1,3 +1,6 @@
+Best examle: [Pytest-with-Eric](https://pytest-with-eric.com/pytest-advanced/hypothesis-testing-python/){:target="_blank"} is  a very good resource. It is included in PyTest_06_HYPOTHESIS.
+
+
 When writing unit tests, it’s hard to consider all possible edge cases and validate that your code works correctly.
 
 This is sometimes caught in production and a quick and speedy patch needs to be deployed. Only for a new bug to emerge later.
@@ -24,5 +27,5 @@ https://github.com/HypothesisWorks/hypothesis/blob/master/hypothesis-python/exam
 
 [Hypothesis PyPi](https://pypi.org/project/hypothesis/){:target="_blank"}
 
-[Pytest-with-Eric](https://pytest-with-eric.com/pytest-advanced/hypothesis-testing-python/){:target="_blank"} is  a very good resource.
+
 
