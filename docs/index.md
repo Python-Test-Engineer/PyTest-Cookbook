@@ -12,13 +12,13 @@ The premise is that if a developer has an easy to set up test suite with example
 
 The repo has all the test suites rather than individual repos.
 
-Download or git clone from https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK and cd into the desired test suite.
+Download or git clone from [repo](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK) and cd into the desired test suite.
 
 Each test suite has a README.md and there are more details and information there as necessary. For Playwright you will neeed to run `playwright install` after Playwright is installed to load browsers.
 
 For prettier console output Rich and PyBoxen, built on Rich, are used.
 
-There will be links to any relevant YT videos I have made and the channel link for all the videos is https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74
+There will be links to any relevant YT videos I have made and the channel link for all the videos is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74)
 
 Create a virtual environment and run `pip install -r requiements.txt`.
 
