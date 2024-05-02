@@ -8,7 +8,24 @@ To provide curated resources of articles, videos and books that I have found use
 
 The premise is that if a developer has an easy to set up test suite with example tests, combined with links to video and text resources, they can readily adapt the test suites as needed without having to set them up and coonfigure them.
 
+## How best to use
+
+The repo has all the test suites rather than individual repos.
+
+Download or git clone from [repo](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK) and cd into the desired test suite.
+
+Each test suite has a README.md and there are more details and information there as necessary. For Playwright you will neeed to run `playwright install` after Playwright is installed to load browsers.
+
+For prettier console output Rich and PyBoxen, built on Rich, are used.
+
+There will be links to any relevant YT videos I have made and the channel link for all the videos is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74).
+
+Create a virtual environment and run `pip install -r requiements.txt`.
+
+Run PyTest as a module preferably `python -m pytest` with arguments as necessary.
+
 ## Test Suites
+
 *See the README.md in root of each Test Suite for detailed and up to date set up instructions.*
 
 These four are incremental, with each suite adding more functionality to the previous one:
