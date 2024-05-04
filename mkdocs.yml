@@ -57,20 +57,21 @@ markdown_extensions:
 nav:
   - "Home": "index.md"
 
-  - "PyTest":
+  - "PyTest Core":
       - "About": "pytest/index.md"
       - "Minimal": "pytest/pytest_basic.md"
       - "Main Suite": "pytest/pytest.md"
       - "API Testing": "playwright_api/api.md"
       - "e2e Testing": "playwright_api/playwright.md"
       - "Testing Playgrounds": "playwright_api/testing_playgrounds.md"
-      - "Hypothesis": "hypothesis/index.md"
-      - "Plugins": "pytest/pytest_plugins.md"
-      - "Hooks": "pytest/pytest_hooks.md"
-      - "CLI Apps": "pytest/cli.md"
+  - "PyTest Extended":
       - "DB Testing": "db_testing/testing.md"
+      - "Hooks": "pytest/pytest_hooks.md"
+      - "Plugins": "pytest/pytest_plugins.md"
+      - "CLI Apps": "pytest/cli.md"
       - "CI Integration": "ci_integration/ci_github.md"
       - "Tox": "ci_integration/tox.md"
+      - "Hypothesis": "hypothesis/index.md"
   - "Django Testing":
       - "About": "django_testing/index.md"
       - "Setup": "django_testing/setup.md"
