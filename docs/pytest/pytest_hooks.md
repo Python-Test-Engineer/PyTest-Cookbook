@@ -14,6 +14,7 @@ In the conftest.py, we add hooks for:
 - pytest_sessionstart
 - pytest_sessionfinish
 - pytest_collection_modifyitems - this gathers tests it will do and can display without running tests. One can sort by property as well as add markers dynamically
+- pytest_generate_tests - this enables us to customise tests. The example we look it is how we can dynamically create params for the `@pytest.mark.paremetrize` feature. This is a Hypothesis Lite as it werem where can create datasets that push the boundaries of values.
 - pytest_runtest_makereport - we get test results and export to CSV, (see below). This can be used to create simple summary reports.
 
 There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7
@@ -30,7 +31,7 @@ There are many more. A useful article on hooks: https://paragkamble.medium.com/u
 - run `python -m pytest -vs`.
 - you will se output of accessible variables in PyBoxen, (a console formatter based on Rich).
 - some more verbose information has been commented out.
-- Test results are exported to ab output file report_NNNN.tyt in the `pytest_runtest_makereport` hook. It is `|` pipe delimited. One can read and extract relevant infomation of test that will be run.
+- Test results are exported to an output file report_NNNN.tyt in the `pytest_runtest_makereport` hook. It is `|` pipe delimited. One can read and extract relevant infomation of test that will be run.
 ```
 test_division|tests/ex01/test_class.py::TestApp::test_division|PASSED|0.00011979998089373112|inner-db2-outer
 test_example1_pass|tests/ex01/test_functions.py::test_example1_pass|PASSED|0.0009691999293863773|sanity-outer
