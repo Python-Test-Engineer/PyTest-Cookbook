@@ -1,6 +1,6 @@
-# PyTest_01_PYTEST
+# PyTest Core
 
-## About PyTest Core
+## About 
 
 PyTest Core is a set of 4 test suites that build on each other so that the final suite contains the previous three suites. 
 
