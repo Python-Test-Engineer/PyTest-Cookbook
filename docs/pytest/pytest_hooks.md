@@ -31,7 +31,7 @@ There are many more. A useful article on hooks: https://paragkamble.medium.com/u
 - run `python -m pytest -vs`.
 - you will se output of accessible variables in PyBoxen, (a console formatter based on Rich).
 - some more verbose information has been commented out.
-- Test results are exported to an output file pipe delimited CSV `report_04-05-2024-12-53-26` in the `pytest_runtest_makereport` hook. It is `|` pipe delimited. One can read and extract relevant infomation of test that will be run.
+- Test results are exported to an output pipe delimited CSV file that is timestamped Y-M-D-H-M-S `report_2024-05-04-12-55-53.csv` in the `pytest_runtest_makereport` hook. It is `|` pipe delimited. One can read and extract relevant infomation of test that will be run. It has all the markers including xfail included.
 ```
 test_division|tests/ex01/test_class.py::TestApp::test_division|PASSED|0.00011979998089373112|inner-db2-outer
 test_example1_pass|tests/ex01/test_functions.py::test_example1_pass|PASSED|0.0009691999293863773|sanity-outer
