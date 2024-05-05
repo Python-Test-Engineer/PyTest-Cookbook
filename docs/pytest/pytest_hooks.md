@@ -8,6 +8,10 @@ PyTest has many hooks that we can tap into such as 'seesion_start'. 'make_report
 
 We can use conftest.py as a central location to add our own implementations when these hooks run.
 
+In PyTest_08_HOOKS, we use these hooks to create a number of mini-plugins. Remember, hooks are the basis for plugins and if ina file, particulalry conftest.py, then the are 'local' plugins. If we make them distributale via PyPi or GitHub then the are 'pluigns'
+
+![Flow chart!](../images/list_hooks.png "PyTest Hooks")
+
 In the conftest.py, we add hooks for:
 
 - pytest_configure
@@ -16,6 +20,8 @@ In the conftest.py, we add hooks for:
 - pytest_collection_modifyitems - this gathers tests it will do and can display without running tests. One can sort by property as well as add markers dynamically
 - pytest_generate_tests - this enables us to customise tests. The example we look it is how we can dynamically create params for the `@pytest.mark.paremetrize` feature. This is a Hypothesis Lite as it werem where can create datasets that push the boundaries of values.
 - pytest_runtest_makereport - we get test results and export to CSV, (see below). This can be used to create simple summary reports.
+
+
 
 There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7
 
