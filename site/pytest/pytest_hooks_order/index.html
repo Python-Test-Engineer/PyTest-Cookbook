@@ -11,23 +11,25 @@
       
       
       
+        <link rel="prev" href="../../db_testing/testing/">
       
-        <link rel="next" href="pytest/">
+      
+        <link rel="next" href="../pytest_plugins/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>PyTest Cookbook</title>
+        <title>Hooks Order - PyTest Cookbook</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="assets/css/custom.css">
+      <link rel="stylesheet" href="../../assets/css/custom.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" class="md-skip">
+        <a href="#pytest_hooks_order" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href="../.." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Hooks Order
             
           </span>
         </div>
@@ -225,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href="../.." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -252,30 +254,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -284,80 +266,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose_of_this_book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose of this book
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how_best_to_use" class="md-nav__link">
-    <span class="md-ellipsis">
-      How best to use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test_suites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test Suites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#youtube_videos" class="md-nav__link">
-    <span class="md-ellipsis">
-      YouTube Videos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
-    <span class="md-ellipsis">
-      TODO
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -404,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/pytest_core/" class="md-nav__link">
+      <a href="../pytest_core/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/pytest_basic/" class="md-nav__link">
+      <a href="../pytest_basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/pytest.md" class="md-nav__link">
+      <a href="../pytest.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="playwright_api/api/" class="md-nav__link">
+      <a href="../../playwright_api/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="playwright_api/playwright/" class="md-nav__link">
+      <a href="../../playwright_api/playwright/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="playwright_api/testing_playgrounds/" class="md-nav__link">
+      <a href="../../playwright_api/testing_playgrounds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,17 +463,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -579,7 +489,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             PyTest Extended
@@ -593,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/pytest_extended/" class="md-nav__link">
+      <a href="../pytest_extended/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="db_testing/testing/" class="md-nav__link">
+      <a href="../../db_testing/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/pytest_hooks.md" class="md-nav__link">
+      <a href="../pytest_hooks.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,10 +563,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="pytest/pytest_hooks_order/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -665,6 +584,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -677,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/pytest_plugins/" class="md-nav__link">
+      <a href="../pytest_plugins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ci_integration/ci_github/" class="md-nav__link">
+      <a href="../../ci_integration/ci_github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ci_integration/tox/" class="md-nav__link">
+      <a href="../../ci_integration/tox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hypothesis/" class="md-nav__link">
+      <a href="../../hypothesis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django_testing/" class="md-nav__link">
+      <a href="../../django_testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django_testing/setup/" class="md-nav__link">
+      <a href="../../django_testing/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django_testing/apps/" class="md-nav__link">
+      <a href="../../django_testing/apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django_testing/tests/" class="md-nav__link">
+      <a href="../../django_testing/tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="craig/services/" class="md-nav__link">
+      <a href="../../craig/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="craig/cv/" class="md-nav__link">
+      <a href="../../craig/cv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="craig/contact/" class="md-nav__link">
+      <a href="../../craig/contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,68 +953,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose_of_this_book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose of this book
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how_best_to_use" class="md-nav__link">
-    <span class="md-ellipsis">
-      How best to use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test_suites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test Suites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#youtube_videos" class="md-nav__link">
-    <span class="md-ellipsis">
-      YouTube Videos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#todo" class="md-nav__link">
-    <span class="md-ellipsis">
-      TODO
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1111,66 +969,13 @@
   
 
 
-<h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - <em>recipes with videos and repos</em><a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
-<h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
-<p>To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.</p>
-<p>To provide curated resources of articles, videos and books that I have found useful.</p>
-<p>The premise is that if a developer has an easy to set up test suite with example tests, combined with links to video and text resources, they can readily adapt the test suites as needed without having to set them up and coonfigure them.</p>
-<h2 id="how_best_to_use">How best to use<a class="headerlink" href="#how_best_to_use" title="Permanent link">&para;</a></h2>
-<p>The repo has all the test suites rather than individual repos.</p>
-<p>Download or git clone from <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK">repo</a> and cd into the desired test suite.</p>
-<p>Each test suite has a README.md and there are more details and information there as necessary. For Playwright you will neeed to run <code>playwright install</code> after Playwright is installed to load browsers.</p>
-<p>For prettier console output Rich and PyBoxen, built on Rich, are used.</p>
-<p>There will be links to any relevant YT videos I have made and the channel link for all the videos is <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74">here</a>.</p>
-<p>Create a virtual environment and run <code>pip install -r requiements.txt</code>.</p>
-<p>Run PyTest as a module preferably <code>python -m pytest</code> with arguments as necessary.</p>
-<h2 id="test_suites">Test Suites<a class="headerlink" href="#test_suites" title="Permanent link">&para;</a></h2>
-<p><em>See the README.md in root of each Test Suite for detailed and up to date set up instructions.</em></p>
-<p>These four are incremental, with each suite adding more functionality to the previous one:</p>
-<ul>
-<li>PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.</li>
-<li>PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.</li>
-<li>PyTest_02_API - as above with API testing and Playwright e2e/functional testing.</li>
-<li>PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.</li>
-</ul>
-<p>These are self-contained Test Suites:</p>
-<ul>
-<li>PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.</li>
-<li>PyTest_05_DJANGO is its own unique testing suite built from a range of sources. </li>
-<li>PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.</li>
-<li>PyTest_07_PLUGIN - this is a template PyTest plugin project for adaptation.</li>
-<li>PyTest_08_HOOKS - a small project outputing information on hooks and what they provide.</li>
-<li>PyTest_09_CLI - testing a Typer CLI project.</li>
-<li>PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.</li>
-</ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Download the main repo and navigate to required TEST_SUITE. The Github repo for all these TEST_SUITES is <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK" target="_blank">here</a>.</li>
-<li>Follow install instructions in README.md file of test suite.</li>
-</ul>
-<h2 id="youtube_videos">YouTube Videos<a class="headerlink" href="#youtube_videos" title="Permanent link">&para;</a></h2>
-<p>These are available <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74" target="_blank">here</a>.</p>
-<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
-<p>Django Tests</p>
-<ul>
-<li>https://www.photondesigner.com/articles/unit-tests-factory-boy-faker?ref=yt-unit-tests-factory-boy-faker</li>
-</ul>
-<p>Testing middleware with <code>override_settings</code></p>
-<ul>
-<li>https://www.youtube.com/watch?v=TTEEr4N-lKw</li>
-</ul>
-<p>Add use of dynamically adding markers
-import pytest</p>
-<p>def pytest_collection_modifyitems(items):
-    for item in items:
-        if "model" in item.name:
-            item.add_marker(pytest.mark.model)
-        if "model_structure" in item.name:
-            item.add_marker(pytest.mark.model_structure)
-        if "unit" in item.name:
-            item.add_marker(pytest.mark.unit)
-        if "unit_schema" in item.name:
-            item.add_marker(pytest.mark.unit_schema)</p>
+<h1 id="pytest_hooks_order">PyTest Hooks Order<a class="headerlink" href="#pytest_hooks_order" title="Permanent link">&para;</a></h1>
+<div>
+   <img src="../images/pytest-hooks.png" width="75" height="75">
+</div>
+<div>
+   <img src="../images/pytest-hooks--debug.png" width="75" height="75">
+</div>
 
 
 
@@ -1237,10 +1042,10 @@ import pytest</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

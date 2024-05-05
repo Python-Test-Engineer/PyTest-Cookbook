@@ -69,6 +69,7 @@ nav:
       - "About": "pytest/pytest_extended.md"
       - "DB Testing": "db_testing/testing.md"
       - "Hooks": "pytest/pytest_hooks.md"
+      - "Hooks Order": "pytest/pytest_hooks_order.md"
       - "Plugins": "pytest/pytest_plugins.md"
       - "CLI Apps": "pytest/cli.md"
       - "CI Integration": "ci_integration/ci_github.md"
