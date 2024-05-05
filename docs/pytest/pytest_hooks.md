@@ -10,7 +10,7 @@ We can use conftest.py as a central location to add our own implementations when
 
 In PyTest_08_HOOKS, we use these hooks to create a number of mini-plugins. Remember, hooks are the basis for plugins and if ina file, particulalry conftest.py, then the are 'local' plugins. If we make them distributale via PyPi or GitHub then the are 'pluigns'
 
-![Flow chart!](../images/list_hooks.png "PyTest Hooks")
+![Examples](../images/list_hooks.png "PyTest Hooks")
 
 In the conftest.py, we add hooks for:
 
