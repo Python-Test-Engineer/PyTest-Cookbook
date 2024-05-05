@@ -50,8 +50,21 @@ test_multiplication|tests/ex01/test_class.py::TestApp::test_multiplication|PASSE
 `tests/ex01/test_class.py::TestApp::test_division` is the node of the test and has the full 'path' to the test that we might use in the CLI. The test duration in seconds is included too.
 
 We can detect xfail either via markers or if we include it in our test name,
-## TODO:
+##  - create CSV report
 
- Important ones are pytest_collection_modifyitems to reorder tests if needed or add markers and pytest_runtest_makereport which can create our own custom output file
+##  -  add custom markers
+
+##  -  sort tests
+
+##  -  skip tests
+
+We can use -k and -m but if we have more complex logic then `pytest_collection_modifyitems` can help.
+
+##  -  dynamic param data
+
+##  -  config hook
+
+##  -  stash hook data
+
 
 
