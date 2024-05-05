@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../db_testing/testing/">
       
       
-        <link rel="next" href="pytest_core/">
+        <link rel="next" href="../pytest_hooks_order/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>About - PyTest Cookbook</title>
+        <title>Hooks - PyTest Cookbook</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../assets/css/custom.css">
+      <link rel="stylesheet" href="../../assets/css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytest" class="md-skip">
+        <a href="#pytest_08_hooks" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href="../.." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About
+              Hooks
             
           </span>
         </div>
@@ -227,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href="../.." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -274,19 +274,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -300,7 +298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             PyTest Core
@@ -311,30 +309,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    About
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -343,62 +321,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#if_we_didnt_have_pytest_what_might_we_do" class="md-nav__link">
-    <span class="md-ellipsis">
-      If we didn't have PyTest, what might we do?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pytest_incremental_test_suites" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyTest incremental test suites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stand_alone_test_suites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stand alone test suites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#suggested_use" class="md-nav__link">
-    <span class="md-ellipsis">
-      Suggested use
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -411,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest_core/" class="md-nav__link">
+      <a href="../pytest_core/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest_basic/" class="md-nav__link">
+      <a href="../pytest_basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest/" class="md-nav__link">
+      <a href="../pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../playwright_api/api/" class="md-nav__link">
+      <a href="../../playwright_api/api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../playwright_api/playwright/" class="md-nav__link">
+      <a href="../../playwright_api/playwright/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -516,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../playwright_api/testing_playgrounds/" class="md-nav__link">
+      <a href="../../playwright_api/testing_playgrounds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,17 +463,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -565,7 +489,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             PyTest Extended
@@ -579,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest_extended/" class="md-nav__link">
+      <a href="../pytest_extended/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../db_testing/testing/" class="md-nav__link">
+      <a href="../../db_testing/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,10 +542,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="pytest_hooks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hooks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -630,6 +574,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hooks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run_tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -642,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest_hooks_order/" class="md-nav__link">
+      <a href="../pytest_hooks_order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pytest_plugins/" class="md-nav__link">
+      <a href="../pytest_plugins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ci_integration/ci_github/" class="md-nav__link">
+      <a href="../../ci_integration/ci_github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ci_integration/tox/" class="md-nav__link">
+      <a href="../../ci_integration/tox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hypothesis/" class="md-nav__link">
+      <a href="../../hypothesis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django_testing/" class="md-nav__link">
+      <a href="../../django_testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django_testing/setup/" class="md-nav__link">
+      <a href="../../django_testing/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -852,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django_testing/apps/" class="md-nav__link">
+      <a href="../../django_testing/apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django_testing/tests/" class="md-nav__link">
+      <a href="../../django_testing/tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -936,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../craig/services/" class="md-nav__link">
+      <a href="../../craig/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -957,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../craig/cv/" class="md-nav__link">
+      <a href="../../craig/cv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -978,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../craig/contact/" class="md-nav__link">
+      <a href="../../craig/contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,36 +1026,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#if_we_didnt_have_pytest_what_might_we_do" class="md-nav__link">
+  <a href="#hooks" class="md-nav__link">
     <span class="md-ellipsis">
-      If we didn't have PyTest, what might we do?
+      Hooks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytest_incremental_test_suites" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      PyTest incremental test suites
+      Install
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#stand_alone_test_suites" class="md-nav__link">
+  <a href="#run_tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Stand alone test suites
+      Run Tests
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested_use" class="md-nav__link">
+  <a href="#todo" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested use
+      TODO:
     </span>
   </a>
   
@@ -1079,33 +1079,44 @@
   
 
 
-<h1 id="pytest">PyTest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h1>
-<h2 id="if_we_didnt_have_pytest_what_might_we_do">If we didn't have PyTest,  what might we do?<a class="headerlink" href="#if_we_didnt_have_pytest_what_might_we_do" title="Permanent link">&para;</a></h2>
-<p>If we had to test a set of functions without PyTest, we might do the following:</p>
+<h1 id="pytest_08_hooks">PyTest_08_HOOKS<a class="headerlink" href="#pytest_08_hooks" title="Permanent link">&para;</a></h1>
+<p>This is an isolated test suite to demonstrate variables etc accessible during a PyTest run.</p>
+<h2 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h2>
+<p>PyTest has many hooks that we can tap into such as 'seesion_start'. 'make_report'</p>
+<p>We can use conftest.py as a central location to add our own implementations when these hooks run.</p>
+<p>In the conftest.py, we add hooks for:</p>
 <ul>
-<li>Write code in a test function.</li>
-<li>Have a naming convention to detect testing functions.</li>
-<li>Execute the test functions and store the assert value.</li>
-<li>Add in some useful helpers to create a report, to add makers so that we can run tests selectively.</li>
-<li>etc</li>
+<li>pytest_configure</li>
+<li>pytest_sessionstart</li>
+<li>pytest_sessionfinish</li>
+<li>pytest_collection_modifyitems - this gathers tests it will do and can display without running tests. One can sort by property as well as add markers dynamically</li>
+<li>pytest_generate_tests - this enables us to customise tests. The example we look it is how we can dynamically create params for the <code>@pytest.mark.paremetrize</code> feature. This is a Hypothesis Lite as it werem where can create datasets that push the boundaries of values.</li>
+<li>pytest_runtest_makereport - we get test results and export to CSV, (see below). This can be used to create simple summary reports.</li>
 </ul>
-<p>PyTest does this and far more for us. It uses <a href="https://github.com/pytest-dev/pluggy" target="_blank">Pluggy</a>, to provide a plugin based architecture so that we can use a variety of plugins.</p>
-<p><a href="https://github.com/pytest-dev" target="_blank">pytest-dev</a> hosts a variety of plugins. </p>
-<p>PyTest docs has a list of over 1000 plugins -  <a href="https://docs.pytest.org/en/7.1.x/reference/plugin_list.html" target="_blank">PyTest Plugins</a>.</p>
-<h2 id="pytest_incremental_test_suites">PyTest incremental test suites<a class="headerlink" href="#pytest_incremental_test_suites" title="Permanent link">&para;</a></h2>
-<p>There are four test suites that build on each other:</p>
+<p>There are many more. A useful article on hooks: https://paragkamble.medium.com/understanding-hooks-in-pytest-892e91edbdb7</p>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <ul>
-<li>PyTest_00_MINIMAL is a bare bone wiring of a src folder and tests with custom logging set up in pytest.ini</li>
-<li>PyTest_01_MAIN is a comprehensive test suite with numerous template tests for most of the features of PyTest along with templates for mocking and patching. An async set of tests are also included. Combined with references to YT videos, and some utilities, this is a fundamental test suite.</li>
-<li>PyTest_02_API_PLAYWRIGHT uses Playwright to carry out API tests as well as e23 or end user automated tests.</li>
-<li>PyTest_03_BDD has an implementation of the <code>pytest-bdd</code> plugin for Behaviour Driven Testing/Development.</li>
+<li>move to <code>PyTest_08_HOOKS</code> </li>
+<li>create virtual environment as you wish</li>
+<li>run <code>pip install requirements.txt</code></li>
 </ul>
-<h2 id="stand_alone_test_suites">Stand alone test suites<a class="headerlink" href="#stand_alone_test_suites" title="Permanent link">&para;</a></h2>
-<p>The remaining test suites are all stand alone and do not contain any of the first four test suites.</p>
-<p>Test files can be ported to any of the test suites.</p>
-<h2 id="suggested_use">Suggested use<a class="headerlink" href="#suggested_use" title="Permanent link">&para;</a></h2>
-<p>Start with PyTest_01_MAIN and once set up run <code>python -m pytest -vs</code> to see over a 100 tests run with <code>pytest-sugar</code> formatted output.</p>
-<p>The <code>02_py_coffee</code> folder in tests as well as <code>03_indian_pythonista</code> are two very good tutorials with accompanying YT videos.</p>
+<h2 id="run_tests">Run Tests<a class="headerlink" href="#run_tests" title="Permanent link">&para;</a></h2>
+<ul>
+<li>run <code>python -m pytest -vs</code>.</li>
+<li>you will se output of accessible variables in PyBoxen, (a console formatter based on Rich).</li>
+<li>some more verbose information has been commented out.</li>
+<li>Test results are exported to an output pipe delimited CSV file that is timestamped Y-M-D-H-M-S <code>report_2024-05-04-12-55-53.csv</code> in the <code>pytest_runtest_makereport</code> hook. It is <code>|</code> pipe delimited. One can read and extract relevant infomation of test that will be run. It has all the markers including xfail included.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>test_division|tests/ex01/test_class.py::TestApp::test_division|PASSED|0.00011979998089373112|inner-db2-outer
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>test_example1_pass|tests/ex01/test_functions.py::test_example1_pass|PASSED|0.0009691999293863773|sanity-outer
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>test_example2_pass|tests/ex01/test_functions.py::test_example2_pass|PASSED|0.0006700998637825251|inner-sanity
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>test_example3_xfail|tests/ex01/test_functions.py::test_example3_xfail|FAILED|0.000541699817404151|inner-xfail-setup
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>test_multiplication|tests/ex01/test_class.py::TestApp::test_multiplication|PASSED|8.490006439387798e-05|inner-sanity-db2-db-outer
+</span></code></pre></div></li>
+</ul>
+<p><code>tests/ex01/test_class.py::TestApp::test_division</code> is the node of the test and has the full 'path' to the test that we might use in the CLI. The test duration in seconds is included too.</p>
+<p>We can detect xfail either via markers or if we include it in our test name,</p>
+<h2 id="todo">TODO:<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h2>
+<p>Important ones are pytest_collection_modifyitems to reorder tests if needed or add markers and pytest_runtest_makereport which can create our own custom output file</p>
 
 
 
@@ -1172,10 +1183,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
