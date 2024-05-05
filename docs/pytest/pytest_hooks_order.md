@@ -1,9 +1,4 @@
 # PyTest Hooks Order
+![Flow chart!](../images/pytest-hooks.png "PyTest Hooks")
 
-
- <div>
-   <img src="../images/pytest-hooks.png" width="75" height="75">
-</div> 
- <div>
-   <img src="../images/pytest-hooks--debug.png" width="75" height="75">
-</div> 
+![--debug!](../images/pytest-hooks--debug.png "PyTest Hooks")
