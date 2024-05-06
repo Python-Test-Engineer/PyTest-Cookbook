@@ -6,7 +6,7 @@
 
 2. To provide curated resources of articles, videos and books that I have found useful.
 
-3. Create a concise 'How do I...?' wiki curated links.
+3. Create a concise 'How do I...?' wiki of curated links.
 
 Whilst developing this book, I came across one of the best resources for PyTest - [pytest-with-eric.com](https://pytest-with-eric.com/). Combined with the PyTest book by [Brian Okken](https://pythontest.com/), they have helped me gain a deeper understanding of PyTest.
 
