@@ -8,6 +8,8 @@
 
 3. Create a concise 'How do I...?' wiki of curated links.
 
+4. Convert and transcribe code to YT videos as many of us find more motivation and understanding from watching compared to reading.
+
 Whilst developing this book, I came across one of the best resources for PyTest - [pytest-with-eric.com](https://pytest-with-eric.com/). Combined with the PyTest book by [Brian Okken](https://pythontest.com/), they have helped me gain a deeper understanding of PyTest.
 
 I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create many lite versions of well lnown plugins such as:
