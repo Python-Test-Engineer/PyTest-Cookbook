@@ -1218,9 +1218,27 @@
 
 <h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - <em>recipes with videos and repos</em><a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
 <h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
 <p>To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.</p>
+</li>
+<li>
 <p>To provide curated resources of articles, videos and books that I have found useful.</p>
-<p>The premise is that if a developer has an easy to set up test suite with example tests, combined with links to video and text resources, they can readily adapt the test suites as needed without having to set them up and coonfigure them.</p>
+</li>
+<li>
+<p>Create a concise 'How do I...?' wiki curated links.</p>
+</li>
+</ol>
+<p>Whilst developing this book, I came across one of the best resources for PyTest - <a href="https://pytest-with-eric.com/">pytest-with-eric.com</a>. Combined with the PyTest book by <a href="https://pythontest.com/">Brian Okken</a>, they have helped me gain a deeper understanding of PyTest.</p>
+<p>I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create many lite versions of well lnown plugins such as:</p>
+<ul>
+<li>CSV Lite Reporter</li>
+<li>Sorting, randomizing and deselecting tests</li>
+<li>Dynamic loading of data for paremetrization</li>
+<li>Set up and storing data across hooks</li>
+</ul>
+<p>As a curated list of resources, I have integrity over linking to the work of others and due credits are given.</p>
+<p>Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible as we each find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes complex subjects.</p>
 <h2 id="how_best_to_use">How best to use<a class="headerlink" href="#how_best_to_use" title="Permanent link">&para;</a></h2>
 <p>The repo has all the test suites rather than individual repos.</p>
 <p>Download or git clone from <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK">repo</a> and cd into the desired test suite.</p>
@@ -1243,8 +1261,8 @@
 <li>PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.</li>
 <li>PyTest_05_DJANGO is its own unique testing suite built from a range of sources. </li>
 <li>PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.</li>
-<li>PyTest_07_PLUGIN - this is a template PyTest plugin project for adaptation.</li>
-<li>PyTest_08_HOOKS - a small project outputing information on hooks and what they provide.</li>
+<li>PyTest_087_HOOKS - a small project outputing information on hooks and what they provide.</li>
+<li>PyTest_08_PLUGIN - this is a template PyTest plugin project for adaptation.</li>
 <li>PyTest_09_CLI - testing a Typer CLI project.</li>
 <li>PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.</li>
 </ul>

@@ -2,11 +2,24 @@
 
 ## Purpose of this book 
 
-To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.
+1. To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.
 
-To provide curated resources of articles, videos and books that I have found useful.
+2. To provide curated resources of articles, videos and books that I have found useful.
 
-The premise is that if a developer has an easy to set up test suite with example tests, combined with links to video and text resources, they can readily adapt the test suites as needed without having to set them up and coonfigure them.
+3. Create a concise 'How do I...?' wiki curated links.
+
+Whilst developing this book, I came across one of the best resources for PyTest - [pytest-with-eric.com](https://pytest-with-eric.com/). Combined with the PyTest book by [Brian Okken](https://pythontest.com/), they have helped me gain a deeper understanding of PyTest.
+
+I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create many lite versions of well lnown plugins such as:
+
+- CSV Lite Reporter
+- Sorting, randomizing and deselecting tests
+- Dynamic loading of data for paremetrization
+- Set up and storing data across hooks
+
+As a curated list of resources, I have integrity over linking to the work of others and due credits are given.
+
+Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible as we each find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes complex subjects.
 
 ## How best to use
 
@@ -40,8 +53,8 @@ These are self-contained Test Suites:
 - PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.
 - PyTest_05_DJANGO is its own unique testing suite built from a range of sources. 
 - PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.
-- PyTest_07_PLUGIN - this is a template PyTest plugin project for adaptation.
-- PyTest_08_HOOKS - a small project outputing information on hooks and what they provide.
+- PyTest_087_HOOKS - a small project outputing information on hooks and what they provide.
+- PyTest_08_PLUGIN - this is a template PyTest plugin project for adaptation.
 - PyTest_09_CLI - testing a Typer CLI project.
 - PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.
 
