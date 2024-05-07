@@ -8,7 +8,7 @@ PyTest has many hooks that we can tap into such as 'seesion_start'. 'make_report
 
 We can use conftest.py as a central location to add our own implementations when these hooks run.
 
-In PyTest_08_HOOKS, we use these hooks to create a number of mini-plugins. Remember, hooks are the basis for plugins and if ina file, particulalry conftest.py, then the are 'local' plugins. If we make them distributale via PyPi or GitHub then the are 'pluigns'
+In PyTest_07_HOOKS, we use these hooks to create a number of mini-plugins. Remember, hooks are the basis for plugins and if ina file, particulalry conftest.py, then the are 'local' plugins. If we make them distributale via PyPi or GitHub then the are 'pluigns'
 
 ![Examples](../images/list_hooks.png "PyTest Hooks")
 
