@@ -52,3 +52,17 @@ root
  └── pytest_unconfigure
 
 ```
+
+
+```
+root
+└── pytest_cmdline_main
+ ├── pytest_plugin_registered
+ ├── pytest_configure
+ ├── pytest_sessionstart
+ ├── pytest_collection 
+ ├── pytest_runtestloopizer
+ ├── pytest_sessionfinish
+ └── pytest_unconfigure
+
+```
