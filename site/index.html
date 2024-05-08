@@ -310,18 +310,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how_best_to_use" class="md-nav__link">
+  <a href="#test_frameworks" class="md-nav__link">
     <span class="md-ellipsis">
-      How best to use
+      Test frameworks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test_suites" class="md-nav__link">
+  <a href="#how_best_to_use" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Suites
+      How best to use
     </span>
   </a>
   
@@ -1154,18 +1154,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how_best_to_use" class="md-nav__link">
+  <a href="#test_frameworks" class="md-nav__link">
     <span class="md-ellipsis">
-      How best to use
+      Test frameworks
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#test_suites" class="md-nav__link">
+  <a href="#how_best_to_use" class="md-nav__link">
     <span class="md-ellipsis">
-      Test Suites
+      How best to use
     </span>
   </a>
   
@@ -1218,26 +1218,49 @@
 
 <h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - <em>recipes with videos and repos</em><a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
 <h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
-<ol>
-<li>To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS comprising of test templates and references for developers to adapt to their own needs, requiring just a 1-2-3 of </li>
+<p>To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS comprising of test templates and references for developers to adapt to their own needs, requiring just a 1-2-3 of:</p>
+<ul>
 <li>(1) Create virtual environment</li>
 <li>(2) <code>pip install -r requirements.txt</code></li>
-<li>(3) <code>python -m pytest</code> to see the output of all the tests as below</li>
-</ol>
-<p><img alt="Sample output" src="images/demo.png" title="Demo" /></p>
+<li>(3) <code>python -m pytest</code> to see the output of all the tests as below:</li>
+</ul>
+<p><img alt="Test results" src="images/demo-summary.png" title="Demo" /></p>
+<p><img alt="Items" src="images/demo-items.png" title="Demo" /></p>
+<p><img alt="List test results" src="images/demo.png" title="Demo" /></p>
+<p>The frameworks have logging and other utilities installed to provide a complete framework.</p>
+<p>Resources included are:</p>
 <ol>
 <li>
-<p>To provide curated resources of articles, videos and books that I have found useful.</p>
+<p>Links to helpful articles, videos and documentation.</p>
 </li>
 <li>
 <p>Create a concise 'How do I...?' wiki of curated links.</p>
 </li>
 <li>
-<p>Convert and transcribe code to YT videos as many of us find more motivation and understanding from watching compared to reading.</p>
+<p>Converted and transcribed code of great YT videos where there is no code.</p>
 </li>
 </ol>
+<h2 id="test_frameworks">Test frameworks<a class="headerlink" href="#test_frameworks" title="Permanent link">&para;</a></h2>
+<p><em>See the README.md in root of each Test framework for detailed and up to date set up instructions.</em></p>
+<p>These four are incremental, with each framework adding more functionality to the previous one:</p>
+<ul>
+<li>PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.</li>
+<li>PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.</li>
+<li>PyTest_02_API - as above with API testing and Playwright e2e/functional testing.</li>
+<li>PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.</li>
+</ul>
+<p>These are self-contained Test frameworks:</p>
+<ul>
+<li>PyTest_04_DB_TESTING - is a standalone test framework for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.</li>
+<li>PyTest_05_DJANGO is its own unique testing framework built from a range of sources. </li>
+<li>PyTest_06_HYPOTHESIS is a standalone property based test framework that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.</li>
+<li>PyTest_087_HOOKS - a small project outputing information on hooks and what they provide.</li>
+<li>PyTest_08_PLUGIN - this is a template PyTest plugin project for adaptation.</li>
+<li>PyTest_09_CLI - testing a Typer CLI project.</li>
+<li>PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.</li>
+</ul>
 <p>Whilst developing this book, I came across one of the best resources for PyTest - <a href="https://pytest-with-eric.com/">pytest-with-eric.com</a>. Combined with the PyTest book by <a href="https://pythontest.com/">Brian Okken</a>, they have helped me gain a deeper understanding of PyTest.</p>
-<p>I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create many lite versions of well lnown plugins such as:</p>
+<p>I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:</p>
 <ul>
 <li>CSV Lite Reporter</li>
 <li>Sorting, randomizing and deselecting tests</li>
@@ -1247,36 +1270,17 @@
 <p>As a curated list of resources, I have integrity over linking to the work of others and due credits are given.</p>
 <p>Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible as we each find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes complex subjects.</p>
 <h2 id="how_best_to_use">How best to use<a class="headerlink" href="#how_best_to_use" title="Permanent link">&para;</a></h2>
-<p>The repo has all the test suites rather than individual repos.</p>
-<p>Download or git clone from <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK">repo</a> and cd into the desired test suite.</p>
-<p>Each test suite has a README.md and there are more details and information there as necessary. For Playwright you will neeed to run <code>playwright install</code> after Playwright is installed to load browsers.</p>
+<p>The repo has all the test frameworks rather than individual repos.</p>
+<p>Download or git clone from <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK">repo</a> and cd into the desired test framework.</p>
+<p>Each test framework has a README.md and there are more details and information there as necessary. For Playwright you will neeed to run <code>playwright install</code> after Playwright is installed to load browsers.</p>
 <p>For prettier console output Rich and PyBoxen, built on Rich, are used.</p>
 <p>There will be links to any relevant YT videos I have made and the channel link for all the videos is <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74">here</a>.</p>
 <p>Create a virtual environment and run <code>pip install -r requiements.txt</code>.</p>
 <p>Run PyTest as a module preferably <code>python -m pytest</code> with arguments as necessary.</p>
-<h2 id="test_suites">Test Suites<a class="headerlink" href="#test_suites" title="Permanent link">&para;</a></h2>
-<p><em>See the README.md in root of each Test Suite for detailed and up to date set up instructions.</em></p>
-<p>These four are incremental, with each suite adding more functionality to the previous one:</p>
-<ul>
-<li>PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.</li>
-<li>PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.</li>
-<li>PyTest_02_API - as above with API testing and Playwright e2e/functional testing.</li>
-<li>PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.</li>
-</ul>
-<p>These are self-contained Test Suites:</p>
-<ul>
-<li>PyTest_04_DB_TESTING - is a standalone test suite for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for thes.</li>
-<li>PyTest_05_DJANGO is its own unique testing suite built from a range of sources. </li>
-<li>PyTest_06_HYPOTHESIS is a standalone property based test suite that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.</li>
-<li>PyTest_087_HOOKS - a small project outputing information on hooks and what they provide.</li>
-<li>PyTest_08_PLUGIN - this is a template PyTest plugin project for adaptation.</li>
-<li>PyTest_09_CLI - testing a Typer CLI project.</li>
-<li>PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS. May be replaced with TOX.</li>
-</ul>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Download the main repo and navigate to required TEST_SUITE. The Github repo for all these TEST_SUITES is <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK" target="_blank">here</a>.</li>
-<li>Follow install instructions in README.md file of test suite.</li>
+<li>Download the main repo and navigate to required test framework. The Github repo for all these TEST frameworkS is <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK" target="_blank">here</a>.</li>
+<li>Follow install instructions in README.md file of test framework.</li>
 </ul>
 <h2 id="youtube_videos">YouTube Videos<a class="headerlink" href="#youtube_videos" title="Permanent link">&para;</a></h2>
 <p>These are available <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74" target="_blank">here</a>.</p>
