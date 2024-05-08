@@ -41,7 +41,7 @@ The following are self-contained test frameworks and the tests can be easily add
 - PyTest_087_HOOKS - a set of projects using the various hooks of PyTest with written explanations.
 - PyTest_08_PLUGIN - an app tpo prodoce a distributable plugin of the 'lsort by test name' hook project as well as using PyTester to test the plugin itself.
 - PyTest_09_CLI - testing a Typer CLI project.
-- PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS as well as uisng Tox to test pur plugin across many Python versions.
+- PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS as well as uisng Tox to test our plugin across many Python versions.
 
 ## Authenticity
 
@@ -51,11 +51,13 @@ I strive to acknowledge sources I have used to learn PyTest and any adaptations 
 
 As a curated list of resources, I have integrity over linking to the work of others and due credits are given.
 
-Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible as we each find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes complex subjects.
+Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible as we each find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes very complex subjects.
 
 ## About me
 
 I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
+
+for example:
 
 - CSV Lite Reporter
 - Sorting, randomizing and deselecting tests
@@ -68,12 +70,14 @@ There is more information about me and my services [here](https://pytest-cookboo
 
 Download or git clone from [repo](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK) and cd into the desired test framework.
 
-Each test framework has a README.md and there are more details and information there as necessary. For the API and Playwright test framework, you will neeed to run `playwright install` after Playwright is installed to load all browsers.
+Each test framework has a README.md and there are more details and information there as necessary. For the API and Playwright test framework, you will neeed to run `playwright install` after Playwright is installed to load all the browsers.
 
 For prettier general console output, Rich and PyBoxen, built on Rich, are used as well as pytest-sugar for the test results.
 file of test framework.
 
 ## YouTube Videos
+
+I have made some videos to assist in using this book.
 
 These are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74){target="_blank"}.
 
