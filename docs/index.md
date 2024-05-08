@@ -57,12 +57,10 @@ Often I am a wrapper around someone else's effort and I try to add a different p
 
 I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
 
-for example:
+Example plugins are:
 
 - CSV Lite Reporter
 - Sorting, randomizing and deselecting tests
-- Dynamic loading of data for paremetrization
-- Set up and storing data across hooks
 
 There is more information about me and my services [here](https://pytest-cookbook.netlify.app/craig/).
 
