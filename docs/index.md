@@ -2,13 +2,18 @@
 
 ## Purpose of this book 
 
-1. To provide a range of ready congfigured PYTHON TEST FRAMEWORKS with a 'one step install', comprising of templates and references for developers to adapt to their own needs.
+1. To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS comprising of test templates and references for developers to adapt to their own needs, requiring just a 1-2-3 of 
+- (1) Create virtual environment
+- (2) `pip install -r requirements.txt`
+- (3) `python -m pytest` to see the output of all the tests as below
 
-2. To provide curated resources of articles, videos and books that I have found useful.
 
-3. Create a concise 'How do I...?' wiki of curated links.
 
-4. Convert and transcribe code to YT videos as many of us find more motivation and understanding from watching compared to reading.
+1. To provide curated resources of articles, videos and books that I have found useful.
+
+2. Create a concise 'How do I...?' wiki of curated links.
+
+3. Convert and transcribe code to YT videos as many of us find more motivation and understanding from watching compared to reading.
 
 Whilst developing this book, I came across one of the best resources for PyTest - [pytest-with-eric.com](https://pytest-with-eric.com/). Combined with the PyTest book by [Brian Okken](https://pythontest.com/), they have helped me gain a deeper understanding of PyTest.
 
