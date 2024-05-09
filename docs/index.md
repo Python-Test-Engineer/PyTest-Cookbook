@@ -55,7 +55,7 @@ Often I am a wrapper around someone else's effort and I try to add a different p
 
 ## About me
 
-I am a Python Test Engineer suing PyTest and Playwright as well as a Software Tester.
+I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester.
 
 I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
 
