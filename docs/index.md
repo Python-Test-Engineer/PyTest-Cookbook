@@ -4,9 +4,9 @@
 
 To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS comprising of test templates and references for developers to adapt to their own needs, requiring just a 1-2-3 of:
    
-- (1) Create virtual environment
-- (2) `pip install -r requirements.txt`
-- (3) `python -m pytest` to see the output of all the tests as below:
+1. Create virtual environment
+2. `pip install -r requirements.txt`
+3. `python -m pytest` to see the output of all the tests as below:
 
 ![Test results](./images/demo-summary.png "Demo")
 
@@ -62,6 +62,7 @@ I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online vi
 Example plugins are:
 
 - CSV Lite Reporter
+- Export results to DB
 - Sorting, randomizing and deselecting tests
 
 There is more information about me and my services [here](https://pytest-cookbook.netlify.app/craig/).
