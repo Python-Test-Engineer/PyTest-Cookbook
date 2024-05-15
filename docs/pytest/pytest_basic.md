@@ -2,6 +2,8 @@
 
 ## Set up
 
+See README.md
+
 This uses PyTest_00_MINIMAL and is a simple wiring of src folder for your code and an tests folder for PyTest.
 
 ![test-suite](../assets/images/pytest-00-minimal.png ){:style="width:520px;border-radius:10%;border: 5px solid #555;"}
