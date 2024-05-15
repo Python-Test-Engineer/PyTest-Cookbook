@@ -31,4 +31,4 @@ We will work with an SQLite example but the SQLModel engine feature enables the 
 
 ## YouTube
 
-[YouTube](https://youtu.be/vcRB_pg__AQ)
+[https://youtu.be/vcRB_pg__AQ](https://youtu.be/vcRB_pg__AQ)
