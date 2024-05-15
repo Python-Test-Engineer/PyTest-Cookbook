@@ -12,8 +12,8 @@ Test existence and integrity of tables, foreigh keys, constraints etc.
 
 ## Uses: 
 
-### SQL Model
-SQLModels's `inspect` feature.
+- SQL Model
+- SQLModels's `inspect` feature.
 
 ## Information:
 
