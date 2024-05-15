@@ -1,21 +1,21 @@
 # Database structural testing
 
-## Location: 
+## Location
 
-[PyTest_04_DB](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
+[https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
 
-## Purpose: 
+## Purpose
 
 DB integrity
 
 Test existence and integrity of tables, foreign keys, constraints etc.
 
-## Uses: 
+## Uses
 
 - SQL Model
 - SQLModel's `inspect` feature.
 
-## Information:
+## Information
 
 SQLModel is a library for interacting with SQL databases from Python code, with Python objects. It is designed to be intuitive, easy to use, highly compatible, and robust.
 
