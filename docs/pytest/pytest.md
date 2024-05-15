@@ -32,4 +32,4 @@ It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTes
 
 ## Repo
 
-👉 [ PyTest_00_MINIMAL](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MAIN){target="_blank"}
+👉 [ PyTest_00_MAIN](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MAIN){target="_blank"}

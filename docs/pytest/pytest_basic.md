@@ -24,7 +24,8 @@ pip install -r requirements.txt
 
 ## YT video
 
-https://youtu.be/a3aXbukAvKI
+ [YouTube](https://youtu.be/a3aXbukAvKI)
+
 
 ## Contents
 
