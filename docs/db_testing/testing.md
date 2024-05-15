@@ -6,9 +6,9 @@ PyTest_04_DB
 
 ## Purpose: 
 
-### DB integrity
+DB integrity
 
-Test existence and integrity of tables, foreigh keys, constraints etc.
+Test existence and integrity of tables, foreign keys, constraints etc.
 
 ## Uses: 
 
