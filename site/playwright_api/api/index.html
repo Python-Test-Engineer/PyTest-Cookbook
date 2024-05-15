@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hosting_and_deployment" class="md-skip">
+        <a href="#playwright_testing" class="md-skip">
           Skip to content
         </a>
       
@@ -444,36 +444,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github_pages_and_github" class="md-nav__link">
+  <a href="#about" class="md-nav__link">
     <span class="md-ellipsis">
-      GitHub Pages and GitHub
+      About
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gitlab_pages_and_gitlab" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      GitLab Pages and GitLab
+      Install
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#netlify" class="md-nav__link">
+  <a href="#run_tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Netlify
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws_amplify_console" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Amplify Console
+      Run Tests
     </span>
   </a>
   
@@ -1131,36 +1122,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github_pages_and_github" class="md-nav__link">
+  <a href="#about" class="md-nav__link">
     <span class="md-ellipsis">
-      GitHub Pages and GitHub
+      About
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gitlab_pages_and_gitlab" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      GitLab Pages and GitLab
+      Install
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#netlify" class="md-nav__link">
+  <a href="#run_tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Netlify
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws_amplify_console" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Amplify Console
+      Run Tests
     </span>
   </a>
   
@@ -1184,38 +1166,22 @@
   
 
 
-<h1 id="hosting_and_deployment">Hosting and Deployment<a class="headerlink" href="#hosting_and_deployment" title="Permanent link">&para;</a></h1>
-<h2 id="github_pages_and_github">GitHub Pages and GitHub<a class="headerlink" href="#github_pages_and_github" title="Permanent link">&para;</a></h2>
+<h1 id="playwright_testing">Playwright Testing<a class="headerlink" href="#playwright_testing" title="Permanent link">&para;</a></h1>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
+<p>Playwright was created specifically to accommodate the needs of end-to-end testing. Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox. Test on Windows, Linux, and macOS, locally or on CI, headless or headed with native mobile emulation.</p>
+<p>Playwright recommends using the official Playwright Pytest plugin to write end-to-end tests. It provides context isolation, running it on multiple browser configurations out of the box. Alternatively you can use the library to manually write the testing infrastructure with your preferred test-runner. The Pytest plugin utilizes the sync version of Playwright, there is also an async version accessible via the library.</p>
+<p><a href="https://playwright.dev/python/" target="_blank">Playwright - Python</a></p>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Host source code on GitHub.</li>
-<li>Build and deploy with:<ul>
-<li><code>mkdocs gh-deploy</code></li>
-<li>GitHub Actions</li>
+<li>move to <code>TEST_SUITE_02_API_PLAYWRIGHT</code> </li>
+<li>create virtual environment as you wish</li>
+<li>run <code>pip install requirements_02.txt</code></li>
+<li>run <code>playwright install</code> to load in browsers. IMPORTANT.</li>
 </ul>
-</li>
-</ul>
-<h2 id="gitlab_pages_and_gitlab">GitLab Pages and GitLab<a class="headerlink" href="#gitlab_pages_and_gitlab" title="Permanent link">&para;</a></h2>
+<h2 id="run_tests">Run Tests<a class="headerlink" href="#run_tests" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Host source code on GitLab.</li>
-<li>Build and deploy with GitLab CI/CD.</li>
+<li>run <code>python -m pytest -vs</code></li>
 </ul>
-<h2 id="netlify">Netlify<a class="headerlink" href="#netlify" title="Permanent link">&para;</a></h2>
-<p>Host source code on:</p>
-<ul>
-<li>GitHub</li>
-<li>GitLab</li>
-<li>BitBucket</li>
-</ul>
-<p>Build and deploy with Netlify.</p>
-<h2 id="aws_amplify_console">AWS Amplify Console<a class="headerlink" href="#aws_amplify_console" title="Permanent link">&para;</a></h2>
-<p>Host source code on:</p>
-<ul>
-<li>GitHub</li>
-<li>GitLab</li>
-<li>BitBucket</li>
-<li>AWS CodeCommit</li>
-</ul>
-<p>Build and deploy with AWS Amplify Console.</p>
 
 
 
