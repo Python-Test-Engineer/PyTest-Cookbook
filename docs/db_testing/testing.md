@@ -29,6 +29,6 @@ We can get metadata on tables/views to check:
 
 We will work with an SQLite example but the SQLModel engine feature enables the same code to be used on a variety of databases.
 
-## TODO
+## YouTube
 
-Copy model tests from Very FastAPI
+[YouTube](https://youtu.be/vcRB_pg__AQ)
