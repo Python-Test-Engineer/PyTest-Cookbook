@@ -15,11 +15,10 @@ It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTes
 - 03_indian_pythonista is another good series and most of the code samples are included. [Indian Pythonista](https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS){:target="_blank"}.
 - 04 not included
 - 05_mocks_patch contains a range of templates for mocking and patching. Acknowledgements and links included.
-- 06_async has some templates for async testing
 
 ## Install 
 
-- move to `PyTest_01_PYTEST`.
+- move to `PyTest_01_MAIN`.
 - create virtual environment as you wish.
 - run `pip install requirements.txt`.
 
@@ -27,9 +26,3 @@ It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTes
 
 - run `python -m pytest -vs`
 
-
-## TODO
-
-https://www.youtube.com/watch?v=ujRo8n0LsU4&list=PLWBKAf81pmOaP9naRiNAqug6EBnkPakvY&index=95
-
-mock with lru_cache override.
