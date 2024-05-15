@@ -1,6 +1,6 @@
 # PyTest Extended
 
-## About PyTest Extended
+## About 
 
 PyTest Extended is a set of separate and self contained test suites focussing on a more advanced aspect of PyTest.
 
