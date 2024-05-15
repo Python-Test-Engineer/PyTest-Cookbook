@@ -13,7 +13,7 @@ Test existence and integrity of tables, foreign keys, constraints etc.
 ## Uses: 
 
 - SQL Model
-- SQLModels's `inspect` feature.
+- SQLModel's `inspect` feature.
 
 ## Information:
 
