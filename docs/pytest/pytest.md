@@ -1,4 +1,10 @@
-# PyTest_01_PYTEST
+# PyTest_01_MAIN
+
+
+## YouTube
+
+[PyTest_01_MAIN](https://youtu.be/fqZ2y0Oxu_k)
+
 
 ## About
 
@@ -25,9 +31,6 @@ It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTes
 
 - run `python -m pytest -vs`
 
+## Repo
 
-## TODO
-
-https://www.youtube.com/watch?v=ujRo8n0LsU4&list=PLWBKAf81pmOaP9naRiNAqug6EBnkPakvY&index=95
-
-mock with lru_cache override.
+👉 [ PyTest_00_MAIN](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MAIN){target="_blank"}

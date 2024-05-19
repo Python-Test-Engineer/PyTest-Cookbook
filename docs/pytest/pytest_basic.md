@@ -2,17 +2,31 @@
 
 ## Set up
 
+See README.md
+
 This uses PyTest_00_MINIMAL and is a simple wiring of src folder for your code and an tests folder for PyTest.
 
 ![test-suite](../assets/images/pytest-00-minimal.png ){:style="width:520px;border-radius:10%;border: 5px solid #555;"}
 
 There is custom logging defined in pytest.ini that outputs to a `log` folder.
 
+One of the tests `test_03_logging.py` uses logging in its tests.
+
 - move to `PyTest_00_MINIMAL` folder and create a virtual environment, then install requirements.txt:
 
 ```
 pip install -r requirements.txt
 ```
+
+## Repo
+
+👉 [ PyTest_00_MINIMAL](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MINIMAL){target="_blank"}
+
+## YT video
+
+ [YouTube](https://youtu.be/a3aXbukAvKI)
+
+
 ## Contents
 
 src/sample.py has a very simple function to test.
@@ -36,4 +50,3 @@ python -m pytest
 python -m pytest -vs
 ```
 
-👉 [ PyTest_00_MINIMAL](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_00_MINIMAL){target="_blank"}
