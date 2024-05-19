@@ -37,10 +37,17 @@ extra:
 plugins:
   - search
   - mkdocstrings
-
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      archive: true
+      archive_name: All Articles
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - attr_list
   - codehilite
@@ -84,6 +91,8 @@ nav:
       - "About": "how_do_i/index.md"
       - "Topic01": "how_do_i/topic01.md"
       - "Topic02": "how_do_i/topic02.md"
+  - Blog:
+    - blog/index.md
   - "About Craig":
       - "Services": "craig/services.md"
       - "CV": "craig/cv.md"

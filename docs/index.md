@@ -96,3 +96,17 @@ Testing middleware with `override_settings`
 - https://www.youtube.com/watch?v=TTEEr4N-lKw
 
 
+:flag_be: :heart: :arrow_right: 
+
+
+```python
+# Hello world example (Python)
+print("Hello World!")
+zero_to_
+```
+
+!!! note
+ Example of a note.
+
+!!! tip "Custom title"
+ Example tip.
