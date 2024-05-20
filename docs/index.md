@@ -6,13 +6,11 @@ To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS compris
    
 1. Create virtual environment
 2. `pip install -r requirements.txt`
-3. `python -m pytest` to see the output of all the tests as below:
+3. `python -m pytest` 
 
-![Test results](./images/demo.png "Demo")
-
-![Items](./images/demo-items.png "Demo")
-
-![List test results](./images/demo.png "Demo")
+![Test results](./images/terminal-01.png "Demo")
+![Test results](./images/terminal-03.png "Demo")
+![Test results](./images/terminal-02.png "Demo")
 
 The frameworks have logging and other utilities installed to provide a complete framework.
 
@@ -82,7 +80,7 @@ I have made some videos to assist in using this book.
 
 These are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvkincV5XUzF9BeGsckrjb74){target="_blank"}.
 
-
+<!-- 
 
 ==================================================================
 ## TODO
@@ -109,4 +107,4 @@ zero_to_
  Example of a note.
 
 !!! tip "Custom title"
- Example tip.
+ Example tip. -->
