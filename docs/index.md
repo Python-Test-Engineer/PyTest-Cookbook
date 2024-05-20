@@ -8,7 +8,7 @@ To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS compris
 2. `pip install -r requirements.txt`
 3. `python -m pytest` to see the output of all the tests as below:
 
-![Test results](./images/demo-summary.png "Demo")
+![Test results](./images/demo.png "Demo")
 
 ![Items](./images/demo-items.png "Demo")
 
