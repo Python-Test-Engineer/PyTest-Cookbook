@@ -21,6 +21,10 @@ It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTes
 - 05_mocks_patch contains a range of templates for mocking and patching. Acknowledgements and links included.
 - 06_async has some templates for async testing
 
+## Repo
+
+[PyTest_01_MAIN](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_01_MAIN){target="_blank"}
+
 ## Install 
 
 - move to `PyTest_01_PYTEST`.
@@ -31,6 +35,4 @@ It builds on PyTest_00_MINIMAL with additional tests, detailing how to use PyTes
 
 - run `python -m pytest -vs`
 
-## Repo
 
-👉 [PyTest_01_MAIN](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_01_MAIN){target="_blank"}
