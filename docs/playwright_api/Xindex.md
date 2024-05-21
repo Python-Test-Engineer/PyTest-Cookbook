@@ -10,7 +10,7 @@ Playwright recommends using the official Playwright Pytest plugin to write end-t
 
 ## Install 
 
-- move to `TEST_SUITE_02_API_PLAYWRIGHT` 
+- move to `PyTest_02_API_PLAYWRIGHT` 
 - create virtual environment as you wish
 - run `pip install requirements_02.txt`
 - run `playwright install` to load in browsers. IMPORTANT.
