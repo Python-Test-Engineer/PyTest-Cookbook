@@ -1,6 +1,7 @@
 ## Instructions
 
-- cd TEST_SUITE_05_DJANGO.
+- cd [REPO](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK/tree/main/PyTest_05_DJANGO).
+
 - creater virtual env `python -m venv venv`.
 - pip install -r requirents.txt
 - run `playwright install` to load in playwright browsers.

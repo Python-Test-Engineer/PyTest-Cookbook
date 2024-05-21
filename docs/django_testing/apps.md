@@ -6,7 +6,7 @@ A compilation of various soruces in one project.
 
 Based on a TDD video series of Django by [Ssali Jonathan](https://www.youtube.com/watch?v=B7jM6XNLTIY&list=PLEt8Tae2spYlVZUBBEE9PtX-NXk_hw7o4&index=1){:target="_blank"}, I have extended it to include a PyTest folder as well as additional Django Unit Tests.
 
-## orm - temporarily removed as it classes with new 'ecommerce'
+<!-- ## orm - temporarily removed as it clashs with new 'ecommerce' -->
 
 Based on an ORM Deep Dive series by [BugBytes](https://www.youtube.com/playlist?list=PL-2EBeDYMIbQXKsyNweppuFptuogJe2L-){:target="_blank"}, the code for the 18+ videos was not included in the repo so I have added files for each of the videos. I have also included some of my own ORM scripts as well as others from  [Very Academy](https://www.youtube.com/c/veryacademy){:target="_blank"}.
 

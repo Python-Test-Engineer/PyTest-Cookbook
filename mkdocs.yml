@@ -83,7 +83,7 @@ nav:
       # - "Tox": "ci_integration/tox.md"
       - "Hypothesis": "hypothesis/index.md"
   - "Django Testing":
-      - "About": "django_testing/index.md"
+      # - "About": "django_testing/index.md"
       - "Setup": "django_testing/setup.md"
       - "Apps": "django_testing/apps.md"
       - "Tests": "django_testing/tests.md"
