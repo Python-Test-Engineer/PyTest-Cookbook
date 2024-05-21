@@ -36,8 +36,8 @@ The following are self-contained test frameworks and the tests can be easily add
 - PyTest_04_DB_TESTING - is a standalone test framework for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for these.
 - PyTest_05_DJANGO is its own unique testing framework built from a range of sources. 
 - PyTest_06_HYPOTHESIS is a standalone property based test framework that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.
-- PyTest_087_HOOKS - a set of projects using the various hooks of PyTest with written explanations.
-- PyTest_08_PLUGIN - an app tpo prodoce a distributable plugin of the 'lsort by test name' hook project as well as using PyTester to test the plugin itself.
+- PyTest_07_HOOKS - a set of projects using the various hooks of PyTest with written explanations.
+- PyTest_08_PLUGIN - an app tpo prodoce a distributable plugin of the 'sort by test name' hook project as well as using PyTester to test the plugin itself.
 - PyTest_09_CLI - testing a Typer CLI project.
 - PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS as well as uisng Tox to test our plugin across many Python versions.
 
