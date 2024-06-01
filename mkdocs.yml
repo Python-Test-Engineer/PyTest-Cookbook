@@ -64,24 +64,24 @@ markdown_extensions:
 nav:
   - "Home": "index.md"
 
-  - "PyTest Core":
+  - "PyTest Full Stack":
       - "About": "pytest/index.md"
-      - "PyTest Core": "pytest/pytest_core.md"
-      - "Minimal": "pytest/pytest_basic.md"
-      - "Main Suite": "pytest/pytest.md"
-      - "API Testing": "playwright_api/api.md"
+      # - "PyTest Core": "pytest/pytest_core.md"
+      # - "Minimal": "pytest/pytest_basic.md"
+      # - "Main Suite": "pytest/pytest.md"
+      # - "API Testing": "playwright_api/api.md"
       # - "e2e Testing": "playwright_api/playwright.md"
       # - "Testing Playgrounds": "playwright_api/testing_playgrounds.md"
-  - "PyTest Extended":
-      - "About": "pytest/pytest_extended.md"
-      - "DB Testing": "db_testing/testing.md"
-      - "Hooks": "pytest/pytest_hooks.md"
-      - "Hooks Ordering": "pytest/pytest_hooks_order.md"
-      - "Plugins": "pytest/pytest_plugins.md"
-      # - "CLI Apps": "pytest/cli.md"
-      - "CI Integration": "ci_integration/ci_github.md"
-      # - "Tox": "ci_integration/tox.md"
-      - "Hypothesis": "hypothesis/index.md"
+  # - "PyTest Extended":
+  #     - "About": "pytest/pytest_extended.md"
+  #     - "DB Testing": "db_testing/testing.md"
+  #     - "Hooks": "pytest/pytest_hooks.md"
+  #     - "Hooks Ordering": "pytest/pytest_hooks_order.md"
+  #     - "Plugins": "pytest/pytest_plugins.md"
+  # - "CLI Apps": "pytest/cli.md"
+  # - "CI Integration": "ci_integration/ci_github.md"
+  # - "Tox": "ci_integration/tox.md"
+  # - "Hypothesis": "hypothesis/index.md"
   - "Django Testing":
       # - "About": "django_testing/index.md"
       - "Setup": "django_testing/setup.md"

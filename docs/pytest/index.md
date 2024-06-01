@@ -1,6 +1,8 @@
-# PyTest
+# PyTest Full Stack - continually developing...
 
-## If we didn't have PyTest,  what might we do?
+## Configurable, templated
+
+A configurable, templated full stack Python PyTest Framework
 
 If we had to test a set of functions without PyTest, we might do the following:
 
@@ -16,20 +18,23 @@ PyTest does this and far more for us. It uses [Pluggy](https://github.com/pytest
 
 PyTest docs has a list of over 1000 plugins -  [PyTest Plugins](https://docs.pytest.org/en/7.1.x/reference/plugin_list.html){target="_blank"}.
 
-## PyTest incremental test suites
+## Full Stack
 
-There are four test suites that build on each other:
+This framework has tests covering:
 
-- PyTest_00_MINIMAL is a bare bone wiring of a src folder and tests with custom logging set up in pytest.ini
-- PyTest_01_MAIN is a comprehensive test suite with numerous template tests for most of the features of PyTest along with templates for mocking and patching. An async set of tests are also included. Combined with references to YT videos, and some utilities, this is a fundamental test suite.
-- PyTest_02_API_PLAYWRIGHT uses Playwright to carry out API tests as well as e23 or end user automated tests.
-- PyTest_03_BDD has an implementation of the `pytest-bdd` plugin for Behaviour Driven Testing/Development.
+- SQL Schemas for foreign keys, number of tables, check constraints etc...
+- Unit tests
+- Mocks, patches and monkey patches
+- API testing
+- End to End testing with Playwright
 
-## Stand alone test suites
+## YouTube videos
 
-The remaining test suites are all stand alone and do not contain any of the first four test suites.
+Videos are available at: [YouTube]([PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK))
 
-Test files can be ported to any of the test suites.
+## Repo
+
+The repo is available at: [PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
 
 ## Suggested use
 
