@@ -1,38 +1,32 @@
-# PyTest
+# PyTest Full Stack - continually developing...
 
-## If we didn't have PyTest,  what might we do?
+## Full Stack
 
-If we had to test a set of functions without PyTest, we might do the following:
+This framework has tests covering:
 
-- Write code in a test function.
-- Have a naming convention to detect testing functions.
-- Execute the test functions and store the assert value.
-- Add in some useful helpers to create a report, to add makers so that we can run tests selectively.
-- etc
+- SQL Schemas for foreign keys, number of tables, check constraints etc...
+- Unit tests
+- Mocks, patches and monkey patches
+- Behavior Driven Testing templates
+- API testing
+- End to End testing with Playwright
 
-PyTest does this and far more for us. It uses [Pluggy](https://github.com/pytest-dev/pluggy){target="_blank"}, to provide a plugin based architecture so that we can use a variety of plugins.
+## YouTube videos
 
-[pytest-dev](https://github.com/pytest-dev){target="_blank"} hosts a variety of plugins. 
+Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
 
-PyTest docs has a list of over 1000 plugins -  [PyTest Plugins](https://docs.pytest.org/en/7.1.x/reference/plugin_list.html){target="_blank"}.
+## Repo
 
-## PyTest incremental test suites
+The PyTest Full Stack repo is available here: [PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
 
-There are four test suites that build on each other:
+## Installation
 
-- PyTest_00_MINIMAL is a bare bone wiring of a src folder and tests with custom logging set up in pytest.ini
-- PyTest_01_MAIN is a comprehensive test suite with numerous template tests for most of the features of PyTest along with templates for mocking and patching. An async set of tests are also included. Combined with references to YT videos, and some utilities, this is a fundamental test suite.
-- PyTest_02_API_PLAYWRIGHT uses Playwright to carry out API tests as well as e23 or end user automated tests.
-- PyTest_03_BDD has an implementation of the `pytest-bdd` plugin for Behaviour Driven Testing/Development.
+- In your IDE open up the PyTest_01_FULL folder.
+- Create a virtual environment `python -m venv venv`.
+- Activate your virtual enviromnent: Windows `.\venv\Scripts\activte` or Mac `source venv\bin\activate`.
+- install requirements `pip install -r requirements.txt`.
+- for Playwright browsers run `playwright install`.
+- run all tests `python -m pytest -vs`.
+- There are around 200 templated tests.
+- The video series goes into features and utils -> [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
 
-## Stand alone test suites
-
-The remaining test suites are all stand alone and do not contain any of the first four test suites.
-
-Test files can be ported to any of the test suites.
-
-## Suggested use
-
-Start with PyTest_01_MAIN and once set up run `python -m pytest -vs` to see over a 100 tests run with `pytest-sugar` formatted output.
-
-The `02_py_coffee` folder in tests as well as `03_indian_pythonista` are two very good tutorials with accompanying YT videos.

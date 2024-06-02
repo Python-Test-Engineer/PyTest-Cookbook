@@ -26,24 +26,8 @@ Resources included are:
 
 These four are incremental, with each framework adding more functionality to the previous one:
 
-- PyTest_00_MINIMAL - a basic src folder wired to PyTest with custom logging and pytest-sugar console formating.
-- PyTest_01_PYTEST - as above but with a large number of ready made test templates demoing how to use PyTest along with templates for Mocking and Patching.
-- PyTest_02_API - as above with API testing and Playwright e2e/functional testing.
-- PyTest_03_BDD - as above with Behavior Driven testing that enables the use of native English test requirement files to be wired to PyTest and Behave Framework. BDD enables all stakeholders to work on these 'feature' test files in plain English which are then translated to Python test code.
-
-The following are self-contained test frameworks and the tests can be easily added to the previous frameworks, but are self-contained for clarity and ease of use:
-
-- PyTest_04_DB_TESTING - is a standalone test framework for testing database schemas such as foreigh keys, constraints, nullability etc. Uses SQLModel (SQLAlchemy + Pydantic) to inspect DB. Uses SQLite as test DB and this has some restricted schema information but there are tests for these.
-- PyTest_05_DJANGO is its own unique testing framework built from a range of sources. 
-- PyTest_06_HYPOTHESIS is a standalone property based test framework that can provide templates and resources on how to use property based testing. It can be thought of as very extensive parameter based testing to test edge cases and hone in on them.
-- PyTest_07_HOOKS - a set of projects using the various hooks of PyTest with written explanations.
-- PyTest_08_PLUGIN - an app tpo prodoce a distributable plugin of the 'sort by test name' hook project as well as using PyTester to test the plugin itself.
-- PyTest_09_CLI - testing a Typer CLI project.
-- PyTest_10_CI_CD - a CI/CD example to show how we can use GitHub actions to test our code base on multiple Python versions and OS as well as uisng Tox to test our plugin across many Python versions.
-
-## Authenticity
-
-Whilst developing this book, I came across one of the best resources for PyTest - [pytest-with-eric.com](https://pytest-with-eric.com/). Combined with the PyTest book by [Brian Okken](https://pythontest.com/), they have helped me gain a deeper understanding of PyTest.
+- PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright
+- PyTest_02_DJANGO is its own unique testing framework built from a range of sources. 
 
 I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.
 
