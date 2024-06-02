@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../django_testing/setup/">
+        <link rel="next" href="pytest_logging/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -360,15 +360,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurable_templated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurable, templated
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#full_stack" class="md-nav__link">
     <span class="md-ellipsis">
       Full Stack
@@ -396,9 +387,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested_use" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested use
+      Installation
     </span>
   </a>
   
@@ -408,6 +399,111 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pytest_ini.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytest.ini
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pytest_logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pytest_ini_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reading .ini files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pytest_custom_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom CSV Output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pytest_custom_terminal_reports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Console
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -609,6 +705,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../craig/courses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Courses
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../craig/contact/" class="md-nav__link">
         
   
@@ -657,15 +774,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurable_templated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurable, templated
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#full_stack" class="md-nav__link">
     <span class="md-ellipsis">
       Full Stack
@@ -693,9 +801,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#suggested_use" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Suggested use
+      Installation
     </span>
   </a>
   
@@ -720,19 +828,6 @@
 
 
 <h1 id="pytest_full_stack_-_continually_developing">PyTest Full Stack - continually developing...<a class="headerlink" href="#pytest_full_stack_-_continually_developing" title="Permanent link">&para;</a></h1>
-<h2 id="configurable_templated">Configurable, templated<a class="headerlink" href="#configurable_templated" title="Permanent link">&para;</a></h2>
-<p>A configurable, templated full stack Python PyTest Framework</p>
-<p>If we had to test a set of functions without PyTest, we might do the following:</p>
-<ul>
-<li>Write code in a test function.</li>
-<li>Have a naming convention to detect testing functions.</li>
-<li>Execute the test functions and store the assert value.</li>
-<li>Add in some useful helpers to create a report, to add makers so that we can run tests selectively.</li>
-<li>etc</li>
-</ul>
-<p>PyTest does this and far more for us. It uses <a href="https://github.com/pytest-dev/pluggy" target="_blank">Pluggy</a>, to provide a plugin based architecture so that we can use a variety of plugins.</p>
-<p><a href="https://github.com/pytest-dev" target="_blank">pytest-dev</a> hosts a variety of plugins. </p>
-<p>PyTest docs has a list of over 1000 plugins -  <a href="https://docs.pytest.org/en/7.1.x/reference/plugin_list.html" target="_blank">PyTest Plugins</a>.</p>
 <h2 id="full_stack">Full Stack<a class="headerlink" href="#full_stack" title="Permanent link">&para;</a></h2>
 <p>This framework has tests covering:</p>
 <ul>
@@ -744,12 +839,20 @@
 <li>End to End testing with Playwright</li>
 </ul>
 <h2 id="youtube_videos">YouTube videos<a class="headerlink" href="#youtube_videos" title="Permanent link">&para;</a></h2>
-<p>Videos are available at: <a href="[PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)">YouTube</a></p>
+<p>Videos are available here: <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">YouTube</a></p>
 <h2 id="repo">Repo<a class="headerlink" href="#repo" title="Permanent link">&para;</a></h2>
-<p>The repo is available at: <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK">PyTest Full Stack</a></p>
-<h2 id="suggested_use">Suggested use<a class="headerlink" href="#suggested_use" title="Permanent link">&para;</a></h2>
-<p>Start with PyTest_01_MAIN and once set up run <code>python -m pytest -vs</code> to see over a 100 tests run with <code>pytest-sugar</code> formatted output.</p>
-<p>The <code>02_py_coffee</code> folder in tests as well as <code>03_indian_pythonista</code> are two very good tutorials with accompanying YT videos.</p>
+<p>The PyTest Full Stack repo is available here: <a href="https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK">PyTest Full Stack</a></p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>In your IDE open up the PyTest_01_FULL folder.</li>
+<li>Create a virtual environment <code>python -m venv venv</code>.</li>
+<li>Activate your virtual enviromnent: Windows <code>.\venv\Scripts\activte</code> or Mac <code>source venv\bin\activate</code>.</li>
+<li>install requirements <code>pip install -r requirements.txt</code>.</li>
+<li>for Playwright browsers run <code>playwright install</code>.</li>
+<li>run all tests <code>python -m pytest -vs</code>.</li>
+<li>There are around 200 templated tests.</li>
+<li>The video series goes into features and utils -&gt; <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">YouTube</a></li>
+</ul>
 
 
 

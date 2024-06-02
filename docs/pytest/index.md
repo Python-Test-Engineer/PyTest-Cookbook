@@ -1,23 +1,5 @@
 # PyTest Full Stack - continually developing...
 
-## Configurable, templated
-
-A configurable, templated full stack Python PyTest Framework
-
-If we had to test a set of functions without PyTest, we might do the following:
-
-- Write code in a test function.
-- Have a naming convention to detect testing functions.
-- Execute the test functions and store the assert value.
-- Add in some useful helpers to create a report, to add makers so that we can run tests selectively.
-- etc
-
-PyTest does this and far more for us. It uses [Pluggy](https://github.com/pytest-dev/pluggy){target="_blank"}, to provide a plugin based architecture so that we can use a variety of plugins.
-
-[pytest-dev](https://github.com/pytest-dev){target="_blank"} hosts a variety of plugins. 
-
-PyTest docs has a list of over 1000 plugins -  [PyTest Plugins](https://docs.pytest.org/en/7.1.x/reference/plugin_list.html){target="_blank"}.
-
 ## Full Stack
 
 This framework has tests covering:
@@ -31,14 +13,20 @@ This framework has tests covering:
 
 ## YouTube videos
 
-Videos are available at: [YouTube]([PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK))
+Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
 
 ## Repo
 
-The repo is available at: [PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
+The PyTest Full Stack repo is available here: [PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
 
-## Suggested use
+## Installation
 
-Start with PyTest_01_MAIN and once set up run `python -m pytest -vs` to see over a 100 tests run with `pytest-sugar` formatted output.
+- In your IDE open up the PyTest_01_FULL folder.
+- Create a virtual environment `python -m venv venv`.
+- Activate your virtual enviromnent: Windows `.\venv\Scripts\activte` or Mac `source venv\bin\activate`.
+- install requirements `pip install -r requirements.txt`.
+- for Playwright browsers run `playwright install`.
+- run all tests `python -m pytest -vs`.
+- There are around 200 templated tests.
+- The video series goes into features and utils -> [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
 
-The `02_py_coffee` folder in tests as well as `03_indian_pythonista` are two very good tutorials with accompanying YT videos.
