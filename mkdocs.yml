@@ -63,7 +63,6 @@ markdown_extensions:
 # Page tree
 nav:
   - "Home": "index.md"
-
   - "PyTest Full Stack":
       - "About": "pytest/index.md"
       - "pytest.ini": "pytest/pytest_pytest.ini.md"
@@ -71,20 +70,7 @@ nav:
       - "Reading .ini files": "pytest/pytest_ini_files.md"
       - "Custom CSV Output": "pytest/pytest_custom_reports.md"
       - "Custom Console": "pytest/pytest_custom_terminal_reports.md"
-      # - "e2e Testing": "playwright_api/playwright.md"
-      # - "Testing Playgrounds": "playwright_api/testing_playgrounds.md"
-  # - "PyTest Extended":
-  #     - "About": "pytest/pytest_extended.md"
-  #     - "DB Testing": "db_testing/testing.md"
-  #     - "Hooks": "pytest/pytest_hooks.md"
-  #     - "Hooks Ordering": "pytest/pytest_hooks_order.md"
-  #     - "Plugins": "pytest/pytest_plugins.md"
-  # - "CLI Apps": "pytest/cli.md"
-  # - "CI Integration": "ci_integration/ci_github.md"
-  # - "Tox": "ci_integration/tox.md"
-  # - "Hypothesis": "hypothesis/index.md"
   - "Django Testing":
-      # - "About": "django_testing/index.md"
       - "Setup": "django_testing/setup.md"
       - "Apps": "django_testing/apps.md"
       - "Tests": "django_testing/tests.md"
