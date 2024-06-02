@@ -66,7 +66,7 @@ nav:
 
   - "PyTest Full Stack":
       - "About": "pytest/index.md"
-      - "pytest.ini": "pytest/pytest_ini.md"
+      - "pytest.ini": "pytest/pytest_pytest.ini.md"
       - "Logging": "pytest/pytest_logging.md"
       - "Reading .ini files": "pytest/pytest_ini_files.md"
       - "Custom CSV Output": "pytest/pytest_custom_reports.md"
