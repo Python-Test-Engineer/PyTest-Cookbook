@@ -13,11 +13,11 @@ This framework has tests covering:
 
 ## YouTube videos
 
-Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
+Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy) (being recorded in June 2024)
 
 ## Repo
 
-The PyTest Full Stack repo is available here: [PyTest Full Stack](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
+The PyTest Full Stack repo is available here: [PyTest Full Stack](https://github.com/Python-Test-Engineer/PyTest-Full-Stack)
 
 ## Installation
 

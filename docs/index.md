@@ -6,9 +6,9 @@ To provide a range of ready built and congfigurable FULL STACK PYTHON TEST FRAME
 
 Installation will require just a 1-2-3 of:
    
-1. Create virtual environment
-2. `pip install -r requirements.txt`
-3. `python -m pytest` and `playwright install`
+1. 'python -m venv venv` to create virtual environment.
+2. `pip install -r requirements.txt`.
+3. `playwright install` to load Playwright browsers.
 
 We use a number of hooks for utilities and featues.
 
