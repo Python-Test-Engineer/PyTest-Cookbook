@@ -41,7 +41,7 @@ Resources included are:
 These two main test frameworks:
 
 - PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright
-- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction).
+- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a Full-Stack test suite for Django).
 
 I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.
 
