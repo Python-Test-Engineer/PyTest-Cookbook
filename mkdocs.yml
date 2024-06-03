@@ -66,10 +66,7 @@ nav:
   - "PyTest Full Stack":
       - "About": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
-      # - "Logging": "pytest/pytest_logging.md"
-      # - "Reading .ini files": "pytest/pytest_ini_files.md"
-      # - "Custom CSV Output": "pytest/pytest_custom_reports.md"
-      # - "Custom Console": "pytest/pytest_custom_terminal_reports.md"
+      - "Tests": "pytest/pytest_tests.md"
   - "Django Testing":
       - "Setup": "django_testing/setup.md"
       - "Apps": "django_testing/apps.md"
