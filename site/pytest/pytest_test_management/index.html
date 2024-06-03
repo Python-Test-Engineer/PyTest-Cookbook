@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../pytest_tests/">
+      
+      
+        <link rel="next" href="../../django_testing/setup/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Books - PyTest Cookbook</title>
+        <title>Test Mangement - PyTest Cookbook</title>
       
     
     
@@ -73,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test_management" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Books
+              Test Mangement
             
           </span>
         </div>
@@ -265,17 +274,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -289,7 +300,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             PyTest Full Stack
@@ -303,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -324,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_full_stack_customise/" class="md-nav__link">
+      <a href="../pytest_full_stack_customise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -345,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_tests/" class="md-nav__link">
+      <a href="../pytest_tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -354,6 +365,85 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Test Mangement
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Test Mangement
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using_the_test_name_as_meta_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the test name as meta data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report_name_as_test_run_information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report name as test run information
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -614,6 +704,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using_the_test_name_as_meta_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the test name as meta data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report_name_as_test_run_information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report name as test run information
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -631,9 +749,30 @@
   
 
 
-  <h1>Books</h1>
-
-<p>A list of resources I have found useful.</p>
+<h1 id="test_management">Test Management<a class="headerlink" href="#test_management" title="Permanent link">&para;</a></h1>
+<h2 id="using_the_test_name_as_meta_data">Using the test name as meta data<a class="headerlink" href="#using_the_test_name_as_meta_data" title="Permanent link">&para;</a></h2>
+<p>If we name our tests with the following structure:</p>
+<p>test_0001_api_description</p>
+<p>We can programatically use the pytest_collection_modifyitems(items), where items is a list of tests, to extract out the following information:</p>
+<ul>
+<li>test id (0001).</li>
+<li>type of test, (api), which could be any 3 character code like dbm for database model, int for integrations, unt for unit etc</li>
+<li>we also get access to the nodeid and markers for each test with this hook.</li>
+</ul>
+<p>This can be loaded into a database and then combined with the output CSVs that have:</p>
+<ul>
+<li>test id</li>
+<li>test name</li>
+<li>any markers</li>
+<li>test node id which gives folder, parent folders up to tests folder</li>
+<li>test result</li>
+<li>test duration</li>
+</ul>
+<p>Docstrings can also be extracted and added to the database.</p>
+<h2 id="report_name_as_test_run_information">Report name as test run information<a class="headerlink" href="#report_name_as_test_run_information" title="Permanent link">&para;</a></h2>
+<p>Furthermore, as output test CSV files have the format of <code>report_2024-06-02-13-39-00_9496487.csv</code>, we can split the filename on '_'. giving us the date and time of the test  from the second item. This should be globally unique as it gives the time to the second, but to ensure global uniqueness, a randon intger between, 1_000_000 and 9_999_999 is added.</p>
+<p>This enable these data tables to be joined to create detailed test reporting. A sprint version number can also be added to create a history of tests by sprint.</p>
+<p>Extending the database with test creators, creation date, test modifier and modification date, we can create audit trails of tests.</p>
 
 
 

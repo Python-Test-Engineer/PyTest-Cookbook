@@ -67,7 +67,8 @@ nav:
       - "About": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
       - "Tests": "pytest/pytest_tests.md"
-  - "Django Testing":
+      - "Test Mangement": "pytest/pytest_test_management.md"
+  - "Django Testing": 
       - "Setup": "django_testing/setup.md"
       - "Apps": "django_testing/apps.md"
       - "Tests": "django_testing/tests.md"
