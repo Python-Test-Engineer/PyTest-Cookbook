@@ -76,8 +76,9 @@ For PyTest-Full-Stack framework:
 Download or git clone from [repo](https://github.com/https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
 
 
-For prettier general console output, Rich and PyBoxen, built on Rich, are used as well as pytest-sugar for the test results.
-file of test framework.
+For prettier general console output, Rich and PyBoxen, built on Rich, are used.
+
+PyTest-sugar, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have rich console output that is configurable and customisable.
 
 ## YouTube Videos
 
