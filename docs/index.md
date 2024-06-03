@@ -41,7 +41,7 @@ Resources included are:
 These two main test frameworks:
 
 - PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright
-- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. 
+- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction).
 
 I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.
 
@@ -53,15 +53,16 @@ Often I am a wrapper around someone else's effort and I try to add a different p
 
 I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester.
 
-I enjoy building Plugins and I an developing a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
+I enjoy building Plugins and I hae created a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
 
 Example plugins are:
 
 - CSV Lite Reporter
 - Export results to DB
 - Sorting, randomizing and deselecting tests
+- Customising the console report
 
-The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale ever two weeks and the cost would be $20USD approx.
+The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale ever two weeks and the cost would be $20 USD approx.
 
 ![PyTest - hoks and plugins](./images/udemy-hooks.png)
 
@@ -69,9 +70,11 @@ There is more information about me and my services [here](https://pytest-cookboo
 
 ## How best to use this book
 
+
+For PyTest-Full-Stack framework:
+
 Download or git clone from [repo](https://github.com/https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
 
-Each test framework has a README.md and there are more details and information there as necessary. For the API and Playwright test framework, you will neeed to run `playwright install` after Playwright is installed to load all the browsers.
 
 For prettier general console output, Rich and PyBoxen, built on Rich, are used as well as pytest-sugar for the test results.
 file of test framework.
