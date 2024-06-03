@@ -2,7 +2,9 @@
 
 ## Purpose of this book 
 
-To provide a range of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, comprising of over 180 test templates and references for developers to adapt to their own needs.
+To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, comprising of over 180 test templates and references for developers to adapt to their own needs.
+
+Links to resources I have found very helpful, as well as integration of these into the frameworks, are included.
 
 Installation will require just a 1-2-3 of:
    
