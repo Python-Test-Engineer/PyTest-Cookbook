@@ -1,4 +1,4 @@
-# PyTest Full Stack - continually developing...
+# PyTest Full Stack
 
 ## Full Stack
 
@@ -13,7 +13,7 @@ This framework has tests covering:
 
 ## YouTube videos
 
-Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy) (being recorded in June 2024)
+Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy) 
 
 ## Repo
 
