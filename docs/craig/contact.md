@@ -2,4 +2,4 @@
 
 ## Email
 
-<!-- mrcraigwest@hotmail.com -->
+You can contact me at this email: <iwswordpress@gmail.com>

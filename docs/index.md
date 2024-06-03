@@ -2,14 +2,30 @@
 
 ## Purpose of this book 
 
-To provide a range of ready built and congfigured PYTHON TEST FRAMEWORKS comprising of test templates and references for developers to adapt to their own needs, requiring just a 1-2-3 of:
+To provide a range of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, comprising of over 180 test templates and references for developers to adapt to their own needs.
+
+Installation will require just a 1-2-3 of:
    
 1. Create virtual environment
 2. `pip install -r requirements.txt`
-3. `python -m pytest` 
+3. `python -m pytest` and `playwright install`
+
+We use a number of hooks for utilities and featues.
+
+One of these is customising the terminal report and one can configure the output in a number of ways, explained in articles and videos.
+
+Here is a sample output:
+
+#### header sections
 
 ![Test results](./images/terminal-01.png "Demo")
+
+#### customised words for passed etc as well as adding icons and format word colour 
+
 ![Test results](./images/terminal-03.png "Demo")
+
+#### add sections to end of PyTest output 
+
 ![Test results](./images/terminal-02.png "Demo")
 
 The frameworks have logging and other utilities installed to provide a complete framework.
@@ -18,16 +34,14 @@ Resources included are:
 
 1. Links to helpful articles, videos and documentation. Converted and transcribed code of great YT videos where there is no code.
 
-2. A 'How do I...?' wiki of how to use PyTest and the frameworks.
-
 ## Test frameworks
 
 *See the README.md in root of each Test framework for detailed and up to date set up instructions.*
 
-These four are incremental, with each framework adding more functionality to the previous one:
+These two main test frameworks:
 
 - PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright
-- PyTest_02_DJANGO is its own unique testing framework built from a range of sources. 
+- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. 
 
 I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.
 
@@ -46,6 +60,10 @@ Example plugins are:
 - CSV Lite Reporter
 - Export results to DB
 - Sorting, randomizing and deselecting tests
+
+The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale ever two weeks and the cost would be $20USD approx.
+
+![PyTest - hoks and plugins](./images/udemy-hooks.png)
 
 There is more information about me and my services [here](https://pytest-cookbook.netlify.app/craig/).
 
