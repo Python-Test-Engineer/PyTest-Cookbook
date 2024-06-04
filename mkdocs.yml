@@ -67,8 +67,8 @@ nav:
       - "About": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
       - "Tests": "pytest/pytest_tests.md"
-      - "Test Mangement": "pytest/pytest_test_management.md"
-  - "Django Testing": 
+      - "Test Management": "pytest/pytest_test_management.md"
+  - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":
       - "Services": "craig/services.md"
