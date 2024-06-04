@@ -1,3 +1,2 @@
 # Blog
 
-Landing page
