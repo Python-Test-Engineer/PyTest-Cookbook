@@ -25,6 +25,12 @@ I have started recording videos of me go through the article and adding them to 
 
 Playlist [PyTest With Eric](https://www.youtube.com/playlist?list=PLsszRSbzjyvm5meFiH-rDU-YiC5kcOLcK)
 
+Articles videod:
+
+- 01 pytest-html
+- 02 suppress warnings
+- 03 read yaml files with argparse and typer and test
+
 ## 4. Hooks and Plugins
 
 For an advanced look at these topics, I have my course hosted on Udemy:
