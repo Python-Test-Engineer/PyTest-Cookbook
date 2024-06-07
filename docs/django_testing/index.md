@@ -2,7 +2,7 @@
 
 *Currently under construction...*
 
-Using the features of PyTest-Full-Stack, I am planning on developing an ecommerce Django app that will have testing as follows:
+Using the features of PyTest-Full-Stack, I am planning on developing an ecommerce Django app that will have PyTest Full Stack testing as follows:
 
 - SQL schemas
 - Model testing
