@@ -19,11 +19,13 @@ Tools:
 
 I offer on-demand, freelance services starting from 1/2 day blocks.
 
-As and when you need...
+As and when you need it...
+
+### Eligibility
 
 - UK National
 - Fluent English
 
-### Hybrid
+### On-site/Hybrid
 
 I am based in Brighton and enjoy on-site work as well as remote working.
