@@ -18,15 +18,15 @@ One of these is customising the terminal report and one can configure the output
 
 Here is a sample output:
 
-#### header sections
+## Custome header sections
 
 ![Test results](./images/terminal-01.png "Demo")
 
-#### customised words for passed etc as well as adding icons and format word colour 
+## Customised words, colours and icons
 
 ![Test results](./images/terminal-03.png "Demo")
 
-#### add sections to end of PyTest output 
+## Custom footer sections
 
 ![Test results](./images/terminal-02.png "Demo")
 

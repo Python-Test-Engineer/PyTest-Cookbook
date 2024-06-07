@@ -13,17 +13,17 @@ These are used to test that:
 
 Using SQLModel's inspect, we run tests on SQL schema to verify foreign keys, check constraints etc exist. Inspired by Very Academy's TDD Fast Api course.
 
-## 02_py_coffee
+## CoffeeBeforeArch 
 
-This is a great video series on PyTest. I have included the tests form his repo as part of the template tests. Links in repo.
+Located in `02_py_coffee` in PFS, this is a great video series on PyTest. I have included the tests form his repo as part of the template tests. Links in repo.
 
-https://www.youtube.com/playlist?list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS
+[CoffeeBeforeArch](https://www.youtube.com/playlist?list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS)
 
-## 03_indian_pythonista
+## Indian Pythonista
 
-Another great video series that has source code included.
+Located in `03_indian_pythonista` in PFS, this is another great video series that has source code included.
 
-https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS
+[Indian Pythonista](https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS)
 
 ## 05_mocks_patch
 

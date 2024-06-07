@@ -63,6 +63,7 @@ markdown_extensions:
 # Page tree
 nav:
   - "Home": "index.md"
+  - "Learn": learn.md
   - "PyTest Full Stack":
       - "About": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
