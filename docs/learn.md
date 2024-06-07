@@ -17,7 +17,7 @@ Located in `03_indian_pythonista` in PFS, this is another great video series tha
 
 ## 3. PyTest with Eric
 
-This is perhaps one of the best resources for PyTest, [PyTestWithEric](https://pytest-with-eric.com/), I am creating videos of them and incorporating the GitHub code to provide a second content delivery medium, explaing salient points.
+This is perhaps one of the best resources for PyTest, [PyTestWithEric](https://pytest-with-eric.com/), I am creating videos of them and incorporating the GitHub code to provide a second content delivery medium, explaining salient points.
 
 This is both for my own technical development and a way of creating a greater audience for this body of work.
 
