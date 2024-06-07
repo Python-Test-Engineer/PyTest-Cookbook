@@ -1,6 +1,6 @@
 # Tests
  
-## 00_check_setup
+## 00 check_setup
 
 These are used to test that:
 
