@@ -1,5 +1,7 @@
 # Contact me
 
-## Email
+Email: <iwswordpress@gmail.com>
 
-You can contact me at this email: <iwswordpress@gmail.com>
+<!-- ![Test results](../images/linkedin.png "LinkedIn") -->
+
+LinkedIn: [Craig West](https://www.linkedin.com/in/craig-west-0914b230b/)
