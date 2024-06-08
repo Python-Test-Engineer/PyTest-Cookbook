@@ -2,9 +2,6 @@
 
 - [Github CV](https://github.com/Python-Test-Engineer/)
 
-- [Github Repo](https://github.com/Python-Test-Engineer/PYTHON-TEST-FRAMEWORK)
-
-
 ![Logo](../assets/images/craig.jpg){:style="width:240px;border-radius:50%;border: 5px solid #555;"}
 
 <table>
