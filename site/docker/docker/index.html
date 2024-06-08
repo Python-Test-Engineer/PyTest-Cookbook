@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../../pytest/pytest_test_management/">
       
       
-        <link rel="next" href="../pytest_tests/">
+        <link rel="next" href="../../django_testing/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Customise - PyTest Cookbook</title>
+        <title>Docker - PyTest Cookbook</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how_to_configure_your_own_custom_pytest_full_stack" class="md-skip">
+        <a href="#pytest_and_docker" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Customise
+              Docker
             
           </span>
         </div>
@@ -334,11 +334,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytest/pytest_full_stack_customise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytest/pytest_tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytest/pytest_test_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test Management
   </span>
   
 
@@ -368,7 +431,7 @@
           
   
   <span class="md-ellipsis">
-    Customise
+    Docker
   </span>
   
 
@@ -379,7 +442,7 @@
         
   
   <span class="md-ellipsis">
-    Customise
+    Docker
   </span>
   
 
@@ -401,9 +464,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#please_see_the_videos_in_the_playlist" class="md-nav__link">
+  <a href="#demo_example" class="md-nav__link">
     <span class="md-ellipsis">
-      Please see the videos in the playlist
+      Demo example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other_plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other plugins
     </span>
   </a>
   
@@ -413,69 +485,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pytest_tests/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tests
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pytest_test_management/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Test Management
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../docker/docker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docker
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -704,9 +713,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#please_see_the_videos_in_the_playlist" class="md-nav__link">
+  <a href="#demo_example" class="md-nav__link">
     <span class="md-ellipsis">
-      Please see the videos in the playlist
+      Demo example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other_plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other plugins
     </span>
   </a>
   
@@ -730,17 +748,17 @@
   
 
 
-<h1 id="how_to_configure_your_own_custom_pytest_full_stack">How to configure your own custom PyTest Full Stack<a class="headerlink" href="#how_to_configure_your_own_custom_pytest_full_stack" title="Permanent link">&para;</a></h1>
-<h2 id="please_see_the_videos_in_the_playlist">Please see the videos in the playlist<a class="headerlink" href="#please_see_the_videos_in_the_playlist" title="Permanent link">&para;</a></h2>
-<p>YouTube playlist: <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">here</a></p>
-<p>This covers:</p>
+<h1 id="pytest_and_docker">PyTest and Docker<a class="headerlink" href="#pytest_and_docker" title="Permanent link">&para;</a></h1>
+<h2 id="demo_example">Demo example<a class="headerlink" href="#demo_example" title="Permanent link">&para;</a></h2>
+<p>PyTest-Full-Stack has an example using <code>pytest-docker</code>.</p>
+<p><em>Ensure docker desktop or equivalent is running!</em> 😬 </p>
+<p>Located in tests/docker. My usual folder naming of 70_docker is unacceptable so I just use docker.</p>
+<h2 id="other_plugins">Other plugins<a class="headerlink" href="#other_plugins" title="Permanent link">&para;</a></h2>
+<p>There are a number of docker plugins for pytest:</p>
 <ul>
-<li>pytest.ini settings for logging.</li>
-<li>how to read values from the config.ini files in the config folder.</li>
-<li>customise the report header in the console output.</li>
-<li>customising the test status words, colours and icons in the console output.</li>
-<li>adding a report section at end of console output.</li>
-<li>and more...</li>
+<li><code>pytest-docker-compose</code></li>
+<li><code>pytest-docker-tools</code></li>
+<li><code>docker-python-unittest-pytest</code> is a more DIY setup.</li>
 </ul>
 
 
