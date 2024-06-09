@@ -70,6 +70,7 @@ nav:
       - "Tests": "pytest/pytest_tests.md"
       - "Test Management": "pytest/pytest_test_management.md"
       - "Docker": "docker/docker.md"
+      - "Asides": "asides/asides.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":
