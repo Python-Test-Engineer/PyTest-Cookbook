@@ -12,3 +12,6 @@ This covers:
 - customising the test status words, colours and icons in the console output.
 - adding a report section at end of console output.
 - and more...
+
+<br>
+

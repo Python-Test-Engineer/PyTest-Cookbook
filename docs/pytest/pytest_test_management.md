@@ -30,3 +30,6 @@ Furthermore, as output test CSV files have the format of `report_2024-06-02-13-3
 This enable these data tables to be joined to create detailed test reporting. A sprint version number can also be added to create a history of tests by sprint.
 
 Extending the database with test creators, creation date, test modifier and modification date, we can create audit trails of tests.
+
+<br>
+

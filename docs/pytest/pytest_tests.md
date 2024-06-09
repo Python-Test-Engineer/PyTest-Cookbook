@@ -44,3 +44,6 @@ A great range of End2End tests from a variety of sources.
 A working example of using the pyTest-bdd, based on the awesome resource https://pytest-with-eric.com/ which is perhaps the best resource on PyTest available.
 
 In time, more templates will be added, hevily commented to aid understanding and with videos as and when possible.
+
+<br>
+

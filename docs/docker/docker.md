@@ -41,3 +41,11 @@ There are a number of docker plugins for pytest:
 - `pytest-docker-compose`
 - `pytest-docker-tools`
 - `docker-python-unittest-pytest` is a more DIY setup.
+
+## Docker-Postgres-PGAdmin-Adminer - to go
+
+I have a [YT video](https://www.youtube.com/watch?v=mipRKPHwlBk )and [repo](https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql) that I have tested many times myself. It also uses my custom Postgres image which has PGVector extension added, (Vector DB uses).   
+
+<br>
+
+

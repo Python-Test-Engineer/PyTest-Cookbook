@@ -18,3 +18,6 @@ In due course and for example:
 - Mocking - covering the area of mocking, patching and monkeypatching.
 - Docker - some ready to use set ups for use in mocking.
 - Test naming - how the use of structured test names can be use for test management.
+
+<br>
+
