@@ -791,21 +791,24 @@
 <p>PyTest-Full-Stack has an example using <code>pytest-docker</code>.</p>
 <p><em>Ensure docker desktop or equivalent is running!</em> 😬 </p>
 <p>Located in tests/docker. My usual folder naming of 70_docker is unacceptable so I just use docker.</p>
+<p>There is a YT video of this: <a href="https://youtu.be/43YKqEg49HI">pytest-docker</a></p>
 <h2 id="demo_two">Demo Two<a class="headerlink" href="#demo_two" title="Permanent link">&para;</a></h2>
-<p>Located in <code>tests/docker-pytest-poetry-fixtup-RUN_ISOL</code></p>
+<p>Located in <code>tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL</code></p>
 <p>This is based on the following article: </p>
 <ul>
 <li>https://dev.to/farcellier/test-beyond-your-code-with-docker-pytest-3b7g</li>
 </ul>
-<p>Copy and run from outside PyTest-Full-Stack.</p>
 <p>I have included it here for reference. It won't work with PyTest-Full-Stack and needs to be in its own separate suite.</p>
+<p>Open tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL in own IDE</p>
 <ul>
 <li><code>python -m venv venv</code></li>
 <li><code>.\venv\Scripts\activate</code> or Mac equivalent</li>
 <li><code>pip install -r requirements.txt</code></li>
+<li>ensure you remove REACTIVATE_ from front of test_postgressql_database.py so PyTest can discover this test. It was made invisible in this way so it did not collide and fail running of PFS default set up.</li>
 <li><code>python -m pytest .\tests\test_postgressql_database.py -vs</code></li>
 </ul>
 <p><em>Make sure docker is running!</em></p>
+<p>There is a YT video of this: <a href="https://youtu.be/m80NeP_Jtp4">pytest-docker</a></p>
 <h2 id="other_plugins">Other plugins<a class="headerlink" href="#other_plugins" title="Permanent link">&para;</a></h2>
 <p>There are a number of docker plugins for pytest:</p>
 <ul>
