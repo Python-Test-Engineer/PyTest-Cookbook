@@ -9,3 +9,9 @@ For example, we have a folder `docker` that is integrated into PFS, but we also 
 Essentially the convers of what we are doing in PFS.
 
 An example is tests/_isolated which has a docker-poetry-postgres-fixtup suite.
+
+## Planned asides
+
+- Docker
+- Pluggy
+- Mocking
