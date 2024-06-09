@@ -6,7 +6,8 @@ This framework has tests covering:
 
 - SQL Schemas for foreign keys, number of tables, check constraints etc...
 - Unit tests
-- Mocks, patches and monkey patches
+- Integrations tests
+- Mock, patch and monkeypatch templates
 - Behavior Driven Testing templates
 - API testing
 - End to End testing with Playwright
