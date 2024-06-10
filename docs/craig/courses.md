@@ -12,7 +12,9 @@ I am currently developing three courses:
 - Pluggy - building apps with a plugin architecture.
 - PyTest Django Full Stack - a DB <-> E2E testing of a generic ecommerce store.
 
-The aim is to make then generic, ready to go templates, that also dive deeper into aspects of Python.
+The aim is to make them generic, ready to go templates, that also dive deeper into aspects of Python.
+
+I am of the opinion that as developers we do not need to reinvent the wheel - it has (almost) all been done before - and that we should be free to use our creativity to build great proucts.
 
 The type of course I would want...
 

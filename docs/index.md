@@ -2,17 +2,15 @@
 
 ## Purpose of this book 
 
-To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, comprising of over 180 test templates and references for developers to adapt to their own needs.
+To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, (PFS),comprising of over 200 highly commented test templates for developers to adapt to their own needs along with resource links that have helped me greatly, as well as integration of these into the frameworks.
 
-Links to resources I have found very helpful, as well as integration of these into the frameworks, are included.
-
-Installation will require just a 1-2-3 of:
+The PyTest Full Stack suite has an installation tat will just require a 1-2-3 of:
    
-1. 'python -m venv venv` to create virtual environment.
-2. `pip install -r requirements.txt`.
-3. `playwright install` to load Playwright browsers.
+1. `pip install -r requirements.txt`.
+2. `playwright install` to load Playwright browsers.
+3. `python -m pytest -v` to run over 200 tests.
 
-We use a number of hooks for utilities and featues.
+PFS uses a number of hooks for utilities and featues.
 
 One of these is customising the terminal report and one can configure the output in a number of ways, explained in articles and videos.
 
@@ -34,7 +32,8 @@ The frameworks have logging and other utilities installed to provide a complete 
 
 Resources included are:
 
-1. Links to helpful articles, videos and documentation. Converted and transcribed code of great YT videos where there is no code.
+1. Links to helpful articles, videos and documentation. 
+2. Converted and transcribed code of great YT videos where there is no code.
 
 ## Test frameworks
 
@@ -43,7 +42,7 @@ Resources included are:
 These two main test frameworks:
 
 - PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright
-- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a Full-Stack test suite for Django).
+- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a PyTest-Full-Stack test suite for Django).
 
 I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.
 
@@ -53,16 +52,16 @@ Often I am a wrapper around someone else's effort and I try to add a different p
 
 ## About me
 
-I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester.
+I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester and Django developer.
 
-I enjoy building Plugins and I hae created a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
+I enjoy building Plugins and I have created a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
 
 Example plugins are:
 
 - CSV Lite Reporter
 - Export results to DB
 - Sorting, randomizing and deselecting tests
-- Customising the console report
+- Customising the console report with colors and icons
 
 The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale ever two weeks and the cost would be $20 USD approx.
 
@@ -77,10 +76,15 @@ For PyTest-Full-Stack framework:
 
 Download or git clone from [repo](https://github.com/https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
 
+Follow installation instructuins in the README.md or the 1-2-3 of:
+
+1. `pip install -r requirements.txt`.
+2. `playwright install` to load Playwright browsers.
+3. `python -m pytest -v` to run over 200 tests.
 
 For prettier general console output, Rich and PyBoxen, built on Rich, are used.
 
-PyTest-sugar, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have rich console output that is configurable and customisable.
+PyTest-sugar, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have a coloruful and decorative console output that is configurable and customisable (see YouTube guide below).
 
 ## YouTube Videos
 

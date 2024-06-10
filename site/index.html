@@ -874,15 +874,14 @@
 
 <h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - <em>recipes with videos and repos</em><a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
 <h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
-<p>To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, comprising of over 180 test templates and references for developers to adapt to their own needs.</p>
-<p>Links to resources I have found very helpful, as well as integration of these into the frameworks, are included.</p>
-<p>Installation will require just a 1-2-3 of:</p>
+<p>To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, (PFS),comprising of over 200 highly commented test templates for developers to adapt to their own needs along with resource links that have helped me greatly, as well as integration of these into the frameworks.</p>
+<p>The PyTest Full Stack suite has an installation tat will just require a 1-2-3 of:</p>
 <ol>
-<li>'python -m venv venv` to create virtual environment.</li>
 <li><code>pip install -r requirements.txt</code>.</li>
 <li><code>playwright install</code> to load Playwright browsers.</li>
+<li><code>python -m pytest -v</code> to run over 200 tests.</li>
 </ol>
-<p>We use a number of hooks for utilities and featues.</p>
+<p>PFS uses a number of hooks for utilities and featues.</p>
 <p>One of these is customising the terminal report and one can configure the output in a number of ways, explained in articles and videos.</p>
 <p>Here is a sample output:</p>
 <h2 id="custome_header_sections">Custome header sections<a class="headerlink" href="#custome_header_sections" title="Permanent link">&para;</a></h2>
@@ -894,27 +893,28 @@
 <p>The frameworks have logging and other utilities installed to provide a complete framework.</p>
 <p>Resources included are:</p>
 <ol>
-<li>Links to helpful articles, videos and documentation. Converted and transcribed code of great YT videos where there is no code.</li>
+<li>Links to helpful articles, videos and documentation. </li>
+<li>Converted and transcribed code of great YT videos where there is no code.</li>
 </ol>
 <h2 id="test_frameworks">Test frameworks<a class="headerlink" href="#test_frameworks" title="Permanent link">&para;</a></h2>
 <p><em>See the README.md in root of each Test framework for detailed and up to date set up instructions.</em></p>
 <p>These two main test frameworks:</p>
 <ul>
 <li>PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright</li>
-<li>PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a Full-Stack test suite for Django).</li>
+<li>PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a PyTest-Full-Stack test suite for Django).</li>
 </ul>
 <p>I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.</p>
 <p>As a curated list of resources, I have integrity over linking to the work of others and due credits are given.</p>
 <p>Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible as we each find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes very complex subjects.</p>
 <h2 id="about_me">About me<a class="headerlink" href="#about_me" title="Permanent link">&para;</a></h2>
-<p>I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester.</p>
-<p>I enjoy building Plugins and I hae created a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:</p>
+<p>I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester and Django developer.</p>
+<p>I enjoy building Plugins and I have created a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:</p>
 <p>Example plugins are:</p>
 <ul>
 <li>CSV Lite Reporter</li>
 <li>Export results to DB</li>
 <li>Sorting, randomizing and deselecting tests</li>
-<li>Customising the console report</li>
+<li>Customising the console report with colors and icons</li>
 </ul>
 <p>The course is available <a href="https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/">Udemy Hooks and Plugins course</a> and Udemy has a sale ever two weeks and the cost would be $20 USD approx.</p>
 <p><img alt="PyTest - hoks and plugins" src="images/udemy-hooks.png" /></p>
@@ -922,8 +922,14 @@
 <h2 id="how_best_to_use_this_book">How best to use this book<a class="headerlink" href="#how_best_to_use_this_book" title="Permanent link">&para;</a></h2>
 <p>For PyTest-Full-Stack framework:</p>
 <p>Download or git clone from <a href="https://github.com/https://github.com/Python-Test-Engineer/PyTest-Full-Stack">repo</a>.</p>
+<p>Follow installation instructuins in the README.md or the 1-2-3 of:</p>
+<ol>
+<li><code>pip install -r requirements.txt</code>.</li>
+<li><code>playwright install</code> to load Playwright browsers.</li>
+<li><code>python -m pytest -v</code> to run over 200 tests.</li>
+</ol>
 <p>For prettier general console output, Rich and PyBoxen, built on Rich, are used.</p>
-<p>PyTest-sugar, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have rich console output that is configurable and customisable.</p>
+<p>PyTest-sugar, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have a coloruful and decorative console output that is configurable and customisable (see YouTube guide below).</p>
 <h2 id="youtube_videos">YouTube Videos<a class="headerlink" href="#youtube_videos" title="Permanent link">&para;</a></h2>
 <p>I have made some videos to assist in using this book.</p>
 <p>These are available <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy" target="_blank">here</a>.</p>
