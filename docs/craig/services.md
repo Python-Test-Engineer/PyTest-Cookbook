@@ -28,7 +28,11 @@ As and when you need it...
 
 ## On-site/Hybrid
 
-I am based in Brighton and enjoy on-site work as well as remote working.
+I am based in Brighton and enjoy (local) on-site work as well as working from my home office.
+
+## Outside of tech...
+
+I enjoy working in community kitchens and love laughter, creating, doing and trying to work out why things are funny.
 
 <br>
 
