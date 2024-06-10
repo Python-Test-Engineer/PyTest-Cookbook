@@ -19,7 +19,10 @@ Tools:
 
 I offer on-demand, freelance services starting from 1/2 day blocks.
 
-As and when you need it...
+*As and when you need it...*
+
+Tech is a way of life not just a job and I strive to have enthusiasm and passion for the projects I work on.
+
 
 ## Eligibility
 
