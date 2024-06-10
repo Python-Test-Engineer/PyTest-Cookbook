@@ -6,10 +6,9 @@ The course [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-
 
 ![PyTest - hoks and plugins](../images/udemy-hooks.png)
 
-I am currently developing three courses:
+I am currently developing two courses:
 
 - Python - mock, patch and monkeypatch.
-- Pluggy - building apps with a plugin architecture.
 - PyTest Django Full Stack - a DB <-> E2E testing of a generic ecommerce store.
 
 The aim is to make them generic, ready to go templates, that also dive deeper into aspects of Python.
