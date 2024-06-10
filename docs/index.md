@@ -16,7 +16,7 @@ One of these is customising the terminal report and one can configure the output
 
 Here is a sample output:
 
-## Custome header sections
+## Custom header sections
 
 ![Test results](./images/terminal-01.png "Demo")
 
