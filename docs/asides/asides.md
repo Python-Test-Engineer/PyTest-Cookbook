@@ -12,6 +12,11 @@ An example is tests/_isolated_suites which has a docker-postgres-fixtup suite.
 
 ## Planned asides
 
+<<<<<<< HEAD
+=======
+In due course and for example:
+
+>>>>>>> 0426728ef4b39e961c93ab4340d26ad92dcb7211
 - Mocking - covering the area of mocking, patching and monkeypatching.
 - Docker - some ready to use set ups for use in mocking.
 - Test naming - how the use of structured test names can be use for test management.
