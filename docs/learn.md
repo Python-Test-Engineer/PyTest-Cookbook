@@ -1,6 +1,8 @@
 # Learning PyTest 
 
+I have made some videos to assist in using this PyTest Cookbook and how to customise the hooks and plugins used to create custom terminal reports and custom CSV files.
 
+These videos are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy){target="_blank"}.
 
 ## Suggested path
 
@@ -41,8 +43,6 @@ The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/c
 
 ![PyTest - hoks and plugins](./images/udemy-hooks.png)
 
-I have made some videos to assist in using this PyTest Cookbook and how to customise the hooks and plugins used to create custom terminal reports and custom CSV files:
 
-These are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy){target="_blank"}.
 
 
