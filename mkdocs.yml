@@ -64,9 +64,10 @@ markdown_extensions:
 nav:
   - "Home": "index.md"
   - "Learn": learn.md
-  - "Asides": "asides/asides.md"
+  - "Asides":
+      - "About": "asides/asides.md"
+      - "Pluggy": "asides/pluggy.md"
   - "PyTest Full Stack":
-      - "About": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
       - "Tests": "pytest/pytest_tests.md"
       - "Test Management": "pytest/pytest_test_management.md"

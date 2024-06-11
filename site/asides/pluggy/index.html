@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../pytest/pytest_test_management/">
+        <link rel="prev" href="../asides/">
       
       
-        <link rel="next" href="../../django_testing/">
+        <link rel="next" href="../../pytest/pytest_full_stack_customise/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Docker - PyTest Cookbook</title>
+        <title>Pluggy - PyTest Cookbook</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pytest_and_docker" class="md-skip">
+        <a href="#pluggy" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker
+              Pluggy
             
           </span>
         </div>
@@ -294,17 +294,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -318,7 +320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Asides
@@ -332,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/asides/" class="md-nav__link">
+      <a href="../asides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -350,10 +352,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../asides/pluggy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pluggy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -362,6 +384,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" class="md-nav__link">
+    <span class="md-ellipsis">
+      About
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yt_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      YT Video
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -378,19 +447,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -404,7 +471,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             PyTest Full Stack
@@ -478,30 +545,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Docker
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../docker/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,62 +557,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#demo_one" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo One
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo_two" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo Two
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other_plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other plugins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-postgres-pgadmin-adminer_-_to_go" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker-Postgres-PGAdmin-Adminer - to go
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -794,36 +785,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#demo_one" class="md-nav__link">
+  <a href="#about" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo One
+      About
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#demo_two" class="md-nav__link">
+  <a href="#repo" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo Two
+      Repo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#other_plugins" class="md-nav__link">
+  <a href="#yt_video" class="md-nav__link">
     <span class="md-ellipsis">
-      Other plugins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-postgres-pgadmin-adminer_-_to_go" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker-Postgres-PGAdmin-Adminer - to go
+      YT Video
     </span>
   </a>
   
@@ -847,39 +829,13 @@
   
 
 
-<h1 id="pytest_and_docker">PyTest and Docker<a class="headerlink" href="#pytest_and_docker" title="Permanent link">&para;</a></h1>
-<h2 id="demo_one">Demo One<a class="headerlink" href="#demo_one" title="Permanent link">&para;</a></h2>
-<p>PyTest-Full-Stack has an example using <code>pytest-docker</code>.</p>
-<p><em>Ensure docker desktop or equivalent is running!</em> 😬 </p>
-<p>Located in tests/docker. My usual folder naming of 70_docker is unacceptable so I just use docker.</p>
-<p>There is a YT video of this: <a href="https://youtu.be/43YKqEg49HI">pytest-docker</a></p>
-<h2 id="demo_two">Demo Two<a class="headerlink" href="#demo_two" title="Permanent link">&para;</a></h2>
-<p>Located in <code>tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL</code></p>
-<p>This is based on the following article: </p>
-<ul>
-<li>https://dev.to/farcellier/test-beyond-your-code-with-docker-pytest-3b7g</li>
-</ul>
-<p>I have included it here for reference. It won't work with PyTest-Full-Stack and needs to be in its own separate suite.</p>
-<p>Open tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL in own IDE</p>
-<ul>
-<li><code>python -m venv venv</code></li>
-<li><code>.\venv\Scripts\activate</code> or Mac equivalent</li>
-<li><code>pip install -r requirements.txt</code></li>
-<li>ensure you remove REACTIVATE_ from front of test_postgressql_database.py so PyTest can discover this test. It was made invisible in this way so it did not collide and fail running of PFS default set up.</li>
-<li><code>python -m pytest .\tests\test_postgressql_database.py -vs</code></li>
-</ul>
-<p><em>Make sure docker is running!</em></p>
-<p>There is a YT video of this: <a href="https://youtu.be/m80NeP_Jtp4">pytest-docker</a></p>
-<h2 id="other_plugins">Other plugins<a class="headerlink" href="#other_plugins" title="Permanent link">&para;</a></h2>
-<p>There are a number of docker plugins for pytest:</p>
-<ul>
-<li><code>pytest-docker-compose</code></li>
-<li><code>pytest-docker-tools</code></li>
-<li><code>docker-python-unittest-pytest</code> is a more DIY setup.</li>
-</ul>
-<h2 id="docker-postgres-pgadmin-adminer_-_to_go">Docker-Postgres-PGAdmin-Adminer - to go<a class="headerlink" href="#docker-postgres-pgadmin-adminer_-_to_go" title="Permanent link">&para;</a></h2>
-<p>I have a <a href="https://www.youtube.com/watch?v=mipRKPHwlBk">YT video</a>and <a href="https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql">repo</a> that I have tested many times myself. It also uses my custom Postgres image which has PGVector extension added, (Vector DB uses).   </p>
-<p><br></p>
+<h1 id="pluggy">Pluggy<a class="headerlink" href="#pluggy" title="Permanent link">&para;</a></h1>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
+<p>I have uploaded a video and repo where I have encoded the 'complete example' in the docs and added a second plugin so that the host can be run with two plugins extending its functionality.</p>
+<h2 id="repo">Repo<a class="headerlink" href="#repo" title="Permanent link">&para;</a></h2>
+<p>A tested project is available here: <a href="https://github.com/Python-Test-Engineer/yt-eggsample-demo">GiHub</a></p>
+<h2 id="yt_video">YT Video<a class="headerlink" href="#yt_video" title="Permanent link">&para;</a></h2>
+<p>There is an explainer video (7mins) to walk through installation and running: <a href="https://www.youtube.com/watch?v=6CqINfl9OMY">YouTube</a></p>
 
 
 
