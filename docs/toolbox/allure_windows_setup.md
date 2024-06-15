@@ -8,7 +8,16 @@ I used the following video:
 
 My video is here:
 
-[Install Java and Allure](https://youtu.be/rSBF74Ydm58)
+[Install Java](https://youtu.be/rSBF74Ydm58)
+
+To install Allure: 
+
+[Windows Install](https://allurereport.org/docs/install-for-windows/)
+
+Get a version you want.
+
+I have a video on installing Allure and using https://pytest-with-eric.com/reporting/pytest-allure-report/ to run reports here (to be added shortly)
+
 
 
 
