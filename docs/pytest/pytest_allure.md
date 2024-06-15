@@ -1,6 +1,6 @@
 # Allure Reporting - Windows
 
-A fine article, as ever, is https://pytest-with-eric.com/reporting/pytest-allure-report/
+This has not been installed in PyTest-Full-Stack but a fine article, as ever, is https://pytest-with-eric.com/reporting/pytest-allure-report/.
 
 You will need Allure to run this repo and Java needs to be installed.
 
