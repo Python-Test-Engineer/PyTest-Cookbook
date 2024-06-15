@@ -8,5 +8,7 @@ I used the following video:
 
 My video is here:
 
+[Install Java and Allure](https://youtu.be/rSBF74Ydm58)
+
 
 
