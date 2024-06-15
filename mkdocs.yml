@@ -72,7 +72,9 @@ nav:
   - "Asides":
       - "About": "asides/asides.md"
       - "Pluggy": "asides/pluggy.md"
-  - "Toolbox": "toolbox/index.md"
+  - "Toolbox":
+      - "About": "toolbox/index.md"
+      - "Allure Windows ": "toolbox/allure_windows_setup.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":
