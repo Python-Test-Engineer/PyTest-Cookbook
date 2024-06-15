@@ -17,9 +17,4 @@ To install Allure:
 - For Allure, download the zip of the version you want.
 - Unzip and place in a location of your choice.
 - Add the path in environment variables. Mine was C:\allure\bin
-
-
-
-
-
-
+<br>
