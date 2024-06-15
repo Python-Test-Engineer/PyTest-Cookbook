@@ -14,9 +14,13 @@ To install Allure:
 
 [Windows Install](https://allurereport.org/docs/install-for-windows/)
 
-Get a version you want.
+[Allure Install](https://www.youtube.com/watch?v=Y4S2UUPsNP4)
 
-I have a video on installing Allure and using https://pytest-with-eric.com/reporting/pytest-allure-report/ to run reports here (to be added shortly)
+- For Allure, download the zip of the version you want.
+- Unzip and place in a location of your choice.
+- Add the path in environment variables. Mine was C:\allure\bin
+
+
 
 
 
