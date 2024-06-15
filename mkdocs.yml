@@ -69,6 +69,7 @@ nav:
       - "Tests": "pytest/pytest_tests.md"
       - "Test Management": "pytest/pytest_test_management.md"
       - "Docker": "docker/docker.md"
+      - "Allure": "pytest/pytest_allure.md"
   - "Asides":
       - "About": "asides/asides.md"
       - "Pluggy": "asides/pluggy.md"
