@@ -12,8 +12,6 @@ My video is here:
 
 To install Allure: 
 
-[Windows Install](https://allurereport.org/docs/install-for-windows/)
-
 [Allure Install](https://www.youtube.com/watch?v=Y4S2UUPsNP4)
 
 - For Allure, download the zip of the version you want.
