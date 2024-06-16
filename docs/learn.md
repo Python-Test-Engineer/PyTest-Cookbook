@@ -34,6 +34,9 @@ Articles videod:
 - 01 pytest-html
 - 02 suppress warnings
 - 03 read yaml files with argparse and typer and test
+- 04 transactions with SQL Model
+- 05 setting up allure reporting
+- 06 automated testing with GitHub actions
 
 ## 4. Hooks and Plugins
 
