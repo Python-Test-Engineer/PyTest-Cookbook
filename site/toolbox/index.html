@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../pytest_tests/">
+        <link rel="prev" href="../asides/pluggy/">
       
       
-        <link rel="next" href="../../docker/docker/">
+        <link rel="next" href="allure_windows_setup/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>Test Management - PyTest Cookbook</title>
+        <title>About - PyTest Cookbook</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../assets/css/custom.css">
+      <link rel="stylesheet" href="../assets/css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#test_management" class="md-skip">
+        <a href="#toolbox" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href=".." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Test Management
+              About
             
           </span>
         </div>
@@ -227,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href=".." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -277,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learn/" class="md-nav__link">
+      <a href="../learn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -294,19 +294,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -320,7 +318,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             PyTest Full Stack
@@ -334,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest_full_stack_customise/" class="md-nav__link">
+      <a href="../pytest/pytest_full_stack_customise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest_tests/" class="md-nav__link">
+      <a href="../pytest/pytest_tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,30 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Test Management
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../pytest/pytest_test_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,44 +383,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using_the_test_name_as_meta_data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the test name as meta data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#report_name_as_test_run_information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Report name as test run information
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -455,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker/" class="md-nav__link">
+      <a href="../docker/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -476,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest_allure/" class="md-nav__link">
+      <a href="../pytest/pytest_allure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/asides/" class="md-nav__link">
+      <a href="../asides/asides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/pluggy/" class="md-nav__link">
+      <a href="../asides/pluggy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,17 +525,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -609,7 +551,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Toolbox
@@ -620,10 +562,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../toolbox/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -632,6 +583,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -644,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/allure_windows_setup/" class="md-nav__link">
+      <a href="allure_windows_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/docker_postgres_setup/" class="md-nav__link">
+      <a href="docker_postgres_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django_testing/" class="md-nav__link">
+      <a href="../django_testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/services/" class="md-nav__link">
+      <a href="../craig/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/cv/" class="md-nav__link">
+      <a href="../craig/cv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/courses/" class="md-nav__link">
+      <a href="../craig/courses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/contact/" class="md-nav__link">
+      <a href="../craig/contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,32 +847,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using_the_test_name_as_meta_data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the test name as meta data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#report_name_as_test_run_information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Report name as test run information
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -937,31 +863,9 @@
   
 
 
-<h1 id="test_management">Test Management<a class="headerlink" href="#test_management" title="Permanent link">&para;</a></h1>
-<h2 id="using_the_test_name_as_meta_data">Using the test name as meta data<a class="headerlink" href="#using_the_test_name_as_meta_data" title="Permanent link">&para;</a></h2>
-<p>If we name our tests with the following structure:</p>
-<p>test_0001_api_description</p>
-<p>We can programatically use the pytest_collection_modifyitems(items), where items is a list of tests, to extract out the following information:</p>
-<ul>
-<li>test id (0001).</li>
-<li>type of test, (api), which could be any 3 character code like dbm for database model, int for integrations, unt for unit etc</li>
-<li>we also get access to the nodeid and markers for each test with this hook.</li>
-</ul>
-<p>This can be loaded into a database and then combined with the output CSVs that have:</p>
-<ul>
-<li>test id</li>
-<li>test name</li>
-<li>any markers</li>
-<li>test node id which gives folder, parent folders up to tests folder</li>
-<li>test result</li>
-<li>test duration</li>
-</ul>
-<p>Docstrings can also be extracted and added to the database.</p>
-<h2 id="report_name_as_test_run_information">Report name as test run information<a class="headerlink" href="#report_name_as_test_run_information" title="Permanent link">&para;</a></h2>
-<p>Furthermore, as output test CSV files have the format of <code>report_2024-06-02-13-39-00_9496487.csv</code>, we can split the filename on '_'. giving us the date and time of the test  from the second item. This should be globally unique as it gives the time to the second, but to ensure global uniqueness, a randon intger between, 1_000_000 and 9_999_999 is added.</p>
-<p>This enable these data tables to be joined to create detailed test reporting. A sprint version number can also be added to create a history of tests by sprint.</p>
-<p>Extending the database with test creators, creation date, test modifier and modification date, we can create audit trails of tests.</p>
-<p><br></p>
+<h1 id="toolbox">Toolbox<a class="headerlink" href="#toolbox" title="Permanent link">&para;</a></h1>
+<p>This section is for stand alone projects that offer tools that QA Test Engineers may use but are not part of PyTest Full Stack.</p>
+<p>They can be integrated if required.</p>
 
 
 
@@ -1028,10 +932,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
