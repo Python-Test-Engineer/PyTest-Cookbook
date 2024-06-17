@@ -14,7 +14,7 @@ The repo is here: [GitHub](https://github.com/Python-Test-Engineer/yt-docker-pos
 
 There are a number of ways to set up a volume.
 
-For me, the following saved the Postgress data:
+For me, the following saved the Postgres data:
 
 ```
 volumes:
