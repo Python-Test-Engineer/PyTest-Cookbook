@@ -33,6 +33,10 @@ Tech is a way of life not just a job and I strive to have enthusiasm and passion
 
 I am based in Brighton and enjoy (local) on-site work as well as working from my home office.
 
+## Volunteer Coach
+
+I am a volunteer coach with [Codebar Brighton](https://codebar.io/brighton).
+
 ## Outside of tech...
 
 I enjoy working in community kitchens and love laughter, creating, doing and trying to work out why things are funny.
