@@ -65,6 +65,7 @@ nav:
   - "Home": "index.md"
   - "Learn": learn.md
   - "PyTest Full Stack":
+      - "About": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
       - "Tests": "pytest/pytest_tests.md"
       - "Test Management": "pytest/pytest_test_management.md"
@@ -76,7 +77,8 @@ nav:
   - "Toolbox":
       - "About": "toolbox/index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
-      - "Docker Postgres ": "toolbox/docker_postgres_setup.md"
+      - "Docker Postgres": "toolbox/docker_postgres_setup.md"
+      - "Pydantic": "toolbox/pytest_pydantic.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":

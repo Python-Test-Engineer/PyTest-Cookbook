@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../allure_windows_setup/">
+        <link rel="prev" href="../docker_postgres_setup/">
       
       
-        <link rel="next" href="../pytest_pydantic/">
+        <link rel="next" href="../../django_testing/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Docker Postgres - PyTest Cookbook</title>
+        <title>Pydantic - PyTest Cookbook</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker_postgress_pgadmin_adminer" class="md-skip">
+        <a href="#pydantic_utilities" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Postgres
+              Pydantic
             
           </span>
         </div>
@@ -625,6 +625,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_postgres_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Postgres
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -641,33 +662,12 @@
         
   
   <span class="md-ellipsis">
-    Docker Postgres
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pytest_pydantic/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
     Pydantic
   </span>
   
 
       </a>
+      
     </li>
   
 
@@ -905,21 +905,9 @@
   
 
 
-<h1 id="docker_postgress_pgadmin_adminer">Docker Postgress PgAdmin Adminer<a class="headerlink" href="#docker_postgress_pgadmin_adminer" title="Permanent link">&para;</a></h1>
-<p>This uses my Postgres image that has the VectorDB extension installed, (for semantic search).</p>
-<p>It has both PgAdmin and Adminer as Postgress clients.</p>
-<p>There are range of SQL Crud files included so that you have Python-Docker-Postgres working.</p>
-<p>I had some issues with this type of set up but came up with my own docker-compose file.</p>
-<p><a href="https://www.youtube.com/watch?v=mipRKPHwlBk&amp;list=PLsszRSbzjyvmgwrK911sdv03peQlGirym">YouTube Video</a></p>
-<p>The repo is here: <a href="https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql">GitHub</a></p>
-<p>There are a number of ways to set up a volume.</p>
-<p>For me, the following saved the Postgres data:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>volumes:
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   - ./db-data/:/var/lib/postgresql/data/
-</span></code></pre></div>
-<p>and it uses the default storage location for data in Postgres.</p>
-<p>Using the named volume approach gave me a few issues.</p>
-<p><br></p>
+<h1 id="pydantic_utilities">Pydantic Utilities<a class="headerlink" href="#pydantic_utilities" title="Permanent link">&para;</a></h1>
+<p>I have a number of utilities based on Pydantic that can be of use.</p>
+<p>These will be added to the toolbox in due course...</p>
 
 
 
