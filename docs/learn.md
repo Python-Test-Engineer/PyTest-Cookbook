@@ -1,10 +1,9 @@
-# Learning PyTest 
+# Learning PyTest - Suggested path
 
 I have made some videos to assist in using this PyTest Cookbook and how to customise the hooks and plugins used to create custom terminal reports and custom CSV files.
 
 These videos are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy){target="_blank"}.
 
-## Suggested path
 
 ## 1. CoffeeBeforeArch 
 
