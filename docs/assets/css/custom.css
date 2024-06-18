@@ -1,3 +1,9 @@
+
+.md-nav__title {
+    font-size: 22px;
+    font-weight: 800;
+
+}
 p, li {
     font-size: 20px;}
 

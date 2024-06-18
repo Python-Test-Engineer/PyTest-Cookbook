@@ -84,7 +84,7 @@ Follow installation instructions in the README.md or the 1-2-3 of:
 
 For prettier general console output, Rich and PyBoxen, built on Rich, are used.
 
-PyTest-sugar, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have a coloruful and decorative console output that is configurable and customisable (see YouTube guide below).
+`pytest-sugar`, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have a coloruful and decorative console output that is configurable and customisable (see YouTube guide below).
 
 ## YouTube Videos
 
