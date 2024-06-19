@@ -1,18 +1,6 @@
-# Django testing
+# PyTest Django Full Stack
 
-*Currently under construction...*
+I have decided to produce a book or technical manual on Full Stack Django Testing, with a companion video course.
 
-Using the features of PyTest-Full-Stack, I am planning on developing an ecommerce Django app that will have PyTest Full Stack testing as follows:
-
-- SQL schemas
-- Model testing
-- Forms and views testing
-- API testing
-- E2E on the website using Playwright
-
-This will be collated from a great range of sources and be, hopefully, a complete test framework for Django which one can use as a base for one's own projects.
-
-I would also like to introduce Test Run Management by logging test runs etc into the Django DB so that we can use the app to manage data from test runs.
-
-<br>
+This will be in its own site and the link will be added here in due course.
 

@@ -77,6 +77,7 @@ nav:
   - "Toolbox":
       - "About": "toolbox/index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
+      - "Docker": "toolbox/docker.md"
       - "Docker Postgres": "toolbox/docker_postgres_setup.md"
       - "Pydantic": "toolbox/pytest_pydantic.md"
   - "Django Testing":
