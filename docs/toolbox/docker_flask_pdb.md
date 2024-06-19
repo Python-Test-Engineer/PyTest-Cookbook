@@ -4,7 +4,7 @@ This is inspired by the excellent courst 'Python in Container'.
 
 We build a flask image and this is used as one layer for another image for testing.
 
-An explainer video is here: [YouTube]().
+An explainer video is here: [YouTube Video](https://youtu.be/Jsf5S8cZj1Y).
 
 The repo is [here](https://github.com/Python-Test-Engineer/yt-docker-flask-pytest-pdb).
 
