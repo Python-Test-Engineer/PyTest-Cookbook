@@ -77,12 +77,9 @@ nav:
   - "Toolbox":
       - "About": "toolbox/toolbox_index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
-<<<<<<< HEAD
       - "Docker Postgres": "toolbox/docker_postgres_setup.md"
+      - "PyTest-Docker Plugin": "toolbox/pytest_docker.md"
       - "Docker PyTest Image": "toolbox/docker_flask_pdb.md"
-=======
-      - "Docker": "toolbox/docker.md"
->>>>>>> fedeb3778eb8f9447a226104a9755f8f5e70a37f
       - "Pydantic": "toolbox/pytest_pydantic.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
