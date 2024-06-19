@@ -1005,26 +1005,21 @@
 <h2 id="using_yoyo_migrations">Using YoYo migrations<a class="headerlink" href="#using_yoyo_migrations" title="Permanent link">&para;</a></h2>
 <p>Using our Docker Postges set up with YoYo for database migrations and versioning <a href="https://ollycope.com/software/yoyo/latest/">YoYo</a>.</p>
 <h2 id="docker-pytest_plugin">Docker-PyTest plugin<a class="headerlink" href="#docker-pytest_plugin" title="Permanent link">&para;</a></h2>
-<p>Located in <code>tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL</code></p>
 <p>This is based on the following article: </p>
 <ul>
-<li>https://dev.to/farcellier/test-beyond-your-code-with-docker-pytest-3b7g</li>
+<li>article: <a href="https://dev.to/farcellier/test-beyond-your-code-with-docker-pytest-3b7g">test-beyond-your-code-with-docker-pytest</a></li>
+<li>repo: <a href="https://github.com/Python-Test-Engineer/yt-docker-pytest-poetry-fixtup">repo</a></li>
+<li>video: <a href="https://youtu.be/m80NeP_Jtp4">pytest-docker</a></li>
 </ul>
-<p>I have included it here for reference. It won't work with PyTest-Full-Stack and needs to be in its own separate suite.</p>
-<p>Open tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL in own IDE</p>
+<p>Setup:</p>
 <ul>
 <li><code>python -m venv venv</code></li>
 <li><code>.\venv\Scripts\activate</code> or Mac equivalent</li>
-<li>
-<p><code>pip install -r requirements.txt</code></p>
-</li>
-<li>
-<p>ensure you remove REACTIVATE_ from front of test_postgressql_database.py so PyTest can discover this test. It was made invisible in this way so it did not collide and fail running of PFS default set up.</p>
-</li>
-<li><code>python -m pytest .\tests\test_postgressql_database.py -vs</code></li>
+<li><code>pip install -r requirements.txt</code></li>
+<li><code>python -m pytest -vs</code></li>
 </ul>
 <p><em>Make sure docker is running!</em></p>
-<p>There is a YT video of this: <a href="https://youtu.be/m80NeP_Jtp4">pytest-docker</a></p>
+<p><br></p>
 
 
 
