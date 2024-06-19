@@ -80,6 +80,7 @@ nav:
       - "Docker Postgres": "toolbox/docker_postgres_setup.md"
       - "PyTest-Docker Plugin": "toolbox/pytest_docker.md"
       - "Docker PyTest Image": "toolbox/docker_flask_pdb.md"
+      - "Python on Whales": "toolbox/python_on_whales.md"
       - "Pydantic": "toolbox/pytest_pydantic.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
