@@ -1,6 +1,6 @@
 # Python on Whales
 
-[Python on Whales](https://gabrieldemarmiesse.github.io/python-on-whales/)
+Docs: [Python on Whales](https://gabrieldemarmiesse.github.io/python-on-whales/)
 
 - 1 to 1 mapping between the CLI interface and the Python API. No need to look in the docs what is the name of the function/argument you need.
 - Docker object as Python objects: Container, Images, Volumes, Services... and their attributes are updated in real-time!
