@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../../asides/pluggy/">
+      
+      
+        <link rel="next" href="../allure_windows_setup/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Docker Postgress PgAdmin Adminer - PyTest Cookbook</title>
+        <title>About - PyTest Cookbook</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker_postgress_pgadmin_adminer" class="md-skip">
+        <a href="#toolbox" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Postgress PgAdmin Adminer
+              About
             
           </span>
         </div>
@@ -542,17 +546,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -566,7 +572,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Toolbox
@@ -577,10 +583,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../toolbox_index/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -589,6 +604,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -889,21 +905,9 @@
   
 
 
-<h1 id="docker_postgress_pgadmin_adminer">Docker Postgress PgAdmin Adminer<a class="headerlink" href="#docker_postgress_pgadmin_adminer" title="Permanent link">&para;</a></h1>
-<p>This uses my Postgres image that has the VectorDB extension installed, (for semantic search).</p>
-<p>It has both PgAdmin and Adminer as Postgress clients.</p>
-<p>There are range of SQL Crud files included so that you have Python-Docker-Postgres working.</p>
-<p>I had some issues with this type of set up but came up with my own docker-compose file.</p>
-<p><a href="https://www.youtube.com/watch?v=mipRKPHwlBk&amp;list=PLsszRSbzjyvmgwrK911sdv03peQlGirym">YouTube Video</a></p>
-<p>The repo is here: <a href="https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql">GitHub</a></p>
-<p>There are a number of ways to set up a volume.</p>
-<p>For me, the following saved the Postgres data:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>volumes:
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   - ./db-data/:/var/lib/postgresql/data/
-</span></code></pre></div>
-<p>and it uses the default storage location for data in Postgres.</p>
-<p>Using the named volume approach gave me a few issues.</p>
-<p><br></p>
+<h1 id="toolbox">Toolbox<a class="headerlink" href="#toolbox" title="Permanent link">&para;</a></h1>
+<p>This is a colelction of resources that are of use as a Python Test Engineer but are not part of PyTest Full Stack. </p>
+<p>They are self-contained units.</p>
 
 
 

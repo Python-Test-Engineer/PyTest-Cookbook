@@ -14,7 +14,7 @@
         <link rel="prev" href="../allure_windows_setup/">
       
       
-        <link rel="next" href="../docker_postgres_setup/">
+        <link rel="next" href="../pytest_pydantic/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -586,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href="../toolbox_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,6 +637,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -647,27 +658,52 @@
 
       </a>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../docker_postgres_setup/" class="md-nav__link">
         
-  
-  <span class="md-ellipsis">
-    Docker Postgres
-  </span>
-  
 
-      </a>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#my_docker-postgres_setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      My Docker-Postgres setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using_yoyo_migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using YoYo migrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-pytest_plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker-PyTest plugin
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -910,6 +946,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#my_docker-postgres_setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      My Docker-Postgres setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using_yoyo_migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using YoYo migrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-pytest_plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker-PyTest plugin
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -927,14 +998,33 @@
 
 
 <h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<h2 id="my_docker-postgres_setup">My Docker-Postgres setup<a class="headerlink" href="#my_docker-postgres_setup" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>My Docker-Postgres-PgAdmin-Adminer set up: <a href="https://pytest-cookbook.com/toolbox/docker_postgres_setup/">Docker-Postgres-PgAdmin-Adminer</a></p>
-</li>
-<li>
-<p>Using our Docker Postges set up with YoYo for database migrations and versioning <a href="https://ollycope.com/software/yoyo/latest/">YoYo</a>.</p>
-</li>
+<li>My Docker-Postgres-PgAdmin-Adminer set up: <a href="https://pytest-cookbook.com/toolbox/docker_postgres_setup/">Docker-Postgres-PgAdmin-Adminer</a></li>
 </ul>
+<h2 id="using_yoyo_migrations">Using YoYo migrations<a class="headerlink" href="#using_yoyo_migrations" title="Permanent link">&para;</a></h2>
+<p>Using our Docker Postges set up with YoYo for database migrations and versioning <a href="https://ollycope.com/software/yoyo/latest/">YoYo</a>.</p>
+<h2 id="docker-pytest_plugin">Docker-PyTest plugin<a class="headerlink" href="#docker-pytest_plugin" title="Permanent link">&para;</a></h2>
+<p>Located in <code>tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL</code></p>
+<p>This is based on the following article: </p>
+<ul>
+<li>https://dev.to/farcellier/test-beyond-your-code-with-docker-pytest-3b7g</li>
+</ul>
+<p>I have included it here for reference. It won't work with PyTest-Full-Stack and needs to be in its own separate suite.</p>
+<p>Open tests/_isolated_suites/docker-pytest-poetry-fixtup-RUN_ISOL in own IDE</p>
+<ul>
+<li><code>python -m venv venv</code></li>
+<li><code>.\venv\Scripts\activate</code> or Mac equivalent</li>
+<li>
+<p><code>pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p>ensure you remove REACTIVATE_ from front of test_postgressql_database.py so PyTest can discover this test. It was made invisible in this way so it did not collide and fail running of PFS default set up.</p>
+</li>
+<li><code>python -m pytest .\tests\test_postgressql_database.py -vs</code></li>
+</ul>
+<p><em>Make sure docker is running!</em></p>
+<p>There is a YT video of this: <a href="https://youtu.be/m80NeP_Jtp4">pytest-docker</a></p>
 
 
 

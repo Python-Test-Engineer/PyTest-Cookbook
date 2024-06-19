@@ -75,10 +75,9 @@ nav:
       - "About": "asides/asides.md"
       - "Pluggy": "asides/pluggy.md"
   - "Toolbox":
-      - "About": "toolbox/index.md"
+      - "About": "toolbox/toolbox_index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
       - "Docker": "toolbox/docker.md"
-      - "Docker Postgres": "toolbox/docker_postgres_setup.md"
       - "Pydantic": "toolbox/pytest_pydantic.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
