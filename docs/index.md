@@ -2,7 +2,11 @@
 
 ## Purpose of this book 
 
-To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, (PFS), comprising of over 200 highly commented test templates for developers to adapt to their own needs along with resource links that have helped me greatly, as well as integration of these into the frameworks.
+1. To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, (PFS), comprising of over 200 highly commented test templates for developers to adapt to their own needs along with resource links that have helped me greatly, as well as integration of these into the frameworks.
+
+2. To provide a curated source of articles and videos that surround PyTest, for example Docker, that enable 'out of the box' ease of use. Some are created by me, others reference with acknowledgments other sources.
+
+## PyTest Full Stack, (PFS)
 
 The PyTest Full Stack suite has an installation tat will just require a 1-2-3 of:
    
