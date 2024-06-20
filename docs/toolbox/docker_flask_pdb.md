@@ -1,6 +1,6 @@
 # Multiple container testing
 
-This is inspired by the excellent courst 'Python in Container'.
+This is inspired by the excellent courst 'Python in Containers' on Udemy.
 
 We build a flask image and this is used as one layer for another image for testing.
 
