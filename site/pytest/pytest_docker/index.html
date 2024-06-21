@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../toolbox_index/">
+        <link rel="prev" href="../pytest_test_management/">
       
       
-        <link rel="next" href="../python_on_whales/">
+        <link rel="next" href="../pytest_allure/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Allure Windows - PyTest Cookbook</title>
+        <title>Docker - PyTest Cookbook</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#allure_reporting_-_windows" class="md-skip">
+        <a href="#pytest_and_docker" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Allure Windows 
+              Docker
             
           </span>
         </div>
@@ -294,17 +294,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -318,7 +320,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             PyTest Full Stack
@@ -332,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_full_stack_customise/" class="md-nav__link">
+      <a href="../pytest_full_stack_customise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -374,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_tests/" class="md-nav__link">
+      <a href="../pytest_tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -395,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_test_management/" class="md-nav__link">
+      <a href="../pytest_test_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -413,10 +415,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../pytest/pytest_docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -425,6 +447,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker_and_pytest_full_stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker and PyTest Full Stack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_and_pytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker and PyTest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other_plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-postgres-pgadmin-adminer_-_to_go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker-Postgres-PGAdmin-Adminer - to go
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -437,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_allure/" class="md-nav__link">
+      <a href="../pytest_allure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,19 +624,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -572,7 +648,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Toolbox
@@ -586,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toolbox_index/" class="md-nav__link">
+      <a href="../../toolbox/toolbox_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,19 +680,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../toolbox/allure_windows_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +692,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -638,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_on_whales/" class="md-nav__link">
+      <a href="../../toolbox/python_on_whales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest_pydantic/" class="md-nav__link">
+      <a href="../../toolbox/pytest_pydantic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,6 +1081,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker_and_pytest_full_stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker and PyTest Full Stack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker_and_pytest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker and PyTest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other_plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-postgres-pgadmin-adminer_-_to_go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker-Postgres-PGAdmin-Adminer - to go
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1031,19 +1141,30 @@
   
 
 
-<h1 id="allure_reporting_-_windows">Allure Reporting - Windows<a class="headerlink" href="#allure_reporting_-_windows" title="Permanent link">&para;</a></h1>
-<p>If you are on Windows, like me, we can set up Allure as follows:</p>
-<p>I used the following video as learning:</p>
-<p><a href="https://www.youtube.com/watch?v=-O4QVijnA7Y">Useful JDK Video</a></p>
-<p>I created my own video here:</p>
-<p><a href="https://youtu.be/rSBF74Ydm58">Install JDK</a></p>
-<p>To install Allure: </p>
-<p><a href="https://www.youtube.com/watch?v=Y4S2UUPsNP4">Allure Install</a></p>
+<h1 id="pytest_and_docker">PyTest and Docker<a class="headerlink" href="#pytest_and_docker" title="Permanent link">&para;</a></h1>
+<p>Docker seems to be an essential part of testing work.</p>
+<p>As a result, I have a section on Docker, with a sub section of Docker To Go, a range of ready made Docker set ups. <a href="https://pytest-cookbook.com/docker/docker_index/">Docker</a></p>
+<p>I have done many trainings on Docker and I would say the best training is on my favourite platform Udemy:
+<a href="https://www.udemy.com/course/docker-bootcamp-conquer-docker-with-real-world-projects">Docker Bootcamp: Conquer Docker with Real-World Projects</a></p>
+<p>Sales every two weeks or so will mean you can get if for $20 USD or so. </p>
+<p>What I really like about this course is it does not really go into theory but just builds a great number of microservices and connects them. Repetition makes it become part of the muscle and is probably what is needed for a Test Engineer.</p>
+<p>There are other courses that go deeper and one that I find really good is: <a href="https://www.udemy.com/course/python-in-containers/">Python in Containers</a></p>
+<h2 id="docker_and_pytest_full_stack">Docker and PyTest Full Stack<a class="headerlink" href="#docker_and_pytest_full_stack" title="Permanent link">&para;</a></h2>
+<p>PyTest-Full-Stack has one example using <code>pytest-docker</code>.</p>
+<p><em>Ensure docker desktop or equivalent is running!</em> 😬 </p>
+<p>Located in tests/docker. My usual folder naming of 70_docker is unacceptable so I just use docker.</p>
+<p>There is a YT video of this: <a href="https://youtu.be/43YKqEg49HI">pytest-docker</a></p>
+<h2 id="docker_and_pytest">Docker and PyTest<a class="headerlink" href="#docker_and_pytest" title="Permanent link">&para;</a></h2>
+<p>There are a number of subjects covered in Toolbox &gt; Docker. The section is <a href="https://pytest-cookbook.com/toolbox/docker/">here</a></p>
+<h2 id="other_plugins">Other plugins<a class="headerlink" href="#other_plugins" title="Permanent link">&para;</a></h2>
+<p>There are a number of docker plugins for pytest:</p>
 <ul>
-<li>For Allure, download the zip of the version you want.</li>
-<li>Unzip and place in a location of your choice.</li>
-<li>Add the path in environment variables. Mine was C:\allure\bin</li>
+<li><code>pytest-docker-compose</code></li>
+<li><code>pytest-docker-tools</code></li>
+<li><code>docker-python-unittest-pytest</code> is a more DIY setup.</li>
 </ul>
+<h2 id="docker-postgres-pgadmin-adminer_-_to_go">Docker-Postgres-PGAdmin-Adminer - to go<a class="headerlink" href="#docker-postgres-pgadmin-adminer_-_to_go" title="Permanent link">&para;</a></h2>
+<p>I have a <a href="https://www.youtube.com/watch?v=mipRKPHwlBk">YT video</a> and <a href="https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql">repo</a> that I have tested many times myself. It also uses my custom Postgres image which has PGVector extension added for Semantic Search, (AI RAG).</p>
 <p><br></p>
 
 

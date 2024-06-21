@@ -69,7 +69,7 @@ nav:
       - "Customise": "pytest/pytest_full_stack_customise.md"
       - "Tests": "pytest/pytest_tests.md"
       - "Test Management": "pytest/pytest_test_management.md"
-      - "Docker": "docker/docker.md"
+      - "Docker": "pytest/pytest_docker.md"
       - "Allure": "pytest/pytest_allure.md"
   - "Asides":
       - "About": "asides/asides.md"
@@ -77,11 +77,13 @@ nav:
   - "Toolbox":
       - "About": "toolbox/toolbox_index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
-      - "Docker Postgres": "toolbox/docker_postgres_setup.md"
-      - "PyTest-Docker Plugin": "toolbox/pytest_docker.md"
-      - "Docker PyTest Image": "toolbox/docker_flask_pdb.md"
       - "Python on Whales": "toolbox/python_on_whales.md"
       - "Pydantic": "toolbox/pytest_pydantic.md"
+  - "Docker":
+      - "About": "docker/docker_index.md"
+      - "Docker Postgres": "docker/docker_postgres_setup.md"
+      - "PyTest-Docker Plugin": "docker/pytest_docker.md"
+      - "Docker PyTest Image": "docker/docker_flask_pdb.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":
