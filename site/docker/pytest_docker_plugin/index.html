@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../docker_postgres_setup/">
+      
+      
+        <link rel="next" href="../docker_flask_pdb/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>PyTest and Docker - PyTest Cookbook</title>
+        <title>PyTest-Docker Plugin - PyTest Cookbook</title>
       
     
     
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyTest and Docker
+              PyTest-Docker Plugin
             
           </span>
         </div>
@@ -668,17 +672,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -692,7 +698,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -745,10 +751,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pytest_docker.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PyTest-Docker Plugin
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -757,6 +783,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker_and_pytest_full_stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker and PyTest Full Stack
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -774,6 +829,27 @@
   
   <span class="md-ellipsis">
     Docker PyTest Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_to_go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker To Go
   </span>
   
 
@@ -1014,33 +1090,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#docker_and_pytest" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker and PyTest
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other_plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other plugins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-postgres-pgadmin-adminer_-_to_go" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker-Postgres-PGAdmin-Adminer - to go
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1061,6 +1110,7 @@
 
 <h1 id="pytest_and_docker">PyTest and Docker<a class="headerlink" href="#pytest_and_docker" title="Permanent link">&para;</a></h1>
 <p>Docker seems to be an essential part of testing work.</p>
+<p>As a result, I have a section on Docker, with a sub section of Docker To Go, a range of ready made Docker set ups. <a href="https://pytest-cookbook.com/docker/docker_index/">Docker</a></p>
 <p>I have done many trainings on Docker and I would say the best training is on my favourite platform Udemy:
 <a href="https://www.udemy.com/course/docker-bootcamp-conquer-docker-with-real-world-projects">Docker Bootcamp: Conquer Docker with Real-World Projects</a></p>
 <p>Sales every two weeks or so will mean you can get if for $20 USD or so. </p>
@@ -1071,17 +1121,6 @@
 <p><em>Ensure docker desktop or equivalent is running!</em> 😬 </p>
 <p>Located in tests/docker. My usual folder naming of 70_docker is unacceptable so I just use docker.</p>
 <p>There is a YT video of this: <a href="https://youtu.be/43YKqEg49HI">pytest-docker</a></p>
-<h2 id="docker_and_pytest">Docker and PyTest<a class="headerlink" href="#docker_and_pytest" title="Permanent link">&para;</a></h2>
-<p>There are a number of subjects covered in Toolbox &gt; Docker. The section is <a href="https://pytest-cookbook.com/toolbox/docker/">here</a></p>
-<h2 id="other_plugins">Other plugins<a class="headerlink" href="#other_plugins" title="Permanent link">&para;</a></h2>
-<p>There are a number of docker plugins for pytest:</p>
-<ul>
-<li><code>pytest-docker-compose</code></li>
-<li><code>pytest-docker-tools</code></li>
-<li><code>docker-python-unittest-pytest</code> is a more DIY setup.</li>
-</ul>
-<h2 id="docker-postgres-pgadmin-adminer_-_to_go">Docker-Postgres-PGAdmin-Adminer - to go<a class="headerlink" href="#docker-postgres-pgadmin-adminer_-_to_go" title="Permanent link">&para;</a></h2>
-<p>I have a <a href="https://www.youtube.com/watch?v=mipRKPHwlBk">YT video</a> and <a href="https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql">repo</a> that I have tested many times myself. It also uses my custom Postgres image which has PGVector extension added for Semantic Search, (AI RAG).</p>
 <p><br></p>
 
 

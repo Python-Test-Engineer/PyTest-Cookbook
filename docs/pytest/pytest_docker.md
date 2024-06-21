@@ -2,7 +2,7 @@
 
 Docker seems to be an essential part of testing work.
 
-As a result, I have a section on Docker, with a sub section of Docker To Go, a range of ready made Docker set ups. [Docker](https://pytest-cookbook.com/docker/docker_index/)
+As a result, I have a section on Docker, with a sub section of Docker To Go, a range of ready made Docker set ups: [Docker](https://pytest-cookbook.com/docker/docker_index/)
 
 I have done many trainings on Docker and I would say the best training is on my favourite platform Udemy:
 [Docker Bootcamp: Conquer Docker with Real-World Projects](https://www.udemy.com/course/docker-bootcamp-conquer-docker-with-real-world-projects)

@@ -82,8 +82,9 @@ nav:
   - "Docker":
       - "About": "docker/docker_index.md"
       - "Docker Postgres": "docker/docker_postgres_setup.md"
-      - "PyTest-Docker Plugin": "docker/pytest_docker.md"
+      - "PyTest-Docker Plugin": "docker/pytest_docker_plugin.md"
       - "Docker PyTest Image": "docker/docker_flask_pdb.md"
+      - "Docker To Go": "docker/docker_to_go.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":
