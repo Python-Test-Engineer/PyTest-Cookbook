@@ -2,7 +2,9 @@
 
 ## Source
 
-https://gist.github.com/kwmiebach/3fd49612ef7a52b5ce3a
+[https://gist.github./comkwmiebach/3fd49612ef7a52b5ce3a](https://gist.github./comkwmiebach/3fd49612ef7a52b5ce3a)
+
+I have made some amendments to original version
 
 ### Usage
 

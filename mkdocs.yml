@@ -71,6 +71,7 @@ nav:
       - "Test Management": "pytest/pytest_test_management.md"
       - "Docker": "pytest/pytest_docker.md"
       - "Allure": "pytest/pytest_allure.md"
+      - "Cheat Sheet": "pytest/pytest_cheat_sheet.md"
   - "Asides":
       - "About": "asides/asides.md"
       - "Pluggy": "asides/pluggy.md"

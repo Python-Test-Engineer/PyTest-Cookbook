@@ -14,17 +14,17 @@ Generally, nothing can come before FROM as this creates a new shell as it were.
 
 However, we can use ARG to be able to pass in arguments in the CLI build:
 
-Base Image
+### Base Image
 ```
 ARG BaseImage
 FROM $BaseImage
 ```
 
-use --build-arg 
+### use --build-arg 
 ```
 docker build -t factors_flask_tester -f Dockerfile.tester --build-arg BaseImage=factors_flask_pdb .
 ```
 
 Tests are carried out on the `factors_flask_tester` image.
 
-Note, we can use the -f flag to select a Dockerfile. This can be a convenience when we have several Dockerfiles we want to use but don't want to have to overwrite the root Dockerfile.
+Note, we can use the -f flag to select a Dockerfile. This can be a convenience when we have several Dockerfiles we want to use but don't want to have to overwrite the root Dockerfile.###
