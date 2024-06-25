@@ -1,4 +1,6 @@
-# Python Mock, Patch and Monkeypatch - deep dive
+# Python Mock, Patch and Monkeypatch
+
+A deep dive...
 
 ## About
 
