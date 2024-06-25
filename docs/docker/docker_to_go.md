@@ -1,10 +1,8 @@
 # Docker To Go
 
-I have a range of Docker multi-container apps that I will be making available shortly.
+I have a range of Docker multi-container apps and the repo is [here](https://github.com/Python-Test-Engineer/yt-docker-to-go).
 
-Original source where applicable are listed.
-
-Currently made:
+I will be adding more notes in the repo and a video explainer shortly...
 
 ### Django
 
@@ -16,6 +14,7 @@ Currently made:
 
 ### Flask-Redis
 
-### Nginc-Flask-MySQL
+### Nginx-Flask-MySQL
 
 ### Python-Postgres-PgAdmin-Adminer
+
