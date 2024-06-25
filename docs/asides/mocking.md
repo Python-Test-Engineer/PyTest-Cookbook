@@ -1,6 +1,7 @@
 # Python Mock, Patch and Monkeypatch
 
-A deep dive...
+![YouTube Mock](../images/yt-mock-aside.png "Mock")
+
 
 ## About
 
