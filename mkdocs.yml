@@ -81,6 +81,7 @@ nav:
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
       - "Python on Whales": "toolbox/python_on_whales.md"
       - "Pydantic": "toolbox/pytest_pydantic.md"
+      - "YoYo PyTest": "toolbox/docker_postgres_yoyo_pytest.md"
   - "Docker":
       - "About": "docker/docker_index.md"
       - "Docker Postgres": "docker/docker_postgres_setup.md"
