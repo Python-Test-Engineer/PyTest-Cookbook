@@ -16,6 +16,8 @@ Using various SQL scripts, we can get a list of all constraints - PK, FK, Defaul
 
 YoYo acts like Git for our migrations with rollback made possible.
 
+## Migrations
+
 `yoyo new -m "add foreign keys"` creates a file in the `migrations` folder that has 'steps' of SQL and their rollback. The file has a name of `datestamp-random_chars-message_used.py`.
 
 ![MIGRATIONS](../images/yoyo-migrations-folder.png  "Migrations")
@@ -24,29 +26,31 @@ YoYo acts like Git for our migrations with rollback made possible.
 ![STEPS](../images/yoyo-steps.png  "steps")
 
 
-### YoYo
+### Fix error
 
 When I installed on Windows it complained of 'no pkg_resources'.
 
 This was fixed with installing setuptools, (in requirements.txt).
 
-## Using existing unapplied migrations I ran `yoyo list` I got:
+### Using existing unapplied migrations I ran `yoyo list` I got:
 
 ![Initial](../images/yoyo-initial.png 'YoYo')
 
-## After `yoyo apply`:
+### After `yoyo apply`:
 
 ![First Apply](../images/yoyo-list-after-apply.png 'YoYo')
 
-## After two `yoyo rollback`:
+### After two `yoyo rollback`:
 
 ![Two Rollbacks](../images/yoyo-list-after-two-rollbacks.png 'YoYo')
 
-## PgAdmin looks like:
+### PgAdmin looks like:
 
 ![PgAdmin](../images/yoyo-pgadmin.png 'YoYo')
 
 *There can be many steps in a file.*
+
+## Project structure
 
 The `sql_schema folder` contains scripts to query the schema tables for all constraints.
 
@@ -62,7 +66,9 @@ sources = %(here)s/migrations
 database = postgresql://postgres:postgres@host.docker.internal/postgres?port=5432
 ```
 
-In the video, you will see examples of building up a number of migration files and alos how to rollback one, many or all migrations.
+In the video, you will see examples of building up a number of migration files and also how to rollback one, many or all migrations.
+
+## DB Structural Testing
 
 Our DB has PK, FK, Unique and Check constraints and we can access Postgres Schema to run tests on the strucure of the DB:
 
@@ -73,6 +79,8 @@ Our DB has PK, FK, Unique and Check constraints and we can access Postgres Schem
 This is in addition to CRUD testing we may do. This helps ensure that we have not damaged our DB schema during any development.
 
 The project also includes a folder of sql_postgress python modules to perfome CRUD etc.
+
+## Docker Postgres setup
 
 It uses the standard [docker-postgres-pgadmin-adminer-python-sql](https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql) project to set up Docker Postgres.
 
