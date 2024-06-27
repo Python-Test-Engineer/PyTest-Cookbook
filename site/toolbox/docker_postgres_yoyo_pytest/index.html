@@ -764,6 +764,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Yoyo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yoyo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      YoYo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using_existing_unapplied_migrations_i_ran_yoyo_list_i_got" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using existing unapplied migrations I ran yoyo list I got:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after_yoyo_apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      After yoyo apply:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after_two_yoyo_rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      After two yoyo rollback:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pgadmin_looks_like" class="md-nav__link">
+    <span class="md-ellipsis">
+      PgAdmin looks like:
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1151,6 +1202,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Yoyo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yoyo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      YoYo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using_existing_unapplied_migrations_i_ran_yoyo_list_i_got" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using existing unapplied migrations I ran yoyo list I got:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after_yoyo_apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      After yoyo apply:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after_two_yoyo_rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      After two yoyo rollback:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pgadmin_looks_like" class="md-nav__link">
+    <span class="md-ellipsis">
+      PgAdmin looks like:
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1186,6 +1288,17 @@
 <p><code>yoyo new -m "add foreign keys"</code> creates a file in the <code>migrations</code> folder that has 'steps' of SQL and their rollback. The file has a name of <code>datestamp-random_chars-message_used.py</code>.</p>
 <p><img alt="MIGRATIONS" src="../../images/yoyo-migrations-folder.png" title="Migrations" /></p>
 <p><img alt="STEPS" src="../../images/yoyo-steps.png" title="steps" /></p>
+<h3 id="yoyo_1">YoYo<a class="headerlink" href="#yoyo_1" title="Permanent link">&para;</a></h3>
+<p>When I installed on Windows it complained of 'no pkg_resources'.</p>
+<p>This was fixed with installing setuptools, (in requirements.txt).</p>
+<h2 id="using_existing_unapplied_migrations_i_ran_yoyo_list_i_got">Using existing unapplied migrations I ran <code>yoyo list</code> I got:<a class="headerlink" href="#using_existing_unapplied_migrations_i_ran_yoyo_list_i_got" title="Permanent link">&para;</a></h2>
+<p><img alt="Initial" src="../../images/yoyo-initial.png" title="YoYo" /></p>
+<h2 id="after_yoyo_apply">After <code>yoyo apply</code>:<a class="headerlink" href="#after_yoyo_apply" title="Permanent link">&para;</a></h2>
+<p><img alt="First Apply" src="../../images/yoyo-list-after-apply.png" title="YoYo" /></p>
+<h2 id="after_two_yoyo_rollback">After two <code>yoyo rollback</code>:<a class="headerlink" href="#after_two_yoyo_rollback" title="Permanent link">&para;</a></h2>
+<p><img alt="Two Rollbacks" src="../../images/yoyo-list-after-two-rollbacks.png" title="YoYo" /></p>
+<h2 id="pgadmin_looks_like">PgAdmin looks like:<a class="headerlink" href="#pgadmin_looks_like" title="Permanent link">&para;</a></h2>
+<p><img alt="PgAdmin" src="../../images/yoyo-pgadmin.png" title="YoYo" /></p>
 <p><em>There can be many steps in a file.</em></p>
 <p>The <code>sql_schema folder</code> contains scripts to query the schema tables for all constraints.</p>
 <p>The <code>steps</code> folder has just the steps for reuse and archice.</p>

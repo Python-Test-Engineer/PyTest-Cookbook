@@ -23,6 +23,29 @@ YoYo acts like Git for our migrations with rollback made possible.
 
 ![STEPS](../images/yoyo-steps.png  "steps")
 
+
+### YoYo
+
+When I installed on Windows it complained of 'no pkg_resources'.
+
+This was fixed with installing setuptools, (in requirements.txt).
+
+## Using existing unapplied migrations I ran `yoyo list` I got:
+
+![Initial](../images/yoyo-initial.png 'YoYo')
+
+## After `yoyo apply`:
+
+![First Apply](../images/yoyo-list-after-apply.png 'YoYo')
+
+## After two `yoyo rollback`:
+
+![Two Rollbacks](../images/yoyo-list-after-two-rollbacks.png 'YoYo')
+
+## PgAdmin looks like:
+
+![PgAdmin](../images/yoyo-pgadmin.png 'YoYo')
+
 *There can be many steps in a file.*
 
 The `sql_schema folder` contains scripts to query the schema tables for all constraints.
