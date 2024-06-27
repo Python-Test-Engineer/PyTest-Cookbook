@@ -25,10 +25,11 @@ YoYo acts like Git for our migrations with rollback made possible.
 
 ![STEPS](../images/yoyo-steps.png  "steps")
 
+*There can be many step functions in the steps list.*
 
-### Fix error
+### Fix plg_resourcs error
 
-When I installed on Windows it complained of 'no pkg_resources'.
+You may not get this but I had this, when I installed on Windows- it complained of 'no pkg_resources'.
 
 This was fixed with installing setuptools, (in requirements.txt).
 
@@ -47,8 +48,6 @@ This was fixed with installing setuptools, (in requirements.txt).
 ### PgAdmin looks like:
 
 ![PgAdmin](../images/yoyo-pgadmin.png 'YoYo')
-
-*There can be many steps in a file.*
 
 ## Project structure
 
