@@ -33,7 +33,9 @@ You may not get this but I had this, when I installed on Windows- it complained 
 
 This was fixed with installing setuptools, (in requirements.txt).
 
-### Using existing unapplied migrations I ran `yoyo list` I got:
+### `yoyo list`
+
+This lists all migrations and their status - 'U' unapplied and 'A' applied
 
 ![Initial](../images/yoyo-initial.png 'YoYo')
 
