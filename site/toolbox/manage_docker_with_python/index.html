@@ -1116,11 +1116,13 @@
 
 
 <h1 id="manage_docker_with_python">Manage Docker with Python<a class="headerlink" href="#manage_docker_with_python" title="Permanent link">&para;</a></h1>
-<p>Repo: <a href="https://github.com/Python-Test-Engineer/yt-docker-managed-by-python">yt-docker-managed-by-python</a>
-Video: to follow...</p>
+<p>Repo: <a href="https://github.com/Python-Test-Engineer/yt-docker-managed-by-python">yt-docker-managed-by-python</a></p>
+<p>Video: to follow...</p>
 <p>There are two main libraries for this:</p>
-<p>1 Docs: <a href="https://gabrieldemarmiesse.github.io/python-on-whales/">Python on Whales</a>
-2 Docs: <a href="https://docker-py.readthedocs.io/en/stable/">Docker Py</a></p>
+<ol>
+<li>Docs: <a href="https://gabrieldemarmiesse.github.io/python-on-whales/">Python on Whales</a></li>
+<li>Docs: <a href="https://docker-py.readthedocs.io/en/stable/">Docker Py</a></li>
+</ol>
 <p>For Python on Whales, a very useful script is:</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>from python_on_whales import DockerClient
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -1147,7 +1149,7 @@ becomes
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>print(docker.ps())
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a># [python_on_whales.Container(id=&#39;f5fb939c409d&#39;, name=&#39;some-postgres&#39;)]
 </span></code></pre></div>
-which can also be manged programatically.</p>
+which can also be managed programatically.</p>
 <p>For Docker-Py we have:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import docker
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>client = docker.from_env()
@@ -1162,7 +1164,7 @@ which can also be manged programatically.</p>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>PORT = random.randint(8000, 9000)
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>container = client.containers.run(&quot;nginx:latest&quot;, detach=True, ports={&quot;80/tcp&quot;: PORT})
 </span></code></pre></div>
-<p>Docker enable the use of ARG and --build-arg to add arguments prior to FROM, FROM usually being the first allowed command</p>
+<p>Docker enables the use of ARG and --build-arg to add arguments prior to FROM, FROM usually being the first allowed command</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ARG BaseImage
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>FROM $BaseImage
 </span></code></pre></div>
@@ -1181,8 +1183,17 @@ and this means we can use this and other shell variables to script a lot of proc
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>PORT = random.randint(8000, 9000)
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>container = client.containers.run(&quot;nginx:latest&quot;, detach=True, ports={&quot;80/tcp&quot;: PORT})
 </span></code></pre></div>
-<p>The repo and video explore managing Docker programatically with Python.
-<br></p>
+<p>Sources of YT video on Python and YAML</p>
+<ol>
+<li>
+<p><a href="https://www.youtube.com/watch?v=sFqdgG8tSPk">MathByte</a> - shorter and more concise video with its repo installed in this project in <code>yaml</code> folder.</p>
+</li>
+<li>
+<p><a href="https://github.com/kunchalavikram1427/YouTube_Series/tree/main/YAML">DevOpsMadeEasy</a> which has a YT video (1hr 45m) <a href="https://www.youtube.com/watch?v=GOk4IoYhM9U">here</a>.</p>
+</li>
+</ol>
+<p>The repo and video explore managing Docker programatically with Python, mostly through the use of editing docker compose files and then running them programatically.</p>
+<p><br></p>
 
 
 

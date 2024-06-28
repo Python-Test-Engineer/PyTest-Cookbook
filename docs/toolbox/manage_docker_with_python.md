@@ -1,12 +1,13 @@
 # Manage Docker with Python
 
 Repo: [yt-docker-managed-by-python](https://github.com/Python-Test-Engineer/yt-docker-managed-by-python)
+
 Video: to follow...
 
 There are two main libraries for this:
 
-1 Docs: [Python on Whales](https://gabrieldemarmiesse.github.io/python-on-whales/)
-2 Docs: [Docker Py](https://docker-py.readthedocs.io/en/stable/)
+1. Docs: [Python on Whales](https://gabrieldemarmiesse.github.io/python-on-whales/)
+2. Docs: [Docker Py](https://docker-py.readthedocs.io/en/stable/)
 
 For Python on Whales, a very useful script is:
 
@@ -40,7 +41,7 @@ docker.run(
 print(docker.ps())
 # [python_on_whales.Container(id='f5fb939c409d', name='some-postgres')]
 ```
-which can also be manged programatically.
+which can also be managed programatically.
 
 For Docker-Py we have:
 
@@ -59,7 +60,7 @@ PORT = random.randint(8000, 9000)
 container = client.containers.run("nginx:latest", detach=True, ports={"80/tcp": PORT})
 ```
 
-Docker enable the use of ARG and --build-arg to add arguments prior to FROM, FROM usually being the first allowed command
+Docker enables the use of ARG and --build-arg to add arguments prior to FROM, FROM usually being the first allowed command
 
 ```
 ARG BaseImage
@@ -84,6 +85,13 @@ PORT = random.randint(8000, 9000)
 container = client.containers.run("nginx:latest", detach=True, ports={"80/tcp": PORT})
 ```
 
-The repo and video explore managing Docker programatically with Python.
+Sources of YT video on Python and YAML
+
+1. [MathByte](https://www.youtube.com/watch?v=sFqdgG8tSPk) - shorter and more concise video with its repo installed in this project in `yaml` folder.
+
+2. [DevOpsMadeEasy](https://github.com/kunchalavikram1427/YouTube_Series/tree/main/YAML) which has a YT video (1hr 45m) [here](https://www.youtube.com/watch?v=GOk4IoYhM9U).
+
+The repo and video explore managing Docker programatically with Python, mostly through the use of editing docker compose files and then running them programatically.
+
 <br>
 
