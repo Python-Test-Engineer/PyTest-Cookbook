@@ -8,7 +8,7 @@ I had some issues with this type of set up but came up with my own docker-compos
 
 [YouTube Video](https://www.youtube.com/watch?v=mipRKPHwlBk&list=PLsszRSbzjyvmgwrK911sdv03peQlGirym)
 
-The repo is here: [GitHub](https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql)
+The repo is here: [GitHub](https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminer-python-sql)
 
 There are a number of ways to set up a volume - named or bind mount.
 
