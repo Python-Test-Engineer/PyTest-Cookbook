@@ -2,13 +2,9 @@
 
 I have a range of Docker multi-container apps and the repo is [here](https://github.com/Python-Test-Engineer/yt-docker-to-go).
 
-I will be adding more notes in the repo and a video explainer shortly...
+The following have been added and tested as of 28JUN2024
 
 ### Django
-
-### Django Celery
-
-### Entrypoint-CMD
 
 ### FastAPI
 
