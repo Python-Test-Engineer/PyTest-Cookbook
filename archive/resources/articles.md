@@ -1,1 +1,0 @@
-A list of resources I have found useful.
