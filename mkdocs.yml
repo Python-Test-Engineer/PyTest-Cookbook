@@ -79,9 +79,9 @@ nav:
   - "Toolbox":
       - "About": "toolbox/toolbox_index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
-
-      - "Pydantic": "toolbox/pytest_pydantic.md"
+      - "Pydantic DTS": "toolbox/pydantic_dts.md"
       - "YoYo PyTest": "toolbox/docker_postgres_yoyo_pytest.md"
+      - "Git Essentials": "toolbox/git_essentials.md"
   - "Docker":
       - "About": "docker/docker_index.md"
       - "Manage Docker with Python": "toolbox/manage_docker_with_python.md"
@@ -89,6 +89,7 @@ nav:
       - "PyTest-Docker Plugin": "docker/pytest_docker_plugin.md"
       - "Docker PyTest Image": "docker/docker_flask_pdb.md"
       - "Docker To Go": "docker/docker_to_go.md"
+      - "Advanced Docker": "docker/docker_advanced.md"
   - "Django Testing":
       - "Planned": "django_testing/index.md"
   - "About Craig":
