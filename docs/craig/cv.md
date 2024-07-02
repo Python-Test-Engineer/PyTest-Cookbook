@@ -2,19 +2,10 @@
 
 - [Github CV](https://github.com/Python-Test-Engineer/)
 
-![Logo](../assets/images/craig.jpg){:style="width:240px;border-radius:50%;border: 5px solid #555;"}
+![Logo](../images/craig/craig.jpg){:style="width:240px;border-radius:50%;border: 5px solid #555;"}
 
-<table>
-<tbody>
-	<tr>
-		<td><img src="./craig.jpg" style="width:240px;border-radius:50%;border: 5px solid #555;"></td>
-		<td>Python Test Engineer - particulalry Django</td>
-	</tr>
 
-</tbody>
-</table>
-
-# Python Test Engineer
+# Python Backend and Test Automation Engineer
 
 - Degree in Chemistry, Oxford University.
 - Former A+ PC Technician, Microsoft Certified Systems Engineer and Microsoft Certified SQL Server DBA.

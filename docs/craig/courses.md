@@ -4,7 +4,7 @@
 
 The course [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) has just been published and Udemy has a sale ever two weeks and the cost would be $20 USD approx.
 
-![PyTest - hoks and plugins](../images/udemy-hooks.png)
+![PyTest - hooks and plugins](../images/craig/udemy-hooks.png 'Course')
 
 I am currently developing two courses:
 

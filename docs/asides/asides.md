@@ -12,7 +12,7 @@ An example is tests/_isolated_suites which has a docker-postgres-fixtup suite.
 
 ## Pluggy
 
-![Test Pluggy](../images/pluggy.png "Pluggy")
+![Test Pluggy](../images/asides/pluggy.png "Pluggy")
 
 Pytest uses Pluggy to have a plugin architecture.
 
@@ -20,7 +20,7 @@ Using Pluggy docs, I have created a repo andd video of the examples in the docs 
 
 ## Mocking
 
-![YouTube Mock](../images/yt-mock-aside.png "Mock")
+![YouTube Mock](../images/asides/yt-mock-aside.png "Mock")
 
 This covers mock, patch and monkeypatch using Rich and PyBoxed for pretty console output. We look at globals() and sys.modules to see what is happening under the hood as well as create our own mocks to better understand this topic.
 

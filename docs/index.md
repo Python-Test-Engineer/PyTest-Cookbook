@@ -69,7 +69,7 @@ Example plugins are:
 
 The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale every two weeks and the cost would be $20 USD approx.
 
-![PyTest - hooks and plugins](./images/home/udemy-hooks.png)
+![PyTest - hooks and plugins](./images/craig/udemy-hooks.png 'Course')
 
 There is more information about me and my services [here](https://pytest-cookbook.netlify.app/craig/).
 

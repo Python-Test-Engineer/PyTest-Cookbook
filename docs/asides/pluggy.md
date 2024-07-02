@@ -1,5 +1,5 @@
 # Pluggy
-![Test Pluggy](../images/pluggy.png "Pluggy")
+![Test Pluggy](../images/asides/pluggy.png "Pluggy")
 ## About
 
 [Pluggy](https://pluggy.readthedocs.io/en/stable/) as per docs:

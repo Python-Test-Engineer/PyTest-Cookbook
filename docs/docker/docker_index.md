@@ -10,4 +10,4 @@ A useful script builder provided by Docker is:
 
 [Docker Docs](https://docs.docker.com/reference/cli/docker/init/)
 
-![Docker Init](../images/docker-init-docs.png 'Docker Init')
+![Docker Init](../images/docker/docker-init-docs.png 'Docker Init')
