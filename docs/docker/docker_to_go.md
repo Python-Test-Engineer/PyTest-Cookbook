@@ -6,6 +6,7 @@ The following have been added and tested as of 28JUN2024
 
 - Django
 - Flask-Redis
+- FastAPI with hot reload on code change
 - Nginx-Flask-MySQL
 - PythonCRUD-Postgres-PgAdmin-Adminer
 
