@@ -1403,8 +1403,45 @@
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>LABEL desc=&quot;This is docker tutorial&quot;
 </span></code></pre></div>
 <h3 id="overide_and_merge">Overide and merge<a class="headerlink" href="#overide_and_merge" title="Permanent link">&para;</a></h3>
+<p>Files can be overriden, merge or have include files.</p>
+<p><a href="https://docs.docker.com/compose/multiple-compose-files/extends/#extending-services-from-another-file">https://docs.docker.com/compose/multiple-compose-files/extends/#extending-services-from-another-file</a>]</p>
+<p>For example:</p>
+<p><code>docker compose -f compose.yml -f compose.admin.yml run backup_db</code>
+The compose.yml file might specify a webapp service.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>webapp:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  image: examples/web
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  ports:
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    - &quot;8000:8000&quot;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  volumes:
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    - &quot;/data&quot;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  environment:
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    - DEBUG=1
+</span></code></pre></div>
+The compose.admin.yml may also specify this same service:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>webapp:
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  ports:
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    - &quot;9000:8000&quot;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  environment:
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    - ANOTHER_VARIABLE=value
+</span></code></pre></div>
+Any matching fields override the previous file. New values, add to the webapp service configuration:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>webapp:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  image: examples/web
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  ports:
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    - &quot;9000:8000&quot;
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  volumes:
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    - &quot;/data&quot;
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  environment:
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    - DEBUG=1
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    - ANOTHER_VARIABLE=value
+</span></code></pre></div>
 <h3 id="multi_stage_builds">Multi stage builds<a class="headerlink" href="#multi_stage_builds" title="Permanent link">&para;</a></h3>
+<p>Many times, one part of the build creates artificacts that are used in the main image.</p>
+<p>By using multi stage builds, the artifiact and not the images needed to create them are used in the main image build.</p>
+<p>For example, we might build an artifact in Cpython to use in our image build. We don't want the Cpython compiler image included in the final image, just the code.</p>
+<p><a href="https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a">https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a</a></p>
 <h3 id="securing_secrets">Securing secrets<a class="headerlink" href="#securing_secrets" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.youtube.com/watch?v=aK6sJDOn2Hc">YouTube</a></p>
 
 
 

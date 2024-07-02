@@ -96,6 +96,57 @@ LABEL desc="This is docker tutorial"
 
 ### Overide and merge
 
+Files can be overriden, merge or have include files.
+
+[https://docs.docker.com/compose/multiple-compose-files/extends/#extending-services-from-another-file](https://docs.docker.com/compose/multiple-compose-files/extends/#extending-services-from-another-file)]
+
+For example:
+
+`docker compose -f compose.yml -f compose.admin.yml run backup_db`
+The compose.yml file might specify a webapp service.
+
+```
+webapp:
+  image: examples/web
+  ports:
+    - "8000:8000"
+  volumes:
+    - "/data"
+  environment:
+    - DEBUG=1
+```
+The compose.admin.yml may also specify this same service:
+
+```
+webapp:
+  ports:
+    - "9000:8000"
+  environment:
+    - ANOTHER_VARIABLE=value
+```
+Any matching fields override the previous file. New values, add to the webapp service configuration:
+
+```
+webapp:
+  image: examples/web
+  ports:
+    - "9000:8000"
+  volumes:
+    - "/data"
+  environment:
+    - DEBUG=1
+    - ANOTHER_VARIABLE=value
+```
 ### Multi stage builds
 
+Many times, one part of the build creates artificacts that are used in the main image.
+
+By using multi stage builds, the artifiact and not the images needed to create them are used in the main image build.
+
+For example, we might build an artifact in Cpython to use in our image build. We don't want the Cpython compiler image included in the final image, just the code.
+
+[https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a](https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a)
+
 ### Securing secrets
+
+[YouTube](https://www.youtube.com/watch?v=aK6sJDOn2Hc)
