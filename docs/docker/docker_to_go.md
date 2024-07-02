@@ -8,5 +8,5 @@ The following have been added and tested as of 28JUN2024
 - FastAPI
 - Flask-Redis
 - Nginx-Flask-MySQL
-- Python-Postgres-PgAdmin-Adminer
+- PythonCRUD-Postgres-PgAdmin-Adminer
 
