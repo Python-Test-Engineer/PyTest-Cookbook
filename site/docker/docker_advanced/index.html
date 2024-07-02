@@ -724,6 +724,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolbox/rich_pyboxen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console prettying
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -980,19 +1001,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Labels">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overide_and_merge" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overide_include_and_merge" class="md-nav__link">
     <span class="md-ellipsis">
-      Overide and merge
+      Overide, include and merge
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#multi_stage_builds" class="md-nav__link">
     <span class="md-ellipsis">
       Multi stage builds
@@ -1000,18 +1020,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#securing_secrets" class="md-nav__link">
     <span class="md-ellipsis">
       Securing secrets
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1280,19 +1295,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Labels">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overide_and_merge" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overide_include_and_merge" class="md-nav__link">
     <span class="md-ellipsis">
-      Overide and merge
+      Overide, include and merge
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#multi_stage_builds" class="md-nav__link">
     <span class="md-ellipsis">
       Multi stage builds
@@ -1300,18 +1314,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#securing_secrets" class="md-nav__link">
     <span class="md-ellipsis">
       Securing secrets
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1402,7 +1411,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>LABEL website=&quot;geeksforgeeks&quot;
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>LABEL desc=&quot;This is docker tutorial&quot;
 </span></code></pre></div>
-<h3 id="overide_and_merge">Overide and merge<a class="headerlink" href="#overide_and_merge" title="Permanent link">&para;</a></h3>
+<h2 id="overide_include_and_merge">Overide, include and merge<a class="headerlink" href="#overide_include_and_merge" title="Permanent link">&para;</a></h2>
 <p>Files can be overriden, merge or have include files.</p>
 <p><a href="https://docs.docker.com/compose/multiple-compose-files/extends/#extending-services-from-another-file">https://docs.docker.com/compose/multiple-compose-files/extends/#extending-services-from-another-file</a>]</p>
 <p>For example:</p>
@@ -1435,12 +1444,12 @@ Any matching fields override the previous file. New values, add to the webapp se
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    - DEBUG=1
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    - ANOTHER_VARIABLE=value
 </span></code></pre></div>
-<h3 id="multi_stage_builds">Multi stage builds<a class="headerlink" href="#multi_stage_builds" title="Permanent link">&para;</a></h3>
+<h2 id="multi_stage_builds">Multi stage builds<a class="headerlink" href="#multi_stage_builds" title="Permanent link">&para;</a></h2>
 <p>Many times, one part of the build creates artificacts that are used in the main image.</p>
 <p>By using multi stage builds, the artifiact and not the images needed to create them are used in the main image build.</p>
 <p>For example, we might build an artifact in Cpython to use in our image build. We don't want the Cpython compiler image included in the final image, just the code.</p>
 <p><a href="https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a">https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a</a></p>
-<h3 id="securing_secrets">Securing secrets<a class="headerlink" href="#securing_secrets" title="Permanent link">&para;</a></h3>
+<h2 id="securing_secrets">Securing secrets<a class="headerlink" href="#securing_secrets" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.youtube.com/watch?v=aK6sJDOn2Hc">YouTube</a></p>
 
 

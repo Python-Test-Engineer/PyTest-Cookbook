@@ -94,7 +94,7 @@ LABEL website="geeksforgeeks"
 LABEL desc="This is docker tutorial"
 ```
 
-### Overide and merge
+## Overide, include and merge
 
 Files can be overriden, merge or have include files.
 
@@ -137,7 +137,7 @@ webapp:
     - DEBUG=1
     - ANOTHER_VARIABLE=value
 ```
-### Multi stage builds
+## Multi stage builds
 
 Many times, one part of the build creates artificacts that are used in the main image.
 
@@ -147,6 +147,6 @@ For example, we might build an artifact in Cpython to use in our image build. We
 
 [https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a](https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a)
 
-### Securing secrets
+## Securing secrets
 
 [YouTube](https://www.youtube.com/watch?v=aK6sJDOn2Hc)
