@@ -1,6 +1,6 @@
 # Docker Postgres Yoyo PyTest
 
-![YoYo](../images/yoyo.png 'YoYo')
+![YoYo](../images/yoyo/yoyo.png 'YoYo')
 
 ## Yoyo
 
@@ -20,10 +20,10 @@ YoYo acts like Git for our migrations with rollback made possible.
 
 `yoyo new -m "add foreign keys"` creates a file in the `migrations` folder that has 'steps' of SQL and their rollback. The file has a name of `datestamp-random_chars-message_used.py`.
 
-![MIGRATIONS](../images/yoyo-migrations-folder.png  "Migrations")
+![MIGRATIONS](../images/yoyo/yoyo-migrations-folder.png  "Migrations")
 
 
-![STEPS](../images/yoyo-steps.png  "steps")
+![STEPS](../images/yoyo/yoyo-steps.png  "steps")
 
 *There can be many step functions in the steps list.*
 
@@ -37,19 +37,19 @@ This was fixed with installing setuptools, (in requirements.txt).
 
 This lists all migrations and their status - 'U' unapplied and 'A' applied
 
-![Initial](../images/yoyo-initial.png 'YoYo')
+![Initial](../images/yoyo/yoyo-initial.png 'YoYo')
 
 ### After `yoyo apply`:
 
-![First Apply](../images/yoyo-list-after-apply.png 'YoYo')
+![First Apply](../images/yoyo/yoyo-list-after-apply.png 'YoYo')
 
 ### After two `yoyo rollback`:
 
-![Two Rollbacks](../images/yoyo-list-after-two-rollbacks.png 'YoYo')
+![Two Rollbacks](../images/yoyo/yoyo-list-after-two-rollbacks.png 'YoYo')
 
 ### PgAdmin looks like:
 
-![PgAdmin](../images/yoyo-pgadmin.png 'YoYo')
+![PgAdmin](../images/yoyo/yoyo-pgadmin.png 'YoYo')
 
 ## Project structure
 

@@ -22,15 +22,15 @@ Here is a sample output:
 
 ## Custom header sections
 
-![Test results](./images/terminal-01.png "Demo")
+![Test results](./images/home/terminal-01.png "Demo")
 
 ## Customised words, colours and icons
 
-![Test results](./images/terminal-03.png "Demo")
+![Test results](./images/home/terminal-03.png "Demo")
 
 ## Custom footer sections
 
-![Test results](./images/terminal-02.png "Demo")
+![Test results](./images/home/terminal-02.png "Demo")
 
 The frameworks have logging and other utilities installed to provide a complete framework.
 
@@ -69,7 +69,7 @@ Example plugins are:
 
 The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale every two weeks and the cost would be $20 USD approx.
 
-![PyTest - hooks and plugins](./images/udemy-hooks.png)
+![PyTest - hooks and plugins](./images/home/udemy-hooks.png)
 
 There is more information about me and my services [here](https://pytest-cookbook.netlify.app/craig/).
 

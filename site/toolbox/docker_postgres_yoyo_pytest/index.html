@@ -1388,7 +1388,7 @@
 
 
 <h1 id="docker_postgres_yoyo_pytest">Docker Postgres Yoyo PyTest<a class="headerlink" href="#docker_postgres_yoyo_pytest" title="Permanent link">&para;</a></h1>
-<p><img alt="YoYo" src="../../images/yoyo.png" title="YoYo" /></p>
+<p><img alt="YoYo" src="../../images/yoyo/yoyo.png" title="YoYo" /></p>
 <h2 id="yoyo">Yoyo<a class="headerlink" href="#yoyo" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Repo: https://github.com/Python-Test-Engineer/yt-docker-postgres-yoyo-pytest</li>
@@ -1401,21 +1401,21 @@
 <p>YoYo acts like Git for our migrations with rollback made possible.</p>
 <h2 id="migrations">Migrations<a class="headerlink" href="#migrations" title="Permanent link">&para;</a></h2>
 <p><code>yoyo new -m "add foreign keys"</code> creates a file in the <code>migrations</code> folder that has 'steps' of SQL and their rollback. The file has a name of <code>datestamp-random_chars-message_used.py</code>.</p>
-<p><img alt="MIGRATIONS" src="../../images/yoyo-migrations-folder.png" title="Migrations" /></p>
-<p><img alt="STEPS" src="../../images/yoyo-steps.png" title="steps" /></p>
+<p><img alt="MIGRATIONS" src="../../images/yoyo/yoyo-migrations-folder.png" title="Migrations" /></p>
+<p><img alt="STEPS" src="../../images/yoyo/yoyo-steps.png" title="steps" /></p>
 <p><em>There can be many step functions in the steps list.</em></p>
 <h3 id="fix_plg_resourcs_error">Fix plg_resourcs error<a class="headerlink" href="#fix_plg_resourcs_error" title="Permanent link">&para;</a></h3>
 <p>You may not get this but I had this, when I installed on Windows- it complained of 'no pkg_resources'.</p>
 <p>This was fixed with installing setuptools, (in requirements.txt).</p>
 <h3 id="yoyo_list"><code>yoyo list</code><a class="headerlink" href="#yoyo_list" title="Permanent link">&para;</a></h3>
 <p>This lists all migrations and their status - 'U' unapplied and 'A' applied</p>
-<p><img alt="Initial" src="../../images/yoyo-initial.png" title="YoYo" /></p>
+<p><img alt="Initial" src="../../images/yoyo/yoyo-initial.png" title="YoYo" /></p>
 <h3 id="after_yoyo_apply">After <code>yoyo apply</code>:<a class="headerlink" href="#after_yoyo_apply" title="Permanent link">&para;</a></h3>
-<p><img alt="First Apply" src="../../images/yoyo-list-after-apply.png" title="YoYo" /></p>
+<p><img alt="First Apply" src="../../images/yoyo/yoyo-list-after-apply.png" title="YoYo" /></p>
 <h3 id="after_two_yoyo_rollback">After two <code>yoyo rollback</code>:<a class="headerlink" href="#after_two_yoyo_rollback" title="Permanent link">&para;</a></h3>
-<p><img alt="Two Rollbacks" src="../../images/yoyo-list-after-two-rollbacks.png" title="YoYo" /></p>
+<p><img alt="Two Rollbacks" src="../../images/yoyo/yoyo-list-after-two-rollbacks.png" title="YoYo" /></p>
 <h3 id="pgadmin_looks_like">PgAdmin looks like:<a class="headerlink" href="#pgadmin_looks_like" title="Permanent link">&para;</a></h3>
-<p><img alt="PgAdmin" src="../../images/yoyo-pgadmin.png" title="YoYo" /></p>
+<p><img alt="PgAdmin" src="../../images/yoyo/yoyo-pgadmin.png" title="YoYo" /></p>
 <h2 id="project_structure">Project structure<a class="headerlink" href="#project_structure" title="Permanent link">&para;</a></h2>
 <p>The <code>sql_schema folder</code> contains scripts to query the schema tables for all constraints.</p>
 <p>The <code>steps</code> folder has just the steps for reuse and archice.</p>
