@@ -60,7 +60,14 @@ services:
 
 There is an alternative way for reloading without rebuilding that does not need bind mounts:
 
-[https://docs.docker.com/compose/file-watch/](https://docs.docker.com/compose/file-watch/)
+![Compose Develop](../images/docker/compose-watch-dockercon2023.png  'develop')
+
+[DockerCon2023 Video on Compose Develop](https://www.youtube.com/watch?v=u1q8AyNMxd4)
+
+
+Docs: [https://docs.docker.com/compose/file-watch/](https://docs.docker.com/compose/file-watch/)
+
+
 
 ```
 services:
@@ -148,5 +155,7 @@ For example, we might build an artifact in Cpython to use in our image build. We
 [https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a](https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a)
 
 ## Securing secrets
+
+The video below is a very good explainer of how 'secrets' can be exposed and how to prevent this.
 
 [YouTube](https://www.youtube.com/watch?v=aK6sJDOn2Hc)
