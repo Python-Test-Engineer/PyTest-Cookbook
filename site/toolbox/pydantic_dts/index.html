@@ -679,6 +679,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pydantic DTS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -688,6 +699,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data_sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data sources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data_transformation_services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Transformation Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_dts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example DTS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1162,6 +1228,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data_sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data sources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data_transformation_services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Transformation Services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_dts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example DTS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1181,6 +1291,39 @@
 <h1 id="pydantic_data_transformation_services">Pydantic Data Transformation Services<a class="headerlink" href="#pydantic_data_transformation_services" title="Permanent link">&para;</a></h1>
 <p>Utilities that carry out data transformation services - JOSN to CSV to Pydantice Classes to Export etc.</p>
 <p>Under construction 🏗️</p>
+<h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
+<p>We will have the following classes:</p>
+<ul>
+<li>User</li>
+<li>Product</li>
+<li>Category</li>
+</ul>
+<h2 id="data_sources">Data sources<a class="headerlink" href="#data_sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>API (or JSON stub)</li>
+<li>CSV</li>
+<li>DB</li>
+</ul>
+<h2 id="data_transformation_services">Data Transformation Services<a class="headerlink" href="#data_transformation_services" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Before Validation</li>
+<li>After Validation</li>
+<li>Aliasing</li>
+<li>Type Conversion</li>
+<li>Handling Date/Time</li>
+</ul>
+<h2 id="example_dts">Example DTS<a class="headerlink" href="#example_dts" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>From an API, handle JS type field names, firstName, and convert to Python field name, first_name, and also exporting out to JS field names.</p>
+</li>
+<li>
+<p>Read data in from a CSV, validate, clean and then load into a DB.</p>
+</li>
+<li>
+<p>Extract data from a DB/CSV and export to JSON.</p>
+</li>
+</ol>
 
 
 
