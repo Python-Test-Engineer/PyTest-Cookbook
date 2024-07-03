@@ -12,7 +12,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 
 A range of templates are available in Rich's GitHub repo [here](https://github.com/Textualize/rich/tree/master/examples).
 
-PyBoxen is built on Rich and provides quick boxes - [https://github.com/savioxavier/pyboxen](https://github.com/savioxavier/pyboxen)]
+PyBoxen is built on Rich and provides quick boxes - [https://github.com/savioxavier/pyboxen](https://github.com/savioxavier/pyboxen).
 
 ```
 from pyboxen import boxen
