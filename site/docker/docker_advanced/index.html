@@ -1386,7 +1386,9 @@
 </span></code></pre></div></p>
 <h2 id="develop_and_watch">Develop and watch<a class="headerlink" href="#develop_and_watch" title="Permanent link">&para;</a></h2>
 <p>There is an alternative way for reloading without rebuilding that does not need bind mounts:</p>
-<p><a href="https://docs.docker.com/compose/file-watch/">https://docs.docker.com/compose/file-watch/</a></p>
+<p><img alt="Compose Develop" src="../../images/docker/compose-watch-dockercon2023.png" title="develop" /></p>
+<p><a href="https://www.youtube.com/watch?v=u1q8AyNMxd4">DockerCon2023 Video on Compose Develop</a></p>
+<p>Docs: <a href="https://docs.docker.com/compose/file-watch/">https://docs.docker.com/compose/file-watch/</a></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>services:
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  web:
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    build: .
@@ -1450,6 +1452,7 @@ Any matching fields override the previous file. New values, add to the webapp se
 <p>For example, we might build an artifact in Cpython to use in our image build. We don't want the Cpython compiler image included in the final image, just the code.</p>
 <p><a href="https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a">https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a</a></p>
 <h2 id="securing_secrets">Securing secrets<a class="headerlink" href="#securing_secrets" title="Permanent link">&para;</a></h2>
+<p>The video below is a very good explainer of how 'secrets' can be exposed and how to prevent this.</p>
 <p><a href="https://www.youtube.com/watch?v=aK6sJDOn2Hc">YouTube</a></p>
 
 
