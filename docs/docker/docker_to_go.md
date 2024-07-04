@@ -9,6 +9,7 @@ The following have been added and tested as of 28JUN2024
 This uses the PythonCRUD-Postgres-PgAdmin-Adminer in the Docker To Go [repo](https://github.com/Python-Test-Engineer/yt-docker-to-go) to set up a Postgres container.
 
 There are a number of settings.py files:
+
 - `settings.py` with default SQLite
 - `settings_sqlite.py` with default SQLite
 - `settings_postgres.py`with Posgres connection
@@ -17,7 +18,7 @@ They can be merged into one with SQLite or Postgres commented out or copy approp
 
 ## FastAPI with reload
 
-FastAPI with hot reload on code change [YouTube](https://www.youtube.com/watch?v=ubHmmKnAoQg)
+FastAPI with hot reload on code change [YouTube](https://www.youtube.com/watch?v=ubHmmKnAoQg).
 
 ## PythonCRUD-Postgres-PgAdmin-Adminer 
 

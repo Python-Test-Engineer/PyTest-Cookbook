@@ -910,6 +910,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker To Go
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -919,6 +930,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#django_sqlitepostgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Sqlite/Postgres
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi_with_reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      FastAPI with reload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythoncrud-postgres-pgadmin-adminer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PythonCRUD-Postgres-PgAdmin-Adminer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flask-Redis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-flask-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx-Flask-MySQL
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1162,6 +1237,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#django_sqlitepostgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Sqlite/Postgres
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi_with_reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      FastAPI with reload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythoncrud-postgres-pgadmin-adminer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PythonCRUD-Postgres-PgAdmin-Adminer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flask-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flask-Redis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nginx-flask-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx-Flask-MySQL
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1181,13 +1309,23 @@
 <h1 id="docker_to_go">Docker To Go<a class="headerlink" href="#docker_to_go" title="Permanent link">&para;</a></h1>
 <p>I have a range of Docker multi-container apps and the repo is <a href="https://github.com/Python-Test-Engineer/yt-docker-to-go">here</a>.</p>
 <p>The following have been added and tested as of 28JUN2024</p>
+<h2 id="django_sqlitepostgres">Django Sqlite/Postgres<a class="headerlink" href="#django_sqlitepostgres" title="Permanent link">&para;</a></h2>
+<p>This uses the PythonCRUD-Postgres-PgAdmin-Adminer in the Docker To Go <a href="https://github.com/Python-Test-Engineer/yt-docker-to-go">repo</a> to set up a Postgres container.</p>
+<p>There are a number of settings.py files:</p>
 <ul>
-<li>Django</li>
-<li>Flask-Redis</li>
-<li>FastAPI with hot reload on code change <a href="https://www.youtube.com/watch?v=ubHmmKnAoQg">YouTube</a></li>
-<li>Nginx-Flask-MySQL</li>
-<li>PythonCRUD-Postgres-PgAdmin-Adminer <a href="https://www.youtube.com/watch?v=gldHOc65buI">YouTube</a></li>
+<li><code>settings.py</code> with default SQLite</li>
+<li><code>settings_sqlite.py</code> with default SQLite</li>
+<li><code>settings_postgres.py</code>with Posgres connection</li>
 </ul>
+<p>They can be merged into one with SQLite or Postgres commented out or copy appropriate settings file to <code>settings.py</code>.</p>
+<h2 id="fastapi_with_reload">FastAPI with reload<a class="headerlink" href="#fastapi_with_reload" title="Permanent link">&para;</a></h2>
+<p>FastAPI with hot reload on code change <a href="https://www.youtube.com/watch?v=ubHmmKnAoQg">YouTube</a>.</p>
+<h2 id="pythoncrud-postgres-pgadmin-adminer">PythonCRUD-Postgres-PgAdmin-Adminer<a class="headerlink" href="#pythoncrud-postgres-pgadmin-adminer" title="Permanent link">&para;</a></h2>
+<p>This has the PythonCRUD-Postgres-PgAdmin-Adminer set up <a href="https://www.youtube.com/watch?v=gldHOc65buI">YouTube</a>.</p>
+<h2 id="flask-redis">Flask-Redis<a class="headerlink" href="#flask-redis" title="Permanent link">&para;</a></h2>
+<p>Details to follow...</p>
+<h2 id="nginx-flask-mysql">Nginx-Flask-MySQL<a class="headerlink" href="#nginx-flask-mysql" title="Permanent link">&para;</a></h2>
+<p>Details to follow...</p>
 
 
 
