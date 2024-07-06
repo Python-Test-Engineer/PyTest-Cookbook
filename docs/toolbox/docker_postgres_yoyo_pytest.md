@@ -83,6 +83,6 @@ The project also includes a folder of sql_postgress python modules to perfome CR
 
 ## Docker Postgres setup
 
-It uses the standard [docker-postgres-pgadmin-adminer-python-sql](https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminier-python-sql) project to set up Docker Postgres.
+It uses the standard [docker-postgres-pgadmin-adminer-python-sql](https://github.com/Python-Test-Engineer/yt-docker-to-go/tree/main/python-postgres-pgadmin-adminer) project to set up Docker Postgres.
 
 <br>

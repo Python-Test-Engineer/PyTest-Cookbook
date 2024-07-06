@@ -152,7 +152,7 @@ By using multi stage builds, the artifiact and not the images needed to create t
 
 For example, we might build an artifact in Cpython to use in our image build. We don't want the Cpython compiler image included in the final image, just the code.
 
-[https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a](https://medium.com/@ketangangal98/docker-201-multi-stage-builds-for-production-59b1ea98924a)
+[FastAPI Docker To Go](https://github.com/Python-Test-Engineer/yt-docker-to-go/tree/main/fastapi) has an example of a multi stage build where we create a simple artifact of `test.txt` with the current date and time and copy this into the final image.
 
 ## Securing secrets
 
