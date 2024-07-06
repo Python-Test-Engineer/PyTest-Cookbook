@@ -1,6 +1,8 @@
 # Pydantic Data Transformation Services
 
-Utilities that carry out data transformation services - JOSN to CSV to Pydantice Classes to Export etc.
+### [Repo]()
+
+### [YouTube Video]()
 
 Under construction 🏗️
 
@@ -16,7 +18,9 @@ Under construction 🏗️
   
 ## CLASS
 
+- We can define types for each field, Nullability and whether it is required or optional.
 - We can use Pydantic field definitions on what will be valid data.
+- Define aliases for deserialization and serialization.
 - We can use Custom Validator functions.
 
 ## OUTPUT
