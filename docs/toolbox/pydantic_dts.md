@@ -4,32 +4,42 @@ Utilities that carry out data transformation services - JOSN to CSV to Pydantice
 
 Under construction 🏗️
 
-## Classes
+*DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models*
 
-We will have the following classes:
+*SERIALIZATION === output data from Pydantic Python Model to string/dict/JSON data*
 
-- User
-- Product
-- Category
+## INPUT
 
-## Data sources
+- We can register aliases for input e.g. firstName, FirstName to go into first_name.
+- We can clean/limit acceptable inputs before deserialization is complete.
+- We can validate data after data has entered model.
+  
+## CLASS
 
-- API (or JSON stub)
-- CSV
-- DB
+- We can use Pydantic field definitions on what will be valid data.
+- We can use Custom Validator functions.
 
-## Data Transformation Services
+## OUTPUT
 
-- Before Validation
-- After Validation
-- Aliasing
-- Type Conversion
-- Handling Date/Time
+- We can specify which fields to include/exclude when outputing to dict of JSON.
+- We can specify which alias to use e.g. first_name, FirstName or firstName etc.
+  
+As you can see, there are many operations we can perform and many ways to do them.
 
-## Example DTS
+The repo has templates for the most common uses with Rich and PyBoxen for presentation of these examples.
 
-1. From an API, handle JS type field names, firstName, and convert to Python field name, first_name, and also exporting out to JS field names.
+## UTILITIES
 
-2. Read data in from a CSV, validate, clean and then load into a DB.
+### Import a REST API
 
-3. Extract data from a DB/CSV and export to JSON.
+A range of examples for clean and unclean data.
+
+### Loading CSV files
+
+As with APIs we have a set of examples depending on the cleanliness of the data.
+
+### Import/Export to/from DB
+
+We will use SQLite as our DB.
+
+<br>
