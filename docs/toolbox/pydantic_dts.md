@@ -10,27 +10,21 @@ Under construction 🏗️
 
 *SERIALIZATION === output data from Pydantic Python Model to string/dict/JSON data*
 
-## INPUT
+## LIFECYCLE
 
-- We can register aliases for input e.g. firstName, FirstName to go into first_name.
-- We can clean/limit acceptable inputs before deserialization is complete.
-- We can validate data after data has entered model.
-  
-## CLASS
+### Before
 
-- We can define types for each field, Nullability and whether it is required or optional.
-- We can use Pydantic field definitions on what will be valid data.
-- Define aliases for deserialization and serialization.
-- We can use Custom Validator functions.
+If we are importing in JSON for example, we can create aliases so that we can map firstName to first_name for example. We can also set rules for how Pydantic should handle extra fields.
 
-## OUTPUT
+We can also apply validation and data transformation prior to Pydantic carry out its own validataion, transformation and insertion.
 
-- We can specify which fields to include/exclude when outputing to dict of JSON.
-- We can specify which alias to use e.g. first_name, FirstName or firstName etc.
-  
-As you can see, there are many operations we can perform and many ways to do them.
+### After
 
-The repo has templates for the most common uses with Rich and PyBoxen for presentation of these examples.
+Afte Pydantic has run thorugh its own process, we can apply after validators/transformations prior to being inserted into the class.
+
+### Serialization
+
+When serialising, ('exporting'), we can set up rules for include/exclude fields depending on whether we are exporting to a Python dict or JOSN object.
 
 ## UTILITIES
 

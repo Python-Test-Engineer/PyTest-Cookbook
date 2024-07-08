@@ -734,29 +734,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
-      INPUT
+      LIFECYCLE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFECYCLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
     <span class="md-ellipsis">
-      CLASS
+      After
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#serialization" class="md-nav__link">
     <span class="md-ellipsis">
-      OUTPUT
+      Serialization
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1304,29 +1319,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
+  <a href="#lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
-      INPUT
+      LIFECYCLE
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LIFECYCLE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
     <span class="md-ellipsis">
-      CLASS
+      After
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#serialization" class="md-nav__link">
     <span class="md-ellipsis">
-      OUTPUT
+      Serialization
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1396,26 +1426,14 @@
 <p>Under construction 🏗️</p>
 <p><em>DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models</em></p>
 <p><em>SERIALIZATION === output data from Pydantic Python Model to string/dict/JSON data</em></p>
-<h2 id="input">INPUT<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<ul>
-<li>We can register aliases for input e.g. firstName, FirstName to go into first_name.</li>
-<li>We can clean/limit acceptable inputs before deserialization is complete.</li>
-<li>We can validate data after data has entered model.</li>
-</ul>
-<h2 id="class">CLASS<a class="headerlink" href="#class" title="Permanent link">&para;</a></h2>
-<ul>
-<li>We can define types for each field, Nullability and whether it is required or optional.</li>
-<li>We can use Pydantic field definitions on what will be valid data.</li>
-<li>Define aliases for deserialization and serialization.</li>
-<li>We can use Custom Validator functions.</li>
-</ul>
-<h2 id="output">OUTPUT<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<ul>
-<li>We can specify which fields to include/exclude when outputing to dict of JSON.</li>
-<li>We can specify which alias to use e.g. first_name, FirstName or firstName etc.</li>
-</ul>
-<p>As you can see, there are many operations we can perform and many ways to do them.</p>
-<p>The repo has templates for the most common uses with Rich and PyBoxen for presentation of these examples.</p>
+<h2 id="lifecycle">LIFECYCLE<a class="headerlink" href="#lifecycle" title="Permanent link">&para;</a></h2>
+<h3 id="before">Before<a class="headerlink" href="#before" title="Permanent link">&para;</a></h3>
+<p>If we are importing in JSON for example, we can create aliases so that we can map firstName to first_name for example. We can also set rules for how Pydantic should handle extra fields.</p>
+<p>We can also apply validation and data transformation prior to Pydantic carry out its own validataion, transformation and insertion.</p>
+<h3 id="after">After<a class="headerlink" href="#after" title="Permanent link">&para;</a></h3>
+<p>Afte Pydantic has run thorugh its own process, we can apply after validators/transformations prior to being inserted into the class.</p>
+<h3 id="serialization">Serialization<a class="headerlink" href="#serialization" title="Permanent link">&para;</a></h3>
+<p>When serialising, ('exporting'), we can set up rules for include/exclude fields depending on whether we are exporting to a Python dict or JOSN object.</p>
 <h2 id="utilities">UTILITIES<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
 <h3 id="import_a_rest_api">Import a REST API<a class="headerlink" href="#import_a_rest_api" title="Permanent link">&para;</a></h3>
 <p>A range of examples for clean and unclean data.</p>
