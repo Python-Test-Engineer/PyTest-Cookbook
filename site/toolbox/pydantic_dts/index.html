@@ -734,19 +734,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lifecycle" class="md-nav__link">
+  <a href="#lifecycles" class="md-nav__link">
     <span class="md-ellipsis">
-      LIFECYCLE
+      Lifecycles
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="LIFECYCLE">
+    <nav class="md-nav" aria-label="Lifecycles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#before" class="md-nav__link">
     <span class="md-ellipsis">
       Before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pydantic_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pydantic validation
     </span>
   </a>
   
@@ -776,44 +785,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#utilities" class="md-nav__link">
+  <a href="#ingesting_a_rest_api" class="md-nav__link">
     <span class="md-ellipsis">
-      UTILITIES
+      Ingesting a REST API
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="UTILITIES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#import_a_rest_api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import a REST API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loading_csv_files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loading CSV files
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#importexport_tofrom_db" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import/Export to/from DB
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1319,19 +1295,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lifecycle" class="md-nav__link">
+  <a href="#lifecycles" class="md-nav__link">
     <span class="md-ellipsis">
-      LIFECYCLE
+      Lifecycles
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="LIFECYCLE">
+    <nav class="md-nav" aria-label="Lifecycles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#before" class="md-nav__link">
     <span class="md-ellipsis">
       Before
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pydantic_validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pydantic validation
     </span>
   </a>
   
@@ -1361,44 +1346,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#utilities" class="md-nav__link">
+  <a href="#ingesting_a_rest_api" class="md-nav__link">
     <span class="md-ellipsis">
-      UTILITIES
+      Ingesting a REST API
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="UTILITIES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#import_a_rest_api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import a REST API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loading_csv_files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loading CSV files
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#importexport_tofrom_db" class="md-nav__link">
-    <span class="md-ellipsis">
-      Import/Export to/from DB
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1426,21 +1378,22 @@
 <p>Under construction 🏗️</p>
 <p><em>DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models</em></p>
 <p><em>SERIALIZATION === output data from Pydantic Python Model to string/dict/JSON data</em></p>
-<h2 id="lifecycle">LIFECYCLE<a class="headerlink" href="#lifecycle" title="Permanent link">&para;</a></h2>
+<h2 id="lifecycles">Lifecycles<a class="headerlink" href="#lifecycles" title="Permanent link">&para;</a></h2>
 <h3 id="before">Before<a class="headerlink" href="#before" title="Permanent link">&para;</a></h3>
 <p>If we are importing in JSON for example, we can create aliases so that we can map firstName to first_name for example. We can also set rules for how Pydantic should handle extra fields.</p>
 <p>We can also apply validation and data transformation prior to Pydantic carry out its own validataion, transformation and insertion.</p>
+<h3 id="pydantic_validation">Pydantic validation<a class="headerlink" href="#pydantic_validation" title="Permanent link">&para;</a></h3>
+<p>Our Pydantic model will validate data and return a list of errors that fail validation.</p>
+<p>Pydantic does not stop on the first failed validation but continues on until all fields have been validated and it will then report a list of all validation errors.</p>
 <h3 id="after">After<a class="headerlink" href="#after" title="Permanent link">&para;</a></h3>
-<p>Afte Pydantic has run thorugh its own process, we can apply after validators/transformations prior to being inserted into the class.</p>
+<p>After Pydantic has run thorugh its own process, we can apply after validators/transformations prior to being inserted into the class.</p>
 <h3 id="serialization">Serialization<a class="headerlink" href="#serialization" title="Permanent link">&para;</a></h3>
 <p>When serialising, ('exporting'), we can set up rules for include/exclude fields depending on whether we are exporting to a Python dict or JOSN object.</p>
-<h2 id="utilities">UTILITIES<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
-<h3 id="import_a_rest_api">Import a REST API<a class="headerlink" href="#import_a_rest_api" title="Permanent link">&para;</a></h3>
-<p>A range of examples for clean and unclean data.</p>
-<h3 id="loading_csv_files">Loading CSV files<a class="headerlink" href="#loading_csv_files" title="Permanent link">&para;</a></h3>
-<p>As with APIs we have a set of examples depending on the cleanliness of the data.</p>
-<h3 id="importexport_tofrom_db">Import/Export to/from DB<a class="headerlink" href="#importexport_tofrom_db" title="Permanent link">&para;</a></h3>
-<p>We will use SQLite as our DB.</p>
+<h2 id="ingesting_a_rest_api">Ingesting a REST API<a class="headerlink" href="#ingesting_a_rest_api" title="Permanent link">&para;</a></h2>
+<p>This is <code>01_users.py</code></p>
+<p>Using <code>https://dummyjson.com/users/3</code> we get a dictionary from our requests library.</p>
+<p>In this first template, we only want id, first_name, last_name, age and email.</p>
+<p>We want to map our <code>user_id</code> in our Pydantic model to the REST <code>id</code> so we use our ConfigDict model alias for all the fields except this one, which uses a field level alias to map <code>user_id</code> to <code>id</code>,</p>
 <p><br></p>
 
 

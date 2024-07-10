@@ -10,7 +10,7 @@ Under construction 🏗️
 
 *SERIALIZATION === output data from Pydantic Python Model to string/dict/JSON data*
 
-## LIFECYCLE
+## Lifecycles
 
 ### Before
 
@@ -18,26 +18,28 @@ If we are importing in JSON for example, we can create aliases so that we can ma
 
 We can also apply validation and data transformation prior to Pydantic carry out its own validataion, transformation and insertion.
 
+### Pydantic validation
+
+Our Pydantic model will validate data and return a list of errors that fail validation.
+
+Pydantic does not stop on the first failed validation but continues on until all fields have been validated and it will then report a list of all validation errors.
+
 ### After
 
-Afte Pydantic has run thorugh its own process, we can apply after validators/transformations prior to being inserted into the class.
+After Pydantic has run thorugh its own process, we can apply after validators/transformations prior to being inserted into the class.
 
 ### Serialization
 
 When serialising, ('exporting'), we can set up rules for include/exclude fields depending on whether we are exporting to a Python dict or JOSN object.
 
-## UTILITIES
+## Ingesting a REST API
 
-### Import a REST API
+This is `01_users.py`
 
-A range of examples for clean and unclean data.
+Using `https://dummyjson.com/users/3` we get a dictionary from our requests library.
 
-### Loading CSV files
+In this first template, we only want id, first_name, last_name, age and email.
 
-As with APIs we have a set of examples depending on the cleanliness of the data.
-
-### Import/Export to/from DB
-
-We will use SQLite as our DB.
+We want to map our `user_id` in our Pydantic model to the REST `id` so we use our ConfigDict model alias for all the fields except this one, which uses a field level alias to map `user_id` to `id`,
 
 <br>
