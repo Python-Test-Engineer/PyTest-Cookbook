@@ -1,10 +1,10 @@
 # Pydantic Data Transformation Services
 
-### [Repo]()
+### [Repo](https://github.com/Python-Test-Engineer/yt-pydantic-dts)
 
-### [YouTube Video]()
+### [YouTube Video](https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL)
 
-Under construction 🏗️
+### Best course on Pydantic [https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic).
 
 *DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models*
 
