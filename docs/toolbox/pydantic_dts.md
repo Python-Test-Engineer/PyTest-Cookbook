@@ -10,7 +10,7 @@
 
 ### Best course on Pydantic 
 
-[https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic)
+[https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic) and there is a very good YT video by him [https://www.youtube.com/watch?v=ok8bF8M7gjk](https://www.youtube.com/watch?v=ok8bF8M7gjk) which he also has a  repo for in the links.
 
 *DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models*
 
