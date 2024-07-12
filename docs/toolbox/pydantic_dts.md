@@ -1,10 +1,16 @@
 # Pydantic Data Transformation Services
 
-### [Repo](https://github.com/Python-Test-Engineer/yt-pydantic-dts)
+### Repo
 
-### [YouTube Video](https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL)
+[https://github.com/Python-Test-Engineer/yt-pydantic-dts](https://github.com/Python-Test-Engineer/yt-pydantic-dts)
 
-### Best course on Pydantic [https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic).
+### YouTube Video
+
+[https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL](https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL)
+
+### Best course on Pydantic 
+
+[https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic).
 
 *DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models*
 
@@ -34,12 +40,15 @@ When serialising, ('exporting'), we can set up rules for include/exclude fields 
 
 ## Ingesting a REST API
 
-This is `01_users.py`
-
 Using `https://dummyjson.com/users/3` we get a dictionary from our requests library.
 
-In this first template, we only want id, first_name, last_name, age and email.
+- `01_user.py` - set up model level configuration and filter API for just a few fields.
+- `02_user_composition.py` - we use nested models for our `address` field.
+- `03_user_field_validation.py` - we apply field level validation/transformation on the `last_name` field and also demonstrate ordering of decorators where we use many on on field:
 
-We want to map our `user_id` in our Pydantic model to the REST `id` so we use our ConfigDict model alias for all the fields except this one, which uses a field level alias to map `user_id` to `id`,
+![Before After Validators](../images/toolbox/order-of-before-after-validators.png 'Validatores')
+![Before After Validators](../images/toolbox/output-order-validators-pydantic.png 'Validatores')
+
+No matter what order the validators are lexcially defined in, the order is always Before first with furthest lexically first, then After with lexically nearest first.
 
 <br>

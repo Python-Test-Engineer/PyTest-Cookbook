@@ -734,9 +734,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best_course_on_pydantic_httpswwwudemycomcoursepydantic" class="md-nav__link">
+  <a href="#best_course_on_pydantic" class="md-nav__link">
     <span class="md-ellipsis">
-      Best course on Pydantic https://www.udemy.com/course/pydantic.
+      Best course on Pydantic
     </span>
   </a>
   
@@ -1304,9 +1304,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best_course_on_pydantic_httpswwwudemycomcoursepydantic" class="md-nav__link">
+  <a href="#best_course_on_pydantic" class="md-nav__link">
     <span class="md-ellipsis">
-      Best course on Pydantic https://www.udemy.com/course/pydantic.
+      Best course on Pydantic
     </span>
   </a>
   
@@ -1391,9 +1391,12 @@
 
 
 <h1 id="pydantic_data_transformation_services">Pydantic Data Transformation Services<a class="headerlink" href="#pydantic_data_transformation_services" title="Permanent link">&para;</a></h1>
-<h3 id="repo"><a href="https://github.com/Python-Test-Engineer/yt-pydantic-dts">Repo</a><a class="headerlink" href="#repo" title="Permanent link">&para;</a></h3>
-<h3 id="youtube_video"><a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL">YouTube Video</a><a class="headerlink" href="#youtube_video" title="Permanent link">&para;</a></h3>
-<h3 id="best_course_on_pydantic_httpswwwudemycomcoursepydantic">Best course on Pydantic <a href="https://www.udemy.com/course/pydantic">https://www.udemy.com/course/pydantic</a>.<a class="headerlink" href="#best_course_on_pydantic_httpswwwudemycomcoursepydantic" title="Permanent link">&para;</a></h3>
+<h3 id="repo">Repo<a class="headerlink" href="#repo" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Python-Test-Engineer/yt-pydantic-dts">https://github.com/Python-Test-Engineer/yt-pydantic-dts</a></p>
+<h3 id="youtube_video">YouTube Video<a class="headerlink" href="#youtube_video" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL">https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL</a></p>
+<h3 id="best_course_on_pydantic">Best course on Pydantic<a class="headerlink" href="#best_course_on_pydantic" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.udemy.com/course/pydantic">https://www.udemy.com/course/pydantic</a>.</p>
 <p><em>DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models</em></p>
 <p><em>SERIALIZATION === output data from Pydantic Python Model to string/dict/JSON data</em></p>
 <h2 id="lifecycles">Lifecycles<a class="headerlink" href="#lifecycles" title="Permanent link">&para;</a></h2>
@@ -1408,10 +1411,15 @@
 <h3 id="serialization">Serialization<a class="headerlink" href="#serialization" title="Permanent link">&para;</a></h3>
 <p>When serialising, ('exporting'), we can set up rules for include/exclude fields depending on whether we are exporting to a Python dict or JOSN object.</p>
 <h2 id="ingesting_a_rest_api">Ingesting a REST API<a class="headerlink" href="#ingesting_a_rest_api" title="Permanent link">&para;</a></h2>
-<p>This is <code>01_users.py</code></p>
 <p>Using <code>https://dummyjson.com/users/3</code> we get a dictionary from our requests library.</p>
-<p>In this first template, we only want id, first_name, last_name, age and email.</p>
-<p>We want to map our <code>user_id</code> in our Pydantic model to the REST <code>id</code> so we use our ConfigDict model alias for all the fields except this one, which uses a field level alias to map <code>user_id</code> to <code>id</code>,</p>
+<ul>
+<li><code>01_user.py</code> - set up model level configuration and filter API for just a few fields.</li>
+<li><code>02_user_composition.py</code> - we use nested models for our <code>address</code> field.</li>
+<li><code>03_user_field_validation.py</code> - we apply field level validation/transformation on the <code>last_name</code> field and also demonstrate ordering of decorators where we use many on on field:</li>
+</ul>
+<p><img alt="Before After Validators" src="../../images/toolbox/order-of-before-after-validators.png" title="Validatores" />
+<img alt="Before After Validators" src="../../images/toolbox/output-order-validators-pydantic.png" title="Validatores" /></p>
+<p>No matter what order the validators are lexcially defined in, the order is always Before first with furthest lexically first, then After with lexically nearest first.</p>
 <p><br></p>
 
 
