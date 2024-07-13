@@ -27,4 +27,6 @@ docker build -t factors_flask_tester -f Dockerfile.tester --build-arg BaseImage=
 
 Tests are carried out on the `factors_flask_tester` image.
 
-Note, we can use the -f flag to select a Dockerfile. This can be a convenience when we have several Dockerfiles we want to use but don't want to have to overwrite the root Dockerfile.###
+Note, we can use the -f flag to select a Dockerfile. This can be a convenience when we have several Dockerfiles we want to use but don't want to have to overwrite the root Dockerfile.
+
+<br>

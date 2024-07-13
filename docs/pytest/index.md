@@ -29,7 +29,7 @@ The PyTest Full Stack repo is available here: [PyTest Full Stack](https://github
 - for Playwright browsers run `playwright install`.
 - run all tests `python -m pytest -vs`.
 - There are around 200 templated tests.
-- The video series goes into features and utils -> [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
+- The video series goes into features and utililities: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
 
 
 <br>

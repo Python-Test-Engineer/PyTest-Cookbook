@@ -1450,10 +1450,11 @@ Any matching fields override the previous file. New values, add to the webapp se
 <p>Many times, one part of the build creates artificacts that are used in the main image.</p>
 <p>By using multi stage builds, the artifiact and not the images needed to create them are used in the main image build.</p>
 <p>For example, we might build an artifact in Cpython to use in our image build. We don't want the Cpython compiler image included in the final image, just the code.</p>
-<p><a href="https://github.com/Python-Test-Engineer/yt-docker-to-go/tree/main/fastapi">FastAPI Docker To Go</a> has an example of a multi stage build where we create a simple artifact of <code>test.txt</code> with the current date and time and copy this into the final image.</p>
+<p><a href="https://pytest-cookbook.com/docker/docker_to_go/#fastapi_multi-stage_build">FastAPI Docker To Go</a> has an example of a multi stage build where we create a simple artifact of <code>test.txt</code> with the current date and time and copy this into the final image.</p>
 <h2 id="securing_secrets">Securing secrets<a class="headerlink" href="#securing_secrets" title="Permanent link">&para;</a></h2>
 <p>The video below is a very good explainer of how 'secrets' can be exposed and how to prevent this.</p>
 <p><a href="https://www.youtube.com/watch?v=aK6sJDOn2Hc">YouTube</a></p>
+<p><br></p>
 
 
 

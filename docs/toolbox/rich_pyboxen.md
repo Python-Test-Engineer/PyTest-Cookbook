@@ -30,4 +30,12 @@ print(
 ```
 ![Rich PyBoxen](../images/toolbox/pyboxen.png 'PyBoxen')
 
+For a more pretty traceback:
+
+```
+from rich.traceback import install
+install(show_locals=True)
+```
+![Rich Traceback](../images/toolbox/rich-tb.png)
+
 <br>

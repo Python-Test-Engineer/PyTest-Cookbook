@@ -20,11 +20,11 @@ Located in `03_indian_pythonista` in PFS, this is another great video series tha
 
 ## 3. PyTest with Eric
 
-This is perhaps one of the best resources for PyTest, [PyTestWithEric](https://pytest-with-eric.com/), I am creating videos of them and incorporating the GitHub code to provide a second content delivery medium, explaining salient points.
+This is perhaps one of the best resources for PyTest, [PyTestWithEric](https://pytest-with-eric.com/), and I am creating videos of them and incorporating the GitHub code to provide a second content delivery medium, explaining salient points.
 
 This is both for my own technical development and a way of creating a greater audience for this body of work.
 
-I have started recording videos of me go through the article and adding them to PyTest Full Stack in 60_pwe.
+I have started recording videos of me go through the article and adding them to PyTest Full Stack in `60_pwe`.
 
 Playlist [PyTest With Eric](https://www.youtube.com/playlist?list=PLsszRSbzjyvm5meFiH-rDU-YiC5kcOLcK)
 
@@ -44,6 +44,10 @@ For an advanced look at these topics, I have my course hosted on Udemy:
 The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale ever two weeks and the cost would be $20 USD approx.
 
 ![PyTest - hooks and plugins](./images/craig/udemy-hooks.png)
+
+The repo contains heavily commented source files creating a sort of 'ebook' and is freely available [https://github.com/Python-Test-Engineer/Udemy-PyTest](https://github.com/Python-Test-Engineer/Udemy-PyTest). The video course add visual explanations and commentary.
+
+<br>
 
 
 

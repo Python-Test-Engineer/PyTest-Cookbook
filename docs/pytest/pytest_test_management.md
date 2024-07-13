@@ -25,7 +25,11 @@ Docstrings can also be extracted and added to the database.
 
 ##  Report name as test run information
 
-Furthermore, as output test CSV files have the format of `report_2024-06-02-13-39-00_9496487.csv`, we can split the filename on '_'. giving us the date and time of the test  from the second item. This should be globally unique as it gives the time to the second, but to ensure global uniqueness, a randon intger between, 1_000_000 and 9_999_999 is added.
+Furthermore, as output test CSV files have the format of `report_2024-06-02-13-39-00_9496487.csv`, we can split the filename on '_'. giving us the date and time of the test from the second item. This should be globally unique as it gives the time to the second, but to ensure global uniqueness, a randon intger between, 1_000_000 and 9_999_999 is added.
+
+We can also include the application version as well, i.e. `report_V061_2024-06-02-13-39-00_9496487.csv`, whee V061 would indicate a development sprint 67.
+
+These files can then be digested and inserted into SQL tables enabling a full audit trail of tests over time and versions to be made.
 
 This enable these data tables to be joined to create detailed test reporting. A sprint version number can also be added to create a history of tests by sprint.
 

@@ -1,16 +1,10 @@
 # Pydantic Data Transformation Services
 
-### Repo
+"Today, Pydantic is downloaded many times a month and used by some of the largest and most recognisable organisations in the world.
 
-[https://github.com/Python-Test-Engineer/yt-pydantic-dts](https://github.com/Python-Test-Engineer/yt-pydantic-dts)
+It's hard to know why so many people have adopted Pydantic since its inception six years ago, but here are a few guesses."
 
-### YouTube Video
-
-[https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL](https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL)
-
-### Best course on Pydantic 
-
-[https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic) and there is a very good YT video by him [https://www.youtube.com/watch?v=ok8bF8M7gjk](https://www.youtube.com/watch?v=ok8bF8M7gjk) which he also has a  repo for in the links.
+![Pydantic](../images/toolbox/pydantic-homepage.png)
 
 *DESERIALIZATION === input string/dict/JSON data into Pydantic Python Models*
 
@@ -50,5 +44,18 @@ Using `https://dummyjson.com/users/3` we get a dictionary from our requests libr
 ![Before After Validators](../images/toolbox/output-order-validators-pydantic.png 'Validatores')
 
 No matter what order the validators are lexcially defined in, the order is always Before first with furthest lexically first, then After with lexically nearest first.
+
+
+### Repo
+
+[https://github.com/Python-Test-Engineer/yt-pydantic-dts](https://github.com/Python-Test-Engineer/yt-pydantic-dts)
+
+### YouTube Video
+
+[https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL](https://www.youtube.com/playlist?list=PLsszRSbzjyvnRLSoGM3e-VspqImbWpXSL)
+
+## Best course on Pydantic 
+
+[https://www.udemy.com/course/pydantic](https://www.udemy.com/course/pydantic) and there is a very good YT video by him [https://www.youtube.com/watch?v=ok8bF8M7gjk](https://www.youtube.com/watch?v=ok8bF8M7gjk) which he also has a  repo for in the links.
 
 <br>

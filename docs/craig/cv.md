@@ -1,11 +1,13 @@
-- [PythonTestEngineer.co.uk](http://pythontestengineer.co.uk)
 
-- [Github CV](https://github.com/Python-Test-Engineer/)
+## GitHub CV
+
+I use GitHub to host a copy of my CV.
+
+[Github CV](https://github.com/Python-Test-Engineer/)
+
+## Python Backend and Test Automation Engineer
 
 ![Logo](../images/craig/craig.jpg){:style="width:240px;border-radius:50%;border: 5px solid #555;"}
-
-
-# Python Backend and Test Automation Engineer
 
 - Degree in Chemistry, Oxford University.
 - Former A+ PC Technician, Microsoft Certified Systems Engineer and Microsoft Certified SQL Server DBA.

@@ -1273,7 +1273,9 @@
 </ul>
 <p>Docstrings can also be extracted and added to the database.</p>
 <h2 id="report_name_as_test_run_information">Report name as test run information<a class="headerlink" href="#report_name_as_test_run_information" title="Permanent link">&para;</a></h2>
-<p>Furthermore, as output test CSV files have the format of <code>report_2024-06-02-13-39-00_9496487.csv</code>, we can split the filename on '_'. giving us the date and time of the test  from the second item. This should be globally unique as it gives the time to the second, but to ensure global uniqueness, a randon intger between, 1_000_000 and 9_999_999 is added.</p>
+<p>Furthermore, as output test CSV files have the format of <code>report_2024-06-02-13-39-00_9496487.csv</code>, we can split the filename on '_'. giving us the date and time of the test from the second item. This should be globally unique as it gives the time to the second, but to ensure global uniqueness, a randon intger between, 1_000_000 and 9_999_999 is added.</p>
+<p>We can also include the application version as well, i.e. <code>report_V061_2024-06-02-13-39-00_9496487.csv</code>, whee V061 would indicate a development sprint 67.</p>
+<p>These files can then be digested and inserted into SQL tables enabling a full audit trail of tests over time and versions to be made.</p>
 <p>This enable these data tables to be joined to create detailed test reporting. A sprint version number can also be added to create a history of tests by sprint.</p>
 <p>Extending the database with test creators, creation date, test modifier and modification date, we can create audit trails of tests.</p>
 <p><br></p>

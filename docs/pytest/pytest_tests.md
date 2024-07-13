@@ -11,7 +11,9 @@ These are used to test that:
 
 ## 01 Inspect
 
-Using SQLModel's inspect, we run tests on SQL schema to verify foreign keys, check constraints etc exist. Inspired by Very Academy's TDD Fast Api course.
+Using SQLModel's inspect, we run tests on SQL schema to verify foreign keys, check constraints etc exist. Inspired by Very Academy's TDD Fast API course.
+
+There is also a repo and video series on YoYo database migrations and SQL Schema Tests here [https://pytest-cookbook.com/toolbox/docker_postgres_yoyo_pytest/](https://pytest-cookbook.com/toolbox/docker_postgres_yoyo_pytest/).
 
 ## 02 CoffeeBeforeArch 
 

@@ -2,7 +2,7 @@
 
 Docker seems to be an essential part of testing work.
 
-As a result, I have a section on Docker, with a sub section of Docker To Go, a range of ready made Docker set ups. [Docker](https://pytest-cookbook.com/docker/docker_index/)
+As a result, I have a section on Docker, with a sub section of Docker To Go, a range of ready made Docker set ups: [Docker](https://pytest-cookbook.com/docker/docker_index/).
 
 
 ## Docker and PyTest Full Stack
@@ -13,7 +13,7 @@ PyTest-Full-Stack has one example using `pytest-docker`.
 
 Located in tests/docker. My usual folder naming of 70_docker is unacceptable so I just use docker.
 
-There is a YT video of this: [pytest-docker](https://youtu.be/43YKqEg49HI)
+There is a YT video of this: [pytest-docker](https://youtu.be/43YKqEg49HI).
 
 ## Useful courses
 

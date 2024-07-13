@@ -8,7 +8,7 @@
 
 ## PyTest Full Stack, (PFS)
 
-The PyTest Full Stack suite has an installation tat will just require a 1-2-3 of:
+The PyTest Full Stack suite has an installation that will just require a 1-2-3 of:
    
 1. `pip install -r requirements.txt`.
 2. `playwright install` to load Playwright browsers.
@@ -41,7 +41,7 @@ Resources included are:
 
 ## Test frameworks
 
-*See the README.md in root of each Test framework for detailed and up to date set up instructions.*
+*See the README.md in root of each test framework for detailed and up to date set up instructions.*
 
 There are two main test frameworks:
 
@@ -56,7 +56,7 @@ Often I am a wrapper around someone else's effort and I try to add a different p
 
 ## About me
 
-I am a Python Test Engineer using PyTest and Playwright as well as a Software Tester and Django developer.
+I describe myself as a 'Freelance Backend Pythonista and Test Automation Engineer'.
 
 I enjoy building Plugins and I have created a PyTest Hooks and Plugin online video course that teaches how to create lite versions of some well known plugins as well as our own useful custom plugins which can be made distributabe:
 
