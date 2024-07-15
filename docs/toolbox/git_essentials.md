@@ -44,6 +44,12 @@ git push origin --delete <branch_name>
 git remote -v
 ```
 
+### Change url of remote origin
+
+```
+git remote set-url origin git@github.com:User/UserRepo.git
+```
+
 ### Delete remote origin
 
 ```
@@ -69,9 +75,29 @@ git commit --amend
 git log --pretty=oneline
 ```
 
-### Go back to a previous checkout
+### Go back to a previous commit
 
-### Go back to a previous checkout (hard)
+```
+ git reset --soft HEAD~1
+```
+Reset will rewind your current HEAD branch to the specified revision. In our example above, we'd like to return to the one before the current revision - effectively making our last commit undone.
 
+Note the --soft flag: this makes sure that the changes in undone revisions are preserved. After running the command, you'll find the changes as uncommitted local modifications in your working copy.
+
+If you don't want to keep these changes, simply use the --hard flag. Be sure to only do this when you're sure you don't need these changes anymore.
+
+### Go back to the previous commit (hard)
+
+```
+git reset --hard HEAD~1
+```
+
+### Go back to a particular commit
+
+```
+git reset --hard 0ad5a7a6
+```
+
+![Revert to a particular commit](../images/toolbox/revert-to-particular-commit.png)
 
 <br>

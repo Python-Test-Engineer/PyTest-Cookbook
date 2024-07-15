@@ -821,6 +821,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change_url_of_remote_origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change url of remote origin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#delete_remote_origin" class="md-nav__link">
     <span class="md-ellipsis">
       Delete remote origin
@@ -857,18 +866,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#go_back_to_a_previous_checkout" class="md-nav__link">
+  <a href="#go_back_to_a_previous_commit" class="md-nav__link">
     <span class="md-ellipsis">
-      Go back to a previous checkout
+      Go back to a previous commit
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#go_back_to_a_previous_checkout_hard" class="md-nav__link">
+  <a href="#go_back_to_the_previous_commit_hard" class="md-nav__link">
     <span class="md-ellipsis">
-      Go back to a previous checkout (hard)
+      Go back to the previous commit (hard)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go_back_to_a_particular_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go back to a particular commit
     </span>
   </a>
   
@@ -1379,6 +1397,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#change_url_of_remote_origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change url of remote origin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#delete_remote_origin" class="md-nav__link">
     <span class="md-ellipsis">
       Delete remote origin
@@ -1415,18 +1442,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#go_back_to_a_previous_checkout" class="md-nav__link">
+  <a href="#go_back_to_a_previous_commit" class="md-nav__link">
     <span class="md-ellipsis">
-      Go back to a previous checkout
+      Go back to a previous commit
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#go_back_to_a_previous_checkout_hard" class="md-nav__link">
+  <a href="#go_back_to_the_previous_commit_hard" class="md-nav__link">
     <span class="md-ellipsis">
-      Go back to a previous checkout (hard)
+      Go back to the previous commit (hard)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go_back_to_a_particular_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go back to a particular commit
     </span>
   </a>
   
@@ -1473,21 +1509,35 @@
 <h3 id="list_remote_origin">List remote origin<a class="headerlink" href="#list_remote_origin" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git remote -v
 </span></code></pre></div>
+<h3 id="change_url_of_remote_origin">Change url of remote origin<a class="headerlink" href="#change_url_of_remote_origin" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git remote set-url origin git@github.com:User/UserRepo.git
+</span></code></pre></div>
 <h3 id="delete_remote_origin">Delete remote origin<a class="headerlink" href="#delete_remote_origin" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git remote remove origin
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git remote remove origin
 </span></code></pre></div>
 <h3 id="add_a_remote_origin">Add a remote origin<a class="headerlink" href="#add_a_remote_origin" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git remote add origin &lt;remote_url&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git remote add origin &lt;remote_url&gt;
 </span></code></pre></div>
 <h3 id="edit_previous_commit_message">Edit previous commit message<a class="headerlink" href="#edit_previous_commit_message" title="Permanent link">&para;</a></h3>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git commit --amend
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git commit --amend
 </span></code></pre></div>
  - opens up git editor.</p>
 <h3 id="list_checkouts_one_line">List checkouts one line<a class="headerlink" href="#list_checkouts_one_line" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git log --pretty=oneline
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git log --pretty=oneline
 </span></code></pre></div>
-<h3 id="go_back_to_a_previous_checkout">Go back to a previous checkout<a class="headerlink" href="#go_back_to_a_previous_checkout" title="Permanent link">&para;</a></h3>
-<h3 id="go_back_to_a_previous_checkout_hard">Go back to a previous checkout (hard)<a class="headerlink" href="#go_back_to_a_previous_checkout_hard" title="Permanent link">&para;</a></h3>
+<h3 id="go_back_to_a_previous_commit">Go back to a previous commit<a class="headerlink" href="#go_back_to_a_previous_commit" title="Permanent link">&para;</a></h3>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a> git reset --soft HEAD~1
+</span></code></pre></div>
+Reset will rewind your current HEAD branch to the specified revision. In our example above, we'd like to return to the one before the current revision - effectively making our last commit undone.</p>
+<p>Note the --soft flag: this makes sure that the changes in undone revisions are preserved. After running the command, you'll find the changes as uncommitted local modifications in your working copy.</p>
+<p>If you don't want to keep these changes, simply use the --hard flag. Be sure to only do this when you're sure you don't need these changes anymore.</p>
+<h3 id="go_back_to_the_previous_commit_hard">Go back to the previous commit (hard)<a class="headerlink" href="#go_back_to_the_previous_commit_hard" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git reset --hard HEAD~1
+</span></code></pre></div>
+<h3 id="go_back_to_a_particular_commit">Go back to a particular commit<a class="headerlink" href="#go_back_to_a_particular_commit" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git reset --hard 0ad5a7a6
+</span></code></pre></div>
+<p><img alt="Revert to a particular commit" src="../../images/toolbox/revert-to-particular-commit.png" /></p>
 <p><br></p>
 
 
