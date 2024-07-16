@@ -62,10 +62,10 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - "Home": "index.md"
+  - "Motivation": "index.md"
   - "Learn": learn.md
   - "PyTest Full Stack":
-      - "About": "pytest/index.md"
+      - "Set Up": "pytest/index.md"
       - "Customise": "pytest/pytest_full_stack_customise.md"
       - "Tests": "pytest/pytest_tests.md"
       - "Test Management": "pytest/pytest_test_management.md"
@@ -100,4 +100,4 @@ nav:
       - "Contact": "craig/contact.md"
 
 copyright: |
-  &copy; 2024 <a href="https://github.com/Python-Test-Engineer"  target="_blank" rel="noopener">Craig West - PythonTestEngineer.co.uk</a>
+  &copy; 2024 <a href="https://github.com/Python-Test-Engineer"  target="_blank" rel="noopener">Craig West - pytest-cookbook.com</a>

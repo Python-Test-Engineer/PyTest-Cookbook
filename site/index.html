@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Motivation
             
           </span>
         </div>
@@ -268,7 +268,7 @@
           
   
   <span class="md-ellipsis">
-    Home
+    Motivation
   </span>
   
 
@@ -279,7 +279,7 @@
         
   
   <span class="md-ellipsis">
-    Home
+    Motivation
   </span>
   
 
@@ -299,6 +299,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#purpose_of_this_book" class="md-nav__link">
@@ -358,24 +367,6 @@
   <a href="#about_me" class="md-nav__link">
     <span class="md-ellipsis">
       About me
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how_best_to_use_this_book" class="md-nav__link">
-    <span class="md-ellipsis">
-      How best to use this book
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#youtube_videos" class="md-nav__link">
-    <span class="md-ellipsis">
-      YouTube Videos
     </span>
   </a>
   
@@ -455,7 +446,7 @@
         
   
   <span class="md-ellipsis">
-    About
+    Set Up
   </span>
   
 
@@ -1276,6 +1267,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#purpose_of_this_book" class="md-nav__link">
     <span class="md-ellipsis">
       Purpose of this book
@@ -1338,24 +1338,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#how_best_to_use_this_book" class="md-nav__link">
-    <span class="md-ellipsis">
-      How best to use this book
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#youtube_videos" class="md-nav__link">
-    <span class="md-ellipsis">
-      YouTube Videos
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1375,6 +1357,9 @@
 
 
 <h1 id="the_pytest_cookbook_-_recipes_with_videos_and_repos">The Pytest Cookbook - <em>recipes with videos and repos</em><a class="headerlink" href="#the_pytest_cookbook_-_recipes_with_videos_and_repos" title="Permanent link">&para;</a></h1>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<p>I really enjoy coming a across a resource that helps me understand a subject and that has a repo of the code that works 'out of the box' and additionally a video explainer rather than just an article.</p>
+<p>I have created or collected such resources and combined them into a 'book', citing references where appropriate.</p>
 <h2 id="purpose_of_this_book">Purpose of this book<a class="headerlink" href="#purpose_of_this_book" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -1410,8 +1395,8 @@
 <p><em>See the README.md in root of each test framework for detailed and up to date set up instructions.</em></p>
 <p>There are two main test frameworks:</p>
 <ul>
-<li>PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright</li>
-<li>PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a PyTest-Full-Stack test suite for Django).</li>
+<li>PyTest Full Stack - a full stack testing framework from SQL Schemas to E2E testing with Playwright</li>
+<li>PyTest Django Full Stack- is its own unique testing framework built from a range of sources. (Under construction and will be a PyTest-Full-Stack test suite for Django).</li>
 </ul>
 <p>I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.</p>
 <p>As a curated list of resources, I have integrity over linking to the work of others and due credits are given.</p>
@@ -1429,20 +1414,6 @@
 <p>The course is available <a href="https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/">Udemy Hooks and Plugins course</a> and Udemy has a sale every two weeks and the cost would be $20 USD approx.</p>
 <p><img alt="PyTest - hooks and plugins" src="images/craig/udemy-hooks.png" title="Course" /></p>
 <p>There is more information about me and my services <a href="https://pytest-cookbook.netlify.app/craig/">here</a>.</p>
-<h2 id="how_best_to_use_this_book">How best to use this book<a class="headerlink" href="#how_best_to_use_this_book" title="Permanent link">&para;</a></h2>
-<p>For the PyTest-Full-Stack framework:</p>
-<p>Download or git clone from <a href="https://github.com/https://github.com/Python-Test-Engineer/PyTest-Full-Stack">repo</a>.</p>
-<p>Follow installation instructions in the README.md or the 1-2-3 of:</p>
-<ol>
-<li><code>pip install -r requirements.txt</code>.</li>
-<li><code>playwright install</code> to load Playwright browsers.</li>
-<li><code>python -m pytest -v</code> to run over 200 tests.</li>
-</ol>
-<p>For prettier general console output, Rich and PyBoxen, built on Rich, are used.</p>
-<p><code>pytest-sugar</code>, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have a coloruful and decorative console output that is configurable and customisable (see YouTube guide below).</p>
-<h2 id="youtube_videos">YouTube Videos<a class="headerlink" href="#youtube_videos" title="Permanent link">&para;</a></h2>
-<p>I have made some videos to assist in using this book.</p>
-<p>These are available <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy" target="_blank">here</a>.</p>
 <p><br></p>
 
 
@@ -1473,7 +1444,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2024 <a href="https://github.com/Python-Test-Engineer"  target="_blank" rel="noopener">Craig West - PythonTestEngineer.co.uk</a>
+      &copy; 2024 <a href="https://github.com/Python-Test-Engineer"  target="_blank" rel="noopener">Craig West - pytest-cookbook.com</a>
 
     </div>
   

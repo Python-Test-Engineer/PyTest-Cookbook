@@ -1,5 +1,11 @@
 # The Pytest Cookbook - *recipes with videos and repos*
 
+## Motivation
+
+I really enjoy coming a across a resource that helps me understand a subject and that has a repo of the code that works 'out of the box' and additionally a video explainer rather than just an article.
+
+I have created or collected such resources and combined them into a 'book', citing references where appropriate.
+
 ## Purpose of this book 
 
 1. To provide a number of ready built and congfigurable FULL STACK PYTHON TEST FRAMEWORK, (PFS), comprising of over 200 highly commented test templates for developers to adapt to their own needs along with resource links that have helped me greatly, as well as integration of these into the frameworks.
@@ -45,8 +51,8 @@ Resources included are:
 
 There are two main test frameworks:
 
-- PyTest_01_Full - a full stack testing framework from SQL Schemas to E2E testing with Playwright
-- PyTest_02_DJANGO - is its own unique testing framework built from a range of sources. (Under construction and will be a PyTest-Full-Stack test suite for Django).
+- PyTest Full Stack - a full stack testing framework from SQL Schemas to E2E testing with Playwright
+- PyTest Django Full Stack- is its own unique testing framework built from a range of sources. (Under construction and will be a PyTest-Full-Stack test suite for Django).
 
 I strive to acknowledge sources I have used to learn PyTest and any adaptations of code samples used therein.
 
@@ -72,28 +78,5 @@ The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/c
 ![PyTest - hooks and plugins](./images/craig/udemy-hooks.png 'Course')
 
 There is more information about me and my services [here](https://pytest-cookbook.netlify.app/craig/).
-
-## How best to use this book
-
-
-For the PyTest-Full-Stack framework:
-
-Download or git clone from [repo](https://github.com/https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
-
-Follow installation instructions in the README.md or the 1-2-3 of:
-
-1. `pip install -r requirements.txt`.
-2. `playwright install` to load Playwright browsers.
-3. `python -m pytest -v` to run over 200 tests.
-
-For prettier general console output, Rich and PyBoxen, built on Rich, are used.
-
-`pytest-sugar`, an excellent plugin, was used but with the inclusion of the pytest_terminal_summary hook in the conftest.py file of PyTest-Full-Stack, we have a coloruful and decorative console output that is configurable and customisable (see YouTube guide below).
-
-## YouTube Videos
-
-I have made some videos to assist in using this book.
-
-These are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy){target="_blank"}.
 
 <br>
