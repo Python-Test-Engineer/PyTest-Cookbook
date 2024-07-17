@@ -36,6 +36,7 @@ Articles videod:
 - 04 transactions with SQL Model
 - 05 setting up allure reporting
 - 06 automated testing with GitHub actions
+- 07 wiring of the big Mortgage Calculator FastAPI test suite
 
 ## 4. Hooks and Plugins
 
