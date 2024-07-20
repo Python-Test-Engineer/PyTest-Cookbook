@@ -1030,6 +1030,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#under_the_hood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Under the hood
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1324,6 +1333,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#under_the_hood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Under the hood
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1344,10 +1362,10 @@
 
 <h1 id="advanced_docker">Advanced Docker<a class="headerlink" href="#advanced_docker" title="Permanent link">&para;</a></h1>
 <p>This is a selection of less shown aspects of Docker, not necessarily advanced Docker but more uncommon.</p>
-<p>Under construction 🏗️</p>
 <h2 id="version_deprecated">'version' deprecated<a class="headerlink" href="#version_deprecated" title="Permanent link">&para;</a></h2>
 <p>A <code>docker-compose.yaml</code> file no longer needs the <code>VERSION</code> at top.</p>
 <p>One can also use a different named file with the <code>-f</code> flag: <code>docker compose -f another_file.yaml up</code> and we can avoid the use of <code>docker-compose</code> in favor of <code>docker compose</code>.</p>
+<p>We can use <code>compose.yml</code> in <code>place of docker-compose.yml</code></p>
 <h2 id="depends_on">Depends On<a class="headerlink" href="#depends_on" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.warp.dev/terminus/docker-compose-depends-on">https://www.warp.dev/terminus/docker-compose-depends-on</a></p>
 <p>Whilst <code>depends on</code> defines a dependency, to check that the service is running we can use:</p>
@@ -1384,6 +1402,7 @@
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    healthcheck:
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      test: [&quot;CMD-SHELL&quot;, &quot;pg_isready&quot;]
 </span></code></pre></div></p>
+<p>A good short video on this is <a href="https://www.youtube.com/watch?v=BTXfR76WmCw">https://www.youtube.com/watch?v=BTXfR76WmCw</a>.</p>
 <h2 id="develop_and_watch">Develop and watch<a class="headerlink" href="#develop_and_watch" title="Permanent link">&para;</a></h2>
 <p>There is an alternative way for reloading without rebuilding that does not need bind mounts:</p>
 <p><img alt="Compose Develop" src="../../images/docker/compose-watch-dockercon2023.png" title="develop" /></p>
@@ -1446,6 +1465,16 @@ Any matching fields override the previous file. New values, add to the webapp se
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    - DEBUG=1
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    - ANOTHER_VARIABLE=value
 </span></code></pre></div>
+<p>This is efectively, like updating a dictonary where we just pass in fields to be add/updated and copy in the remaining fields.</p>
+<p>It is also worth noting that if we have two docker composes files such as <code>docker-compose.yml</code> and <code>docker-compose-override.yml</code> then running <code>docker compose up</code> will run <code>docker-compose.yml</code> and then automatically run <code>docker-compose-override.yml</code>.</p>
+<p><a href="https://docs.docker.com/compose/multiple-compose-files/merge/">https://docs.docker.com/compose/multiple-compose-files/merge/</a> or </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Merge Compose files
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Docker Compose lets you merge and override a set of Compose files together to create a composite Compose file.
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>By default, Compose reads two files, a compose.yml and an optional compose.override.yml file. By convention, the compose.yml contains your base configuration. The override file can contain configuration overrides for existing services or entirely new services.
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>If a service is defined in both files, Compose merges the configurations using the rules described below and in the Compose Specification.
+</span></code></pre></div>
 <h2 id="multi_stage_builds">Multi stage builds<a class="headerlink" href="#multi_stage_builds" title="Permanent link">&para;</a></h2>
 <p>Many times, one part of the build creates artificacts that are used in the main image.</p>
 <p>By using multi stage builds, the artifiact and not the images needed to create them are used in the main image build.</p>
@@ -1454,6 +1483,11 @@ Any matching fields override the previous file. New values, add to the webapp se
 <h2 id="securing_secrets">Securing secrets<a class="headerlink" href="#securing_secrets" title="Permanent link">&para;</a></h2>
 <p>The video below is a very good explainer of how 'secrets' can be exposed and how to prevent this.</p>
 <p><a href="https://www.youtube.com/watch?v=aK6sJDOn2Hc">YouTube</a></p>
+<h2 id="under_the_hood">Under the hood<a class="headerlink" href="#under_the_hood" title="Permanent link">&para;</a></h2>
+<p>Under the hood, Docker uses Linux features such as Cgroups, Namespaces and Overlay File System, to create the illusion that a Docker container is its only world.</p>
+<p>There are two very good YT talks on this:
+- <a href="https://www.youtube.com/watch?v=_TsSmSu57Zo Liz">https://www.youtube.com/watch?v=_TsSmSu57Zo</a>
+- <a href="https://www.youtube.com/watch?v=JOsWB50LmwQ">https://www.youtube.com/watch?v=JOsWB50LmwQ</a></p>
 <p><br></p>
 
 

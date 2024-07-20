@@ -27,4 +27,8 @@ Named volume:
 volumes:
    - data:/var/lib/postgresql/data/
 ```
+
+Additonally, this video looks at setting up scripts automatically:
+[https://www.youtube.com/watch?v=EtWTa27G4wE](https://www.youtube.com/watch?v=EtWTa27G4wE).
+
 <br>
