@@ -183,7 +183,8 @@ The video below is a very good explainer of how 'secrets' can be exposed and how
 Under the hood, Docker uses Linux features such as Cgroups, Namespaces and Overlay File System, to create the illusion that a Docker container is its only world.
 
 There are two very good YT talks on this:
-- [https://www.youtube.com/watch?v=_TsSmSu57Zo](https://www.youtube.com/watch?v=_TsSmSu57Zo Liz)
+
+- [https://www.youtube.com/watch?v=_TsSmSu57Zo](https://www.youtube.com/watch?v=_TsSmSu57Zo)
 - [https://www.youtube.com/watch?v=JOsWB50LmwQ](https://www.youtube.com/watch?v=JOsWB50LmwQ)
 
 <br>
