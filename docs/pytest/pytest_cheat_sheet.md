@@ -18,6 +18,12 @@ Help:
 
     pytest --help|zless
 
+### Warnings
+
+There is a video I made in 'PyTest with Eric' [https://www.youtube.com/watch?v=UPnXsSU9mHE](https://www.youtube.com/watch?v=UPnXsSU9mHE) which links to his article as well.
+
+The docs also have a comprehensive set of possibilities [https://docs.pytest.org/en/7.1.x/how-to/capture-warnings.html#how-to-capture-warnings](https://docs.pytest.org/en/7.1.x/how-to/capture-warnings.html#how-to-capture-warnings).
+
 ### Some options
 
 ```
