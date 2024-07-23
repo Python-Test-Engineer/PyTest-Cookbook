@@ -1,5 +1,7 @@
 # Git Essentials
 
+A very good reference that is thorough yet light is [https://www.atlassian.com/git/glossary#commands](https://www.atlassian.com/git/glossary#commands).
+
 Git commands I use most frequently in my work.
 
 ### Clone a repo
