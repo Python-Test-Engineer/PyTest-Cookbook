@@ -84,6 +84,7 @@ nav:
       - "YoYo PyTest": "toolbox/docker_postgres_yoyo_pytest.md"
       - "Git Essentials": "toolbox/git_essentials.md"
       - "Console prettying": "toolbox/rich_pyboxen.md"
+      - "Hatch PyPA": "toolbox/hatch.md"
   - "Docker":
       - "About": "docker/docker_index.md"
       - "Manage Docker with Python": "toolbox/manage_docker_with_python.md"
