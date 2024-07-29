@@ -23,3 +23,5 @@ Hatch lives outside of Python.
 We set up in pyproject.toml a number of environments for different use cases such as dev, linting etc.
 
 In the video and repo, I set up an environment that I will use during `dev` and show you a workflow for dev and testing.
+
+<br>

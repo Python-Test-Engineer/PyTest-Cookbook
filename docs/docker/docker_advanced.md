@@ -186,5 +186,6 @@ There are two very good YT talks on this:
 
 - [https://www.youtube.com/watch?v=_TsSmSu57Zo](https://www.youtube.com/watch?v=_TsSmSu57Zo)
 - [https://www.youtube.com/watch?v=JOsWB50LmwQ](https://www.youtube.com/watch?v=JOsWB50LmwQ)
+- For a course to learn about Linux Containerisation to see what Docker does under the hood: [Docker under the hood](https://www.udemy.com/course/containers-under-the-hood/)
 
 <br>

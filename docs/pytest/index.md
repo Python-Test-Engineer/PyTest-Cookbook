@@ -22,8 +22,8 @@ The PyTest Full Stack repo is available here: [PyTest Full Stack](https://github
 
 ## Installation
 
-- In your IDE open up the PyTest_01_FULL folder.
-- Create a virtual environment `python -m venv venv`.
+- `git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack`
+- Create virtual enviroment `python -m venv venv`
 - Activate your virtual enviromnent: Windows `.\venv\Scripts\activte` or Mac `source venv\bin\activate`.
 - install requirements `pip install -r requirements.txt`.
 - for Playwright browsers run `playwright install`.
