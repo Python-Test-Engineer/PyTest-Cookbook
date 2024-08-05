@@ -6,6 +6,8 @@ We use the library `pixelmatch` [https://pypi.org/project/pixelmatch/](https://p
 
 ## YouTube: 
 
+[https://www.youtube.com/watch?v=wMjsrsQK3hs](https://www.youtube.com/watch?v=wMjsrsQK3hs)
+
 ## Repo: 
 
 [https://github.com/Python-Test-Engineer/yt-visual-regression](https://github.com/Python-Test-Engineer/yt-visual-regression)
