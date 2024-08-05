@@ -81,6 +81,7 @@ nav:
       - "About": "toolbox/toolbox_index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
       - "Pydantic DTS": "toolbox/pydantic_dts.md"
+      - "Visual Regression": "toolbox/visual_regression.md"
       - "YoYo PyTest": "toolbox/docker_postgres_yoyo_pytest.md"
       - "Git Essentials": "toolbox/git_essentials.md"
       - "Console prettying": "toolbox/rich_pyboxen.md"
