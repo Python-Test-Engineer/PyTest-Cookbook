@@ -38,7 +38,18 @@ Articles videod:
 - 06 automated testing with GitHub actions
 - 07 wiring of the big Mortgage Calculator FastAPI test suite
 
-## 4. Hooks and Plugins
+## 4. 
+
+Python Testing with pytest, Second Edition
+Simple, Rapid, Effective, and Scalable
+by Brian Okken
+
+*The definitive book!*
+
+![Brian Okken](./images/okken-book.jpg)
+
+[https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/](https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/)
+## 5. Hooks and Plugins
 
 For an advanced look at these topics, I have my course hosted on Udemy:
 
