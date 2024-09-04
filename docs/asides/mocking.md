@@ -1,6 +1,6 @@
 # Python Mock, Patch and Monkeypatch
 
-![YouTube Mock](../images/asides/yt-mock-aside.png "Mock")
+![YouTube Mock](../images/asides/yt-mock.png "Mock")
 
 
 ## About
@@ -16,8 +16,6 @@ The hardest part is 'getting' the wiring so it is best to work with the repo and
 Regardless, these act as templates and with use the wiring will become clearer.
 
 The repo is [here](https://github.com/Python-Test-Engineer/yt-python-mock) and the YT video series is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlLRuCuj0KqZzEBEHK0_H7g) with the remaining videos uploaded by the end of JUL2024.
-
-![Current series](../images/asides/yt-mock.png "YT Mock Series")
 
 I have endeavoured to make the repo heavily commented so that it can be used as an 'ebook'.
 
