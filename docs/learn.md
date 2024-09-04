@@ -38,7 +38,7 @@ Articles videod:
 - 06 automated testing with GitHub actions
 - 07 wiring of the big Mortgage Calculator FastAPI test suite
 
-## 4. 
+## 4. Brian Okken
 
 Python Testing with pytest, Second Edition
 Simple, Rapid, Effective, and Scalable
