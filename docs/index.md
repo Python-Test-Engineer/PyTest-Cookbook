@@ -77,6 +77,5 @@ The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/c
 
 ![PyTest - hooks and plugins](./images/craig/udemy-hooks.png 'Course')
 
-There is more information about me and my services [here](https://pytest-cookbook.com/craig/services).
 
 <br>
