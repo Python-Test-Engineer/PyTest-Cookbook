@@ -59,7 +59,7 @@ I strive to acknowledge sources I have used to learn PyTest and any adaptations 
 As a curated list of resources, I have integrity over linking to the work of others and due credits are given.
 
 Often I am a wrapper around someone else's effort and I try to add a different presentation whre possible, as we often find our understanding with a different presentation of the subject. Hence having may teachers enables us all as eternal students to get our heads around sometimes very complex subjects.
-
+<!-- 
 ## About me
 
 I describe myself as a 'Freelance Backend Pythonista and Test Automation Engineer'.
@@ -75,7 +75,7 @@ Example plugins are:
 
 The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/) and Udemy has a sale every two weeks and the cost would be $20 USD approx.
 
-![PyTest - hooks and plugins](./images/craig/udemy-hooks.png 'Course')
+![PyTest - hooks and plugins](./images/craig/udemy-hooks.png 'Course') -->
 
 
 <br>
