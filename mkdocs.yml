@@ -62,6 +62,12 @@ markdown_extensions:
 
 # Page tree
 nav:
+  - "Workshop 2024":
+      - "Welcome": "workshop/welcome.md"
+      - "Intention": "workshop/intention.md"
+      - "Final Project": "workshop/final_project.md"
+      - "Build from scratch": "workshop/build_from_scratch.md"
+      - "Afterwards": "workshop/afterwards.md"
   - "Motivation": "index.md"
   - "Learn": learn.md
   - "PyTest Full Stack":
