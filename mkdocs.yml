@@ -67,6 +67,7 @@ nav:
       - "Intention": "workshop/intention.md"
       - "Final Project": "workshop/final_project.md"
       - "Build from scratch": "workshop/build_from_scratch.md"
+      - "PyTest 101": "workshop/pytest_101.md"
       - "Afterwards": "workshop/afterwards.md"
   - "Motivation": "index.md"
   - "Learn": learn.md

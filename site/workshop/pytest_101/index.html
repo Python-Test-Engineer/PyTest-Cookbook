@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../visual_regression/">
+        <link rel="prev" href="../build_from_scratch/">
       
       
-        <link rel="next" href="../git_essentials/">
+        <link rel="next" href="../afterwards/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>YoYo PyTest - PyTest Cookbook</title>
+        <title>PyTest 101 - PyTest Cookbook</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker_postgres_yoyo_pytest" class="md-skip">
+        <a href="#pytest_101" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              YoYo PyTest
+              PyTest 101
             
           </span>
         </div>
@@ -254,17 +254,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -278,7 +280,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Workshop 2024
@@ -292,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/welcome/" class="md-nav__link">
+      <a href="../welcome/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -313,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/intention/" class="md-nav__link">
+      <a href="../intention/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -334,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/final_project/" class="md-nav__link">
+      <a href="../final_project/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/build_from_scratch/" class="md-nav__link">
+      <a href="../build_from_scratch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,10 +375,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../workshop/pytest_101/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PyTest 101
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -385,6 +407,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create_a_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run_a_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a test
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run a test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting_tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output_options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      -v
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      -s
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-q" class="md-nav__link">
+    <span class="md-ellipsis">
+      -q
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -397,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/afterwards/" class="md-nav__link">
+      <a href="../afterwards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,19 +894,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -803,7 +918,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Toolbox
@@ -817,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toolbox_index/" class="md-nav__link">
+      <a href="../../toolbox/toolbox_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -838,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../allure_windows_setup/" class="md-nav__link">
+      <a href="../../toolbox/allure_windows_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -859,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pydantic_dts/" class="md-nav__link">
+      <a href="../../toolbox/pydantic_dts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visual_regression/" class="md-nav__link">
+      <a href="../../toolbox/visual_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,30 +1013,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    YoYo PyTest
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../toolbox/docker_postgres_yoyo_pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,122 +1025,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#yoyo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Yoyo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migrations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fix_plg_resourcs_error" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix plg_resourcs error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#yoyo_list" class="md-nav__link">
-    <span class="md-ellipsis">
-      yoyo list
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#after_yoyo_apply" class="md-nav__link">
-    <span class="md-ellipsis">
-      After yoyo apply:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#after_two_yoyo_rollback" class="md-nav__link">
-    <span class="md-ellipsis">
-      After two yoyo rollback:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pgadmin_looks_like" class="md-nav__link">
-    <span class="md-ellipsis">
-      PgAdmin looks like:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project_structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#db_structural_testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      DB Structural Testing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker_postgres_setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Postgres setup
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1058,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git_essentials/" class="md-nav__link">
+      <a href="../../toolbox/git_essentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1079,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rich_pyboxen/" class="md-nav__link">
+      <a href="../../toolbox/rich_pyboxen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1100,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hatch/" class="md-nav__link">
+      <a href="../../toolbox/hatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1184,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../manage_docker_with_python/" class="md-nav__link">
+      <a href="../../toolbox/manage_docker_with_python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,64 +1505,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#yoyo" class="md-nav__link">
+  <a href="#create_a_test" class="md-nav__link">
     <span class="md-ellipsis">
-      Yoyo
+      Create a test
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrations" class="md-nav__link">
+  <a href="#run_a_test" class="md-nav__link">
     <span class="md-ellipsis">
-      Migrations
+      Run a test
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Migrations">
+    <nav class="md-nav" aria-label="Run a test">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fix_plg_resourcs_error" class="md-nav__link">
+  <a href="#selecting_tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Fix plg_resourcs error
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#yoyo_list" class="md-nav__link">
-    <span class="md-ellipsis">
-      yoyo list
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#after_yoyo_apply" class="md-nav__link">
-    <span class="md-ellipsis">
-      After yoyo apply:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#after_two_yoyo_rollback" class="md-nav__link">
-    <span class="md-ellipsis">
-      After two yoyo rollback:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pgadmin_looks_like" class="md-nav__link">
-    <span class="md-ellipsis">
-      PgAdmin looks like:
+      Selecting tests
     </span>
   </a>
   
@@ -1595,29 +1538,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#project_structure" class="md-nav__link">
+  <a href="#output_options" class="md-nav__link">
     <span class="md-ellipsis">
-      Project structure
+      Output options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      -v
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#db_structural_testing" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#-s" class="md-nav__link">
     <span class="md-ellipsis">
-      DB Structural Testing
+      -s
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#docker_postgres_setup" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#-q" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker Postgres setup
+      -q
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1639,57 +1597,14 @@
   
 
 
-<h1 id="docker_postgres_yoyo_pytest">Docker Postgres Yoyo PyTest<a class="headerlink" href="#docker_postgres_yoyo_pytest" title="Permanent link">&para;</a></h1>
-<p><img alt="YoYo" src="../../images/yoyo/yoyo.png" title="YoYo" /></p>
-<h2 id="yoyo">Yoyo<a class="headerlink" href="#yoyo" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Repo: https://github.com/Python-Test-Engineer/yt-docker-postgres-yoyo-pytest</li>
-<li>YouTube: due soon...</li>
-<li>YoYo docs: https://ollycope.com/software/yoyo/latest/</li>
-</ul>
-<p>Yoyo is a database migration tool like Alembic, except it does not use an ORM but SQL.</p>
-<p>In thisproject, yt-docker-postgres-yoyo-pytest, we use Docker and Postgres along with YoYo migrations to set up an ecommerce database. </p>
-<p>Using various SQL scripts, we can get a list of all constraints - PK, FK, Defaults, Unique and Check - which can then be used to carry out structural testing to ensure that database intgerity is preserved during development.</p>
-<p>YoYo acts like Git for our migrations with rollback made possible.</p>
-<h2 id="migrations">Migrations<a class="headerlink" href="#migrations" title="Permanent link">&para;</a></h2>
-<p><code>yoyo new -m "add foreign keys"</code> creates a file in the <code>migrations</code> folder that has 'steps' of SQL and their rollback. The file has a name of <code>datestamp-random_chars-message_used.py</code>.</p>
-<p><img alt="MIGRATIONS" src="../../images/yoyo/yoyo-migrations-folder.png" title="Migrations" /></p>
-<p><img alt="STEPS" src="../../images/yoyo/yoyo-steps.png" title="steps" /></p>
-<p><em>There can be many step functions in the steps list.</em></p>
-<h3 id="fix_plg_resourcs_error">Fix plg_resourcs error<a class="headerlink" href="#fix_plg_resourcs_error" title="Permanent link">&para;</a></h3>
-<p>You may not get this but I had this, when I installed on Windows- it complained of 'no pkg_resources'.</p>
-<p>This was fixed with installing setuptools, (in requirements.txt).</p>
-<h3 id="yoyo_list"><code>yoyo list</code><a class="headerlink" href="#yoyo_list" title="Permanent link">&para;</a></h3>
-<p>This lists all migrations and their status - 'U' unapplied and 'A' applied</p>
-<p><img alt="Initial" src="../../images/yoyo/yoyo-initial.png" title="YoYo" /></p>
-<h3 id="after_yoyo_apply">After <code>yoyo apply</code>:<a class="headerlink" href="#after_yoyo_apply" title="Permanent link">&para;</a></h3>
-<p><img alt="First Apply" src="../../images/yoyo/yoyo-list-after-apply.png" title="YoYo" /></p>
-<h3 id="after_two_yoyo_rollback">After two <code>yoyo rollback</code>:<a class="headerlink" href="#after_two_yoyo_rollback" title="Permanent link">&para;</a></h3>
-<p><img alt="Two Rollbacks" src="../../images/yoyo/yoyo-list-after-two-rollbacks.png" title="YoYo" /></p>
-<h3 id="pgadmin_looks_like">PgAdmin looks like:<a class="headerlink" href="#pgadmin_looks_like" title="Permanent link">&para;</a></h3>
-<p><img alt="PgAdmin" src="../../images/yoyo/yoyo-pgadmin.png" title="YoYo" /></p>
-<h2 id="project_structure">Project structure<a class="headerlink" href="#project_structure" title="Permanent link">&para;</a></h2>
-<p>The <code>sql_schema folder</code> contains scripts to query the schema tables for all constraints.</p>
-<p>The <code>steps</code> folder has just the steps for reuse and archice.</p>
-<p>The <code>sql_postgres</code> folder has a number of python CRUD files that connect to the docker-postgres instance to act as a set up check and utilities.</p>
-<p><code>yoyo.ini</code> is a configurtion file that has minimal required settings for source of yoyo migration files, (migrations usually), and the DB connection URL:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sources = %(here)s/migrations
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>; both host.docker.internal and localhost work
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>database = postgresql://postgres:postgres@host.docker.internal/postgres?port=5432
-</span></code></pre></div>
-<p>In the video, you will see examples of building up a number of migration files and also how to rollback one, many or all migrations.</p>
-<h2 id="db_structural_testing">DB Structural Testing<a class="headerlink" href="#db_structural_testing" title="Permanent link">&para;</a></h2>
-<p>Our DB has PK, FK, Unique and Check constraints and we can access Postgres Schema to run tests on the strucure of the DB:</p>
-<ul>
-<li>Are all the tables there?</li>
-<li>Are all the PKs and FKs there?</li>
-<li>Are all the Unique and Check constraints there?</li>
-</ul>
-<p>This is in addition to CRUD testing we may do. This helps ensure that we have not damaged our DB schema during any development.</p>
-<p>The project also includes a folder of sql_postgress python modules to perfome CRUD etc.</p>
-<h2 id="docker_postgres_setup">Docker Postgres setup<a class="headerlink" href="#docker_postgres_setup" title="Permanent link">&para;</a></h2>
-<p>It uses the standard <a href="https://github.com/Python-Test-Engineer/yt-docker-to-go/tree/main/python-postgres-pgadmin-adminer">docker-postgres-pgadmin-adminer-python-sql</a> project to set up Docker Postgres.</p>
-<p><br></p>
+<h1 id="pytest_101">PyTest 101<a class="headerlink" href="#pytest_101" title="Permanent link">&para;</a></h1>
+<h2 id="create_a_test">Create a test<a class="headerlink" href="#create_a_test" title="Permanent link">&para;</a></h2>
+<h2 id="run_a_test">Run a test<a class="headerlink" href="#run_a_test" title="Permanent link">&para;</a></h2>
+<h3 id="selecting_tests">Selecting tests<a class="headerlink" href="#selecting_tests" title="Permanent link">&para;</a></h3>
+<h2 id="output_options">Output options<a class="headerlink" href="#output_options" title="Permanent link">&para;</a></h2>
+<h3 id="-v">-v<a class="headerlink" href="#-v" title="Permanent link">&para;</a></h3>
+<h3 id="-s">-s<a class="headerlink" href="#-s" title="Permanent link">&para;</a></h3>
+<h3 id="-q">-q<a class="headerlink" href="#-q" title="Permanent link">&para;</a></h3>
 
 
 
