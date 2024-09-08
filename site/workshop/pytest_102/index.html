@@ -451,6 +451,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fixtures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yield_and_addfinalizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yield and addfinalizer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built_in_fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built in fixtures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -477,6 +501,66 @@
       Customisation by hooks
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-csv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-cov" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-cov
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-xdist" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-xdist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1450,6 +1534,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fixtures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yield_and_addfinalizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yield and addfinalizer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#built_in_fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built in fixtures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1479,6 +1587,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-csv
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-cov" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-cov
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-random
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytest-xdist" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest-xdist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1499,9 +1667,27 @@
 
 <h1 id="pytest_102">PyTest 102<a class="headerlink" href="#pytest_102" title="Permanent link">&para;</a></h1>
 <h2 id="fixtures">Fixtures<a class="headerlink" href="#fixtures" title="Permanent link">&para;</a></h2>
+<h3 id="yield_and_addfinalizer">Yield and addfinalizer()<a class="headerlink" href="#yield_and_addfinalizer" title="Permanent link">&para;</a></h3>
+<h3 id="built_in_fixtures">Built in fixtures<a class="headerlink" href="#built_in_fixtures" title="Permanent link">&para;</a></h3>
 <h2 id="conftest">Conftest<a class="headerlink" href="#conftest" title="Permanent link">&para;</a></h2>
+<p><code>conftest.py</code> is automatically discovered and registered by PyTest.</p>
+<p>If a fixture appears in many <code>conftest.py</code> files then the closes <code>conftest.py</code> file to the test is used.</p>
+<p>Example is: <code>02_py_coffee\02_fixtures\test_conftest_2</code> demonstrating that the closes <code>conftest.py</code> fixture value is used. </p>
 <h2 id="parametrization">Parametrization<a class="headerlink" href="#parametrization" title="Permanent link">&para;</a></h2>
 <h2 id="customisation_by_hooks">Customisation by hooks<a class="headerlink" href="#customisation_by_hooks" title="Permanent link">&para;</a></h2>
+<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
+<p>These are some of the most common plugins.</p>
+<p>xdist aside, we can recreate some of the functionality through the use of hooks. The online course 'PyTest Cookbook - Using hooks to create plugins' that you will have a free coupon for will go through this in much more details.</p>
+<p><em>It is easier than one might think!</em></p>
+<h3 id="pytest-csv">pytest-csv<a class="headerlink" href="#pytest-csv" title="Permanent link">&para;</a></h3>
+<p>We already create our own cutomisable CSV output.</p>
+<h3 id="pytest-html">pytest-html<a class="headerlink" href="#pytest-html" title="Permanent link">&para;</a></h3>
+<h3 id="pytest-cov">pytest-cov<a class="headerlink" href="#pytest-cov" title="Permanent link">&para;</a></h3>
+<p>Coverage is an important metric.</p>
+<h3 id="pytest-random">pytest-random<a class="headerlink" href="#pytest-random" title="Permanent link">&para;</a></h3>
+<p>Ideally, all tests are independent of each other and randomising the order should not change the results of the test.</p>
+<p>Randomising tests are a good way to test this.</p>
+<h3 id="pytest-xdist">pytest-xdist<a class="headerlink" href="#pytest-xdist" title="Permanent link">&para;</a></h3>
 <p><br></p>
 
 
