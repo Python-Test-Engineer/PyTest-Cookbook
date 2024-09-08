@@ -54,9 +54,38 @@ pytest --tb=no      # no traceback at all
 
 ### -x
 
+```
+pytest -x            # stop after first failure
+pytest --maxfail=2    # stop after two failures
+```
+
 ### -r
 
 [https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report](https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report)
+
+```
+f - failed
+
+E - error
+
+s - skipped
+
+x - xfailed
+
+X - xpassed
+
+p - passed
+
+P - passed with output
+
+Special characters for (de)selection of groups:
+
+a - all except pP
+
+A - all
+
+N - none, this can be used to display nothing (since fE is the default)
+```
 
 ### CSV
 
