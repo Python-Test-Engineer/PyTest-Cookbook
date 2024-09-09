@@ -124,6 +124,30 @@ We will not discuss this yet but it is worth mentioning because managing 500+ te
 
 We can use a hook `pytest_collect_modifyitems()`...
 
+#### Built in markers
+
+##### @pytest.mark.skip
+
+Rather than comment out tests, we can mark them to be skipped and they will not be selected. 
+
+##### @pytest.mark.skipif
+
+We can skip conditionally:
+
+##### @pytest.mark.xfail
+
+We may have a test that we know will fail but we want to consider that a pass.
+
+We can `xfail` the test and it will not result in a failed test but be marked as an `xfail`.
+
+What if the `xfail` actually passes? We want to know this and it will be marked not as a fail but an `xpass` - unexepectedly passes.
+
+There are examples of this in the set of tests we ran on PFS at start.
+
+##### Markers for fixtures
+
+We will cover this when we look at fixtures.
+
 ## Output options
 
 [https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output](https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output)

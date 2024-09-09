@@ -542,6 +542,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#built_in_markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built in markers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built in markers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytestmarkskip" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pytest.mark.skip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytestmarkskipif" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pytest.mark.skipif
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytestmarkxfail" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pytest.mark.xfail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markers_for_fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markers for fixtures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1733,6 +1784,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#built_in_markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built in markers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built in markers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytestmarkskip" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pytest.mark.skip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytestmarkskipif" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pytest.mark.skipif
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytestmarkxfail" class="md-nav__link">
+    <span class="md-ellipsis">
+      @pytest.mark.xfail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markers_for_fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markers for fixtures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1914,6 +2016,18 @@ then any markers not registered will cause an error.</p>
 <h4 id="dynamic_markers">Dynamic markers<a class="headerlink" href="#dynamic_markers" title="Permanent link">&para;</a></h4>
 <p>We will not discuss this yet but it is worth mentioning because managing 500+ test markers is best done dynamically...</p>
 <p>We can use a hook <code>pytest_collect_modifyitems()</code>...</p>
+<h4 id="built_in_markers">Built in markers<a class="headerlink" href="#built_in_markers" title="Permanent link">&para;</a></h4>
+<h5 id="pytestmarkskip">@pytest.mark.skip<a class="headerlink" href="#pytestmarkskip" title="Permanent link">&para;</a></h5>
+<p>Rather than comment out tests, we can mark them to be skipped and they will not be selected. </p>
+<h5 id="pytestmarkskipif">@pytest.mark.skipif<a class="headerlink" href="#pytestmarkskipif" title="Permanent link">&para;</a></h5>
+<p>We can skip conditionally:</p>
+<h5 id="pytestmarkxfail">@pytest.mark.xfail<a class="headerlink" href="#pytestmarkxfail" title="Permanent link">&para;</a></h5>
+<p>We may have a test that we know will fail but we want to consider that a pass.</p>
+<p>We can <code>xfail</code> the test and it will not result in a failed test but be marked as an <code>xfail</code>.</p>
+<p>What if the <code>xfail</code> actually passes? We want to know this and it will be marked not as a fail but an <code>xpass</code> - unexepectedly passes.</p>
+<p>There are examples of this in the set of tests we ran on PFS at start.</p>
+<h5 id="markers_for_fixtures">Markers for fixtures<a class="headerlink" href="#markers_for_fixtures" title="Permanent link">&para;</a></h5>
+<p>We will cover this when we look at fixtures.</p>
 <h2 id="output_options">Output options<a class="headerlink" href="#output_options" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output">https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output</a></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pytest --showlocals     # show local variables in tracebacks
