@@ -1,16 +1,114 @@
 # PyTest 101
 
+## Test discovery
+
+![test-discovery](../images/workshop/test-discvovery.png)
+[https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery](https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery)
+
+
+## Change location
+
+We can change default in `pytest.ini`:
+
+[https://docs.pytest.org/en/stable/example/pythoncollection.html](https://docs.pytest.org/en/stable/example/pythoncollection.html)
+
+![change test discovery](../images/workshop/change-test-discovery.png)
+
 ## Create a test
 
+If we have a function `src\some_function.py` and we want to test it, we can run this function within a test and PyTest will excute it and store results etc:
+
+```
+def test_some_function_works.py():
+    actual_result = some_function()
+    expecterd_result = "expected result values here"
+    assert actual_result == expected_result, "(optional) output message if not equal"
+```
 ## Run a test
+
+To run tests we run `python -m pytest`. We can run just `pytest` but running it as a module adds the path to sys.path and can avoid any future issues.
+
+![why python -m](../images/workshop/why-python-m.png)
+[https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest](https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest)
 
 ## Selecting tests
 
 ### Locations
 
+We can select tests by their location, module, class or function:
+
+![location-selection](../images/workshop/run-by-location.png)
+[https://docs.pytest.org/en/stable/how-to/usage.html#specifying-which-tests-to-run](https://docs.pytest.org/en/stable/how-to/usage.html#specifying-which-tests-to-run)
+
+These are called nodes:
+
+`python -m pytest .\tests\00_check_setup\test_01_setup.py`
+
+`python -m pytest .\tests\00_check_setup\test_01_setup.py::test_0001_SET_pass`
 ### -k
 
+We can select test that are 'like' with the `-k` option:
+
+`python -m pytest -k 0001 ` to select a specific id or
+
+`python -m pytest -k SET` will select all those that contain 'SET' in test name.
+
+We can combine 'not', 'or', 'and':
+
+`python -m pytest -k "not SQL"` will get all tests that contain SET (case insensitive) or SQL. 
+
+This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.
+
+
 ### Markers
+
+Markers are 'tags' which we can add to tests using `@pytest.mark.tag_name` and we can then select a particular marker using `pytest -m pytest -m tag_name`.
+
+```
+@pytest.mark.tag_name
+def test_use_marker_tag_name():
+    assert True
+```
+
+We can assign the name of the marker after @pytest.mark
+
+We do not need to register them with `pytest.ini` provided we do not have `strict` in `addopts`. If we do, we will get an error, if we don't we will get warnings.
+
+In our `pytest.ini` we haf:
+
+```
+markers =
+    ;add markers of group tests - can use
+    ; after colon is optional description
+    setup: set up tests
+    sanity: sanity tests
+    mocks: all mocks
+    joke_mocks: mocks for jokes
+    add: test add
+    inner_marker: an inner marker
+    outer_marker: an outer marker
+    outer
+    inner
+    deposit
+    withdrawal
+    banking
+```
+
+In this case above, iff we have 
+```
+addopts = strict
+```
+then any markers not registered will cause an error.
+
+If we run `python -m pytest -m sanity` we will get all those that have a marker of `sanity`.
+
+We can also use `not`: `python -m pytest -m "not sanity"`
+
+We can also mark a whole Class and all method tests within will be selected.
+
+Multiple markers? Seems difficult but later we will see how we can create markers dynamically and thus create one 'super marker'.
+
+[https://docs.pytest.org/en/stable/example/markers.html#working-with-custom-markers](https://docs.pytest.org/en/stable/example/markers.html#working-with-custom-markers)
 
 #### Strict mode
 
