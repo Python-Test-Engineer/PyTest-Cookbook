@@ -106,9 +106,11 @@ We can also use `not`: `python -m pytest -m "not sanity"`
 
 We can also mark a whole Class and all method tests within will be selected.
 
-Multiple markers? Seems difficult but later we will see how we can create markers dynamically and thus create one 'super marker'.
+[Multiple markers? Seems difficult but later we will see how we can create markers dynamically and thus create one 'super marker'.](https://github.com/pytest-dev/pytest/issues/6142)
 
 [https://docs.pytest.org/en/stable/example/markers.html#working-with-custom-markers](https://docs.pytest.org/en/stable/example/markers.html#working-with-custom-markers)
+
+Multiple markers: https://github.com/pytest-dev/pytest/issues/6142
 
 #### Strict mode
 
