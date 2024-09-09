@@ -45,7 +45,7 @@ These are called nodes:
 `python -m pytest .\tests\00_check_setup\test_01_setup.py`
 
 `python -m pytest .\tests\00_check_setup\test_01_setup.py::test_0001_SET_pass`
-### -k
+### -k for 'like'
 
 We can select test that are 'like' with the `-k` option:
 
@@ -62,6 +62,8 @@ This can get tricky for more complex queries and in those case we will use 'mark
 
 ### Markers
 
+#### Definition
+
 Markers are 'tags' which we can add to tests using `@pytest.mark.tag_name` and we can then select a particular marker using `pytest -m pytest -m tag_name`.
 
 ```
@@ -72,9 +74,11 @@ def test_use_marker_tag_name():
 
 We can assign the name of the marker after @pytest.mark
 
+#### Registering
+
 We do not need to register them with `pytest.ini` provided we do not have `strict` in `addopts`. If we do, we will get an error, if we don't we will get warnings.
 
-In our `pytest.ini` we haf:
+In our `pytest.ini` we have:
 
 ```
 markers =
@@ -100,21 +104,19 @@ addopts = strict
 ```
 then any markers not registered will cause an error.
 
+#### Calling markers
+
 If we run `python -m pytest -m sanity` we will get all those that have a marker of `sanity`.
 
 We can also use `not`: `python -m pytest -m "not sanity"`
 
 We can also mark a whole Class and all method tests within will be selected.
 
-[Multiple markers? Seems difficult but later we will see how we can create markers dynamically and thus create one 'super marker'.](https://github.com/pytest-dev/pytest/issues/6142)
+#### Multiple markers
 
-[https://docs.pytest.org/en/stable/example/markers.html#working-with-custom-markers](https://docs.pytest.org/en/stable/example/markers.html#working-with-custom-markers)
+Multiple markers: [https://github.com/pytest-dev/pytest/issues/6142](https://github.com/pytest-dev/pytest/issues/6142)
 
-Multiple markers: https://github.com/pytest-dev/pytest/issues/6142
-
-#### Strict mode
-
-In `pytest.ini` we have `addopts`
+`python -m pytest -m "sanity or outer"` will select all tests with either `sanity` or `outer` as marks. It works in the same way as the `-k` flag and we can use `not` and `and`.
 
 #### Dynamic markers
 
@@ -124,7 +126,7 @@ We can use a hook `pytest_collect_modifyitems()`...
 
 ## Output options
 
-[https://docs.pytest.org/en/7.1.x/how-to/output.html](https://docs.pytest.org/en/7.1.x/how-to/output.html)
+[https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output](https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output)
 
 ```
 pytest --showlocals     # show local variables in tracebacks
@@ -146,20 +148,30 @@ pytest --tb=native  # Python standard library formatting
 pytest --tb=no      # no traceback at all
 ```
 
-### -v, -vv, -vvv
+### Verbosity
 
-### -s
+We can use one of these flags for increasing verbosity:
 
-### -q
+-v, -vv, -vvv
 
-### -x
+### Console ouput
+
+By default, PyTest suppresses console output to avoid 'clutter'.
+
+If we want to use `print` statements, we need to use the `-s` flag. It can be combined with the `-v` flag `-vs` which is what I tend to use by default.
+
+### -q for quiet
+
+This means 'quiet'
+
+### -x for failures
 
 ```
 pytest -x            # stop after first failure
-pytest --maxfail=2    # stop after two failures
+pytest --maxfail=2   # stop after two failures
 ```
 
-### -r
+### -r for report
 
 [https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report](https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report)
 
@@ -187,10 +199,21 @@ A - all
 N - none, this can be used to display nothing (since fE is the default)
 ```
 
-### CSV
+### CSV Outputs
 
 We can use `pytest-csv` but our custom local plugin `conftest.py` can do this for us.
 
-There is an explainer video for this and we will look at this a bit later.
+There is an explainer video for this and we will look at this a bit later and a sample line is:
+
+```
+0001|test_0001_SET_pass|tests/00_check_setup/test_01_setup.py::test_0001_SET_pass|PASSED|1.013291|
+```
+this is `test_id|test_name|test_node|result|duration`.
+
+### HTML Reports
+
+We can also create an html report with `pytest-html`. A sample report is in the `reports` folder.
+
+We can run this with `python -m pytest --html=reports/report.html --self-contained-html` (see COMMANDS.md in root folder).
 
 <br>
