@@ -201,27 +201,23 @@ pytest --maxfail=2   # stop after two failures
 
 ```
 f - failed
-
 E - error
-
 s - skipped
-
 x - xfailed
-
 X - xpassed
-
 p - passed
-
 P - passed with output
 
 Special characters for (de)selection of groups:
 
 a - all except pP
-
 A - all
-
 N - none, this can be used to display nothing (since fE is the default)
 ```
+
+If we run `pytestpython -m pytest .\tests\00_check_setup\ -rx` we get a short test summary at end of test run:
+
+![-rx summary](../images/workshop/short-test-summary-rx.png)
 
 ### CSV Outputs
 
@@ -239,5 +235,11 @@ this is `test_id|test_name|test_node|result|duration`.
 We can also create an html report with `pytest-html`. A sample report is in the `reports` folder.
 
 We can run this with `python -m pytest --html=reports/report.html --self-contained-html` (see COMMANDS.md in root folder).
+
+### Coverage Reports
+
+With `python -m pytest --cov-report html --cov .` (note end .) we get a coverage report as seen in the folder `htmlcov`.
+
+There is a `.coverage` file created in the root of the project which requires processing, as done by the above command to give the folder `htmlcov` with an `index.html`.
 
 <br>
