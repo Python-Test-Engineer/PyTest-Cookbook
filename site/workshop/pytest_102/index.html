@@ -455,6 +455,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yield_and_addfinalizer" class="md-nav__link">
     <span class="md-ellipsis">
       Yield and addfinalizer()
@@ -1538,6 +1556,24 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yield_and_addfinalizer" class="md-nav__link">
     <span class="md-ellipsis">
       Yield and addfinalizer()
@@ -1667,12 +1703,42 @@
 
 <h1 id="pytest_102">PyTest 102<a class="headerlink" href="#pytest_102" title="Permanent link">&para;</a></h1>
 <h2 id="fixtures">Fixtures<a class="headerlink" href="#fixtures" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.pytest.org/en/stable/explanation/fixtures.html">https://docs.pytest.org/en/stable/explanation/fixtures.html</a></p>
+<p>Fixtures are requested by test functions or other fixtures by declaring them as argument names.</p>
+<p>They are an example of dependency injection and replace the setup/teardown features of Unit Test.</p>
+<p>Fixtures can thus use other fixtures.</p>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<p><code>tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fiztures_0.py</code> is an example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@pytest.fixture
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>def initial_value():
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    return 5
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>def square(num: int) -&gt; int:
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    return num * num
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a># We pass in the fixture - dependency injection
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>def test_0240_FXT_square(initial_value: int) -&gt; None:
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    result = square(initial_value)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    assert result == initial_value**2
+</span></code></pre></div>
 <h3 id="yield_and_addfinalizer">Yield and addfinalizer()<a class="headerlink" href="#yield_and_addfinalizer" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@pytest.fixture()
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>def my_object_fixture():
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    print(&quot;1. fixture code.&quot;)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    yield MyObjectThatRequiresCleanUp()
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    print(&quot;4. fixture code after yield.&quot;)
+</span></code></pre></div>
 <h3 id="built_in_fixtures">Built in fixtures<a class="headerlink" href="#built_in_fixtures" title="Permanent link">&para;</a></h3>
+<p>There are many built in fixtures provided by PyTest but I only use a few of them:</p>
+<p><a href="https://docs.pytest.org/en/stable/reference/fixtures.html#built-in-fixtures">https://docs.pytest.org/en/stable/reference/fixtures.html#built-in-fixtures</a>
+<img alt="built in fixtures" src="../../images/workshop/built-in-fixtures.png" />
+<img alt="built in fixtures" src="../../images/workshop/built-in-fixtures-2.png" /></p>
+<p>Fixture availability is determined from the perspective of the test. A fixture is only available for tests to request if they are in the scope that fixture is defined in. If a fixture is defined inside a class, it can only be requested by tests inside that class. But if a fixture is defined inside the global scope of the module, then every test in that module, even if it’s defined inside a class, can request it.</p>
 <h2 id="conftest">Conftest<a class="headerlink" href="#conftest" title="Permanent link">&para;</a></h2>
 <p><code>conftest.py</code> is automatically discovered and registered by PyTest.</p>
 <p>If a fixture appears in many <code>conftest.py</code> files then the closes <code>conftest.py</code> file to the test is used.</p>
-<p>Example is: <code>02_py_coffee\02_fixtures\test_conftest_2</code> demonstrating that the closes <code>conftest.py</code> fixture value is used. </p>
+<p>Example is: <code>02_py_coffee\02_fixtures\test_conftest_2</code> demonstrating that the closest <code>conftest.py</code> fixture value is used. </p>
 <h2 id="parametrization">Parametrization<a class="headerlink" href="#parametrization" title="Permanent link">&para;</a></h2>
 <h2 id="customisation_by_hooks">Customisation by hooks<a class="headerlink" href="#customisation_by_hooks" title="Permanent link">&para;</a></h2>
 <h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
