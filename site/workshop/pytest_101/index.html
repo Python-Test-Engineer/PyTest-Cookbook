@@ -1963,6 +1963,9 @@
 <h2 id="test_discovery">Test discovery<a class="headerlink" href="#test_discovery" title="Permanent link">&para;</a></h2>
 <p><img alt="test-discovery" src="../../images/workshop/test-discvovery.png" />
 <a href="https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery">https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery</a></p>
+<p>Do we need <code>__init__.py</code> in <code>tests</code> folder?</p>
+<p>No. But if we don't and two tests have same name then there will be a name collision.</p>
+<p>Using <code>__init__.py</code> will make each test have a unique namespace.</p>
 <h2 id="change_location">Change location<a class="headerlink" href="#change_location" title="Permanent link">&para;</a></h2>
 <p>We can change default in <code>pytest.ini</code>:</p>
 <p><a href="https://docs.pytest.org/en/stable/example/pythoncollection.html">https://docs.pytest.org/en/stable/example/pythoncollection.html</a></p>

@@ -5,6 +5,11 @@
 ![test-discovery](../images/workshop/test-discvovery.png)
 [https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery](https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery)
 
+Do we need `__init__.py` in `tests` folder?
+
+No. But if we don't and two tests have same name then there will be a name collision.
+
+Using `__init__.py` will make each test have a unique namespace.
 
 ## Change location
 
