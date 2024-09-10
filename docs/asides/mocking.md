@@ -14,8 +14,13 @@ We will also look at the source code for `mock.py` as well as look at a number o
 The hardest part is 'getting' the wiring so it is best to work with the repo and break and fix the tests to really understand that patching involves using `where it is called, not where it is defined'.
 
 Regardless, these act as templates and with use the wiring will become clearer.
+## Repo
 
-The repo is [here](https://github.com/Python-Test-Engineer/yt-python-mock) and the YT video series is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlLRuCuj0KqZzEBEHK0_H7g).
+The repo is [here](https://github.com/Python-Test-Engineer/yt-python-mock).
+
+## YT video series 
+
+The series is [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlLRuCuj0KqZzEBEHK0_H7g).
 
 I have endeavoured to make the repo heavily commented so that it can be used as an 'ebook'.
 
