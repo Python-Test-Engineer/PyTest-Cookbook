@@ -1707,7 +1707,7 @@
 <p><a href="https://docs.pytest.org/en/stable/explanation/fixtures.html">https://docs.pytest.org/en/stable/explanation/fixtures.html</a></p>
 <p>Fixtures are requested by test functions or other fixtures by declaring them as argument names.</p>
 <p>They are an example of dependency injection and replace the setup/teardown features of Unit Test.</p>
-<p>Fixtures can thus use other fixtures.</p>
+<p>Fixtures can thus use other fixtures. They are Python functions and can be the arguments of other functions.</p>
 <h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
 <p><code>tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fiztures_0.py</code> is an example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@pytest.fixture
@@ -1725,9 +1725,25 @@
 <h3 id="yield_and_addfinalizer">Yield and addfinalizer()<a class="headerlink" href="#yield_and_addfinalizer" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@pytest.fixture()
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>def my_object_fixture():
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    print(&quot;1. fixture code.&quot;)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    print(&quot;Yielding fixture data...&quot;)
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    yield MyObjectThatRequiresCleanUp()
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    print(&quot;4. fixture code after yield.&quot;)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    print(&quot;Do clean up after test has run...&quot;)
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@pytest.fixture
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>def setup_data(request):
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    # setup_data is now the fixture name we pass into our test...
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    print(&quot;\nSetting up resources...&quot;)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    data = 22
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    # Define a finalizer function for teardown
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    def finalizer():
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        print(&quot;\nPerforming teardown...&quot;)
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        # Clean up any resources if needed
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    # Register the finalizer to ensure cleanup
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    request.addfinalizer(finalizer)
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    return data  # Provide the data to the test
 </span></code></pre></div>
 <h3 id="built_in_fixtures">Built in fixtures<a class="headerlink" href="#built_in_fixtures" title="Permanent link">&para;</a></h3>
 <p>There are many built in fixtures provided by PyTest but I only use a few of them:</p>
@@ -1736,10 +1752,29 @@
 <img alt="built in fixtures" src="../../images/workshop/built-in-fixtures-2.png" /></p>
 <p>Fixture availability is determined from the perspective of the test. A fixture is only available for tests to request if they are in the scope that fixture is defined in. If a fixture is defined inside a class, it can only be requested by tests inside that class. But if a fixture is defined inside the global scope of the module, then every test in that module, even if it’s defined inside a class, can request it.</p>
 <h2 id="conftest">Conftest<a class="headerlink" href="#conftest" title="Permanent link">&para;</a></h2>
-<p><code>conftest.py</code> is automatically discovered and registered by PyTest.</p>
-<p>If a fixture appears in many <code>conftest.py</code> files then the closes <code>conftest.py</code> file to the test is used.</p>
+<p><code>conftest.py</code> is automatically discovered and registered by PyTest. It is a good place to store fixtures so that they can be reused in the folder it is located in and any subfolders.</p>
+<p>It does not need to be imported.</p>
+<p>If a fixture appears in many <code>conftest.py</code> files then the closest <code>conftest.py</code> file to the test is used.</p>
 <p>Example is: <code>02_py_coffee\02_fixtures\test_conftest_2</code> demonstrating that the closest <code>conftest.py</code> fixture value is used. </p>
 <h2 id="parametrization">Parametrization<a class="headerlink" href="#parametrization" title="Permanent link">&para;</a></h2>
+<p>We may want to run a test for a range of values, e.g, we may want to test our <code>add()</code> for a range of values.</p>
+<p>Rather than do some Pythonic looping over a test, we can use the <code>@pytest.mark.parametrize()</code> to decorate the test and supply our values in this decorator.</p>
+<p>A decorator is a function that wraps another function and any values passed into the deocrator are available to the inner function by the closure created.</p>
+<p>Examples in PFS are:</p>
+<ul>
+<li><code>tests\03_indian_pythonista\ip_04_parametrize\tests\test_sample.py</code></li>
+<li><code>python -m pytest -vs -k TestClassSetUp</code></li>
+</ul>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>n and expected are variable names that take values of supplied list
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>@pytest.mark.parametrize(&quot;n, expected&quot;, [(1, 2), (3, 4)])
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>class TestClass:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    def test_simple_case(self, n, expected):
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        assert n + 1 == expected
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    def test_weird_simple_case(self, n, expected):
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        assert (n * 1) + 1 == expected
+</span></code></pre></div>
+<img alt="parametrization" src="../../images/workshop/parametrization-example.png" /></p>
 <h2 id="customisation_by_hooks">Customisation by hooks<a class="headerlink" href="#customisation_by_hooks" title="Permanent link">&para;</a></h2>
 <h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
 <p>These are some of the most common plugins.</p>

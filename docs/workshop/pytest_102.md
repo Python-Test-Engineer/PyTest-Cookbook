@@ -10,7 +10,7 @@ Fixtures are requested by test functions or other fixtures by declaring them as 
 
 They are an example of dependency injection and replace the setup/teardown features of Unit Test.
 
-Fixtures can thus use other fixtures.
+Fixtures can thus use other fixtures. They are Python functions and can be the arguments of other functions.
 
 ### Implementation
 
@@ -38,9 +38,27 @@ def test_0240_FXT_square(initial_value: int) -> None:
 ```
 @pytest.fixture()
 def my_object_fixture():
-    print("1. fixture code.")
+    print("Yielding fixture data...")
     yield MyObjectThatRequiresCleanUp()
-    print("4. fixture code after yield.")
+    print("Do clean up after test has run...")
+```
+
+```
+@pytest.fixture
+def setup_data(request):
+    # setup_data is now the fixture name we pass into our test...
+    print("\nSetting up resources...")
+    data = 22
+    
+    # Define a finalizer function for teardown
+    def finalizer():
+        print("\nPerforming teardown...")
+        # Clean up any resources if needed
+
+    # Register the finalizer to ensure cleanup
+    request.addfinalizer(finalizer)
+
+    return data  # Provide the data to the test
 ```
 
 ### Built in fixtures
@@ -55,13 +73,49 @@ Fixture availability is determined from the perspective of the test. A fixture i
 
 ## Conftest
 
-`conftest.py` is automatically discovered and registered by PyTest.
+`conftest.py` is automatically discovered and registered by PyTest. It is a good place to store fixtures so that they can be reused in the folder it is located in and any subfolders.
 
-If a fixture appears in many `conftest.py` files then the closes `conftest.py` file to the test is used.
+It does not need to be imported.
+
+If a fixture appears in many `conftest.py` files then the closest `conftest.py` file to the test is used.
 
 Example is: `02_py_coffee\02_fixtures\test_conftest_2` demonstrating that the closest `conftest.py` fixture value is used. 
 
 ## Parametrization
+
+We may want to run a test for a range of values, e.g, we may want to test our `add()` for a range of values.
+
+Rather than do some Pythonic looping over a test, we can use the `@pytest.mark.parametrize()` to decorate the test and supply our values in this decorator.
+
+A decorator is a function that wraps another function and any values passed into the deocrator are available to the inner function by the closure created.
+
+### Examples
+
+- `tests\03_indian_pythonista\ip_04_parametrize\tests\test_sample.py`
+- `python -m pytest -vs -k TestClassSetUp`
+
+```
+n and expected are variable names that take values of supplied list
+@pytest.mark.parametrize("n, expected", [(1, 2), (3, 4)])
+class TestClass:
+    def test_simple_case(self, n, expected):
+        assert n + 1 == expected
+
+    def test_weird_simple_case(self, n, expected):
+        assert (n * 1) + 1 == expected
+```
+
+### Output
+
+![parametrization](../images/workshop/parametrization-example.png)
+
+### Options
+
+There are a great many options available:
+
+
+- Add ids for more human readable output.
+- Using the indirect=True parameter when parametrizing a test allows to parametrize a test with a fixture receiving the values before passing them to a test.
 
 ## Customisation by hooks
 
