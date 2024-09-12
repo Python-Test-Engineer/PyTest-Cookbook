@@ -473,6 +473,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#setupteardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      setup/teardown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yield_and_addfinalizer" class="md-nav__link">
     <span class="md-ellipsis">
       Yield and addfinalizer()
@@ -510,6 +519,39 @@
       Parametrization
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Parametrization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1574,6 +1616,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#setupteardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      setup/teardown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#yield_and_addfinalizer" class="md-nav__link">
     <span class="md-ellipsis">
       Yield and addfinalizer()
@@ -1611,6 +1662,39 @@
       Parametrization
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Parametrization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1722,6 +1806,8 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    result = square(initial_value)
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    assert result == initial_value**2
 </span></code></pre></div>
+<h3 id="setupteardown">setup/teardown<a class="headerlink" href="#setupteardown" title="Permanent link">&para;</a></h3>
+<p>We can use <code>setup_method()</code> and <code>teardown_method()</code> as a simpler but less DRY alternative. See <code>tests\00_check_setup\test_04_src.py</code>.</p>
 <h3 id="yield_and_addfinalizer">Yield and addfinalizer()<a class="headerlink" href="#yield_and_addfinalizer" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@pytest.fixture()
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>def my_object_fixture():
@@ -1760,12 +1846,12 @@
 <p>We may want to run a test for a range of values, e.g, we may want to test our <code>add()</code> for a range of values.</p>
 <p>Rather than do some Pythonic looping over a test, we can use the <code>@pytest.mark.parametrize()</code> to decorate the test and supply our values in this decorator.</p>
 <p>A decorator is a function that wraps another function and any values passed into the deocrator are available to the inner function by the closure created.</p>
-<p>Examples in PFS are:</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>tests\03_indian_pythonista\ip_04_parametrize\tests\test_sample.py</code></li>
 <li><code>python -m pytest -vs -k TestClassSetUp</code></li>
 </ul>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>n and expected are variable names that take values of supplied list
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>n and expected are variable names that take values of supplied list
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>@pytest.mark.parametrize(&quot;n, expected&quot;, [(1, 2), (3, 4)])
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>class TestClass:
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    def test_simple_case(self, n, expected):
@@ -1774,7 +1860,14 @@
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    def test_weird_simple_case(self, n, expected):
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        assert (n * 1) + 1 == expected
 </span></code></pre></div>
-<img alt="parametrization" src="../../images/workshop/parametrization-example.png" /></p>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<p><img alt="parametrization" src="../../images/workshop/parametrization-example.png" /></p>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
+<p>There are a great many options available:</p>
+<ul>
+<li>Add ids for more human readable output.</li>
+<li>Using the indirect=True parameter when parametrizing a test allows to parametrize a test with a fixture receiving the values before passing them to a test.</li>
+</ul>
 <h2 id="customisation_by_hooks">Customisation by hooks<a class="headerlink" href="#customisation_by_hooks" title="Permanent link">&para;</a></h2>
 <h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
 <p>These are some of the most common plugins.</p>

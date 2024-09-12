@@ -33,6 +33,10 @@ def test_0240_FXT_square(initial_value: int) -> None:
 
 
 
+### setup/teardown
+
+We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative. See `tests\00_check_setup\test_04_src.py`.
+
 ### Yield and addfinalizer()
 
 ```
