@@ -21,6 +21,8 @@ We can change default in `pytest.ini`:
 
 ## Create a test
 
+### Function based
+
 If we have a function `src\some_function.py` and we want to test it, we can run this function within a test and PyTest will excute it and store results etc:
 
 ```
@@ -28,6 +30,31 @@ def test_some_function_works.py():
     actual_result = some_function()
     expecterd_result = "expected result values here"
     assert actual_result == expected_result, "(optional) output message if not equal"
+```
+
+### Class based
+
+Using a class based test can group tests together and we can also apply PyTest features to the class and thus all the methods in it.
+
+For discovery, both the class and methods must follow the naming convention whether default or custom.
+
+(see above)
+
+For class: Test*
+
+For methods test_* or *_test
+
+```
+class TestSample:
+    
+    def test_0031_SET_add_num(self):
+        """fn test in a class"""
+        assert add(1, 2) == 3
+
+    def test_0032_SET_add_num_will_fail(self):
+        """failing fn test in a class"""
+        console.print("[red italic]Example of failed test[/]⚠️")
+        assert add(1, 2) == 5
 ```
 ## Run a test
 
@@ -71,13 +98,20 @@ This can get tricky for more complex queries and in those case we will use 'mark
 
 Markers are 'tags' which we can add to tests using `@pytest.mark.tag_name` and we can then select a particular marker using `pytest -m pytest -m tag_name`.
 
+We can assign the name of the marker after @pytest.mark
+
 ```
-@pytest.mark.tag_name
+import pytest
+
+@pytest.mark.tag_name # needs to be imported
 def test_use_marker_tag_name():
     assert True
 ```
+Like the `-k` option, we can use add/or/not:
 
-We can assign the name of the marker after @pytest.mark
+`python -m pytest -m 'outer or inner'`
+
+
 
 #### Registering
 
