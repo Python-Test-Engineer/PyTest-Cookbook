@@ -64,7 +64,6 @@ markdown_extensions:
 nav:
   - "Workshop 2024":
       - "Welcome": "workshop/welcome.md"
-      - "Intention": "workshop/intention.md"
       - "Final Project": "workshop/final_project.md"
       - "Build from scratch": "workshop/build_from_scratch.md"
       - "PyTest 101": "workshop/pytest_101.md"
