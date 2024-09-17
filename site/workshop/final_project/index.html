@@ -370,9 +370,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install_and_setup" class="md-nav__link">
+  <a href="#youtube_videos" class="md-nav__link">
     <span class="md-ellipsis">
-      Install and setup
+      YouTube videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
     </span>
   </a>
   
@@ -382,15 +391,6 @@
   <a href="#test_run" class="md-nav__link">
     <span class="md-ellipsis">
       Test run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Structure
     </span>
   </a>
   
@@ -1441,9 +1441,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install_and_setup" class="md-nav__link">
+  <a href="#youtube_videos" class="md-nav__link">
     <span class="md-ellipsis">
-      Install and setup
+      YouTube videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
     </span>
   </a>
   
@@ -1453,15 +1462,6 @@
   <a href="#test_run" class="md-nav__link">
     <span class="md-ellipsis">
       Test run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Structure
     </span>
   </a>
   
@@ -1498,10 +1498,36 @@
 <p>We will start by downloading and setting up PFS so that you have a working final project to take away.</p>
 <p>We will tlook at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.</p>
 <h2 id="repo">Repo<a class="headerlink" href="#repo" title="Permanent link">&para;</a></h2>
-<h2 id="install_and_setup">Install and setup<a class="headerlink" href="#install_and_setup" title="Permanent link">&para;</a></h2>
+<p>Clone from <a href="https://github.com/Python-Test-Engineer/PyTest-Full-Stack">https://github.com/Python-Test-Engineer/PyTest-Full-Stack</a>.</p>
+<h2 id="youtube_videos">YouTube videos<a class="headerlink" href="#youtube_videos" title="Permanent link">&para;</a></h2>
+<p>Videos are available here: <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">YouTube</a> </p>
+<p>Theu show how to use and customise PFS.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack</code></li>
+<li>Create virtual enviroment <code>python -m venv venv</code></li>
+<li>Activate your virtual enviromnent: Windows <code>.\venv\Scripts\activte</code> or Mac <code>source venv/bin/activate</code>.</li>
+<li>install requirements <code>pip install -r requirements.txt</code>.</li>
+<li>for Playwright browsers run <code>playwright install</code>.</li>
+<li>run all tests <code>python -m pytest -vs</code>. <code>-vs</code> enables verboistiy and non-capture of print statements that are by default captured to prevent clutter.</li>
+<li>There are around 200 templated tests.</li>
+</ul>
 <h2 id="test_run">Test run<a class="headerlink" href="#test_run" title="Permanent link">&para;</a></h2>
-<h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
+<p>Let's run <code>python -m pytest -vs --headed</code>. The <code>--headed</code> tells Playwright to open up browsers in our E2E tests for demon puposes.</p>
+<p>We can see a CSV of results in the <code>results</code> folder. The console ouput is colorised with the Rich library. Rename the <code>conftest.py</code> in the root of the folder to say <code>Xconftest.py</code> and you will see no CSV produced and no colorisation.</p>
 <h2 id="customisation">Customisation<a class="headerlink" href="#customisation" title="Permanent link">&para;</a></h2>
+<p>YouTube playlist: <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">here</a></p>
+<p>This covers:</p>
+<ul>
+<li>pytest.ini settings for logging.</li>
+<li>how to read values from the config.ini files in the config folder.</li>
+<li>customise the report header in the console output.</li>
+<li>customising the test status words, colours and icons in the console output.</li>
+<li>adding a report section at end of console output.</li>
+<li>and more...</li>
+</ul>
+<p>The free online course 'PyTest Hooks and Plugins' that you have a free coupon for goes into much more detail about how to use hooks in PyTest.</p>
+<p><br></p>
 
 
 

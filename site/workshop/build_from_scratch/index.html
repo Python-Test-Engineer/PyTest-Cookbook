@@ -463,9 +463,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#htmlcov" class="md-nav__link">
+  <a href="#htmlcov_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      htmlcov
+      htmlcov folder
     </span>
   </a>
   
@@ -1576,9 +1576,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#htmlcov" class="md-nav__link">
+  <a href="#htmlcov_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      htmlcov
+      htmlcov folder
     </span>
   </a>
   
@@ -1621,30 +1621,46 @@
 
 
 <h1 id="build_from_scratch">Build from scratch<a class="headerlink" href="#build_from_scratch" title="Permanent link">&para;</a></h1>
+<p>Note all we need to use pytest is a <code>tests</code>folder with test files <code>test_*.py</code> and pytest installed. This will enable us to do <code>python -m pytest</code> to run tests.</p>
+<p>However, to build a framework we can add the following:</p>
 <h2 id="src">SRC<a class="headerlink" href="#src" title="Permanent link">&para;</a></h2>
 <p>Folder for one's source code - optional but recommended location by Python.</p>
+<p>We will assume we have our <code>src</code> folder.</p>
+<p>We can create a virtual environment with <code>python -m venv venv</code> followed byt activation:</p>
+<ul>
+<li><code>.\venv\scripts\activate</code> for Windows</li>
+<li><code>source venv/bin/activate</code> for Mac and Linux</li>
+</ul>
 <h2 id="pytest">PyTest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h2>
-<p>Installation of <code>pytest</code></p>
+<p>Installation of <code>pytest</code> with <code>pip instal pytest</code>.</p>
 <h2 id="playwright">Playwright<a class="headerlink" href="#playwright" title="Permanent link">&para;</a></h2>
-<p>Installation of Playwright and also <code>plyawright install</code> to load browsers for headed tests.</p>
+<p>Installation of Playwright<code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests.</p>
 <h2 id="pytestini">Pytest.ini<a class="headerlink" href="#pytestini" title="Permanent link">&para;</a></h2>
 <p>Holds settings for PyTest.</p>
+<p>We can use the one in PFS.</p>
 <h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
 <p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>.</p>
+<p>In PFS, the logging location is <code>log</code> so we create this folder.</p>
 <h2 id="utils">Utils<a class="headerlink" href="#utils" title="Permanent link">&para;</a></h2>
-<p>Utility functions</p>
+<p>Utility functions are stored in <code>utils</code>.</p>
 <h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
-<p>Folder that holds <code>*.ini</code> files or other config files.</p>
+<p>Folder that holds <code>*.ini</code> files or other config files. We create a <code>config</code> folder.</p>
 <h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
-<p>These have reports from pytest-html</p>
+<p>These have reports from pytest-html and if we use this as our location for reports then they will be store here.</p>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
-<p>Our custom CSV ouput files</p>
-<h2 id="htmlcov">htmlcov<a class="headerlink" href="#htmlcov" title="Permanent link">&para;</a></h2>
-<p>Coverage report from pytest-cov</p>
+<p>Our custom CSV ouput files will go here based on the settings in the root <code>conftest.py</code> file, (near top of file), in the tests folder:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># ----- OUTPUT FILE AND LOCATION -----
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>report_date = datetime.now().strftime(&quot;%Y-%m-%d-%H-%M-%S&quot;)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># practically a GUID...
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>FILENAME = f&quot;./results/report_{report_date}_{random.randint(1_000_000, 9_999_999)}.csv&quot;
+</span></code></pre></div>
+<h2 id="htmlcov_folder">htmlcov folder<a class="headerlink" href="#htmlcov_folder" title="Permanent link">&para;</a></h2>
+<p>Coverage report from pytest-cov can go here depending if we use <code>pytest --cov=htmlcov tests/</code></p>
 <h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h2>
-<p>Folder to save captured screenshots from Playwright tests.</p>
+<p>Folder to save captured screenshots from Playwright tests as configured in the Playwright test <code>test_08_download.py</code></p>
 <h2 id="tests">Tests!<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <p>All our tests are stored in the <code>tests</code> folder.</p>
+<p>We don't need to add <code>__init__.py</code> in this folder or subfolders but if we don't we may have a test name collision if two tests have the same name.</p>
 <p><br></p>
 
 
