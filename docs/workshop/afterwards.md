@@ -10,9 +10,8 @@ The cookbook covers many more items such as:
 
 ## Revision 
 
-[CoffeeBeforeArch](
-[CoffeeBeforeArch](https://www.youtube.com/playlist?list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS)
-) and [Indian Pythonista](https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS) are very good concise walkthroughs of PyTest covering beginner to advanced topics.
+
+[CoffeeBeforeArch](https://www.youtube.com/playlist?list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS) and [Indian Pythonista](https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS) are very good concise walkthroughs of PyTest covering beginner to advanced topics.
 
 
 ## Development

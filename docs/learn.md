@@ -46,7 +46,7 @@ by Brian Okken
 
 *The definitive book!*
 
-![Brian Okken](../images/okken-book.jpg)
+![Brian Okken](./images/okken-book.jpg)
 
 [https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/](https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/)
 ## 5. Hooks and Plugins
