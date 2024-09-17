@@ -11,7 +11,7 @@ Clone from [https://github.com/Python-Test-Engineer/PyTest-Full-Stack](https://g
 
 Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy) 
 
-Theu show how to use and customise PFS.
+These show you how to use and customise PFS.
 
 ## Installation
 
@@ -30,7 +30,6 @@ Let's run `python -m pytest -vs --headed`. The `--headed` tells Playwright to op
 We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation.
 
 ## Customisation
-
 
 YouTube playlist: [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
 
