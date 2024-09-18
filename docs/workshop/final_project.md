@@ -1,8 +1,8 @@
-# Final Project
+# Final Project, PFS
 
 We will start by downloading and setting up PFS so that you have a working final project to take away.
 
-We will tlook at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.
+We will look at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.
 
 ## Repo
 
@@ -20,7 +20,6 @@ These show you how to use and customise PFS.
 - Activate your virtual enviromnent: Windows `.\venv\Scripts\activte` or Mac `source venv/bin/activate`.
 - install requirements `pip install -r requirements.txt`.
 - for Playwright browsers run `playwright install`.
-- run all tests `python -m pytest -vs`. `-vs` enables verboistiy and non-capture of print statements that are by default captured to prevent clutter.
 - There are around 200 templated tests.
 
 ## Test run

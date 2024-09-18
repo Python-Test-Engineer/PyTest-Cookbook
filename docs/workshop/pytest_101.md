@@ -63,6 +63,25 @@ To run tests we run `python -m pytest`. We can run just `pytest` but running it 
 ![why python -m](../images/workshop/why-python-m.png)
 [https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest](https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest)
 
+Let's run two tests, one PASSED and one FAILED...
+
+in `00_check_setup\test_01_setup.py` there are two tests:
+
+```
+def test_0001_SET_pass():
+    sleep(1)
+    console.print("\n[blue bold]Testing Rich[/]\n")
+    assert True
+
+# A test fail to show as an example
+def test_0004_SET_this_will_fail():
+    console.print("[red italic]Example of a failed test[/]⚠️")
+    assert False
+```
+We can run this easily with ` python -m pytest -vs -k 0001` (-k is a 'like' and with unique test numbering it can be a convenient way to select a test, which we will dive into deeper later...).
+
+I will explain my test naming convention later...
+
 ## Selecting tests
 
 ### Locations
@@ -97,6 +116,28 @@ This can get tricky for more complex queries and in those case we will use 'mark
 #### Definition
 
 Markers are 'tags' which we can add to tests using `@pytest.mark.tag_name` and we can then select a particular marker using `pytest -m pytest -m tag_name`.
+
+They are decorators and they are syntactic sugar for passing a function to another function:
+
+```
+def make_pretty(func):
+
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()  
+
+This is actually:
+
+ordinary = make_pretty(ordinary)
+
+```
 
 We can assign the name of the marker after @pytest.mark
 
@@ -210,6 +251,7 @@ pytest --tb=line    # only one line per failure
 pytest --tb=native  # Python standard library formatting
 pytest --tb=no      # no traceback at all
 ```
+We can run `python -m pytest -k 0004 --tb=no ` to see a failed test with various tracebck levels.
 
 ### Verbosity
 
@@ -260,6 +302,8 @@ If we run `pytestpython -m pytest .\tests\00_check_setup\ -rx` we get a short te
 
 ### CSV Outputs
 
+[https://pytest-cookbook.com/pytest/pytest_test_management/](https://pytest-cookbook.com/pytest/pytest_test_management/) has more detail on test management and the use of a test naming convention.
+
 We can use `pytest-csv` but our custom local plugin `conftest.py` can do this for us.
 
 There is an explainer video for this and we will look at this a bit later and a sample line is:
@@ -267,7 +311,14 @@ There is an explainer video for this and we will look at this a bit later and a 
 ```
 0001|test_0001_SET_pass|tests/00_check_setup/test_01_setup.py::test_0001_SET_pass|PASSED|1.013291|
 ```
-this is `test_id|test_name|test_node|result|duration`.
+
+This is `test_id|test_name|test_node|result|duration`.
+
+Given these details and the name of the CSV file containing the run_date and unique run_id, we can do a range of reports on our tests over many differing runs.
+
+These can be loaded into and SQL DB to provide comprehensive analysis.
+
+We can use other Python libraries to analyse and display this data.
 
 ### HTML Reports
 
