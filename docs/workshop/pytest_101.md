@@ -152,7 +152,11 @@ Like the `-k` option, we can use add/or/not:
 
 `python -m pytest -m 'outer or inner'`
 
+#### Classes and modules
 
+[https://docs.pytest.org/en/stable/example/markers.html#marking-whole-classes-or-modules](https://docs.pytest.org/en/stable/example/markers.html#marking-whole-classes-or-modules)
+
+Screenshot etc...
 
 #### Registering
 
