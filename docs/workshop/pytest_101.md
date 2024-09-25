@@ -275,6 +275,12 @@ This means 'quiet'
 
 ### -x for failures
 
+### pytest --setup-show 
+
+Used to see the order of execution.
+
+
+
 ```
 pytest -x            # stop after first failure
 pytest --maxfail=2   # stop after two failures
