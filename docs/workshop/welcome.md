@@ -1,8 +1,12 @@
 # Welcome
 
+*Let's get comfortable and confident with PyTest.*
+
 Welcome to the Getting Started with PyTest workshop.
 
-There are a lot of resources both for the workshop and after so that you can feel * comfortable and confident* with PyTest.
+There are a lot of resources both for the workshop and after so that you can feel *comfortable and confident* with PyTest.
+
+There are a lot of features to PyTest and 80% of usage uses just 20% so I will highlight the essentials, the rest you just need to be aware of rather than fully grasp *now*.
 
 ## Who am I?
 
@@ -64,9 +68,11 @@ We will look at PyTest features to make testing easier:
 
 ### 4. Afterwards
 
-We will look at resources available afterwards to help refresh and deepen your understanding.
+We will look at a great manyresources available afterwards to help refresh and deepen your understanding. These range from videos, some made by me and the rest by the community, as well articles and other materials.
 
-*My intention is for you to feel comfortable and confident with PyTest, ready to use and deepen your skillset from today.*
+[https://pytest-cookbook.com/learn/](https://pytest-cookbook.com/learn/).
+
+*My intention is for you to feel comfortable and confident with PyTest, ready to use and deepen your skill set from today.*
 
 <br>
 
