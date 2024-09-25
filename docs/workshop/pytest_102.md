@@ -22,16 +22,25 @@ Fixtures can thus use other fixtures. They are Python functions and can be the a
 def initial_value():
     return 5
 
-def square(num: int) -> int:
+def square(num) :
     return num * num
 
 # We pass in the fixture - dependency injection
-def test_0240_FXT_square(initial_value: int) -> None:
+def test_0240_FXT_square(initial_value):
     result = square(initial_value)
     assert result == initial_value**2
 ```
 
+We can rename fixtures:
 
+```
+@pytest.fixture
+def initial_value(name="custom_name"):
+    return 5
+
+def test_0240_FXT_square(custom_name)
+    ...
+```
 
 ### setup/teardown
 
