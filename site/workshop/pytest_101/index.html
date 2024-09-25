@@ -2062,9 +2062,10 @@
 <p>To run tests we run <code>python -m pytest</code>. We can run just <code>pytest</code> but running it as a module adds the path to sys.path and can avoid any future issues.</p>
 <p><img alt="why python -m" src="../../images/workshop/why-python-m.png" />
 <a href="https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest">https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest</a></p>
+<p>I use Rich and PyBoxen for console colouring. Some notes are here <a href="https://pytest-cookbook.com/toolbox/rich_pyboxen/">https://pytest-cookbook.com/toolbox/rich_pyboxen/</a>.</p>
 <p>Let's run two tests, one PASSED and one FAILED...</p>
-<p>in <code>00_check_setup\test_01_setup.py</code> there are two tests:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>def test_0001_SET_pass():
+<p>In <code>00_check_setup\test_01_setup.py</code> there are two tests:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>def test_0001_SET_pass():
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    sleep(1)
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    console.print(&quot;\n[blue bold]Testing Rich[/]\n&quot;)
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    assert True
@@ -2074,7 +2075,10 @@
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    console.print(&quot;[red italic]Example of a failed test[/]⚠️&quot;)
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    assert False
 </span></code></pre></div>
-We can run this easily with <code>python -m pytest -vs -k 0001</code> (-k is a 'like' and with unique test numbering it can be a convenient way to select a test, which we will dive into deeper later...).</p>
+<p>A failed test with -v verbosity gives:
+<img alt="Failed test" src="../../images/workshop/example-test-fail.png" /></p>
+<p>We will look at verbosity and outputs later...</p>
+<p>We can run this easily with <code>python -m pytest -vs -k 0001</code> (-k is a 'like' and with unique test numbering it can be a convenient way to select a test, which we will dive into this deeper later...).</p>
 <p>I will explain my test naming convention later...</p>
 <h2 id="selecting_tests">Selecting tests<a class="headerlink" href="#selecting_tests" title="Permanent link">&para;</a></h2>
 <h3 id="locations">Locations<a class="headerlink" href="#locations" title="Permanent link">&para;</a></h3>
@@ -2084,6 +2088,7 @@ We can run this easily with <code>python -m pytest -vs -k 0001</code> (-k is a '
 <p>These are called nodes:</p>
 <p><code>python -m pytest .\tests\00_check_setup\test_01_setup.py</code></p>
 <p><code>python -m pytest .\tests\00_check_setup\test_01_setup.py::test_0001_SET_pass</code></p>
+<p><code>python -m pytest -vs .\tests\00_check_setup\test_04_class_based.py::TestSample::test_0031_SET_add_num</code></p>
 <h3 id="-k_for_like">-k for 'like'<a class="headerlink" href="#-k_for_like" title="Permanent link">&para;</a></h3>
 <p>We can select test that are 'like' with the <code>-k</code> option:</p>
 <p><code>python -m pytest -k 0001</code> to select a specific id or</p>

@@ -36,6 +36,8 @@ In my experience, I look for 3 things;
 
 I hope PyTest FullStack, (PFS), achieves this.
 
+We will work in a circular way, going back to concepts we have seen before. This helps learning, so don't be too concerned if things don't click at first.
+
 ## Agenda
 
 We will split the workshop into four main sections:
@@ -73,6 +75,8 @@ We will look at a great manyresources available afterwards to help refresh and d
 [https://pytest-cookbook.com/learn/](https://pytest-cookbook.com/learn/).
 
 *My intention is for you to feel comfortable and confident with PyTest, ready to use and deepen your skill set from today.*
+
+
 
 <br>
 

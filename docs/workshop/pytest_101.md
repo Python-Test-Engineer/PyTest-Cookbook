@@ -63,9 +63,11 @@ To run tests we run `python -m pytest`. We can run just `pytest` but running it 
 ![why python -m](../images/workshop/why-python-m.png)
 [https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest](https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest)
 
+I use Rich and PyBoxen for console colouring. Some notes are here [https://pytest-cookbook.com/toolbox/rich_pyboxen/](https://pytest-cookbook.com/toolbox/rich_pyboxen/).
+
 Let's run two tests, one PASSED and one FAILED...
 
-in `00_check_setup\test_01_setup.py` there are two tests:
+In `00_check_setup\test_01_setup.py` there are two tests:
 
 ```
 def test_0001_SET_pass():
@@ -78,7 +80,13 @@ def test_0004_SET_this_will_fail():
     console.print("[red italic]Example of a failed test[/]⚠️")
     assert False
 ```
-We can run this easily with ` python -m pytest -vs -k 0001` (-k is a 'like' and with unique test numbering it can be a convenient way to select a test, which we will dive into deeper later...).
+
+A failed test with -v verbosity gives:
+![Failed test](../images/workshop/example-test-fail.png)
+
+We will look at verbosity and outputs later...
+
+We can run this easily with `python -m pytest -vs -k 0001` (-k is a 'like' and with unique test numbering it can be a convenient way to select a test, which we will dive into this deeper later...).
 
 I will explain my test naming convention later...
 
@@ -96,6 +104,9 @@ These are called nodes:
 `python -m pytest .\tests\00_check_setup\test_01_setup.py`
 
 `python -m pytest .\tests\00_check_setup\test_01_setup.py::test_0001_SET_pass`
+
+`python -m pytest -vs .\tests\00_check_setup\test_04_class_based.py::TestSample::test_0031_SET_add_num`
+
 ### -k for 'like'
 
 We can select test that are 'like' with the `-k` option:
