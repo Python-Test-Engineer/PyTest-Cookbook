@@ -1885,11 +1885,20 @@
 <h3 id="pytest-html">pytest-html<a class="headerlink" href="#pytest-html" title="Permanent link">&para;</a></h3>
 <h3 id="pytest-cov">pytest-cov<a class="headerlink" href="#pytest-cov" title="Permanent link">&para;</a></h3>
 <p>Coverage is an important metric.</p>
+<p><a href="https://pytest-with-eric.com/coverage/poetry-test-coverage/">https://pytest-with-eric.com/coverage/poetry-test-coverage/</a> is a very good example with code to illustrate the use of <code>pytest-cov</code>.</p>
+<p>We can run <code>coverage run -m pytest .\tests\01_inspect\</code> to run tests on a particular folder. This produces a <code>.coverage</code> in the root of the folder.</p>
+<p>To create a report in the console, we can use <code>coverage report -m</code>.</p>
+<p>To create an html report in <code>htmlcov</code> folder, we can use <code>coverage html</code> and the report is <code>index.html</code></p>
 <h3 id="pytest-random">pytest-random<a class="headerlink" href="#pytest-random" title="Permanent link">&para;</a></h3>
 <p>Ideally, all tests are independent of each other and randomising the order should not change the results of the test.</p>
 <p>Randomising tests are a good way to test this.</p>
 <h3 id="pytest-xdist">pytest-xdist<a class="headerlink" href="#pytest-xdist" title="Permanent link">&para;</a></h3>
-<p><br></p>
+<p>Using <code>python -m pytest .\tests\00_check_setup\test_06_xdist.py -n 4</code> with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.</p>
+<p>Running with n=1, the test took around 21s.
+Running with n=4, the test took around 8s.
+Running with n=8, the test took around 9s as there is overhead with managing workers.</p>
+<p>There are plugins wich can split tests based on execution time based on previous runs, (which we have in our results.csv file).</p>
+<p><br> </p>
 
 
 

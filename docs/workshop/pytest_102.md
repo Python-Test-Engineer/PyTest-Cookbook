@@ -155,7 +155,7 @@ Coverage is an important metric.
 
 [https://pytest-with-eric.com/coverage/poetry-test-coverage/](https://pytest-with-eric.com/coverage/poetry-test-coverage/) is a very good example with code to illustrate the use of `pytest-cov`.
 
-We can run `coverage run -m pytest.\tests\02_py_coffee\` to run tests on a particular folder. This produces a `.coverage` in the root of the folder.
+We can run `coverage run -m pytest .\tests\01_inspect\` to run tests on a particular folder. This produces a `.coverage` in the root of the folder.
 
 To create a report in the console, we can use `coverage report -m`.
 
