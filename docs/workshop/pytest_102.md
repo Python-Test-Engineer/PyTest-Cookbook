@@ -153,6 +153,14 @@ We already create our own cutomisable CSV output.
 
 Coverage is an important metric.
 
+[https://pytest-with-eric.com/coverage/poetry-test-coverage/](https://pytest-with-eric.com/coverage/poetry-test-coverage/) is a very good example with code to illustrate the use of `pytest-cov`.
+
+We can run `coverage run -m pytest.\tests\02_py_coffee\` to run tests on a particular folder. This produces a `.coverage` in the root of the folder.
+
+To create a report in the console, we can use `coverage report -m`.
+
+To create an html report in `htmlcov` folder, we can use `coverage html` and the report is `index.html`
+
 ### pytest-random
 
 Ideally, all tests are independent of each other and randomising the order should not change the results of the test.
@@ -161,4 +169,12 @@ Randomising tests are a good way to test this.
 
 ### pytest-xdist
 
-<br>
+Using `python -m pytest .\tests\00_check_setup\test_06_xdist.py -n 4` with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.
+
+Running with n=1, the test took around 21s.
+Running with n=4, the test took around 8s.
+Running with n=8, the test took around 9s as there is overhead with managing workers.
+
+There are plugins wich can split tests based on execution time based on previous runs, (which we have in our results.csv file).
+
+<br> 
