@@ -155,18 +155,18 @@ Coverage is an important metric.
 
 [https://pytest-with-eric.com/coverage/poetry-test-coverage/](https://pytest-with-eric.com/coverage/poetry-test-coverage/) is a very good example with code to illustrate the use of `pytest-cov`.
 
-We can run `coverage run -m pytest .\tests\01_inspect\` to run tests on a particular folder. This produces a `.coverage` in the root of the folder.
+We can run `python -m coverage run -m pytest .\tests\01_inspect\ -vs` to run tests on a particular folder. This produces a `.coverage` in the root of the folder.
 
-To create a report in the console, we can use `coverage report -m`.
+To create a report in the console, we can use `python -m coverage report -m` or `coverage report -m`.
 
-To create an html report in `htmlcov` folder, we can use `coverage html` and the report is `index.html`
+To create an html report in `htmlcov` folder, we can use `python -m coverage html` and the report is `index.html`
 
 We can omit tests using a `.coveragerc` file:
 
 ```
 [run]
 omit = 
-    */venv/*
+    */tests/00_check_set_up/*
     ...
 ```
 

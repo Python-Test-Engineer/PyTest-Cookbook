@@ -1886,13 +1886,13 @@
 <h3 id="pytest-cov">pytest-cov<a class="headerlink" href="#pytest-cov" title="Permanent link">&para;</a></h3>
 <p>Coverage is an important metric.</p>
 <p><a href="https://pytest-with-eric.com/coverage/poetry-test-coverage/">https://pytest-with-eric.com/coverage/poetry-test-coverage/</a> is a very good example with code to illustrate the use of <code>pytest-cov</code>.</p>
-<p>We can run <code>coverage run -m pytest .\tests\01_inspect\</code> to run tests on a particular folder. This produces a <code>.coverage</code> in the root of the folder.</p>
-<p>To create a report in the console, we can use <code>coverage report -m</code>.</p>
-<p>To create an html report in <code>htmlcov</code> folder, we can use <code>coverage html</code> and the report is <code>index.html</code></p>
+<p>We can run <code>python -m coverage run -m pytest .\tests\01_inspect\ -vs</code> to run tests on a particular folder. This produces a <code>.coverage</code> in the root of the folder.</p>
+<p>To create a report in the console, we can use <code>python -m coverage report -m</code> or <code>coverage report -m</code>.</p>
+<p>To create an html report in <code>htmlcov</code> folder, we can use <code>python -m coverage html</code> and the report is <code>index.html</code></p>
 <p>We can omit tests using a <code>.coveragerc</code> file:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[run]
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>omit = 
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    */venv/*
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    */tests/00_check_set_up/*
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    ...
 </span></code></pre></div>
 <p>Some command line options:</p>
