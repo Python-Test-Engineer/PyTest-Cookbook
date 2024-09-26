@@ -161,6 +161,27 @@ To create a report in the console, we can use `coverage report -m`.
 
 To create an html report in `htmlcov` folder, we can use `coverage html` and the report is `index.html`
 
+We can omit tests using a `.coveragerc` file:
+
+```
+[run]
+omit = 
+    */venv/*
+    ...
+```
+
+Some command line options:
+
+```
+--cov=src: Tells pytest-cov to measure coverage for the src folder.
+--cov-report=term and --cov-report=html: Generate terminal and HTML coverage reports.
+--cov-branch: Measures branch coverage as well as line coverage.
+--cov-config=none: Specifies that no external config file will be read, but coverage will still run.
+--cov-omit=src/legacy/*,src/migrations/*: Specifies the directories you want to omit from the coverage report.
+``` 
+
+[https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/](https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/) for more ways and deeper information.
+
 ### pytest-random
 
 Ideally, all tests are independent of each other and randomising the order should not change the results of the test.

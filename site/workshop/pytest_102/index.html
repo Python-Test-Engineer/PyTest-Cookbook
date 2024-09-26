@@ -1889,6 +1889,20 @@
 <p>We can run <code>coverage run -m pytest .\tests\01_inspect\</code> to run tests on a particular folder. This produces a <code>.coverage</code> in the root of the folder.</p>
 <p>To create a report in the console, we can use <code>coverage report -m</code>.</p>
 <p>To create an html report in <code>htmlcov</code> folder, we can use <code>coverage html</code> and the report is <code>index.html</code></p>
+<p>We can omit tests using a <code>.coveragerc</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[run]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>omit = 
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    */venv/*
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    ...
+</span></code></pre></div>
+<p>Some command line options:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>--cov=src: Tells pytest-cov to measure coverage for the src folder.
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>--cov-report=term and --cov-report=html: Generate terminal and HTML coverage reports.
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>--cov-branch: Measures branch coverage as well as line coverage.
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>--cov-config=none: Specifies that no external config file will be read, but coverage will still run.
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>--cov-omit=src/legacy/*,src/migrations/*: Specifies the directories you want to omit from the coverage report.
+</span></code></pre></div>
+<p><a href="https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/">https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/</a> for more ways and deeper information.</p>
 <h3 id="pytest-random">pytest-random<a class="headerlink" href="#pytest-random" title="Permanent link">&para;</a></h3>
 <p>Ideally, all tests are independent of each other and randomising the order should not change the results of the test.</p>
 <p>Randomising tests are a good way to test this.</p>
