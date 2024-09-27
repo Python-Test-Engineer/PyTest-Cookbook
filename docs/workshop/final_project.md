@@ -24,7 +24,11 @@ These show you how to use and customise PFS.
 
 ## Test run
 
-Let's run `python -m pytest -vs --headed`. The `--headed` tells Playwright to open up browsers in our E2E tests for demon puposes.
+Let's run `python -m pytest -vs -n auto --headed`. 
+
+The `-n auto` uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores `-n 4` etc.
+
+The `--headed` tells Playwright to open up browsers in our E2E tests for demon puposes.
 
 We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation.
 
