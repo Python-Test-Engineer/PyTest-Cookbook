@@ -282,20 +282,31 @@ If we want to use `print` statements, we need to use the `-s` flag. It can be co
 
 ### -q for quiet
 
-This means 'quiet'
+This means 'quiet'.
 
-### -x for failures
+### ---durations
 
-### pytest --setup-show 
+[https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration](https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration)
 
-Used to see the order of execution.
+![durations](../images/workshop/durations.png)
 
+*NB We have our CSV report that gives duration for each test so that we can create our own 'durations' report.*
 
+### -x ---maxfail
 
 ```
 pytest -x            # stop after first failure
 pytest --maxfail=2   # stop after two failures
 ```
+
+### ---setup-show 
+
+Used to see the order of execution.
+
+
+### ---collectonly
+
+This will show what tests will be run without running tess.
 
 ### -r for report
 
@@ -317,7 +328,7 @@ A - all
 N - none, this can be used to display nothing (since fE is the default)
 ```
 
-If we run `pytestpython -m pytest .\tests\00_check_setup\ -rx` we get a short test summary at end of test run:
+If we run `pytestpython -m pytest .\tests\00_check_setup\ -rx` we get a short test summary at end of test run of just XFAIL:
 
 ![-rx summary](../images/workshop/short-test-summary-rx.png)
 
