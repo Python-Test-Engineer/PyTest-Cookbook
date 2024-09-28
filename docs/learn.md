@@ -57,7 +57,7 @@ The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/c
 
 ![PyTest - hooks and plugins](./images/craig/udemy-hooks.png)
 
-The repo contains heavily commented source files creating a sort of 'ebook' and is freely available [https://github.com/Python-Test-Engineer/Udemy-PyTest](https://github.com/Python-Test-Engineer/Udemy-PyTest). The video course add visual explanations and commentary.
+The repo contains heavily commented source files creating a sort of 'ebook' and is freely available [https://github.com/Python-Test-Engineer/Udemy-PyTest](https://github.com/Python-Test-Engineer/Udemy-PyTest). The video course adds visual explanations and commentary.
 
 <br>
 
