@@ -22,6 +22,12 @@ These show you how to use and customise PFS.
 - for Playwright browsers run `playwright install`.
 - There are around 200 templated tests.
 
+## Rich and PyBoxen
+
+I use Rich, (mostly), and PyBoxen, which is based on Rich to colorise console output.
+
+More details at [https://pytest-cookbook.com/toolbox/rich_pyboxen/](https://pytest-cookbook.com/toolbox/rich_pyboxen/).
+
 ## Test run
 
 Let's run `python -m pytest -vs -n auto --headed`. 
@@ -31,6 +37,7 @@ The `-n auto` uses pytest-xdist to determine number of cores and split tests acr
 The `--headed` tells Playwright to open up browsers in our E2E tests for demon puposes.
 
 We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation.
+
 
 ## Customisation
 
