@@ -190,7 +190,11 @@ Randomising tests are a good way to test this.
 
 ### pytest-xdist
 
-Using `python -m pytest .\tests\00_check_setup\test_06_xdist.py -n 4` with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.
+Using `python -m pytest -vs .\tests\00_check_setup\Xtest_06_xdist.py` with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.
+
+The file has X at beginning to avoid being called when we do a general pytest run as this would slow things down.
+
+This does show how we can call any file for a test run. We just need `test_` etc if we want PyTest to discover the tests.
 
 Running with n=1, the test took around 21s.
 Running with n=4, the test took around 8s.
