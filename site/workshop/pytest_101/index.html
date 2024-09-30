@@ -2110,6 +2110,7 @@
 <p><code>python -m pytest -k 0001</code> to select a specific id or</p>
 <p><code>python -m pytest -k SET</code> will select all those that contain 'SET' in test name.</p>
 <p>We can combine 'not', 'or', 'and':</p>
+<p><code>python -m pytest -vs -k "0211 or 0212"</code> - note that single or double quotes are needed.</p>
 <p><code>python -m pytest -k "not SQL"</code> will get all tests that contain SET (case insensitive) or SQL. </p>
 <p>This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.</p>
 <h3 id="markers">Markers<a class="headerlink" href="#markers" title="Permanent link">&para;</a></h3>

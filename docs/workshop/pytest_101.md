@@ -117,6 +117,8 @@ We can select test that are 'like' with the `-k` option:
 
 We can combine 'not', 'or', 'and':
 
+`python -m pytest -vs -k "0211 or 0212"` - note that single or double quotes are needed.
+
 `python -m pytest -k "not SQL"` will get all tests that contain SET (case insensitive) or SQL. 
 
 This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.
