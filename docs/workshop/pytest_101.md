@@ -249,6 +249,10 @@ What if the `xfail` actually passes? We want to know this and it will be marked 
 
 There are examples of this in the set of tests we ran on PFS at start.
 
+Some more detailed information is here: [https://docs.pytest.org/en/stable/how-to/skipping.html#xfail-mark-test-functions-as-expected-to-fail](https://docs.pytest.org/en/stable/how-to/skipping.html#xfail-mark-test-functions-as-expected-to-fail)
+
+![xfail-strict](../images/workshop/xfail-strict.png)
+
 ##### Markers for fixtures
 
 We will cover this when we look at fixtures.
@@ -278,6 +282,9 @@ pytest --tb=no      # no traceback at all
 ```
 We can run `python -m pytest -k 0004 --tb=no ` to see a failed test with various tracebck levels.
 
+This may be useful when needed:
+![stepwise](../images/workshop/stepwise.png)
+ 
 ### Verbosity
 
 We can use one of these flags for increasing verbosity:

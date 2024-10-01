@@ -2194,6 +2194,8 @@ then any markers not registered will cause an error.</p>
 <p>We can <code>xfail</code> the test and it will not result in a failed test but be marked as an <code>xfail</code>.</p>
 <p>What if the <code>xfail</code> actually passes? We want to know this and it will be marked not as a fail but an <code>xpass</code> - unexepectedly passes.</p>
 <p>There are examples of this in the set of tests we ran on PFS at start.</p>
+<p>Some more detailed information is here: <a href="https://docs.pytest.org/en/stable/how-to/skipping.html#xfail-mark-test-functions-as-expected-to-fail">https://docs.pytest.org/en/stable/how-to/skipping.html#xfail-mark-test-functions-as-expected-to-fail</a></p>
+<p><img alt="xfail-strict" src="../../images/workshop/xfail-strict.png" /></p>
 <h5 id="markers_for_fixtures">Markers for fixtures<a class="headerlink" href="#markers_for_fixtures" title="Permanent link">&para;</a></h5>
 <p>We will cover this when we look at fixtures.</p>
 <h2 id="output_options">Output options<a class="headerlink" href="#output_options" title="Permanent link">&para;</a></h2>
@@ -2217,6 +2219,8 @@ then any markers not registered will cause an error.</p>
 </span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>pytest --tb=no      # no traceback at all
 </span></code></pre></div>
 We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test with various tracebck levels.</p>
+<p>This may be useful when needed:
+<img alt="stepwise" src="../../images/workshop/stepwise.png" /></p>
 <h3 id="verbosity">Verbosity<a class="headerlink" href="#verbosity" title="Permanent link">&para;</a></h3>
 <p>We can use one of these flags for increasing verbosity:</p>
 <p>-v, -vv, -vvv</p>
