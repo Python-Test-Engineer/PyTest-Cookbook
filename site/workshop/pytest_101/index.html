@@ -2145,9 +2145,9 @@ Like the <code>-k</code> option, we can use add/or/not:</p>
 <p><code>python -m pytest -m 'outer or inner'</code></p>
 <h4 id="classes_and_modules">Classes and modules<a class="headerlink" href="#classes_and_modules" title="Permanent link">&para;</a></h4>
 <p><a href="https://docs.pytest.org/en/stable/example/markers.html#marking-whole-classes-or-modules">https://docs.pytest.org/en/stable/example/markers.html#marking-whole-classes-or-modules</a></p>
-<p>Screenshot etc...</p>
+<p><img alt="mark-classes-modules" src="../../images/workshop/mark-class-modules.png" /></p>
 <h4 id="registering">Registering<a class="headerlink" href="#registering" title="Permanent link">&para;</a></h4>
-<p>We do not need to register them with <code>pytest.ini</code> provided we do not have <code>strict</code> in <code>addopts</code>. If we do, we will get an error, if we don't we will get warnings.</p>
+<p>We do not need to register them with <code>pytest.ini</code> provided we do not have <code>--strict-markers</code> in <code>addopts</code>. If we do, we will get an error, if we don't we will get warnings.</p>
 <p>In our <code>pytest.ini</code> we have:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>markers =
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    ;add markers of group tests - can use
@@ -2165,8 +2165,8 @@ Like the <code>-k</code> option, we can use add/or/not:</p>
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    withdrawal
 </span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    banking
 </span></code></pre></div>
-<p>In this case above, iff we have 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>addopts = strict
+<p>In this case above, if we have 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>addopts = --strict-markers
 </span></code></pre></div>
 then any markers not registered will cause an error.</p>
 <h4 id="calling_markers">Calling markers<a class="headerlink" href="#calling_markers" title="Permanent link">&para;</a></h4>
@@ -2180,10 +2180,15 @@ then any markers not registered will cause an error.</p>
 <p>We will not discuss this yet but it is worth mentioning because managing 500+ test markers is best done dynamically...</p>
 <p>We can use a hook <code>pytest_collect_modifyitems()</code>...</p>
 <h4 id="built_in_markers">Built in markers<a class="headerlink" href="#built_in_markers" title="Permanent link">&para;</a></h4>
+<p><img alt="built-n-markers" src="../../images/workshop/builtin-marks.png" /></p>
 <h5 id="pytestmarkskip">@pytest.mark.skip<a class="headerlink" href="#pytestmarkskip" title="Permanent link">&para;</a></h5>
 <p>Rather than comment out tests, we can mark them to be skipped and they will not be selected. </p>
 <h5 id="pytestmarkskipif">@pytest.mark.skipif<a class="headerlink" href="#pytestmarkskipif" title="Permanent link">&para;</a></h5>
 <p>We can skip conditionally:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>@pytest.mark.skipif(
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    sys.version_info &gt; (3, 6), reason=&quot;Test requires Python version &lt;= 3.6!&quot;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>)
+</span></code></pre></div>
 <h5 id="pytestmarkxfail">@pytest.mark.xfail<a class="headerlink" href="#pytestmarkxfail" title="Permanent link">&para;</a></h5>
 <p>We may have a test that we know will fail but we want to consider that a pass.</p>
 <p>We can <code>xfail</code> the test and it will not result in a failed test but be marked as an <code>xfail</code>.</p>
@@ -2193,23 +2198,23 @@ then any markers not registered will cause an error.</p>
 <p>We will cover this when we look at fixtures.</p>
 <h2 id="output_options">Output options<a class="headerlink" href="#output_options" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output">https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output</a></p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pytest --showlocals     # show local variables in tracebacks
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>pytest -l               # show local variables (shortcut)
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>pytest --no-showlocals  # hide local variables (if addopts enables them)
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>pytest --capture=fd  # default, capture at the file descriptor level
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>pytest --capture=sys # capture at the sys level
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>pytest --capture=no  # don&#39;t capture
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>pytest -s            # don&#39;t capture (shortcut)
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>pytest --capture=tee-sys # capture to logs but also output to sys level streams
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>pytest --tb=auto    # (default) &#39;long&#39; tracebacks for the first and last
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>                     # entry, but &#39;short&#39; style for the other entries
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>pytest --tb=long    # exhaustive, informative traceback formatting
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>pytest --tb=short   # shorter traceback format
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>pytest --tb=line    # only one line per failure
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>pytest --tb=native  # Python standard library formatting
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>pytest --tb=no      # no traceback at all
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest --showlocals     # show local variables in tracebacks
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>pytest -l               # show local variables (shortcut)
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>pytest --no-showlocals  # hide local variables (if addopts enables them)
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>pytest --capture=fd  # default, capture at the file descriptor level
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>pytest --capture=sys # capture at the sys level
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>pytest --capture=no  # don&#39;t capture
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>pytest -s            # don&#39;t capture (shortcut)
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>pytest --capture=tee-sys # capture to logs but also output to sys level streams
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>pytest --tb=auto    # (default) &#39;long&#39; tracebacks for the first and last
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>                     # entry, but &#39;short&#39; style for the other entries
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>pytest --tb=long    # exhaustive, informative traceback formatting
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>pytest --tb=short   # shorter traceback format
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>pytest --tb=line    # only one line per failure
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>pytest --tb=native  # Python standard library formatting
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>pytest --tb=no      # no traceback at all
 </span></code></pre></div>
 We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test with various tracebck levels.</p>
 <h3 id="verbosity">Verbosity<a class="headerlink" href="#verbosity" title="Permanent link">&para;</a></h3>
@@ -2225,8 +2230,8 @@ We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test wi
 <p><img alt="durations" src="../../images/workshop/durations.png" /></p>
 <p><em>NB We have our CSV report that gives duration for each test so that we can create our own 'durations' report.</em></p>
 <h3 id="-x_---maxfail">-x ---maxfail<a class="headerlink" href="#-x_---maxfail" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pytest -x            # stop after first failure
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>pytest --maxfail=2   # stop after two failures
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pytest -x            # stop after first failure
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>pytest --maxfail=2   # stop after two failures
 </span></code></pre></div>
 <h3 id="---setup-show">---setup-show<a class="headerlink" href="#---setup-show" title="Permanent link">&para;</a></h3>
 <p>Used to see the order of execution.</p>
@@ -2234,19 +2239,19 @@ We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test wi
 <p>This will show what tests will be run without running tess.</p>
 <h3 id="-r_for_report">-r for report<a class="headerlink" href="#-r_for_report" title="Permanent link">&para;</a></h3>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report">https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>f - failed
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>E - error
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>s - skipped
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>x - xfailed
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>X - xpassed
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>p - passed
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>P - passed with output
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>Special characters for (de)selection of groups:
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>a - all except pP
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>A - all
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>N - none, this can be used to display nothing (since fE is the default)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>f - failed
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>E - error
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>s - skipped
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>x - xfailed
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>X - xpassed
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>p - passed
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>P - passed with output
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>Special characters for (de)selection of groups:
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>a - all except pP
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>A - all
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>N - none, this can be used to display nothing (since fE is the default)
 </span></code></pre></div>
 <p>If we run <code>pytestpython -m pytest .\tests\00_check_setup\ -rx</code> we get a short test summary at end of test run of just XFAIL:</p>
 <p><img alt="-rx summary" src="../../images/workshop/short-test-summary-rx.png" /></p>
@@ -2254,7 +2259,7 @@ We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test wi
 <p><a href="https://pytest-cookbook.com/pytest/pytest_test_management/">https://pytest-cookbook.com/pytest/pytest_test_management/</a> has more detail on test management and the use of a test naming convention.</p>
 <p>We can use <code>pytest-csv</code> but our custom local plugin <code>conftest.py</code> can do this for us.</p>
 <p>There is an explainer video for this and we will look at this a bit later and a sample line is:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>0001|test_0001_SET_pass|tests/00_check_setup/test_01_setup.py::test_0001_SET_pass|PASSED|1.013291|
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>0001|test_0001_SET_pass|tests/00_check_setup/test_01_setup.py::test_0001_SET_pass|PASSED|1.013291|
 </span></code></pre></div>
 <p>This is <code>test_id|test_name|test_node|result|duration</code>.</p>
 <p>Given these details and the name of the CSV file containing the run_date and unique run_id, we can do a range of reports on our tests over many differing runs.</p>

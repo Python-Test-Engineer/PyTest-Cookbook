@@ -169,11 +169,11 @@ Like the `-k` option, we can use add/or/not:
 
 [https://docs.pytest.org/en/stable/example/markers.html#marking-whole-classes-or-modules](https://docs.pytest.org/en/stable/example/markers.html#marking-whole-classes-or-modules)
 
-Screenshot etc...
+![mark-classes-modules](../images/workshop/mark-class-modules.png)
 
 #### Registering
 
-We do not need to register them with `pytest.ini` provided we do not have `strict` in `addopts`. If we do, we will get an error, if we don't we will get warnings.
+We do not need to register them with `pytest.ini` provided we do not have `--strict-markers` in `addopts`. If we do, we will get an error, if we don't we will get warnings.
 
 In our `pytest.ini` we have:
 
@@ -195,9 +195,9 @@ markers =
     banking
 ```
 
-In this case above, iff we have 
+In this case above, if we have 
 ```
-addopts = strict
+addopts = --strict-markers
 ```
 then any markers not registered will cause an error.
 
@@ -223,6 +223,8 @@ We can use a hook `pytest_collect_modifyitems()`...
 
 #### Built in markers
 
+![built-n-markers](../images/workshop/builtin-marks.png)
+
 ##### @pytest.mark.skip
 
 Rather than comment out tests, we can mark them to be skipped and they will not be selected. 
@@ -230,6 +232,12 @@ Rather than comment out tests, we can mark them to be skipped and they will not 
 ##### @pytest.mark.skipif
 
 We can skip conditionally:
+
+```
+@pytest.mark.skipif(
+    sys.version_info > (3, 6), reason="Test requires Python version <= 3.6!"
+)
+```
 
 ##### @pytest.mark.xfail
 
