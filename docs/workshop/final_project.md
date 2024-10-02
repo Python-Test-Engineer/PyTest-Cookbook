@@ -1,5 +1,13 @@
 # Final Project, PFS
 
+Whilst PyTest and PFS have many features, a basic set up suffices:
+
+- Install PyTest.
+- Create a `tests` folder and module named `test_XXX.py` with test starting with `def test_`.
+- Run `pytest`.
+
+See BASIC example.
+
 We will start by downloading and setting up PFS so that you have a working final project to take away.
 
 We will look at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.
