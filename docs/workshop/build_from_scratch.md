@@ -45,6 +45,12 @@ log_file_date_format=%Y-%m-%d %H:%M:%S
 
 In PFS, the logging location is `log` so we create this folder.
 
+*For reference only:*
+
+[https://docs.pytest.org/en/8.3.x/contents.html](https://docs.pytest.org/en/8.3.x/contents.html)
+
+![customise-logging](../images/workshop/customise-logging.png)
+
 ## Utils
 
 Utility functions are stored in `utils`.

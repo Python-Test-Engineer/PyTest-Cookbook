@@ -6,7 +6,7 @@ Whilst PyTest and PFS have many features, a basic set up suffices:
 - Create a `tests` folder and module named `test_XXX.py` with test starting with `def test_`.
 - Run `python -m pytest -v` (-m run as module, -v verbose).
 
-See BASIC example.
+I will demonstrate this with the BASIC example.
 
 We will start by downloading and setting up PFS so that you have a working final project to take away.
 
