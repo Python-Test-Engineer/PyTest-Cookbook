@@ -404,7 +404,7 @@
         <li class="md-nav__item">
   <a href="#src" class="md-nav__link">
     <span class="md-ellipsis">
-      SRC
+      src
     </span>
   </a>
   
@@ -431,7 +431,7 @@
         <li class="md-nav__item">
   <a href="#pytestini" class="md-nav__link">
     <span class="md-ellipsis">
-      Pytest.ini
+      pytest.ini
     </span>
   </a>
   
@@ -447,36 +447,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#utils" class="md-nav__link">
+  <a href="#utils_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Utils
+      utils folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
+  <a href="#config_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Config
+      config folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
+  <a href="#results_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Results
+      results folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reports" class="md-nav__link">
+  <a href="#reports_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Reports
+      reports folder
     </span>
   </a>
   
@@ -492,9 +492,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#pytest-xdist" class="md-nav__link">
     <span class="md-ellipsis">
-      Screenshots
+      pytest-xdist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots_folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      screenshots folder
     </span>
   </a>
   
@@ -504,6 +513,15 @@
   <a href="#tests" class="md-nav__link">
     <span class="md-ellipsis">
       Tests!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      PFS
     </span>
   </a>
   
@@ -1477,7 +1495,7 @@
         <li class="md-nav__item">
   <a href="#src" class="md-nav__link">
     <span class="md-ellipsis">
-      SRC
+      src
     </span>
   </a>
   
@@ -1504,7 +1522,7 @@
         <li class="md-nav__item">
   <a href="#pytestini" class="md-nav__link">
     <span class="md-ellipsis">
-      Pytest.ini
+      pytest.ini
     </span>
   </a>
   
@@ -1520,36 +1538,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#utils" class="md-nav__link">
+  <a href="#utils_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Utils
+      utils folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
+  <a href="#config_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Config
+      config folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#results" class="md-nav__link">
+  <a href="#results_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Results
+      results folder
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reports" class="md-nav__link">
+  <a href="#reports_folder" class="md-nav__link">
     <span class="md-ellipsis">
-      Reports
+      reports folder
     </span>
   </a>
   
@@ -1565,9 +1583,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#pytest-xdist" class="md-nav__link">
     <span class="md-ellipsis">
-      Screenshots
+      pytest-xdist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots_folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      screenshots folder
     </span>
   </a>
   
@@ -1577,6 +1604,15 @@
   <a href="#tests" class="md-nav__link">
     <span class="md-ellipsis">
       Tests!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      PFS
     </span>
   </a>
   
@@ -1601,12 +1637,13 @@
 
 
 <h1 id="build_from_scratch">Build from scratch<a class="headerlink" href="#build_from_scratch" title="Permanent link">&para;</a></h1>
-<p>Note all we need to use pytest is a <code>tests</code>folder with test files <code>test_*.py</code> and pytest installed. This will enable us to do <code>python -m pytest</code> to run tests.</p>
-<p>However, to build a framework we can add the following:</p>
-<h2 id="src">SRC<a class="headerlink" href="#src" title="Permanent link">&para;</a></h2>
+<p>We have already seen the BASIC demo and the minimum we need to use pytest is a <code>tests</code>folder with test files <code>test_*.py</code> and pytest installed. This will enable us to do <code>python -m pytest</code> to run tests.</p>
+<p>We will cover how to use the plugins in PyTest 102.</p>
+<p>To build the PFS framework we can add the following:</p>
+<h2 id="src">src<a class="headerlink" href="#src" title="Permanent link">&para;</a></h2>
 <p>Folder for one's source code - optional but recommended location by Python.</p>
 <p>We will assume we have our <code>src</code> folder.</p>
-<p>We can create a virtual environment with <code>python -m venv venv</code> followed byt activation:</p>
+<p>We can create a virtual environment with <code>python -m venv venv</code> followed by activation:</p>
 <ul>
 <li><code>.\venv\scripts\activate</code> for Windows</li>
 <li><code>source venv/bin/activate</code> for Mac and Linux</li>
@@ -1615,43 +1652,51 @@
 <p>Installation of <code>pytest</code> with <code>pip install pytest</code>.</p>
 <h2 id="playwright">Playwright<a class="headerlink" href="#playwright" title="Permanent link">&para;</a></h2>
 <p>Installation of Playwright<code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests.</p>
-<h2 id="pytestini">Pytest.ini<a class="headerlink" href="#pytestini" title="Permanent link">&para;</a></h2>
+<h2 id="pytestini">pytest.ini<a class="headerlink" href="#pytestini" title="Permanent link">&para;</a></h2>
 <p>Holds settings for PyTest.</p>
-<p>We can use the one in PFS.</p>
+<p>We can use the one in PFS deleting unwanted entries.</p>
 <h2 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h2>
-<p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>.
+<p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># for log file - pytest uses these whenever logger used
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>log_file = log/pytesting.log # customise as required
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>log_file_level = INFO
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>log_file_format = %(asctime)s [%(levelname)8s] [%(name)s] %(message)s (%(filename)s:%(lineno)s)
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>log_file_date_format=%Y-%m-%d %H:%M:%S
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>In PFS, the logging location is <code>log</code> so we create this folder.</p>
 <p><em>For reference only:</em></p>
 <p><a href="https://docs.pytest.org/en/8.3.x/contents.html">https://docs.pytest.org/en/8.3.x/contents.html</a></p>
 <p><img alt="customise-logging" src="../../images/workshop/customise-logging.png" /></p>
-<h2 id="utils">Utils<a class="headerlink" href="#utils" title="Permanent link">&para;</a></h2>
+<h2 id="utils_folder">utils folder<a class="headerlink" href="#utils_folder" title="Permanent link">&para;</a></h2>
 <p>Utility functions are stored in <code>utils</code>.</p>
-<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
+<h2 id="config_folder">config folder<a class="headerlink" href="#config_folder" title="Permanent link">&para;</a></h2>
 <p>Folder that holds <code>*.ini</code> files or other config files. We create a <code>config</code> folder.</p>
 <p>This can be useful as an alternative to CLI arguments. We can add our options in the config.ini file to be retrieved in our tests using the <code>read_config.py</code> file. </p>
 <p>This is standard Python.</p>
-<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<h2 id="results_folder">results folder<a class="headerlink" href="#results_folder" title="Permanent link">&para;</a></h2>
 <p>Our custom CSV ouput files will go here based on the settings in the root <code>conftest.py</code> file, (near top of file), in the tests folder:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># ----- OUTPUT FILE AND LOCATION -----
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>report_date = datetime.now().strftime(&quot;%Y-%m-%d-%H-%M-%S&quot;)
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># practically a GUID...
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>FILENAME = f&quot;./results/report_{report_date}_{random.randint(1_000_000, 9_999_999)}.csv&quot;
 </span></code></pre></div>
-<h2 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h2>
-<p>These have reports from pytest-html and if we use this as our location for reports then they will be store here.</p>
+<h2 id="reports_folder">reports folder<a class="headerlink" href="#reports_folder" title="Permanent link">&para;</a></h2>
+<p>This is where we store our pytest-html reports, but we can choose any folder but we will use <code>reports</code> as in PFS.</p>
+<p>We need to <code>pip install pytest-html</code>.</p>
 <h2 id="htmlcov_folder">htmlcov folder<a class="headerlink" href="#htmlcov_folder" title="Permanent link">&para;</a></h2>
-<p>Coverage report from pytest-cov can go here depending if we use <code>pytest --cov=htmlcov tests/</code></p>
-<h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h2>
-<p>Folder to save captured screenshots from Playwright tests as configured in the Playwright test <code>test_08_download.py</code>. Location is customisable.</p>
+<p>We need to <code>pip install pytest-cov</code>.</p>
+<p>Coverage report from pytest-cov can go here depending if we use <code>pytest --cov=htmlcov tests/</code>.</p>
+<p>A <code>.coverage</code> report file is produced in the root of the project. </p>
+<h2 id="pytest-xdist">pytest-xdist<a class="headerlink" href="#pytest-xdist" title="Permanent link">&para;</a></h2>
+<p>To speed up tests we <code>pip install pytest-xdist</code>.</p>
+<h2 id="screenshots_folder">screenshots folder<a class="headerlink" href="#screenshots_folder" title="Permanent link">&para;</a></h2>
+<p>We add a <code>screenshots</code> folder, (or any name we choose). We may also do this for videos and traceback if we are using these Playwright features.</p>
+<p><code>test_08_download.py</code> uses the <code>screenshot</code> folder.</p>
 <h2 id="tests">Tests!<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <p>All our tests are stored in the <code>tests</code> folder.</p>
 <p>We don't need to add <code>__init__.py</code> in this folder or subfolders but if we don't, we may have a test name collision if two tests have the same name.</p>
+<h2 id="pfs">PFS<a class="headerlink" href="#pfs" title="Permanent link">&para;</a></h2>
+<p>With all of these, we have replicated PFS, although we may choose to add Rich and Pyboxen for colorisation etc.</p>
 <p><br></p>
 
 

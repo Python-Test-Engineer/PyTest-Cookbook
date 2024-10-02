@@ -1,5 +1,6 @@
 # Final Project, PFS
 
+## Minimal Setup
 Whilst PyTest and PFS have many features, a basic set up suffices:
 
 - Install PyTest.
@@ -8,20 +9,11 @@ Whilst PyTest and PFS have many features, a basic set up suffices:
 
 I will demonstrate this with the BASIC example.
 
+## Installation
+
 We will start by downloading and setting up PFS so that you have a working final project to take away.
 
 We will look at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.
-
-## Repo
-
-Clone from [https://github.com/Python-Test-Engineer/PyTest-Full-Stack](https://github.com/Python-Test-Engineer/PyTest-Full-Stack).
-## YouTube videos
-
-Videos are available here: [YouTube](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy) 
-
-These show you how to use and customise PFS.
-
-## Installation
 
 - `git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack`
 - Create virtual enviroment `python -m venv venv`
