@@ -43,6 +43,6 @@ The repo contains heavily commented source files creating a sort of 'ebook' and 
 
 ## Reach out
 
-I am contactable via the links at pytest-cookbook.com.
+I am contactable via the links at [pytest-cookbook.com.](https://pytest-cookbook.com/craig/contact/)
 
 <br>
