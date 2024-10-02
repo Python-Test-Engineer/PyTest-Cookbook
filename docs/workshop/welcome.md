@@ -44,7 +44,7 @@ We will split the workshop into four main sections:
 
 ### 1. PFS framework
 
-Get familiar with all the resources available and download Python Full Stack which is a complete framework for PyTest with over 200 template tests from SQL to API/E2E testing with Playwright. 
+*Having seen a demo of a minimal installation of PyTest*, we will get familiar with all the resources available and download Python Full Stack which is a complete framework for PyTest with over 200 template tests from SQL to API/E2E testing with Playwright. 
 
 Learn how to create this framework from scratch and we will learn how to use it and run/select tests.
 
