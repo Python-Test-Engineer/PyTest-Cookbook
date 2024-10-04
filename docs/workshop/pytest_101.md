@@ -124,6 +124,12 @@ We can combine 'not', 'or', 'and':
 This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.
 
 
+### @tests_to_run.txt
+
+!!!To test
+
+![tests to run](../images/workshop/@file.png)
+
 ### Markers
 
 #### Definition

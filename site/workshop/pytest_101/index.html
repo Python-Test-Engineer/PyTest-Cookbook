@@ -511,6 +511,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#tests_to_runtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      @tests_to_run.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#markers" class="md-nav__link">
     <span class="md-ellipsis">
       Markers
@@ -1782,6 +1791,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#tests_to_runtxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      @tests_to_run.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#markers" class="md-nav__link">
     <span class="md-ellipsis">
       Markers
@@ -2113,6 +2131,11 @@
 <p><code>python -m pytest -vs -k "0211 or 0212"</code> - note that single or double quotes are needed.</p>
 <p><code>python -m pytest -k "not SQL"</code> will get all tests that contain SET (case insensitive) or SQL. </p>
 <p>This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.</p>
+<h3 id="tests_to_runtxt">@tests_to_run.txt<a class="headerlink" href="#tests_to_runtxt" title="Permanent link">&para;</a></h3>
+<div class="admonition to test">
+<p class="admonition-title">To</p>
+</div>
+<p><img alt="tests to run" src="../../images/workshop/%40file.png" /></p>
 <h3 id="markers">Markers<a class="headerlink" href="#markers" title="Permanent link">&para;</a></h3>
 <h4 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
 <p>Markers are 'tags' which we can add to tests using <code>@pytest.mark.tag_name</code> and we can then select a particular marker using <code>pytest -m pytest -m tag_name</code>.</p>
