@@ -85,6 +85,7 @@ nav:
       - "About": "asides/asides.md"
       - "Pluggy": "asides/pluggy.md"
       - "Mocking": "asides/mocking.md"
+      - "Decorators": "asides/decorators.md"
   - "Toolbox":
       - "About": "toolbox/toolbox_index.md"
       - "Allure Windows ": "toolbox/allure_windows_setup.md"
