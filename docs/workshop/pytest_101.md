@@ -2,22 +2,34 @@
 
 ## Test discovery
 
-![test-discovery](../images/workshop/test-discvovery.png)
-[https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery](https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery)
+Before we look at the body of a test, we will first look at naming conventions of test function, classes, files and folders.
 
-Do we need `__init__.py` in `tests` folder?
+The default folder is `tests`. We can configure testpaths in `pytest.ini` for PyTest to search the listed folders:
+```
+testpaths =
+    tests
+    integration
+```
+Do we need `__init__.py` in `tests` folder/subfolders?
 
 No. But if we don't and two tests have same name then there will be a name collision.
 
 Using `__init__.py` will make each test have a unique namespace.
 
-## Change location
-
-We can change default in `pytest.ini`:
+## Conventions
 
 [https://docs.pytest.org/en/stable/example/pythoncollection.html](https://docs.pytest.org/en/stable/example/pythoncollection.html)
 
+![test-discovery](../images/workshop/test-discvovery.png)
+
+[https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery](https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery)
+
+We can change default in `pytest.ini`:
+
 ![change test discovery](../images/workshop/change-test-discovery.png)
+
+
+
 
 ## Create a test
 
