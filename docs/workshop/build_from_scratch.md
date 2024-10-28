@@ -4,6 +4,8 @@ We have already seen the BASIC demo and the minimum we need to use pytest is a `
 
 We will cover how to use the plugins in PyTest 102.
 
+*We will leave this til the end if we have time as a way of testing what we have learnt*.
+
 To build the PFS framework we can add the following:
 
 ## src
@@ -31,13 +33,15 @@ Holds settings for PyTest.
 
 We can use the one in PFS deleting unwanted entries.
 
-## Logging
+## log folder
 
 Folder to store `pytest.log` file for logging messages as defined in `pytest.ini`.
 
 ```
 # for log file - pytest uses these whenever logger used
-log_file = log/pytesting.log # customise as required
+# boiler plate code that can be changed to suit
+
+log_file = log/pytesting.log # customise location as required
 log_file_level = INFO
 log_file_format = %(asctime)s [%(levelname)8s] [%(name)s] %(message)s (%(filename)s:%(lineno)s)
 log_file_date_format=%Y-%m-%d %H:%M:%S
@@ -65,14 +69,20 @@ This is standard Python.
 
 ## results folder
 
+We will need the `conftest.py` file to use the local plugin for CSV ouput and console formating.
+
+We will need to `pip install rich pyboxen` for this.
+
 Our custom CSV ouput files will go here based on the settings in the root `conftest.py` file, (near top of file), in the tests folder:
 
 ```
-# ----- OUTPUT FILE AND LOCATION -----
+# ----- OUTPUT FILENAME AND LOCATION -----
 report_date = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
 # practically a GUID...
 FILENAME = f"./results/report_{report_date}_{random.randint(1_000_000, 9_999_999)}.csv"
 ```
+
+We will see later that using a filename like this means that we can load results into a DB by reading the filename to get report date and run_id, as well as all the test results. These three can form one row in the DB enabling auditing of test results all the way to the individual test level.
 
 ## reports folder
 
@@ -94,7 +104,7 @@ To speed up tests we `pip install pytest-xdist`.
 
 ## screenshots folder
 
-We add a `screenshots` folder, (or any name we choose). We may also do this for videos and traceback if we are using these Playwright features.
+If we are using some image, video and traceback Playwright features, we cann add a `screenshots` folder, (or any name we choose).
 
 `test_08_download.py` uses the `screenshot` folder.
 

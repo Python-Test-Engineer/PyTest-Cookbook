@@ -7,7 +7,7 @@ Whilst PyTest and PFS have many features, a basic set up suffices:
 - Create a `tests` folder and module named `test_XXX.py` with test starting with `def test_`.
 - Run `python -m pytest -v` (-m run as module, -v verbose).
 
-I will demonstrate this with the BASIC example.
+I will demonstrate this with the BASIC example, stored in repo under `_notes`.
 
 ## Installation
 
@@ -18,8 +18,8 @@ We will look at its structure and customisation and then move on to building it 
 - `git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack`
 - Create virtual enviroment `python -m venv venv`
 - Activate your virtual enviromnent: Windows `.\venv\Scripts\activte` or Mac `source venv/bin/activate`.
-- install requirements `pip install -r requirements.txt`.
-- for Playwright browsers run `playwright install`.
+- Install requirements with `pip install -r requirements.txt`.
+- Run `playwright install` for Playwright browsers used primarily in E2E tests.
 - There are around 200 templated tests.
 
 ## Rich and PyBoxen
@@ -32,11 +32,15 @@ More details at [https://pytest-cookbook.com/toolbox/rich_pyboxen/](https://pyte
 
 Let's run `python -m pytest -vs -n auto --headed`. 
 
-The `-n auto` uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores `-n 4` etc.
+The `-n auto` uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores `-n 4` etc. 
 
-The `--headed` tells Playwright to open up browsers in our E2E tests for demon puposes.
+Try running PFS without the -n flag or change the number of cores used.
+
+The `--headed` tells Playwright to open up browsers in our E2E tests for demonstraion puposes. Generally, headless tests are used.
 
 We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation.
+
+This CSV output is a result of a local plugin that is in the `conftest.py`. It is a lite version of `pytest-csv` but has all necessary data.
 
 
 ## Customisation
@@ -53,5 +57,9 @@ This covers:
 - and more...
 
 The free online course 'PyTest Hooks and Plugins' that you have a free coupon for goes into much more detail about how to use hooks in PyTest.
+
+The coupon is valid for 3 days - expires midnight Monday.
+
+LINK ---->
 
 <br>

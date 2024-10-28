@@ -1521,7 +1521,8 @@
 <h2 id="test_run">Test run<a class="headerlink" href="#test_run" title="Permanent link">&para;</a></h2>
 <p>Let's run <code>python -m pytest -vs -n auto --headed</code>. </p>
 <p>The <code>-n auto</code> uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores <code>-n 4</code> etc.</p>
-<p>The <code>--headed</code> tells Playwright to open up browsers in our E2E tests for demon puposes.</p>
+<p>Try running PFS without the -n flag or change the number of cores used.</p>
+<p>The <code>--headed</code> tells Playwright to open up browsers in our E2E tests for demonstraion puposes. Generally, headless tests are used.</p>
 <p>We can see a CSV of results in the <code>results</code> folder. The console ouput is colorised with the Rich library. Rename the <code>conftest.py</code> in the root of the folder to say <code>Xconftest.py</code> and you will see no CSV produced and no colorisation.</p>
 <h2 id="customisation">Customisation<a class="headerlink" href="#customisation" title="Permanent link">&para;</a></h2>
 <p>YouTube playlist: <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">here</a></p>

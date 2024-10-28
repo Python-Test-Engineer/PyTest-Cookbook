@@ -6,11 +6,14 @@ Welcome to the Getting Started with PyTest workshop.
 
 There are a lot of resources both for the workshop and after so that you can feel *comfortable and confident* with PyTest.
 
-There are a lot of features to PyTest and 80% of usage uses just 20% so I will highlight the essentials, the rest you just need to be aware of rather than fully grasp *now*.
+There are a lot of features to PyTest but 20% of them will cover 80% of your needs, so I will highlight the essentials, the rest you just need to be aware of rather than fully grasp *now*.
 
 ## Who am I?
 
 I am an 'adhoc' freelance Backend Pythonista and Test Automation Engineer living in Brighton, UK.
+
+I am also working on a project 'AI Powered Knowledge Systems'.
+
 ![brighton](../images/workshop/brighton.jpg)
 
 ### Volounteer coach
@@ -39,6 +42,14 @@ I hope PyTest FullStack, (PFS), achieves this.
 We will work in a circular way, going back to concepts we have seen before. This helps learning, so don't be too concerned if things don't click at first.
 
 ## Agenda
+
+There are two ways we can create a PyTest Framework for our `src` code:
+
+1. Use a template framework and add in our `src`.
+
+2. Integrate a template framework into our `src`.
+
+We will do both.
 
 We will split the workshop into four main sections:
 
@@ -70,7 +81,7 @@ We will look at PyTest features to make testing easier:
 
 ### 4. Afterwards
 
-We will look at a great manyresources available afterwards to help refresh and deepen your understanding. These range from videos, some made by me and the rest by the community, as well articles and other materials.
+We will look at a great many resources available afterwards to help refresh and deepen your understanding. These range from videos, some made by me and the rest by the community, as well articles and other materials.
 
 [https://pytest-cookbook.com/learn/](https://pytest-cookbook.com/learn/).
 
