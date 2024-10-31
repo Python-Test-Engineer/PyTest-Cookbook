@@ -188,6 +188,40 @@ Ideally, all tests are independent of each other and randomising the order shoul
 
 Randomising tests are a good way to test this.
 
+We create our own local plugin version in the Udemy Course and the pytest_collect_modifyitems is a hook that can be used for filtering, ordering and randomising:
+
+```
+# A pytest hook to for modifying collected items
+def pytest_collection_modifyitems(items, config):
+    # we can sort order of items (tests) as needed
+    # can be used to sort by fixtures used if one is say expensive in time
+    # items.sort(key=lambda item: "expensive" in item.fixturenames)
+    random.shuffle(items)a
+    return items
+```
+
+We can filter and order tests:
+
+```
+# Deselecting/skipping tests based on certain criteria
+def pytest_collection_modifyitems(items, config):
+
+    selected = []
+    deselected = []
+    
+    for test in items:
+      
+        if "custom_expensive_marker" in all_markers:
+            deselected.append(test)
+        else:
+            selected.append(test)
+
+    # Update the deselected tests
+    config.hook.pytest_deselected(items=deselected)
+
+    # Update the selected tests
+    items[:] = selected
+```
 ### pytest-xdist
 
 Using `python -m pytest -vs .\tests\00_check_setup\Xtest_09_xdist.py` with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.
