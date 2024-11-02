@@ -1503,7 +1503,7 @@
 <li>Create a <code>tests</code> folder and module named <code>test_XXX.py</code> with test starting with <code>def test_</code>.</li>
 <li>Run <code>python -m pytest -v</code> (-m run as module, -v verbose).</li>
 </ul>
-<p>I will demonstrate this with the BASIC example.</p>
+<p>I will demonstrate this with the BASIC example, stored in repo under <code>_notes</code>.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>We will start by downloading and setting up PFS so that you have a working final project to take away.</p>
 <p>We will look at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.</p>
@@ -1511,8 +1511,8 @@
 <li><code>git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack</code></li>
 <li>Create virtual enviroment <code>python -m venv venv</code></li>
 <li>Activate your virtual enviromnent: Windows <code>.\venv\Scripts\activte</code> or Mac <code>source venv/bin/activate</code>.</li>
-<li>install requirements <code>pip install -r requirements.txt</code>.</li>
-<li>for Playwright browsers run <code>playwright install</code>.</li>
+<li>Install requirements with <code>pip install -r requirements.txt</code>.</li>
+<li>Run <code>playwright install</code> for Playwright browsers used primarily in E2E tests.</li>
 <li>There are around 200 templated tests.</li>
 </ul>
 <h2 id="rich_and_pyboxen">Rich and PyBoxen<a class="headerlink" href="#rich_and_pyboxen" title="Permanent link">&para;</a></h2>
@@ -1520,10 +1520,11 @@
 <p>More details at <a href="https://pytest-cookbook.com/toolbox/rich_pyboxen/">https://pytest-cookbook.com/toolbox/rich_pyboxen/</a>.</p>
 <h2 id="test_run">Test run<a class="headerlink" href="#test_run" title="Permanent link">&para;</a></h2>
 <p>Let's run <code>python -m pytest -vs -n auto --headed</code>. </p>
-<p>The <code>-n auto</code> uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores <code>-n 4</code> etc.</p>
+<p>The <code>-n auto</code> uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores <code>-n 4</code> etc. </p>
 <p>Try running PFS without the -n flag or change the number of cores used.</p>
 <p>The <code>--headed</code> tells Playwright to open up browsers in our E2E tests for demonstraion puposes. Generally, headless tests are used.</p>
 <p>We can see a CSV of results in the <code>results</code> folder. The console ouput is colorised with the Rich library. Rename the <code>conftest.py</code> in the root of the folder to say <code>Xconftest.py</code> and you will see no CSV produced and no colorisation.</p>
+<p>This CSV output is a result of a local plugin that is in the <code>conftest.py</code>. It is a lite version of <code>pytest-csv</code> but has all necessary data.</p>
 <h2 id="customisation">Customisation<a class="headerlink" href="#customisation" title="Permanent link">&para;</a></h2>
 <p>YouTube playlist: <a href="https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy">here</a></p>
 <p>This covers:</p>
@@ -1536,6 +1537,8 @@
 <li>and more...</li>
 </ul>
 <p>The free online course 'PyTest Hooks and Plugins' that you have a free coupon for goes into much more detail about how to use hooks in PyTest.</p>
+<p>The coupon is valid for 3 days - expires midnight Monday.</p>
+<p>LINK ----&gt;</p>
 <p><br></p>
 
 

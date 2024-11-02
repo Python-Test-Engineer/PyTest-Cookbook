@@ -142,6 +142,10 @@ This can get tricky for more complex queries and in those case we will use 'mark
 
 ![tests to run](../images/workshop/@file.png)
 
+### collect_modifyitems hook
+
+slight intro
+
 ### Markers
 
 #### Definition
