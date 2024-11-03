@@ -404,11 +404,15 @@ We can use other Python libraries to analyse and display this data.
 
 ### HTML Reports
 
+*covered in PyTest102*
+
 We can also create an html report with `pytest-html`. A sample report is in the `reports` folder.
 
 We can run this with `python -m pytest --html=reports/report.html --self-contained-html` (see COMMANDS.md in root folder).
 
 ### Coverage Reports
+
+*covered in PyTest102*
 
 With `python -m pytest --cov-report html --cov .` (note end .) we get a coverage report as seen in the folder `htmlcov`.
 
