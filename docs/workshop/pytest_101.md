@@ -283,6 +283,17 @@ We will cover this when we look at fixtures.
 
 [https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output](https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output)
 
+In `pytest.ini`, we can add as default command line arguments. For example, if we want to always have `-vs`, we can add this as follows:
+
+
+### addopts
+
+```
+addopts = -vs
+```
+
+This will add `-vs` to all CLI commands.
+
 ```
 pytest --showlocals     # show local variables in tracebacks
 pytest -l               # show local variables (shortcut)
