@@ -236,6 +236,10 @@ Running with n=1, the test took around 21s.
 Running with n=4, the test took around 8s.
 Running with n=8, the test took around 9s as there is overhead with managing workers.
 
-There are plugins wich can split tests based on execution time based on previous runs, (which we have in our results.csv file).
+There are plugins which can split tests based on execution time based on previous runs.
+
+[https://pypi.org/project/pytest-split/](https://pypi.org/project/pytest-split/)
+
+[https://pypi.org/project/pytest-split-tests/](https://pypi.org/project/pytest-split-tests/)
 
 <br> 
