@@ -8,11 +8,19 @@ There are a lot of resources both for the workshop and after so that you can fee
 
 There are a lot of features to PyTest but 20% of them will cover 80% of your needs, so I will highlight the essentials, the rest you just need to be aware of rather than fully grasp *now*.
 
+Today, it is more important to grasp the wiring of PyTest rather than exact syntax. 
+
+When you return to PyTest when you are back at work, a solid understanding will serve you best. One can always look up syntax.
+
 ## Who am I?
 
 I am an 'adhoc' freelance Backend Pythonista and Test Automation Engineer living in Brighton, UK.
 
-I am also working on a project 'AI Powered Knowledge Systems'.
+Currently, I am also working on a project 'AI Powered Knowledge Systems', building a book/framework similiar to PFS.
+
+Here is the coupond for the 'PyTest Hooks and Plugins' course on Udemy. The code lasts till tomorrow night.
+
+We will take a quick look at it later...
 
 ![brighton](../images/workshop/brighton.jpg)
 
@@ -31,13 +39,13 @@ https://en.wikipedia.org/wiki/Punched_tape#/media/File:Creed_model_6S-2_paper_ta
 
 There are many great resources for PyTest and I wanted to curate them into one resource.
 
-In my experience, I look for 3 things;
+In my experience, I look for 3 things:
 
 1. Good docs.
 2. A repo that works out of the box.
 3. Videos to explain concepts.
 
-I hope PyTest FullStack, (PFS), achieves this.
+I hope PyTest FullStack, (PFS), achieves this. It is a Full Stack PyTest framework from SQL DB tests to E2E tests with Playwright.
 
 We will work in a circular way, going back to concepts we have seen before. This helps learning, so don't be too concerned if things don't click at first.
 
@@ -63,6 +71,8 @@ Learn how to create this framework from scratch and we will learn how to use it 
 
 ### 2. PyTest 101
 
+This is the core of PyTesting, creating, selecting, running and outputs:
+
 - Create functional and class based test templates.
 - Test discovery customisation.
 - Running tests.
@@ -72,7 +82,7 @@ Learn how to create this framework from scratch and we will learn how to use it 
 
 ### 3. PyTest 102
 
-We will look at PyTest features to make testing easier:
+We will look at PyTest features to make testing easier. They are not necessary for PyTesting but are powerful features to save time and code:
 
 - Fixtures
 - Parametrization
@@ -83,7 +93,7 @@ We will look at PyTest features to make testing easier:
 
 We will look at a great many resources available afterwards to help refresh and deepen your understanding. These range from videos, some made by me and the rest by the community, as well articles and other materials.
 
-[https://pytest-cookbook.com/learn/](https://pytest-cookbook.com/learn/).
+There are two video series that I used in my original learning that are concise and effective. They are referenced in [https://pytest-cookbook.com/learn/](https://pytest-cookbook.com/learn/) and we will look at them later.
 
 *My intention is for you to feel comfortable and confident with PyTest, ready to use and deepen your skill set from today.*
 

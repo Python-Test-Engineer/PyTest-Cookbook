@@ -8,8 +8,9 @@ The cookbook covers many more items such as:
 - Asides on Mocking and Pluggy
 - Toolbox for Console Prettying using Rich and PyBoxen, Allure reports, Visual Regression etc and I add more content as time passes.
 
-## Revision 
+Mocking can be a tricky subject. I have a video series that does a deep dive on mocking and also looks at the Python `mock.py` file so that we can understand what mocking is acutally doing.
 
+## Revision 
 
 [CoffeeBeforeArch](https://www.youtube.com/playlist?list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS) and [Indian Pythonista](https://www.youtube.com/playlist?list=PLyb_C2HpOQSBWGekd7PfhHnb9GnqDgrxS) are very good concise walkthroughs of PyTest covering beginner to advanced topics.
 
@@ -39,7 +40,7 @@ The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/c
 
 ![PyTest - hooks and plugins](../images/craig/udemy-hooks.png)
 
-The repo contains heavily commented source files creating a sort of 'ebook' and is freely available [https://github.com/Python-Test-Engineer/Udemy-PyTest](https://github.com/Python-Test-Engineer/Udemy-PyTest). The video course add visual explanations and commentary.
+The repo contains heavily commented source files creating a sort of 'ebook' and is freely available [https://github.com/Python-Test-Engineer/Udemy-PyTest](https://github.com/Python-Test-Engineer/Udemy-PyTest). The video course adds visual explanations and commentary.
 
 ## Reach out
 

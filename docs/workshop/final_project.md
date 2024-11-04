@@ -45,7 +45,7 @@ This CSV output is a result of a local plugin that is in the `conftest.py`. It i
 
 ## Customisation
 
-YouTube playlist: [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy)
+YouTube playlist: [Customise PFS](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy). It also has videos on the structure of PFS.
 
 This covers:
 
