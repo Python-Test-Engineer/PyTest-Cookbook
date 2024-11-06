@@ -1884,6 +1884,9 @@
 <h3 id="pytest-csv">pytest-csv<a class="headerlink" href="#pytest-csv" title="Permanent link">&para;</a></h3>
 <p>We already create our own cutomisable CSV output.</p>
 <h3 id="pytest-html">pytest-html<a class="headerlink" href="#pytest-html" title="Permanent link">&para;</a></h3>
+<p>For a self-contained pytest-html report with css and images in one file:</p>
+<p><code>python -m pytest --html=reports/report.html --self-contained-html -vs tests/00_check_setup</code></p>
+<p><code>--self-contained</code> means just one file and if we don't specify tests it will work on all test in the <code>tests</code> folder.</p>
 <h3 id="pytest-cov">pytest-cov<a class="headerlink" href="#pytest-cov" title="Permanent link">&para;</a></h3>
 <p>Coverage is an important metric.</p>
 <p><a href="https://pytest-with-eric.com/coverage/poetry-test-coverage/">https://pytest-with-eric.com/coverage/poetry-test-coverage/</a> is a very good example with code to illustrate the use of <code>pytest-cov</code>.</p>
