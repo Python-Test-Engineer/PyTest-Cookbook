@@ -149,6 +149,12 @@ We already create our own cutomisable CSV output.
 
 ### pytest-html
 
+For a self-contained pytest-html report with css and images in one file:
+
+`python -m pytest --html=reports/report.html --self-contained-html -vs tests/00_check_setup`
+
+`--self-contained` means just one file and if we don't specify tests it will work on all test in the `tests` folder.
+
 ### pytest-cov
 
 Coverage is an important metric.

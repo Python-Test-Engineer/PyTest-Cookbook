@@ -18,7 +18,7 @@ I am an 'adhoc' freelance Backend Pythonista and Test Automation Engineer living
 
 Currently, I am also working on a project 'AI Powered Knowledge Systems', building a book/framework similiar to PFS.
 
-Here is the coupond for the 'PyTest Hooks and Plugins' course on Udemy. The code lasts till tomorrow night.
+Here is the coupon for the 'PyTest Hooks and Plugins' course on Udemy. The code lasts till tomorrow night.
 
 We will take a quick look at it later...
 
