@@ -28,6 +28,15 @@ We will take a quick look at it later...
 
 I am a volounteer coach at codebar.io/brighton and I also enjoy working in community kitchens, dog walking and partner dancing.
 
+Just got a Red Fox Labrador Pup, (unexpectedly):
+
+![Leo](../images/workshop/leo.jpg)
+
+We have a local red fox that is apt to follow us...
+
+![Leo](../images/workshop/leo-fox.png)
+
+
 ![codebar](../images/workshop/codebar.png)
 
 ### My first computer 1979
