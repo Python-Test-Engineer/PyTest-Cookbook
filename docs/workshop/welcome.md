@@ -106,7 +106,15 @@ There are two video series that I used in my original learning that are concise 
 
 *My intention is for you to feel comfortable and confident with PyTest, ready to use and deepen your skill set from today.*
 
+## Timings
 
+I am mindful that the talks etc after 11 am break start at 11:20, the time the workshop is due to end.
+
+I propose we aim to end the formal workshop at 11 so that people can if they want get a coffee and go the next talk/workshop.
+
+I will use the last 20 minutes from 11-11:20 for supplementary questions/revision etc for those that want it.
+
+We can go over some intermediate/advanced concepts.
 
 <br>
 
