@@ -16,10 +16,12 @@ We will start by downloading and setting up PFS so that you have a working final
 We will look at its structure and customisation and then move on to building it from scratch if necessary. Some of this may be done later in the workshop but we will see what we are able to do.
 
 - `git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack`
+- cd into folder `Pytest-Full-Stack'
 - Create virtual enviroment `python -m venv venv`
-- Activate your virtual enviromnent: Windows `.\venv\Scripts\activte` or Mac `source venv/bin/activate`.
+- Activate your virtual enviromnent: Windows `.\venv\Scripts\activate` or Mac `source venv/bin/activate`.
 - Install requirements with `pip install -r requirements.txt`.
 - Run `playwright install` for Playwright browsers used primarily in E2E tests.
+- run `python -m pytest -vs -n auto --headed` - there will be two intened FAILED tests.
 - There are around 200 templated tests.
 
 ## Rich and PyBoxen
@@ -27,6 +29,16 @@ We will look at its structure and customisation and then move on to building it 
 I use Rich, (mostly), and PyBoxen, which is based on Rich to colorise console output.
 
 More details at [https://pytest-cookbook.com/toolbox/rich_pyboxen/](https://pytest-cookbook.com/toolbox/rich_pyboxen/).
+
+## Rainbow CSV
+
+I use the Raibow CSV extension for colouring CSV files:
+
+![Rainbow CSV](../images/workshop/rainbow-csv-extension.png)
+
+It is customisable and defaults to cuurent theme which for me is **Monokai Crete**.
+
+![CSV](../images/workshop/csv-with-rainbow.png)
 
 ## Test run
 
