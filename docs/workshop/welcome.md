@@ -30,7 +30,7 @@ I am a volounteer coach at codebar.io/brighton and I also enjoy working in commu
 
 Just got a Red Fox Labrador Pup, (unexpectedly):
 
-![Leo](../images/workshop/leo.jpg)
+![Leo](../images/workshop/leo-carrot.png)
 
 We have a local red fox that is apt to follow us...
 
