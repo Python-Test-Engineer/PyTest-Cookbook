@@ -14,11 +14,11 @@ When you return to PyTest when you are back at work, a solid understanding will 
 
 ## Who am I?
 
+**I am one of *US* - a regular Pythonista.**
+
 I am an 'adhoc' freelance Backend Pythonista and Test Automation Engineer living in Brighton, UK.
 
 Currently, I am also working on a project 'AI Powered Knowledge Systems', building a book/framework similiar to PFS.
-
-Here is the coupon for the 'PyTest Hooks and Plugins' course on Udemy. The code lasts till tomorrow night.
 
 We will take a quick look at it later...
 
