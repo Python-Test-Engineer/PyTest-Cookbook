@@ -1890,7 +1890,8 @@
 <h3 id="pytest-cov">pytest-cov<a class="headerlink" href="#pytest-cov" title="Permanent link">&para;</a></h3>
 <p>Coverage is an important metric.</p>
 <p><a href="https://pytest-with-eric.com/coverage/poetry-test-coverage/">https://pytest-with-eric.com/coverage/poetry-test-coverage/</a> is a very good example with code to illustrate the use of <code>pytest-cov</code>.</p>
-<p>We can run <code>python -m coverage run -m pytest .\tests\01_inspect\ -vs</code> to run tests on a particular folder. This produces a <code>.coverage</code> in the root of the folder.</p>
+<p>We can run <code>python -m pytest -vs tests\02_py_coffee --cov-report html --cov .</code> to run tests on a particular folder. This produces a <code>.coverage</code> in the root of the folder and the report is <code>index.html</code> in the folder <code>htmlcov</code>. </p>
+<p>Note how an XFAIL will result in less than 100% coverage. If we have <code>if/else</code> statements and we do not have tests for each case this will give coverage &lt; 100%.</p>
 <p>To create a report in the console, we can use <code>python -m coverage report -m</code> or <code>coverage report -m</code>.</p>
 <p>To create an html report in <code>htmlcov</code> folder, we can use <code>python -m coverage html</code> and the report is <code>index.html</code></p>
 <p>We can omit tests using a <code>.coveragerc</code> file:</p>
@@ -1906,6 +1907,7 @@
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>--cov-config=none: Specifies that no external config file will be read, but coverage will still run.
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>--cov-omit=src/legacy/*,src/migrations/*: Specifies the directories you want to omit from the coverage report.
 </span></code></pre></div>
+<p>100% code coverage? - <a href="https://edbennett.github.io/python-testing-ci/07-coverage/index.html">https://edbennett.github.io/python-testing-ci/07-coverage/index.html</a></p>
 <p><a href="https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/">https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/</a> for more ways and deeper information.</p>
 <h3 id="pytest-random">pytest-random<a class="headerlink" href="#pytest-random" title="Permanent link">&para;</a></h3>
 <p>Ideally, all tests are independent of each other and randomising the order should not change the results of the test.</p>
