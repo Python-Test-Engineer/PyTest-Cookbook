@@ -26,7 +26,11 @@ We will take a quick look at it later...
 
 ### Volounteer coach
 
-I am a volounteer coach at codebar.io/brighton and I also enjoy working in community kitchens, dog walking and partner dancing.
+I am a volounteer coach at codebar.io/brighton 
+
+![codebar](../images/workshop/codebar.png)
+
+and I also enjoy working in community kitchens, dogs and partner dancing.
 
 Just got a Red Fox Labrador Pup, (unexpectedly):
 
@@ -37,7 +41,7 @@ We have a local red fox that is apt to follow us...
 ![Leo](../images/workshop/leo-fox.png)
 
 
-![codebar](../images/workshop/codebar.png)
+
 
 ### My first computer 1979
 
@@ -110,11 +114,11 @@ There are two video series that I used in my original learning that are concise 
 
 I am mindful that the talks etc after 11 am break start at 11:20, the time the workshop is due to end.
 
-I propose we aim to end the formal workshop at 11 so that people can if they want get a coffee and go the next talk/workshop.
+I propose we aim to end the formal workshop at 11 am so that people can if they want get a coffee and go the next talk/workshop.
 
 I will use the last 20 minutes from 11-11:20 for supplementary questions/revision etc for those that want it.
 
-We can go over some intermediate/advanced concepts.
+We can go over some intermediate/advanced concepts too.
 
 <br>
 
