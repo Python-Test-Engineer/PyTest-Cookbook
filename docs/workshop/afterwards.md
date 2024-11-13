@@ -30,20 +30,41 @@ by Brian Okken
 
 [https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/](https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/)
 
-## Online Hooks and Plugins
+## Hooks and Plugins Course
 
 For an advanced look at these topics, I have my course hosted on Udemy:
 
-The link and coupon code are available for the next 3 days: HERE
+<div style="border:2px solid red; padding: 10px 10px;border-radius:10px">
+
+<h2>The link and coupon code are available until Sunday Midnight: </h2>
+
+<h2>LINK</h2> 
+
+<h2>COUPON</h2> 
+(if needed)
+
+<h2>REPO</h2>
+
+<p>The repo contains heavily commented source files creating a sort of 'ebook' and is freely available:</p>
+<p>
+<a href="https://github.com/Python-Test-Engineer/Udemy-PyTest">https://github.com/Python-Test-Engineer/Udemy-PyTest</a>
+</p>
+<p>
+The video course adds visual explanations and commentary.
+</p>
+</div>
+
+
+
+
 
 The course is available [Udemy Hooks and Plugins course](https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/).
 
 ![PyTest - hooks and plugins](../images/craig/udemy-hooks.png)
 
-The repo contains heavily commented source files creating a sort of 'ebook' and is freely available [https://github.com/Python-Test-Engineer/Udemy-PyTest](https://github.com/Python-Test-Engineer/Udemy-PyTest). The video course adds visual explanations and commentary.
 
 ## Reach out
 
-I am contactable via the links at [pytest-cookbook.com.](https://pytest-cookbook.com/craig/contact/)
+I am contactable via the links in the [Contact Craig](https://pytest-cookbook.com/craig/contact/) section.
 
 <br>

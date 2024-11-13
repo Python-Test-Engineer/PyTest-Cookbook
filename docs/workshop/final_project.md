@@ -21,7 +21,6 @@ We will look at its structure and customisation and then move on to building it 
 - Activate your virtual enviromnent: Windows `.\venv\Scripts\activate` or Mac `source venv/bin/activate`.
 - Install requirements with `pip install -r requirements.txt`.
 - Run `playwright install` for Playwright browsers used primarily in E2E tests.
-- run `python -m pytest -vs -n auto --headed` - there will be two intened FAILED tests.
 - There are around 200 templated tests.
 
 ## Rich and PyBoxen
@@ -42,7 +41,7 @@ It is customisable and defaults to cuurent theme which for me is **Monokai Crete
 
 ## Test run
 
-Let's run `python -m pytest -vs -n auto --headed`. 
+Let's run - run `python -m pytest -vs -n auto --headed` - there will be two intened FAILED tests.. 
 
 The `-n auto` uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores `-n 4` etc. 
 
@@ -50,9 +49,11 @@ Try running PFS without the -n flag or change the number of cores used.
 
 The `--headed` tells Playwright to open up browsers in our E2E tests for demonstraion puposes. Generally, headless tests are used.
 
-We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation.
+We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation. 
 
 This CSV output is a result of a local plugin that is in the `conftest.py`. It is a lite version of `pytest-csv` but has all necessary data.
+
+We will look at `conftest.py` in PyTest 102 so for now we will just take a peek at this file without exlanations.
 
 
 ## Customisation
@@ -68,10 +69,8 @@ This covers:
 - adding a report section at end of console output.
 - and more...
 
-The free online course 'PyTest Hooks and Plugins' that you have a free coupon for goes into much more detail about how to use hooks in PyTest.
+The free online course 'PyTest Hooks and Plugins' that you will have a free coupon for goes into much more detail about how to use hooks in PyTest.
 
-The coupon is valid for 3 days - expires midnight Monday.
-
-LINK ---->
+The link and coupon are in the **Afterwards** section.
 
 <br>

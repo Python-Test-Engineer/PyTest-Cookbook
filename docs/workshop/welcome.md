@@ -70,7 +70,7 @@ There are two ways we can create a PyTest Framework for our `src` code:
 
 1. Use a template framework and add in our `src`.
 
-2. Integrate a template framework into our `src`.
+2. Integrate a template framework around our `src`.
 
 We will do both.
 

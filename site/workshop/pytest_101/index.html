@@ -644,15 +644,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#addopts" class="md-nav__link">
-    <span class="md-ellipsis">
-      addopts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#verbosity" class="md-nav__link">
     <span class="md-ellipsis">
       Verbosity
@@ -665,6 +656,15 @@
   <a href="#console_ouput" class="md-nav__link">
     <span class="md-ellipsis">
       Console ouput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addopts" class="md-nav__link">
+    <span class="md-ellipsis">
+      addopts
     </span>
   </a>
   
@@ -1983,15 +1983,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#addopts" class="md-nav__link">
-    <span class="md-ellipsis">
-      addopts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#verbosity" class="md-nav__link">
     <span class="md-ellipsis">
       Verbosity
@@ -2004,6 +1995,15 @@
   <a href="#console_ouput" class="md-nav__link">
     <span class="md-ellipsis">
       Console ouput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addopts" class="md-nav__link">
+    <span class="md-ellipsis">
+      addopts
     </span>
   </a>
   
@@ -2287,6 +2287,12 @@ then any markers not registered will cause an error.</p>
 <h5 id="markers_for_fixtures">Markers for fixtures<a class="headerlink" href="#markers_for_fixtures" title="Permanent link">&para;</a></h5>
 <p>We will cover this when we look at fixtures.</p>
 <h2 id="output_options">Output options<a class="headerlink" href="#output_options" title="Permanent link">&para;</a></h2>
+<h3 id="verbosity">Verbosity<a class="headerlink" href="#verbosity" title="Permanent link">&para;</a></h3>
+<p>We can use one of these flags for increasing verbosity:</p>
+<p>-v, -vv, -vvv</p>
+<h3 id="console_ouput">Console ouput<a class="headerlink" href="#console_ouput" title="Permanent link">&para;</a></h3>
+<p>By default, PyTest suppresses console output to avoid 'clutter'.</p>
+<p>If we want to use <code>print</code> statements, we need to use the <code>-s</code> flag. It can be combined with the <code>-v</code> flag <code>-vs</code> which is what I tend to use by default.</p>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output">https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output</a></p>
 <h3 id="addopts">addopts<a class="headerlink" href="#addopts" title="Permanent link">&para;</a></h3>
 <p>In <code>pytest.ini</code>, we can add as default command line arguments. For example, if we want to always have <code>-vs -p no:warnings</code>, we can add this as follows:</p>
@@ -2315,12 +2321,6 @@ then any markers not registered will cause an error.</p>
 We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test with various tracebck levels.</p>
 <p>This may be useful when needed:
 <img alt="stepwise" src="../../images/workshop/stepwise.png" /></p>
-<h3 id="verbosity">Verbosity<a class="headerlink" href="#verbosity" title="Permanent link">&para;</a></h3>
-<p>We can use one of these flags for increasing verbosity:</p>
-<p>-v, -vv, -vvv</p>
-<h3 id="console_ouput">Console ouput<a class="headerlink" href="#console_ouput" title="Permanent link">&para;</a></h3>
-<p>By default, PyTest suppresses console output to avoid 'clutter'.</p>
-<p>If we want to use <code>print</code> statements, we need to use the <code>-s</code> flag. It can be combined with the <code>-v</code> flag <code>-vs</code> which is what I tend to use by default.</p>
 <h3 id="-q_for_quiet">-q for quiet<a class="headerlink" href="#-q_for_quiet" title="Permanent link">&para;</a></h3>
 <p>This means 'quiet'.</p>
 <h3 id="---durations">---durations<a class="headerlink" href="#---durations" title="Permanent link">&para;</a></h3>
