@@ -20,6 +20,8 @@ I am an 'adhoc' freelance Backend Pythonista and Test Automation Engineer living
 
 Currently, I am also working on a project 'AI Powered Knowledge Systems', building a book/framework similiar to PFS.
 
+(I have a Django-PyTest Book similar to PFS - incomplete but lots of useful information: [https://django-fullstack-testing.netlify.app/pytest_django/](https://django-fullstack-testing.netlify.app/pytest_django/))
+
 We will take a quick look at it later...
 
 ![brighton](../images/workshop/brighton.jpg)

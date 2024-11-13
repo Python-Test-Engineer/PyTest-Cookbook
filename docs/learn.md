@@ -24,7 +24,7 @@ This is perhaps one of the best resources for PyTest, [PyTestWithEric](https://p
 
 This is both for my own technical development and a way of creating a greater audience for this body of work.
 
-I have started recording videos of me go through the article and adding them to PyTest Full Stack in `60_pwe`.
+I have started recording videos of me go through the article and adding them to PyTest Full Stack in `60_pwe`, (with Eric's permission).
 
 Playlist [PyTest With Eric](https://www.youtube.com/playlist?list=PLsszRSbzjyvm5meFiH-rDU-YiC5kcOLcK)
 

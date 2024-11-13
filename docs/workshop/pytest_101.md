@@ -281,15 +281,27 @@ We will cover this when we look at fixtures.
 
 ## Output options
 
+### Verbosity
+
+We can use one of these flags for increasing verbosity:
+
+-v, -vv, -vvv
+
+### Console ouput
+
+By default, PyTest suppresses console output to avoid 'clutter'.
+
+If we want to use `print` statements, we need to use the `-s` flag. It can be combined with the `-v` flag `-vs` which is what I tend to use by default.
+
 [https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output](https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output)
-
-In `pytest.ini`, we can add as default command line arguments. For example, if we want to always have `-vs`, we can add this as follows:
-
 
 ### addopts
 
+In `pytest.ini`, we can add as default command line arguments. For example, if we want to always have `-vs -p no:warnings`, we can add this as follows:
+
 ```
-addopts = -vs
+addopts = -vs -p no:warnings 
+# this will have verbosity, print statements to console and hide warnings
 ```
 
 This will add `-vs` to all CLI commands.
@@ -318,18 +330,6 @@ We can run `python -m pytest -k 0004 --tb=no ` to see a failed test with various
 This may be useful when needed:
 ![stepwise](../images/workshop/stepwise.png)
  
-### Verbosity
-
-We can use one of these flags for increasing verbosity:
-
--v, -vv, -vvv
-
-### Console ouput
-
-By default, PyTest suppresses console output to avoid 'clutter'.
-
-If we want to use `print` statements, we need to use the `-s` flag. It can be combined with the `-v` flag `-vs` which is what I tend to use by default.
-
 ### -q for quiet
 
 This means 'quiet'.

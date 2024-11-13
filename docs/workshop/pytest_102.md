@@ -230,7 +230,11 @@ def pytest_collection_modifyitems(items, config):
 ```
 ### pytest-xdist
 
-Using `python -m pytest -vs .\tests\00_check_setup\Xtest_09_xdist.py` with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.
+Using `python -m pytest -vs .\tests\00_check_setup\Xtest_09_xdist.py -n auto` with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.
+
+`auto` will detect number of cores. One can set number of cores `-n 4` for example.
+
+This is one of the most effective ways to speed up test along with using fixtures to 'cache' values if they are long running.
 
 The file has X at beginning to avoid being called when we do a general pytest run as this would slow things down.
 

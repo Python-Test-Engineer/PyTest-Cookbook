@@ -2288,9 +2288,10 @@ then any markers not registered will cause an error.</p>
 <p>We will cover this when we look at fixtures.</p>
 <h2 id="output_options">Output options<a class="headerlink" href="#output_options" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output">https://docs.pytest.org/en/8.2.x/how-to/output.html#managing-pytest-s-output</a></p>
-<p>In <code>pytest.ini</code>, we can add as default command line arguments. For example, if we want to always have <code>-vs</code>, we can add this as follows:</p>
 <h3 id="addopts">addopts<a class="headerlink" href="#addopts" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>addopts = -vs
+<p>In <code>pytest.ini</code>, we can add as default command line arguments. For example, if we want to always have <code>-vs -p no:warnings</code>, we can add this as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>addopts = -vs -p no:warnings 
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a># this will have verbosity, print statements to console and hide warnings
 </span></code></pre></div>
 <p>This will add <code>-vs</code> to all CLI commands.</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest --showlocals     # show local variables in tracebacks
