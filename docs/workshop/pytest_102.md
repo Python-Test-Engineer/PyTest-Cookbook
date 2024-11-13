@@ -161,7 +161,9 @@ Coverage is an important metric.
 
 [https://pytest-with-eric.com/coverage/poetry-test-coverage/](https://pytest-with-eric.com/coverage/poetry-test-coverage/) is a very good example with code to illustrate the use of `pytest-cov`.
 
-We can run `python -m coverage run -m pytest .\tests\01_inspect\ -vs` to run tests on a particular folder. This produces a `.coverage` in the root of the folder.
+We can run `python -m pytest -vs tests\02_py_coffee --cov-report html --cov .` to run tests on a particular folder. This produces a `.coverage` in the root of the folder and the report is `index.html` in the folder `htmlcov`. 
+
+Note how an XFAIL will result in less than 100% coverage. If we have `if/else` statements and we do not have tests for each case this will give coverage < 100%.
 
 To create a report in the console, we can use `python -m coverage report -m` or `coverage report -m`.
 
@@ -185,6 +187,8 @@ Some command line options:
 --cov-config=none: Specifies that no external config file will be read, but coverage will still run.
 --cov-omit=src/legacy/*,src/migrations/*: Specifies the directories you want to omit from the coverage report.
 ``` 
+
+100% code coverage? - [https://edbennett.github.io/python-testing-ci/07-coverage/index.html](https://edbennett.github.io/python-testing-ci/07-coverage/index.html)
 
 [https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/](https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/) for more ways and deeper information.
 
