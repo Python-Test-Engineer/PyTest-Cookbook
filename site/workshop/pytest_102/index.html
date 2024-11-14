@@ -1803,6 +1803,8 @@
 
 <h1 id="pytest_102">PyTest 102<a class="headerlink" href="#pytest_102" title="Permanent link">&para;</a></h1>
 <h2 id="fixtures">Fixtures<a class="headerlink" href="#fixtures" title="Permanent link">&para;</a></h2>
+<p><em>In essence, caching certain values to create DRY and faster tests.</em></p>
+<p>Avoid long running set up functions like API and DB requests etc.</p>
 <h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
 <p><a href="https://docs.pytest.org/en/stable/explanation/fixtures.html">https://docs.pytest.org/en/stable/explanation/fixtures.html</a></p>
 <p>Fixtures are requested by test functions or other fixtures by declaring them as argument names.</p>
@@ -1833,7 +1835,7 @@
 <h3 id="pytest_--fixtures">pytest --fixtures<a class="headerlink" href="#pytest_--fixtures" title="Permanent link">&para;</a></h3>
 <p><code>pytest --fixtures</code> is used to list available fixtures and where the fixture is located.</p>
 <h3 id="setupteardown">setup/teardown<a class="headerlink" href="#setupteardown" title="Permanent link">&para;</a></h3>
-<p>We can use <code>setup_method()</code> and <code>teardown_method()</code> as a simpler but less DRY alternative. See <code>tests\00_check_setup\test_04_src.py</code>.</p>
+<p>We can use <code>setup_method()</code> and <code>teardown_method()</code> as a simpler but less DRY alternative. </p>
 <h3 id="yield_and_addfinalizer">Yield and addfinalizer()<a class="headerlink" href="#yield_and_addfinalizer" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@pytest.fixture()
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>def my_object_fixture():
@@ -1866,7 +1868,7 @@ Session (Set up and tear down once for each test session i.e comprising one or m
 <p>(There is also a PACKAGE scope but most literature does not mention this).</p>
 <p>With fixture <code>autouse</code>, you can define a fixture that automatically runs before each test method, eliminating the need for manual fixture invocation in each test function.</p>
 <p>This is especially useful when you have nested fixtures that need to be executed before each test function.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import pytest
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import pytest
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a># Define a fixture with a function scope i.e the instance is created for each test function
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>@pytest.fixture(scope=&quot;function&quot;)
@@ -1881,6 +1883,7 @@ Session (Set up and tear down once for each test session i.e comprising one or m
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    print(an_auto_use_fixture)
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    ...
 </span></code></pre></div>
+run <code>python -m pytest -vs .\tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_2.py</code>and change scope from <code>module</code> to <code>function</code>.</p>
 <p>This can be confusing so I will suggest watching <a href="https://www.youtube.com/watch?v=mTMu8AtdG-E&amp;list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&amp;index=6">https://www.youtube.com/watch?v=mTMu8AtdG-E&amp;list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&amp;index=6</a> from CoffeeBeforeArch YT series for a better understanding.</p>
 <p>We can see code examples in <code>02_py_coffee\02_fixtures\</code></p>
 <h3 id="built_in_fixtures">Built in fixtures<a class="headerlink" href="#built_in_fixtures" title="Permanent link">&para;</a></h3>

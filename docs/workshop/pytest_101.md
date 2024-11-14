@@ -275,6 +275,8 @@ Some more detailed information is here: [https://docs.pytest.org/en/stable/how-t
 
 ![xfail-strict](../images/workshop/xfail-strict.png)
 
+To get all markers  - `python -m pytest --markers`
+
 ##### Markers for fixtures
 
 We will cover this when we look at fixtures.

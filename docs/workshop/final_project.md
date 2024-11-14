@@ -53,6 +53,7 @@ This CSV output is a result of a local plugin that is in the `conftest.py`. It i
 
 We will look at `conftest.py` in PyTest 102 so for now we will just take a peek at this file without exlanations.
 
+If you want to 'turn off' these console customisations and see PyTest default console output, rename the `conftest.py` to `Xconftest.py`. This will also stop CSV output files being created.
 
 ## Customisation
 

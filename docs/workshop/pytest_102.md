@@ -2,6 +2,10 @@
 
 ## Fixtures
 
+*In essence, caching certain values to create DRY and faster tests.*
+
+Avoid long running set up functions like API and DB requests etc.
+
 ### Definition
 
 [https://docs.pytest.org/en/stable/explanation/fixtures.html](https://docs.pytest.org/en/stable/explanation/fixtures.html)
@@ -108,6 +112,7 @@ def test_002_convert_to_binary(number_converter):
     print(an_auto_use_fixture)
     ...
 ```
+run `python -m pytest -vs .\tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_2.py`and change scope from `module` to `function`.
 
 This can be confusing so I will suggest watching [https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6](https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6) from CoffeeBeforeArch YT series for a better understanding.
 
