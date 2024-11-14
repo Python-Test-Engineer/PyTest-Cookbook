@@ -244,6 +244,8 @@ The file has X at beginning to avoid being called when we do a general pytest ru
 
 This does show how we can call any file for a test run. We just need `test_` etc if we want PyTest to discover the tests.
 
+!!!By running separate workers, we will get multiple CSV outputs. If you are processing them, you will need to batch them accordingly as they wille ach contain the tests they run. Some tests, if dependent on others may fail if they are in a different thread. Dependent tests are an anti-pattern anyway.
+
 ![xdist](../images/workshop/xdist-output.png)
 
 Running with n=1, the test took around 21s.

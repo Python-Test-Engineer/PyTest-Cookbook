@@ -41,9 +41,7 @@ It is customisable and defaults to cuurent theme which for me is **Monokai Crete
 
 ## Test run
 
-Let's run `python -m pytest -vs -n auto --headed` - there will be two intened FAILED tests unless an API call fails...
-
-The `-n auto` uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores `-n 4` etc. 
+Let's run `python -m pytest -vs --headed` - there will be two intened FAILED tests unless an API call fails...
 
 Try running PFS without the -n flag or change the number of cores used.
 

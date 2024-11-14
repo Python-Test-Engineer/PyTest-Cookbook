@@ -1947,6 +1947,7 @@
 <p>This is one of the most effective ways to speed up test along with using fixtures to 'cache' values if they are long running.</p>
 <p>The file has X at beginning to avoid being called when we do a general pytest run as this would slow things down.</p>
 <p>This does show how we can call any file for a test run. We just need <code>test_</code> etc if we want PyTest to discover the tests.</p>
+<p>!!!By running separate workers, we will get multiple CSV outputs. If you are processing them, you will need to batch them accordingly as they wille ach contain the tests they run. Some tests, if dependent on others may fail if they are in a different thread. Dependent tests are an anti-pattern anyway.</p>
 <p><img alt="xdist" src="../../images/workshop/xdist-output.png" /></p>
 <p>Running with n=1, the test took around 21s.
 Running with n=4, the test took around 8s.
