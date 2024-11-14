@@ -105,8 +105,11 @@ def test_001_convert_to_binary(number_converter):
 def test_002_convert_to_binary(number_converter):
     print(an_auto_use_fixture)
     ...
+```
 
 This can be confusing so I will suggest watching [https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6](https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6) from CoffeeBeforeArch YT series for a better understanding.
+
+We can see code examples in `02_py_coffee\02_fixtures\`
 
 ### Built in fixtures
 
