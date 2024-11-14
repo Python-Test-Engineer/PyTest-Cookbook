@@ -41,7 +41,7 @@ It is customisable and defaults to cuurent theme which for me is **Monokai Crete
 
 ## Test run
 
-Let's run - run `python -m pytest -vs -n auto --headed` - there will be two intened FAILED tests.. 
+Let's run `python -m pytest -vs -n auto --headed` - there will be two intened FAILED tests unless an API call fails...
 
 The `-n auto` uses pytest-xdist to determine number of cores and split tests across them. One can set number of cores `-n 4` etc. 
 
@@ -71,6 +71,6 @@ This covers:
 
 The free online course 'PyTest Hooks and Plugins' that you will have a free coupon for goes into much more detail about how to use hooks in PyTest.
 
-The link and coupon are in the **Afterwards** section.
+The link and coupon are in the [https://pytest-cookbook.com/workshop/afterwards/](https://pytest-cookbook.com/workshop/afterwards/) section.
 
 <br>
