@@ -47,7 +47,7 @@ def test_0240_FXT_square(custom_name)
 
 ### setup/teardown
 
-We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative. See `tests\00_check_setup\test_04_src.py`.
+We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative. 
 
 ### Yield and addfinalizer()
 
