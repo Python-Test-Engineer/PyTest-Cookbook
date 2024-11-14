@@ -14,7 +14,7 @@ Fixtures can thus use other fixtures. They are Python functions and can be the a
 
 ### Implementation
 
-`tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fiztures_0.py` is an example:
+`tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_0.py` is an example:
 
 ```
 
@@ -76,6 +76,37 @@ def setup_data(request):
 
     return data  # Provide the data to the test
 ```
+
+### Scope
+
+Function (Set up and tear down once for each test function)
+Class (Set up and tear down once for each test class)
+Module (Set up and tear down once for each test module/file)
+Session (Set up and tear down once for each test session i.e comprising one or more test files)
+
+(There is also a PACKAGE scope but most literature does not mention this).
+
+With fixture `autouse`, you can define a fixture that automatically runs before each test method, eliminating the need for manual fixture invocation in each test function.
+
+This is especially useful when you have nested fixtures that need to be executed before each test function.
+
+```
+import pytest
+
+# Define a fixture with a function scope i.e the instance is created for each test function
+@pytest.fixture(scope="function")
+def an_auto_use_fixture(static_number):
+    return "SOMETHING"
+
+# no need to explicitly state the fixture an_auto_use_fixture
+def test_001_convert_to_binary(number_converter):
+    print(an_auto_use_fixture)
+    ...
+def test_002_convert_to_binary(number_converter):
+    print(an_auto_use_fixture)
+    ...
+
+This can be confusing so I will suggest watching [https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6](https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6) from CoffeeBeforeArch YT series for a better understanding.
 
 ### Built in fixtures
 
