@@ -79,6 +79,8 @@ def setup_data(request):
 
 ### Scope
 
+In essence, caching at the fixture level is the same as caching at the test level.
+
 Function (Set up and tear down once for each test function)
 Class (Set up and tear down once for each test class)
 Module (Set up and tear down once for each test module/file)
