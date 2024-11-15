@@ -4,6 +4,7 @@ I have made some videos to assist in using this PyTest Cookbook and how to custo
 
 These videos are available [here](https://www.youtube.com/playlist?list=PLsszRSbzjyvlrB6V5dacW6G8YrD_iW7oy){target="_blank"}.
 
+He also has a guide [https://github.com/CoffeeBeforeArch/pytest_guide/blob/main/src/intro/intro.md](https://github.com/CoffeeBeforeArch/pytest_guide/blob/main/src/intro/intro.md).
 
 ## 1. CoffeeBeforeArch 
 
