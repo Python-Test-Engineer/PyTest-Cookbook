@@ -336,7 +336,7 @@ This may be useful when needed:
 
 This means 'quiet'.
 
-### ---durations
+### --durations
 
 [https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration](https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration)
 
@@ -344,19 +344,19 @@ This means 'quiet'.
 
 *NB We have our CSV report that gives duration for each test so that we can create our own 'durations' report.*
 
-### -x ---maxfail
+### -x --maxfail
 
 ```
 pytest -x            # stop after first failure
 pytest --maxfail=2   # stop after two failures
 ```
 
-### ---setup-show 
+### --setup-show 
 
 Used to see the order of execution.
 
 
-### ---collectonly
+### --collectonly
 
 This will show what tests will be run without running tess.
 

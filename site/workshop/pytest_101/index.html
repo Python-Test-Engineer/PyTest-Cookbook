@@ -680,36 +680,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#---durations" class="md-nav__link">
+  <a href="#--durations" class="md-nav__link">
     <span class="md-ellipsis">
-      ---durations
+      --durations
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-x_---maxfail" class="md-nav__link">
+  <a href="#-x_--maxfail" class="md-nav__link">
     <span class="md-ellipsis">
-      -x ---maxfail
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#---setup-show" class="md-nav__link">
-    <span class="md-ellipsis">
-      ---setup-show
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#---collectonly" class="md-nav__link">
-    <span class="md-ellipsis">
-      ---collectonly
+      -x --maxfail
     </span>
   </a>
   
@@ -717,6 +699,24 @@
         
           <li class="md-nav__item">
   <a href="#--setup-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      --setup-show
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#--collectonly" class="md-nav__link">
+    <span class="md-ellipsis">
+      --collectonly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#--setup-show_1" class="md-nav__link">
     <span class="md-ellipsis">
       --setup-show
     </span>
@@ -2028,36 +2028,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#---durations" class="md-nav__link">
+  <a href="#--durations" class="md-nav__link">
     <span class="md-ellipsis">
-      ---durations
+      --durations
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#-x_---maxfail" class="md-nav__link">
+  <a href="#-x_--maxfail" class="md-nav__link">
     <span class="md-ellipsis">
-      -x ---maxfail
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#---setup-show" class="md-nav__link">
-    <span class="md-ellipsis">
-      ---setup-show
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#---collectonly" class="md-nav__link">
-    <span class="md-ellipsis">
-      ---collectonly
+      -x --maxfail
     </span>
   </a>
   
@@ -2065,6 +2047,24 @@
         
           <li class="md-nav__item">
   <a href="#--setup-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      --setup-show
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#--collectonly" class="md-nav__link">
+    <span class="md-ellipsis">
+      --collectonly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#--setup-show_1" class="md-nav__link">
     <span class="md-ellipsis">
       --setup-show
     </span>
@@ -2342,19 +2342,19 @@ We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test wi
 <img alt="stepwise" src="../../images/workshop/stepwise.png" /></p>
 <h3 id="-q_for_quiet">-q for quiet<a class="headerlink" href="#-q_for_quiet" title="Permanent link">&para;</a></h3>
 <p>This means 'quiet'.</p>
-<h3 id="---durations">---durations<a class="headerlink" href="#---durations" title="Permanent link">&para;</a></h3>
+<h3 id="--durations">--durations<a class="headerlink" href="#--durations" title="Permanent link">&para;</a></h3>
 <p><a href="https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration">https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration</a></p>
 <p><img alt="durations" src="../../images/workshop/durations.png" /></p>
 <p><em>NB We have our CSV report that gives duration for each test so that we can create our own 'durations' report.</em></p>
-<h3 id="-x_---maxfail">-x ---maxfail<a class="headerlink" href="#-x_---maxfail" title="Permanent link">&para;</a></h3>
+<h3 id="-x_--maxfail">-x --maxfail<a class="headerlink" href="#-x_--maxfail" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pytest -x            # stop after first failure
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>pytest --maxfail=2   # stop after two failures
 </span></code></pre></div>
-<h3 id="---setup-show">---setup-show<a class="headerlink" href="#---setup-show" title="Permanent link">&para;</a></h3>
-<p>Used to see the order of execution.</p>
-<h3 id="---collectonly">---collectonly<a class="headerlink" href="#---collectonly" title="Permanent link">&para;</a></h3>
-<p>This will show what tests will be run without running tess.</p>
 <h3 id="--setup-show">--setup-show<a class="headerlink" href="#--setup-show" title="Permanent link">&para;</a></h3>
+<p>Used to see the order of execution.</p>
+<h3 id="--collectonly">--collectonly<a class="headerlink" href="#--collectonly" title="Permanent link">&para;</a></h3>
+<p>This will show what tests will be run without running tess.</p>
+<h3 id="--setup-show_1">--setup-show<a class="headerlink" href="#--setup-show_1" title="Permanent link">&para;</a></h3>
 <p>This shows us the order of operations of tests and fixtures, including the setup and teardown phases of the fixtures.</p>
 <h3 id="-r_for_report">-r for report<a class="headerlink" href="#-r_for_report" title="Permanent link">&para;</a></h3>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report">https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report</a></p>
