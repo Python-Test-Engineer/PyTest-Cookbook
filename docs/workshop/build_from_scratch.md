@@ -2,10 +2,6 @@
 
 We have already seen the BASIC demo and the minimum we need to use pytest is a `tests`folder with test files `test_*.py` and pytest installed. This will enable us to do `python -m pytest` to run tests.
 
-We will cover how to use the plugins in PyTest 102.
-
-*We will leave this til the end if we have time as a way of testing what we have learnt*.
-
 To build the PFS framework we can add the following:
 
 ## src
@@ -25,7 +21,7 @@ Installation of `pytest` with `pip install pytest`.
 
 ## Playwright
 
-Installation of Playwright`pip install playwright` and also `plyawright install` to load browsers for headed tests.
+Installation of Playwright`pip install playwright` and also `plyawright install` to load browsers for headed tests. 
 
 ## pytest.ini
 
@@ -59,6 +55,8 @@ In PFS, the logging location is `log` so we create this folder.
 
 Utility functions are stored in `utils`.
 
+Some of these are used in PFS tests.
+
 ## config folder
 
 Folder that holds `*.ini` files or other config files. We create a `config` folder.
@@ -66,6 +64,7 @@ Folder that holds `*.ini` files or other config files. We create a `config` fold
 This can be useful as an alternative to CLI arguments. We can add our options in the config.ini file to be retrieved in our tests using the `read_config.py` file. 
 
 This is standard Python.
+
 
 ## results folder
 

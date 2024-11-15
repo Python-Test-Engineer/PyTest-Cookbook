@@ -111,6 +111,8 @@ There are two video series that I used in my original learning that are concise 
 
 *My intention is for you to feel comfortable and confident with PyTest, ready to use and deepen your skill set from today.*
 
+There is a coupon for my Udemy course 'Pytest Hooks and Plugins'. I will give link later and it is accessible until end of Monday.
+
 ## Timings
 
 I am mindful that the talks etc after 11 am break start at 11:20, the time the workshop is due to end.

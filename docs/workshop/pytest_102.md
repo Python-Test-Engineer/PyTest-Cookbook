@@ -49,13 +49,18 @@ def test_0240_FXT_square(custom_name)
 ### pytest --fixtures
 `pytest --fixtures` is used to list available fixtures and where the fixture is located.
 
-### setup/teardown
+<!-- ### setup/teardown
 
-We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative. 
+We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative.  -->
 
 ### Yield and addfinalizer()
 
+If one wants to set up and clean up resources, one can use the a generator function with `yield`.
+
+One can also add ` def finalizer():` to a function and then use `request.addfinalizer(finalizer)` to register it:
+
 ```
+# Generator function
 @pytest.fixture()
 def my_object_fixture():
     print("Yielding fixture data...")
@@ -64,6 +69,7 @@ def my_object_fixture():
 ```
 
 ```
+# add finalizer
 @pytest.fixture
 def setup_data(request):
     # setup_data is now the fixture name we pass into our test...
@@ -136,7 +142,7 @@ It does not need to be imported.
 
 If a fixture appears in many `conftest.py` files then the closest `conftest.py` file to the test is used.
 
-Example is: `02_py_coffee\02_fixtures\test_conftest_2` demonstrating that the closest `conftest.py` fixture value is used. 
+Example is: `python -m pytest -vs .\tests\02_py_coffee\02_fixtures\01_conftest\test_conftest_2\` demonstrating that the closest `conftest.py` fixture value is used. 
 
 ## Parametrization
 
@@ -148,8 +154,8 @@ A decorator is a function that wraps another function and any values passed into
 
 ### Examples
 
-- `tests\03_indian_pythonista\ip_04_parametrize\tests\test_sample.py`
-- `python -m pytest -vs -k TestClassSetUp`
+- `python -m pytest tests/03_indian_pythonista/ip_04_parametrize/tests/test_sample.py`
+- `python -m pytest -vs -k TestClassSetUp` in `00_check_setup\test_01_setup::TestClassSetUp`
 
 ```
 n and expected are variable names that take values of supplied list
@@ -169,7 +175,6 @@ class TestClass:
 ### Options
 
 There are a great many options available:
-
 
 - Add ids for more human readable output.
 - Using the indirect=True parameter when parametrizing a test allows to parametrize a test with a fixture receiving the values before passing them to a test.
