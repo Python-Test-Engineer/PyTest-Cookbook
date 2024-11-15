@@ -360,6 +360,10 @@ Used to see the order of execution.
 
 This will show what tests will be run without running tess.
 
+### --setup-show
+
+This shows us the order of operations of tests and fixtures, including the setup and teardown phases of the fixtures.
+
 ### -r for report
 
 [https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report](https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report)

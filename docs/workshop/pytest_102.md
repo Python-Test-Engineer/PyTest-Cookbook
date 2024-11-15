@@ -49,6 +49,11 @@ def test_0240_FXT_square(custom_name)
 ### pytest --fixtures
 `pytest --fixtures` is used to list available fixtures and where the fixture is located.
 
+### --fixtures-per-test
+You can also use --fixtures-per-test to see what fixtures are used by each test and
+where the fixtures are de
+fined:
+
 <!-- ### setup/teardown
 
 We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative.  -->
