@@ -40,6 +40,8 @@ I am a volounteer coach at codebar.io/brighton
 
 and I also enjoy working in community kitchens, dogs and partner dancing.
 
+### Leo!
+
 Just got a Red Fox Labrador Pup Leo, (much earlier than planned):
 
 ![Leo](../images/workshop/leo-carrot.png)
