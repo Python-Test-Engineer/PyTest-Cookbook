@@ -10,6 +10,8 @@ There are a lot of features to PyTest but 20% of them will cover 80% of your nee
 
 Today, it is more important to grasp the wiring of PyTest rather than exact syntax. 
 
+To know what is possible for future use.
+
 When you return to PyTest when you are back at work, a solid understanding will serve you best. One can always look up syntax.
 
 ## Who am I?
@@ -33,7 +35,7 @@ I am a volounteer coach at codebar.io/brighton
 
 and I also enjoy working in community kitchens, dogs and partner dancing.
 
-Just got a Red Fox Labrador Pup, (unexpectedly):
+Just got a Red Fox Labrador Pup Leo, (much earlier than planned):
 
 ![Leo](../images/workshop/leo-carrot.png)
 
@@ -41,17 +43,16 @@ We have a local red fox that is apt to follow us...
 
 ![Leo](../images/workshop/leo-fox.png)
 
-
-
-
 ### My first computer 1979
 
 ![tape](../images/workshop/paper-tape.jpg)
 https://en.wikipedia.org/wiki/Punched_tape#/media/File:Creed_model_6S-2_paper_tape_reader.jpg
 
+...cut and paste was cut and paste!
+
 ## Motivation
 
-There are many great resources for PyTest and I wanted to curate them into one resource.
+There are many great resources for PyTest and I wanted to curate them into one resource, but without creating unuseable bulk.
 
 In my experience, I look for 3 things:
 
