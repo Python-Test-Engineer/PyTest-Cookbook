@@ -40,8 +40,12 @@ For an advanced look at these topics, I have my course hosted on Udemy:
 
 <h2>LINK</h2> 
 
+<br>
+<a href="https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/?couponCode=PYCONIRE">https://www.udemy.com/course/pytest-cookbook-using-hooks-to-create-custom-plugins/?couponCode=PYCONIRE</a>
+
 <h2>COUPON</h2> 
-(if needed)
+<br>
+<b>PYCONIRE</b>
 
 <h2>REPO</h2>
 
