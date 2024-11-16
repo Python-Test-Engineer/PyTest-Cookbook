@@ -38,13 +38,14 @@ We can change default in `pytest.ini`:
 If we have a function `src\some_function.py` and we want to test it, we can run this function within a test and PyTest will excute it and store results etc:
 
 ```
-def test_some_function_works.py():
+def test_some_function_works():
     # Arrange or Given
     expected_result = "expected result values here"
     # Act or When
     actual_result = some_function()
     # Assert or Then
     assert actual_result == expected_result, "(optional) output message if not equal"
+    # optional output message not generally used
 ```
 
 ### Class based
