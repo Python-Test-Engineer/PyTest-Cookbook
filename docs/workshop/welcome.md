@@ -1,8 +1,11 @@
 # Welcome
 
-pytest-cookbook.com
+<h2>Go to: pytest-cookbook.com</h2>
 
-*Let's get comfortable and confident with PyTest.*
+<h2>Then: PyCon IRE 2024 -> Welcome</h2>
+
+
+<h2 style="font-style:bold;">Let's get comfortable and confident with PyTest.</h2>
 
 Welcome to the Getting Started with PyTest workshop.
 
