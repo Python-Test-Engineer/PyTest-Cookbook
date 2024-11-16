@@ -4,6 +4,7 @@
 
 <h2 style="font-weight:bold;letter-spacing:2px">Then: &nbsp;&nbsp;&nbsp;PyCon IRE 2024 -> Welcome</h2>
 
+<a href="https://docs.pytest.org/en/stable/contents.html">https://docs.pytest.org/en/stable/contents.html</a>
 
 <h2 style="font-style:italic;font-weight:bold;letter-spacing:2px">Let's get comfortable and confident with PyTest.</h2>
 
