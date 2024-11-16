@@ -6,7 +6,7 @@
 
 <a href="https://docs.pytest.org/en/stable/contents.html">https://docs.pytest.org/en/stable/contents.html</a>
 
-git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack to save time
+`git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack` to save time
 
 <h2 style="font-style:italic;font-weight:bold;letter-spacing:2px">Let's get comfortable and confident with PyTest.</h2>
 
