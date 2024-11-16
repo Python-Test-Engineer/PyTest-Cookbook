@@ -21,7 +21,7 @@ Installation of `pytest` with `pip install pytest`.
 
 ## Playwright
 
-Installation of Playwright`pip install playwright` and also `plyawright install` to load browsers for headed tests. 
+Installation of Playwright `pip install playwright` and also `plyawright install` to load browsers for headed tests. 
 
 ## pytest.ini
 
@@ -31,7 +31,7 @@ We can use the one in PFS deleting unwanted entries.
 
 ## log folder
 
-Folder to store `pytest.log` file for logging messages as defined in `pytest.ini`.
+Folder to store `pytest.log` file for logging messages as defined in `pytest.ini`. PyTest will create the log file if not present when it runs.
 
 ```
 # for log file - pytest uses these whenever logger used
@@ -64,7 +64,6 @@ Folder that holds `*.ini` files or other config files. We create a `config` fold
 This can be useful as an alternative to CLI arguments. We can add our options in the config.ini file to be retrieved in our tests using the `read_config.py` file. 
 
 This is standard Python.
-
 
 ## results folder
 
@@ -99,11 +98,13 @@ A `.coverage` report file is produced in the root of the project.
 
 ## pytest-xdist
 
-To speed up tests we `pip install pytest-xdist`.
+To speed up tests we `pip install pytest-xdist`. 
+
+We will cover this in PyTest 102.
 
 ## screenshots folder
 
-If we are using some image, video and traceback Playwright features, we cann add a `screenshots` folder, (or any name we choose).
+If we are using some image, video and traceback Playwright features, we can add a `screenshots` folder, (or any name we choose).
 
 `test_08_download.py` uses the `screenshot` folder.
 
@@ -115,6 +116,6 @@ We don't need to add `__init__.py` in this folder or subfolders but if we don't,
 
 ## PFS
 
-With all of these, we have replicated PFS, although we may choose to add Rich and Pyboxen for colorisation etc.
+With all of these, we have replicated PFS.
 
 <br>

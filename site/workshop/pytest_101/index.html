@@ -2152,9 +2152,12 @@ Do we need <code>__init__.py</code> in <code>tests</code> folder/subfolders?</p>
 <h3 id="function_based">Function based<a class="headerlink" href="#function_based" title="Permanent link">&para;</a></h3>
 <p>If we have a function <code>src\some_function.py</code> and we want to test it, we can run this function within a test and PyTest will excute it and store results etc:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>def test_some_function_works.py():
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    actual_result = some_function()
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    expecterd_result = &quot;expected result values here&quot;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    assert actual_result == expected_result, &quot;(optional) output message if not equal&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    # Arrange or Given
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    expected_result = &quot;expected result values here&quot;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    # Act or When
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    actual_result = some_function()
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    # Assert or Then
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    assert actual_result == expected_result, &quot;(optional) output message if not equal&quot;
 </span></code></pre></div>
 <h3 id="class_based">Class based<a class="headerlink" href="#class_based" title="Permanent link">&para;</a></h3>
 <p>Using a class based test can group tests together and we can also apply PyTest features to the class and thus all the methods in it.</p>
@@ -2170,7 +2173,7 @@ Do we need <code>__init__.py</code> in <code>tests</code> folder/subfolders?</p>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    def test_0032_SET_add_num_will_fail(self):
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        &quot;&quot;&quot;failing fn test in a class&quot;&quot;&quot;
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        console.print(&quot;[red italic]Example of failed test[/]⚠️&quot;)
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        print(&quot;Example of failed test&quot;)
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        assert add(1, 2) == 5
 </span></code></pre></div>
 <h2 id="run_a_test">Run a test<a class="headerlink" href="#run_a_test" title="Permanent link">&para;</a></h2>
@@ -2178,8 +2181,8 @@ Do we need <code>__init__.py</code> in <code>tests</code> folder/subfolders?</p>
 <p><img alt="why python -m" src="../../images/workshop/why-python-m.png" />
 <a href="https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest">https://docs.pytest.org/en/stable/how-to/usage.html#other-ways-of-calling-pytest</a></p>
 <p>I use Rich and PyBoxen for console colouring. Some notes are here <a href="https://pytest-cookbook.com/toolbox/rich_pyboxen/">https://pytest-cookbook.com/toolbox/rich_pyboxen/</a>.</p>
-<p>Let's run two tests, one PASSED and one FAILED...</p>
-<p>In <code>00_check_setup\test_01_setup.py</code> there are two tests:</p>
+<p>Let's run some tests...</p>
+<p>In <code>python -m pytest .\tests\00_check_setup\test_01_setup.py -vs</code> there are two tests:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>def test_0001_SET_pass():
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    sleep(1)
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    console.print(&quot;\n[blue bold]Testing Rich[/]\n&quot;)
@@ -2207,18 +2210,20 @@ Do we need <code>__init__.py</code> in <code>tests</code> folder/subfolders?</p>
 <h3 id="-k_for_like">-k for 'like'<a class="headerlink" href="#-k_for_like" title="Permanent link">&para;</a></h3>
 <p>We can select test that are 'like' with the <code>-k</code> option:</p>
 <p><code>python -m pytest -k 0001</code> to select a specific id or</p>
-<p><code>python -m pytest -k SET</code> will select all those that contain 'SET' in test name.</p>
+<p><code>python -m pytest -k SET</code> will select all those that contain 'SET' in test name. CASE INSENSITIVE.</p>
 <p>We can combine 'not', 'or', 'and':</p>
 <p><code>python -m pytest -vs -k "0211 or 0212"</code> - note that single or double quotes are needed.</p>
-<p><code>python -m pytest -k "not SQL"</code> will get all tests that contain SET (case insensitive) or SQL. </p>
+<p><code>python -m pytest -k "not SQL"</code> will get all tests that  do not contain SQL. </p>
 <p>This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.</p>
 <h3 id="tests_to_runtxt">@tests_to_run.txt<a class="headerlink" href="#tests_to_runtxt" title="Permanent link">&para;</a></h3>
-<div class="admonition to test">
-<p class="admonition-title">To</p>
-</div>
+<p>!!!To test - added for competeness. Never used this.</p>
 <p><img alt="tests to run" src="../../images/workshop/%40file.png" /></p>
 <h3 id="collect_modifyitems_hook">collect_modifyitems hook<a class="headerlink" href="#collect_modifyitems_hook" title="Permanent link">&para;</a></h3>
-<p>slight intro</p>
+<p>In our <code>conftest.py</code> file we have used this hook.</p>
+<p>Briefly, it get a list of tests,(it calls them items to avoid name clash I think).</p>
+<p>We can then manipulate this list to filter, sort and randomise etc the returned manipluated list of tests.</p>
+<p>We can also create and attach markers to test. Very useful if one is managing 100s of tests.</p>
+<p>This is one of the most useful hooks for us and is detailed extensively in the Udemy course you have access to.</p>
 <h3 id="markers">Markers<a class="headerlink" href="#markers" title="Permanent link">&para;</a></h3>
 <h4 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
 <p>Markers are 'tags' which we can add to tests using <code>@pytest.mark.tag_name</code> and we can then select a particular marker using <code>pytest -m pytest -m tag_name</code>.</p>
@@ -2243,7 +2248,7 @@ Do we need <code>__init__.py</code> in <code>tests</code> folder/subfolders?</p>
 <p>We can assign the name of the marker after @pytest.mark</p>
 <p><div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import pytest
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>@pytest.mark.tag_name # needs to be imported
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>@pytest.mark.tag_name # pytest needs to be imported
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>def test_use_marker_tag_name():
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    assert True
 </span></code></pre></div>
@@ -2288,7 +2293,7 @@ then any markers not registered will cause an error.</p>
 <h4 id="built_in_markers">Built in markers<a class="headerlink" href="#built_in_markers" title="Permanent link">&para;</a></h4>
 <p><img alt="built-n-markers" src="../../images/workshop/builtin-marks.png" /></p>
 <h5 id="pytestmarkskip">@pytest.mark.skip<a class="headerlink" href="#pytestmarkskip" title="Permanent link">&para;</a></h5>
-<p>Rather than comment out tests, we can mark them to be skipped and they will not be selected. </p>
+<p>Rather than comment out tests, which we may forget or others may not understand why, we can mark them to be skipped and they will not be selected. </p>
 <h5 id="pytestmarkskipif">@pytest.mark.skipif<a class="headerlink" href="#pytestmarkskipif" title="Permanent link">&para;</a></h5>
 <p>We can skip conditionally:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>@pytest.mark.skipif(
@@ -2318,8 +2323,9 @@ then any markers not registered will cause an error.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>addopts = -vs -p no:warnings 
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a># this will have verbosity, print statements to console and hide warnings
 </span></code></pre></div>
-<p>This will add <code>-vs</code> to all CLI commands.</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest --showlocals     # show local variables in tracebacks
+<p>This will add <code>-vs -p no:warnings</code> to all CLI commands.</p>
+<p>There are many flags, for example those below, but I tent to just use --tb=no to limit traceback info
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest --showlocals     # show local variables in tracebacks
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>pytest -l               # show local variables (shortcut)
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>pytest --no-showlocals  # hide local variables (if addopts enables them)
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
@@ -2353,9 +2359,13 @@ We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test wi
 <h3 id="--setup-show">--setup-show<a class="headerlink" href="#--setup-show" title="Permanent link">&para;</a></h3>
 <p>Used to see the order of execution.</p>
 <h3 id="--collectonly">--collectonly<a class="headerlink" href="#--collectonly" title="Permanent link">&para;</a></h3>
-<p>This will show what tests will be run without running tess.</p>
+<p>This will show what tests will be run without running tests.</p>
+<p><code>python -m pytest
+ -vs .\tests\00_check_setup\test_01_setup.py --collectonly</code></p>
 <h3 id="--setup-show_1">--setup-show<a class="headerlink" href="#--setup-show_1" title="Permanent link">&para;</a></h3>
-<p>This shows us the order of operations of tests and fixtures, including the setup and teardown phases of the fixtures.</p>
+<p>This shows us the order of operations of tests and fixtures, including the setup and teardown phases of the fixtures, as well as run the tests:</p>
+<p><code>python -m pytest
+ -vs .\tests\00_check_setup\test_01_setup.py --setup-show</code></p>
 <h3 id="-r_for_report">-r for report<a class="headerlink" href="#-r_for_report" title="Permanent link">&para;</a></h3>
 <p><a href="https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report">https://docs.pytest.org/en/8.2.x/how-to/output.html#producing-a-detailed-summary-report</a></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>f - failed
@@ -2381,8 +2391,9 @@ We can run <code>python -m pytest -k 0004 --tb=no</code> to see a failed test wi
 <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>0001|test_0001_SET_pass|tests/00_check_setup/test_01_setup.py::test_0001_SET_pass|PASSED|1.013291|
 </span></code></pre></div>
 <p>This is <code>test_id|test_name|test_node|result|duration</code>.</p>
+<p>test_node is the full path from root of the test.</p>
 <p>Given these details and the name of the CSV file containing the run_date and unique run_id, we can do a range of reports on our tests over many differing runs.</p>
-<p>These can be loaded into and SQL DB to provide comprehensive analysis.</p>
+<p>These can be loaded into and SQL DB to provide comprehensive analysis, giving a full audit trail of a test over time and test runs etc...</p>
 <p>We can use other Python libraries to analyse and display this data.</p>
 <h3 id="html_reports">HTML Reports<a class="headerlink" href="#html_reports" title="Permanent link">&para;</a></h3>
 <p><em>covered in PyTest102</em></p>

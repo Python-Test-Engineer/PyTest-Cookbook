@@ -1671,12 +1671,12 @@
 <h2 id="pytest">PyTest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h2>
 <p>Installation of <code>pytest</code> with <code>pip install pytest</code>.</p>
 <h2 id="playwright">Playwright<a class="headerlink" href="#playwright" title="Permanent link">&para;</a></h2>
-<p>Installation of Playwright<code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests. </p>
+<p>Installation of Playwright <code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests. </p>
 <h2 id="pytestini">pytest.ini<a class="headerlink" href="#pytestini" title="Permanent link">&para;</a></h2>
 <p>Holds settings for PyTest.</p>
 <p>We can use the one in PFS deleting unwanted entries.</p>
 <h2 id="log_folder">log folder<a class="headerlink" href="#log_folder" title="Permanent link">&para;</a></h2>
-<p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>.</p>
+<p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>. PyTest will create the log file if not present when it runs.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># for log file - pytest uses these whenever logger used
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># boiler plate code that can be changed to suit
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -1714,15 +1714,16 @@
 <p>Coverage report from pytest-cov can go here depending if we use <code>pytest --cov=htmlcov tests/</code>.</p>
 <p>A <code>.coverage</code> report file is produced in the root of the project. </p>
 <h2 id="pytest-xdist">pytest-xdist<a class="headerlink" href="#pytest-xdist" title="Permanent link">&para;</a></h2>
-<p>To speed up tests we <code>pip install pytest-xdist</code>.</p>
+<p>To speed up tests we <code>pip install pytest-xdist</code>. </p>
+<p>We will cover this in PyTest 102.</p>
 <h2 id="screenshots_folder">screenshots folder<a class="headerlink" href="#screenshots_folder" title="Permanent link">&para;</a></h2>
-<p>If we are using some image, video and traceback Playwright features, we cann add a <code>screenshots</code> folder, (or any name we choose).</p>
+<p>If we are using some image, video and traceback Playwright features, we can add a <code>screenshots</code> folder, (or any name we choose).</p>
 <p><code>test_08_download.py</code> uses the <code>screenshot</code> folder.</p>
 <h2 id="tests">Tests!<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <p>All our tests are stored in the <code>tests</code> folder.</p>
 <p>We don't need to add <code>__init__.py</code> in this folder or subfolders but if we don't, we may have a test name collision if two tests have the same name.</p>
 <h2 id="pfs">PFS<a class="headerlink" href="#pfs" title="Permanent link">&para;</a></h2>
-<p>With all of these, we have replicated PFS, although we may choose to add Rich and Pyboxen for colorisation etc.</p>
+<p>With all of these, we have replicated PFS.</p>
 <p><br></p>
 
 
