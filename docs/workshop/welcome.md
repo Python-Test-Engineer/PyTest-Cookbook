@@ -8,6 +8,8 @@
 
 `git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack` to save time
 
+Then goto FINAL PROJECT for instructions
+
 <h2 style="font-style:italic;font-weight:bold;letter-spacing:2px">Let's get comfortable and confident with PyTest.</h2>
 
 Welcome to the Getting Started with PyTest workshop.
