@@ -1,6 +1,16 @@
 # Welcome
 
-*Let's get comfortable and confident with PyTest.*
+<h2 style="font-weight:bold;letter-spacing:2px">Go to: &nbsp;&nbsp;&nbsp;pytest-cookbook.com</h2>
+
+<h2 style="font-weight:bold;letter-spacing:2px">Then: &nbsp;&nbsp;&nbsp;PyCon IRE 2024 -> Welcome</h2>
+
+<a href="https://docs.pytest.org/en/stable/contents.html">https://docs.pytest.org/en/stable/contents.html</a>
+
+`git clone https://github.com/Python-Test-Engineer/PyTest-Full-Stack` to save time
+
+Then goto FINAL PROJECT for instructions
+
+<h2 style="font-style:italic;font-weight:bold;letter-spacing:2px">Let's get comfortable and confident with PyTest.</h2>
 
 Welcome to the Getting Started with PyTest workshop.
 
@@ -9,6 +19,8 @@ There are a lot of resources both for the workshop and after so that you can fee
 There are a lot of features to PyTest but 20% of them will cover 80% of your needs, so I will highlight the essentials, the rest you just need to be aware of rather than fully grasp *now*.
 
 Today, it is more important to grasp the wiring of PyTest rather than exact syntax. 
+
+To know what is possible for future use.
 
 When you return to PyTest when you are back at work, a solid understanding will serve you best. One can always look up syntax.
 
@@ -33,7 +45,9 @@ I am a volounteer coach at codebar.io/brighton
 
 and I also enjoy working in community kitchens, dogs and partner dancing.
 
-Just got a Red Fox Labrador Pup, (unexpectedly):
+### Leo!
+
+Just got a Red Fox Labrador Pup Leo, (much earlier than planned):
 
 ![Leo](../images/workshop/leo-carrot.png)
 
@@ -41,17 +55,16 @@ We have a local red fox that is apt to follow us...
 
 ![Leo](../images/workshop/leo-fox.png)
 
-
-
-
 ### My first computer 1979
 
 ![tape](../images/workshop/paper-tape.jpg)
 https://en.wikipedia.org/wiki/Punched_tape#/media/File:Creed_model_6S-2_paper_tape_reader.jpg
 
+...cut and paste was cut and paste!
+
 ## Motivation
 
-There are many great resources for PyTest and I wanted to curate them into one resource.
+There are many great resources for PyTest and I wanted to curate them into one resource, but without creating unuseable bulk.
 
 In my experience, I look for 3 things:
 

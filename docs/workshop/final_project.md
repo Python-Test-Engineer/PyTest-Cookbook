@@ -41,15 +41,13 @@ It is customisable and defaults to cuurent theme which for me is **Monokai Crete
 
 ## Test run
 
-Let's run `python -m pytest -vs --headed` - there will be two intened FAILED tests unless an API call fails...
-
-Try running PFS without the -n flag or change the number of cores used.
+Let's run `python -m pytest -vs --headed` - there will be two intended FAILED tests unless an API call fails...
 
 The `--headed` tells Playwright to open up browsers in our E2E tests for demonstraion puposes. Generally, headless tests are used.
 
 We can see a CSV of results in the `results` folder. The console ouput is colorised with the Rich library. Rename the `conftest.py` in the root of the folder to say `Xconftest.py` and you will see no CSV produced and no colorisation. 
 
-This CSV output is a result of a local plugin that is in the `conftest.py`. It is a lite version of `pytest-csv` but has all necessary data.
+This CSV output is a result of a local plugin that is in the `conftest.py`. It is a lite version of `pytest-csv` and has all the necessary data. I will explain why I use a certain test naming convention.
 
 We will look at `conftest.py` in PyTest 102 so for now we will just take a peek at this file without exlanations.
 
@@ -70,7 +68,9 @@ This covers:
 - adding a report section at end of console output.
 - and more...
 
-The free online course 'PyTest Hooks and Plugins' that you will have a free coupon for goes into much more detail about how to use hooks in PyTest.
+The online course 'PyTest Hooks and Plugins' that you will have a free coupon for goes into much more detail about how to use hooks in PyTest.
+
+You will have till end of Monday to register for it.
 
 The link and coupon are in the [https://pytest-cookbook.com/workshop/afterwards/](https://pytest-cookbook.com/workshop/afterwards/) section.
 

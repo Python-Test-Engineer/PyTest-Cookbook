@@ -38,10 +38,14 @@ We can change default in `pytest.ini`:
 If we have a function `src\some_function.py` and we want to test it, we can run this function within a test and PyTest will excute it and store results etc:
 
 ```
-def test_some_function_works.py():
+def test_some_function_works():
+    # Arrange or Given
+    expected_result = "expected result values here"
+    # Act or When
     actual_result = some_function()
-    expecterd_result = "expected result values here"
+    # Assert or Then
     assert actual_result == expected_result, "(optional) output message if not equal"
+    # optional output message not generally used
 ```
 
 ### Class based
@@ -65,7 +69,7 @@ class TestSample:
 
     def test_0032_SET_add_num_will_fail(self):
         """failing fn test in a class"""
-        console.print("[red italic]Example of failed test[/]⚠️")
+        print("Example of failed test")
         assert add(1, 2) == 5
 ```
 ## Run a test
@@ -77,9 +81,9 @@ To run tests we run `python -m pytest`. We can run just `pytest` but running it 
 
 I use Rich and PyBoxen for console colouring. Some notes are here [https://pytest-cookbook.com/toolbox/rich_pyboxen/](https://pytest-cookbook.com/toolbox/rich_pyboxen/).
 
-Let's run two tests, one PASSED and one FAILED...
+Let's run some tests...
 
-In `00_check_setup\test_01_setup.py` there are two tests:
+In `python -m pytest .\tests\00_check_setup\test_01_setup.py -vs` there are two tests:
 
 ```
 def test_0001_SET_pass():
@@ -125,26 +129,34 @@ We can select test that are 'like' with the `-k` option:
 
 `python -m pytest -k 0001 ` to select a specific id or
 
-`python -m pytest -k SET` will select all those that contain 'SET' in test name.
+`python -m pytest -k SET` will select all those that contain 'SET' in test name. CASE INSENSITIVE.
 
 We can combine 'not', 'or', 'and':
 
 `python -m pytest -vs -k "0211 or 0212"` - note that single or double quotes are needed.
 
-`python -m pytest -k "not SQL"` will get all tests that contain SET (case insensitive) or SQL. 
+`python -m pytest -k "not SQL"` will get all tests that  do not contain SQL. 
 
 This can get tricky for more complex queries and in those case we will use 'markers' particularly as we can create dynamic markers that are based on Python list manipulation. We will se this later.
 
 
 ### @tests_to_run.txt
 
-!!!To test
+!!!To test - added for competeness. Never used this.
 
 ![tests to run](../images/workshop/@file.png)
 
 ### collect_modifyitems hook
 
-slight intro
+In our `conftest.py` file we have used this hook.
+
+Briefly, it get a list of tests,(it calls them items to avoid name clash I think).
+
+We can then manipulate this list to filter, sort and randomise etc the returned manipluated list of tests.
+
+We can also create and attach markers to test. Very useful if one is managing 100s of tests.
+
+This is one of the most useful hooks for us and is detailed extensively in the Udemy course you have access to.
 
 ### Markers
 
@@ -179,7 +191,7 @@ We can assign the name of the marker after @pytest.mark
 ```
 import pytest
 
-@pytest.mark.tag_name # needs to be imported
+@pytest.mark.tag_name # pytest needs to be imported
 def test_use_marker_tag_name():
     assert True
 ```
@@ -249,7 +261,8 @@ We can use a hook `pytest_collect_modifyitems()`...
 
 ##### @pytest.mark.skip
 
-Rather than comment out tests, we can mark them to be skipped and they will not be selected. 
+Rather than comment out tests, which we may forget or others may not understand why, we can mark them to be skipped and they will not be selected. 
+
 
 ##### @pytest.mark.skipif
 
@@ -306,8 +319,9 @@ addopts = -vs -p no:warnings
 # this will have verbosity, print statements to console and hide warnings
 ```
 
-This will add `-vs` to all CLI commands.
+This will add `-vs -p no:warnings ` to all CLI commands.
 
+There are many flags, for example those below, but I tent to just use --tb=no to limit traceback info
 ```
 pytest --showlocals     # show local variables in tracebacks
 pytest -l               # show local variables (shortcut)
@@ -336,7 +350,7 @@ This may be useful when needed:
 
 This means 'quiet'.
 
-### ---durations
+### --durations
 
 [https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration](https://docs.pytest.org/en/8.3.x/how-to/usage.html#profiling-test-execution-duration)
 
@@ -344,21 +358,31 @@ This means 'quiet'.
 
 *NB We have our CSV report that gives duration for each test so that we can create our own 'durations' report.*
 
-### -x ---maxfail
+### -x --maxfail
 
 ```
 pytest -x            # stop after first failure
 pytest --maxfail=2   # stop after two failures
 ```
 
-### ---setup-show 
+### --setup-show 
 
 Used to see the order of execution.
 
 
-### ---collectonly
+### --collectonly
 
-This will show what tests will be run without running tess.
+This will show what tests will be run without running tests.
+
+`python -m pytest
+ -vs .\tests\00_check_setup\test_01_setup.py --collectonly`
+
+### --setup-show
+
+This shows us the order of operations of tests and fixtures, including the setup and teardown phases of the fixtures, as well as run the tests:
+
+`python -m pytest
+ -vs .\tests\00_check_setup\test_01_setup.py --setup-show`
 
 ### -r for report
 
@@ -398,9 +422,11 @@ There is an explainer video for this and we will look at this a bit later and a 
 
 This is `test_id|test_name|test_node|result|duration`.
 
+test_node is the full path from root of the test.
+
 Given these details and the name of the CSV file containing the run_date and unique run_id, we can do a range of reports on our tests over many differing runs.
 
-These can be loaded into and SQL DB to provide comprehensive analysis.
+These can be loaded into and SQL DB to provide comprehensive analysis, giving a full audit trail of a test over time and test runs etc...
 
 We can use other Python libraries to analyse and display this data.
 

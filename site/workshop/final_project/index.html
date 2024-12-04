@@ -1543,11 +1543,10 @@
 <p>It is customisable and defaults to cuurent theme which for me is <strong>Monokai Crete</strong>.</p>
 <p><img alt="CSV" src="../../images/workshop/csv-with-rainbow.png" /></p>
 <h2 id="test_run">Test run<a class="headerlink" href="#test_run" title="Permanent link">&para;</a></h2>
-<p>Let's run <code>python -m pytest -vs --headed</code> - there will be two intened FAILED tests unless an API call fails...</p>
-<p>Try running PFS without the -n flag or change the number of cores used.</p>
+<p>Let's run <code>python -m pytest -vs --headed</code> - there will be two intended FAILED tests unless an API call fails...</p>
 <p>The <code>--headed</code> tells Playwright to open up browsers in our E2E tests for demonstraion puposes. Generally, headless tests are used.</p>
 <p>We can see a CSV of results in the <code>results</code> folder. The console ouput is colorised with the Rich library. Rename the <code>conftest.py</code> in the root of the folder to say <code>Xconftest.py</code> and you will see no CSV produced and no colorisation. </p>
-<p>This CSV output is a result of a local plugin that is in the <code>conftest.py</code>. It is a lite version of <code>pytest-csv</code> but has all necessary data.</p>
+<p>This CSV output is a result of a local plugin that is in the <code>conftest.py</code>. It is a lite version of <code>pytest-csv</code> and has all the necessary data. I will explain why I use a certain test naming convention.</p>
 <p>We will look at <code>conftest.py</code> in PyTest 102 so for now we will just take a peek at this file without exlanations.</p>
 <p>If you want to 'turn off' these console customisations and see PyTest default console output, rename the <code>conftest.py</code> to <code>Xconftest.py</code> or something different. PyTest will automatically discover and use the <code>conftest.py</code> file and its contents do not need to be imported into test files.</p>
 <p>This will also stop CSV output files being created.</p>
@@ -1562,7 +1561,8 @@
 <li>adding a report section at end of console output.</li>
 <li>and more...</li>
 </ul>
-<p>The free online course 'PyTest Hooks and Plugins' that you will have a free coupon for goes into much more detail about how to use hooks in PyTest.</p>
+<p>The online course 'PyTest Hooks and Plugins' that you will have a free coupon for goes into much more detail about how to use hooks in PyTest.</p>
+<p>You will have till end of Monday to register for it.</p>
 <p>The link and coupon are in the <a href="https://pytest-cookbook.com/workshop/afterwards/">https://pytest-cookbook.com/workshop/afterwards/</a> section.</p>
 <p><br></p>
 
