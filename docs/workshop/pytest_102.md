@@ -2,6 +2,10 @@
 
 ## Fixtures
 
+*In essence, caching certain values to create DRY and faster tests.*
+
+Avoid long running set up functions like API and DB requests etc.
+
 ### Definition
 
 [https://docs.pytest.org/en/stable/explanation/fixtures.html](https://docs.pytest.org/en/stable/explanation/fixtures.html)
@@ -14,7 +18,7 @@ Fixtures can thus use other fixtures. They are Python functions and can be the a
 
 ### Implementation
 
-`tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fiztures_0.py` is an example:
+`tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_0.py` is an example:
 
 ```
 
@@ -45,13 +49,23 @@ def test_0240_FXT_square(custom_name)
 ### pytest --fixtures
 `pytest --fixtures` is used to list available fixtures and where the fixture is located.
 
-### setup/teardown
+### --fixtures-per-test
+You can also use --fixtures-per-test to see what fixtures are used by each test and
+where the fixtures are de
+fined:
 
-We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative. See `tests\00_check_setup\test_04_src.py`.
+<!-- ### setup/teardown
+
+We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative.  -->
 
 ### Yield and addfinalizer()
 
+If one wants to set up and clean up resources, one can use the a generator function with `yield`.
+
+One can also add ` def finalizer():` to a function and then use `request.addfinalizer(finalizer)` to register it:
+
 ```
+# Generator function
 @pytest.fixture()
 def my_object_fixture():
     print("Yielding fixture data...")
@@ -60,6 +74,7 @@ def my_object_fixture():
 ```
 
 ```
+# add finalizer
 @pytest.fixture
 def setup_data(request):
     # setup_data is now the fixture name we pass into our test...
@@ -76,6 +91,43 @@ def setup_data(request):
 
     return data  # Provide the data to the test
 ```
+
+### Scope
+
+In essence, caching at the fixture level is the same as caching at the test level.
+
+Function (Set up and tear down once for each test function)
+Class (Set up and tear down once for each test class)
+Module (Set up and tear down once for each test module/file)
+Session (Set up and tear down once for each test session i.e comprising one or more test files)
+
+(There is also a PACKAGE scope but most literature does not mention this).
+
+With fixture `autouse`, you can define a fixture that automatically runs before each test method, eliminating the need for manual fixture invocation in each test function.
+
+This is especially useful when you have nested fixtures that need to be executed before each test function.
+
+```
+import pytest
+
+# Define a fixture with a function scope i.e the instance is created for each test function
+@pytest.fixture(scope="function")
+def an_auto_use_fixture(static_number):
+    return "SOMETHING"
+
+# no need to explicitly state the fixture an_auto_use_fixture
+def test_001_convert_to_binary(number_converter):
+    print(an_auto_use_fixture)
+    ...
+def test_002_convert_to_binary(number_converter):
+    print(an_auto_use_fixture)
+    ...
+```
+run `python -m pytest -vs .\tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_2.py`and change scope from `module` to `function`.
+
+This can be confusing so I will suggest watching [https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6](https://www.youtube.com/watch?v=mTMu8AtdG-E&list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&index=6) from CoffeeBeforeArch YT series for a better understanding.
+
+We can see code examples in `02_py_coffee\02_fixtures\`
 
 ### Built in fixtures
 
@@ -95,7 +147,7 @@ It does not need to be imported.
 
 If a fixture appears in many `conftest.py` files then the closest `conftest.py` file to the test is used.
 
-Example is: `02_py_coffee\02_fixtures\test_conftest_2` demonstrating that the closest `conftest.py` fixture value is used. 
+Example is: `python -m pytest -vs .\tests\02_py_coffee\02_fixtures\01_conftest\test_conftest_2\` demonstrating that the closest `conftest.py` fixture value is used. 
 
 ## Parametrization
 
@@ -107,8 +159,8 @@ A decorator is a function that wraps another function and any values passed into
 
 ### Examples
 
-- `tests\03_indian_pythonista\ip_04_parametrize\tests\test_sample.py`
-- `python -m pytest -vs -k TestClassSetUp`
+- `python -m pytest tests/03_indian_pythonista/ip_04_parametrize/tests/test_sample.py`
+- `python -m pytest -vs -k TestClassSetUp` in `00_check_setup\test_01_setup::TestClassSetUp`
 
 ```
 n and expected are variable names that take values of supplied list
@@ -128,7 +180,6 @@ class TestClass:
 ### Options
 
 There are a great many options available:
-
 
 - Add ids for more human readable output.
 - Using the indirect=True parameter when parametrizing a test allows to parametrize a test with a fixture receiving the values before passing them to a test.
@@ -243,6 +294,8 @@ This is one of the most effective ways to speed up test along with using fixture
 The file has X at beginning to avoid being called when we do a general pytest run as this would slow things down.
 
 This does show how we can call any file for a test run. We just need `test_` etc if we want PyTest to discover the tests.
+
+!!!By running separate workers, we will get multiple CSV outputs. If you are processing them, you will need to batch them accordingly as they wille ach contain the tests they run. Some tests, if dependent on others may fail if they are in a different thread. Dependent tests are an anti-pattern anyway. *Better to log directly to the database.* See [https://pytest-cookbook.com/pytest/pytest_full_stack_customise/](https://pytest-cookbook.com/pytest/pytest_full_stack_customise/) on how to do this.
 
 ![xdist](../images/workshop/xdist-output.png)
 

@@ -1659,8 +1659,6 @@
 
 <h1 id="build_from_scratch">Build from scratch<a class="headerlink" href="#build_from_scratch" title="Permanent link">&para;</a></h1>
 <p>We have already seen the BASIC demo and the minimum we need to use pytest is a <code>tests</code>folder with test files <code>test_*.py</code> and pytest installed. This will enable us to do <code>python -m pytest</code> to run tests.</p>
-<p>We will cover how to use the plugins in PyTest 102.</p>
-<p><em>We will leave this til the end if we have time as a way of testing what we have learnt</em>.</p>
 <p>To build the PFS framework we can add the following:</p>
 <h2 id="src">src<a class="headerlink" href="#src" title="Permanent link">&para;</a></h2>
 <p>Folder for one's source code - optional but recommended location by Python.</p>
@@ -1673,12 +1671,16 @@
 <h2 id="pytest">PyTest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h2>
 <p>Installation of <code>pytest</code> with <code>pip install pytest</code>.</p>
 <h2 id="playwright">Playwright<a class="headerlink" href="#playwright" title="Permanent link">&para;</a></h2>
-<p>Installation of Playwright<code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests.</p>
+<<<<<<< HEAD
+<p>Installation of Playwright<code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests. </p>
+=======
+<p>Installation of Playwright <code>pip install playwright</code> and also <code>plyawright install</code> to load browsers for headed tests. </p>
+>>>>>>> e51667d05d2f64777ac089ab86ec818caab08d5f
 <h2 id="pytestini">pytest.ini<a class="headerlink" href="#pytestini" title="Permanent link">&para;</a></h2>
 <p>Holds settings for PyTest.</p>
 <p>We can use the one in PFS deleting unwanted entries.</p>
 <h2 id="log_folder">log folder<a class="headerlink" href="#log_folder" title="Permanent link">&para;</a></h2>
-<p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>.</p>
+<p>Folder to store <code>pytest.log</code> file for logging messages as defined in <code>pytest.ini</code>. PyTest will create the log file if not present when it runs.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># for log file - pytest uses these whenever logger used
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># boiler plate code that can be changed to suit
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -1693,6 +1695,7 @@
 <p><img alt="customise-logging" src="../../images/workshop/customise-logging.png" /></p>
 <h2 id="utils_folder">utils folder<a class="headerlink" href="#utils_folder" title="Permanent link">&para;</a></h2>
 <p>Utility functions are stored in <code>utils</code>.</p>
+<p>Some of these are used in PFS tests.</p>
 <h2 id="config_folder">config folder<a class="headerlink" href="#config_folder" title="Permanent link">&para;</a></h2>
 <p>Folder that holds <code>*.ini</code> files or other config files. We create a <code>config</code> folder.</p>
 <p>This can be useful as an alternative to CLI arguments. We can add our options in the config.ini file to be retrieved in our tests using the <code>read_config.py</code> file. </p>
@@ -1715,15 +1718,16 @@
 <p>Coverage report from pytest-cov can go here depending if we use <code>pytest --cov=htmlcov tests/</code>.</p>
 <p>A <code>.coverage</code> report file is produced in the root of the project. </p>
 <h2 id="pytest-xdist">pytest-xdist<a class="headerlink" href="#pytest-xdist" title="Permanent link">&para;</a></h2>
-<p>To speed up tests we <code>pip install pytest-xdist</code>.</p>
+<p>To speed up tests we <code>pip install pytest-xdist</code>. </p>
+<p>We will cover this in PyTest 102.</p>
 <h2 id="screenshots_folder">screenshots folder<a class="headerlink" href="#screenshots_folder" title="Permanent link">&para;</a></h2>
-<p>If we are using some image, video and traceback Playwright features, we cann add a <code>screenshots</code> folder, (or any name we choose).</p>
+<p>If we are using some image, video and traceback Playwright features, we can add a <code>screenshots</code> folder, (or any name we choose).</p>
 <p><code>test_08_download.py</code> uses the <code>screenshot</code> folder.</p>
 <h2 id="tests">Tests!<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
 <p>All our tests are stored in the <code>tests</code> folder.</p>
 <p>We don't need to add <code>__init__.py</code> in this folder or subfolders but if we don't, we may have a test name collision if two tests have the same name.</p>
 <h2 id="pfs">PFS<a class="headerlink" href="#pfs" title="Permanent link">&para;</a></h2>
-<p>With all of these, we have replicated PFS, although we may choose to add Rich and Pyboxen for colorisation etc.</p>
+<p>With all of these, we have replicated PFS.</p>
 <p><br></p>
 
 

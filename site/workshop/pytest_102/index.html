@@ -461,18 +461,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setupteardown" class="md-nav__link">
+<<<<<<< HEAD
+=======
+  <a href="#--fixtures-per-test" class="md-nav__link">
     <span class="md-ellipsis">
-      setup/teardown
+      --fixtures-per-test
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+>>>>>>> e51667d05d2f64777ac089ab86ec818caab08d5f
   <a href="#yield_and_addfinalizer" class="md-nav__link">
     <span class="md-ellipsis">
       Yield and addfinalizer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
     </span>
   </a>
   
@@ -1614,18 +1626,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setupteardown" class="md-nav__link">
+<<<<<<< HEAD
+=======
+  <a href="#--fixtures-per-test" class="md-nav__link">
     <span class="md-ellipsis">
-      setup/teardown
+      --fixtures-per-test
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+>>>>>>> e51667d05d2f64777ac089ab86ec818caab08d5f
   <a href="#yield_and_addfinalizer" class="md-nav__link">
     <span class="md-ellipsis">
       Yield and addfinalizer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
     </span>
   </a>
   
@@ -1785,13 +1809,15 @@
 
 <h1 id="pytest_102">PyTest 102<a class="headerlink" href="#pytest_102" title="Permanent link">&para;</a></h1>
 <h2 id="fixtures">Fixtures<a class="headerlink" href="#fixtures" title="Permanent link">&para;</a></h2>
+<p><em>In essence, caching certain values to create DRY and faster tests.</em></p>
+<p>Avoid long running set up functions like API and DB requests etc.</p>
 <h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
 <p><a href="https://docs.pytest.org/en/stable/explanation/fixtures.html">https://docs.pytest.org/en/stable/explanation/fixtures.html</a></p>
 <p>Fixtures are requested by test functions or other fixtures by declaring them as argument names.</p>
 <p>They are an example of dependency injection and replace the setup/teardown features of Unit Test.</p>
 <p>Fixtures can thus use other fixtures. They are Python functions and can be the arguments of other functions.</p>
 <h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
-<p><code>tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fiztures_0.py</code> is an example:</p>
+<p><code>tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_0.py</code> is an example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@pytest.fixture
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>def initial_value():
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    return 5
@@ -1814,31 +1840,71 @@
 </span></code></pre></div>
 <h3 id="pytest_--fixtures">pytest --fixtures<a class="headerlink" href="#pytest_--fixtures" title="Permanent link">&para;</a></h3>
 <p><code>pytest --fixtures</code> is used to list available fixtures and where the fixture is located.</p>
-<h3 id="setupteardown">setup/teardown<a class="headerlink" href="#setupteardown" title="Permanent link">&para;</a></h3>
-<p>We can use <code>setup_method()</code> and <code>teardown_method()</code> as a simpler but less DRY alternative. See <code>tests\00_check_setup\test_04_src.py</code>.</p>
+<<<<<<< HEAD
+=======
+<h3 id="--fixtures-per-test">--fixtures-per-test<a class="headerlink" href="#--fixtures-per-test" title="Permanent link">&para;</a></h3>
+<p>You can also use --fixtures-per-test to see what fixtures are used by each test and
+where the fixtures are de
+fined:</p>
+>>>>>>> e51667d05d2f64777ac089ab86ec818caab08d5f
+<!-- ### setup/teardown
+
+We can use `setup_method()` and `teardown_method()` as a simpler but less DRY alternative.  -->
+
 <h3 id="yield_and_addfinalizer">Yield and addfinalizer()<a class="headerlink" href="#yield_and_addfinalizer" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@pytest.fixture()
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>def my_object_fixture():
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    print(&quot;Yielding fixture data...&quot;)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    yield MyObjectThatRequiresCleanUp()
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    print(&quot;Do clean up after test has run...&quot;)
+<p>If one wants to set up and clean up resources, one can use the a generator function with <code>yield</code>.</p>
+<p>One can also add <code>def finalizer():</code> to a function and then use <code>request.addfinalizer(finalizer)</code> to register it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Generator function
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>@pytest.fixture()
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>def my_object_fixture():
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    print(&quot;Yielding fixture data...&quot;)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    yield MyObjectThatRequiresCleanUp()
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    print(&quot;Do clean up after test has run...&quot;)
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@pytest.fixture
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>def setup_data(request):
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    # setup_data is now the fixture name we pass into our test...
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    print(&quot;\nSetting up resources...&quot;)
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    data = 22
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    # Define a finalizer function for teardown
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    def finalizer():
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        print(&quot;\nPerforming teardown...&quot;)
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        # Clean up any resources if needed
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    # Register the finalizer to ensure cleanup
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    request.addfinalizer(finalizer)
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    return data  # Provide the data to the test
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># add finalizer
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>@pytest.fixture
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>def setup_data(request):
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    # setup_data is now the fixture name we pass into our test...
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    print(&quot;\nSetting up resources...&quot;)
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    data = 22
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    # Define a finalizer function for teardown
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    def finalizer():
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        print(&quot;\nPerforming teardown...&quot;)
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        # Clean up any resources if needed
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    # Register the finalizer to ensure cleanup
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    request.addfinalizer(finalizer)
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    return data  # Provide the data to the test
 </span></code></pre></div>
+<h3 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h3>
+<p>In essence, caching at the fixture level is the same as caching at the test level.</p>
+<p>Function (Set up and tear down once for each test function)
+Class (Set up and tear down once for each test class)
+Module (Set up and tear down once for each test module/file)
+Session (Set up and tear down once for each test session i.e comprising one or more test files)</p>
+<p>(There is also a PACKAGE scope but most literature does not mention this).</p>
+<p>With fixture <code>autouse</code>, you can define a fixture that automatically runs before each test method, eliminating the need for manual fixture invocation in each test function.</p>
+<p>This is especially useful when you have nested fixtures that need to be executed before each test function.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import pytest
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a># Define a fixture with a function scope i.e the instance is created for each test function
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>@pytest.fixture(scope=&quot;function&quot;)
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>def an_auto_use_fixture(static_number):
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    return &quot;SOMETHING&quot;
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a># no need to explicitly state the fixture an_auto_use_fixture
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>def test_001_convert_to_binary(number_converter):
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    print(an_auto_use_fixture)
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    ...
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>def test_002_convert_to_binary(number_converter):
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    print(an_auto_use_fixture)
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    ...
+</span></code></pre></div>
+run <code>python -m pytest -vs .\tests\02_py_coffee\02_fixtures\00_basic_fixtures\test_fixtures_2.py</code>and change scope from <code>module</code> to <code>function</code>.</p>
+<p>This can be confusing so I will suggest watching <a href="https://www.youtube.com/watch?v=mTMu8AtdG-E&amp;list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&amp;index=6">https://www.youtube.com/watch?v=mTMu8AtdG-E&amp;list=PLxNPSjHT5qvuZ_JT1bknzrS8YqLiMjNpS&amp;index=6</a> from CoffeeBeforeArch YT series for a better understanding.</p>
+<p>We can see code examples in <code>02_py_coffee\02_fixtures\</code></p>
 <h3 id="built_in_fixtures">Built in fixtures<a class="headerlink" href="#built_in_fixtures" title="Permanent link">&para;</a></h3>
 <p>There are many built in fixtures provided by PyTest but I only use a few of them:</p>
 <p><a href="https://docs.pytest.org/en/stable/reference/fixtures.html#built-in-fixtures">https://docs.pytest.org/en/stable/reference/fixtures.html#built-in-fixtures</a>
@@ -1849,24 +1915,24 @@
 <p><code>conftest.py</code> is automatically discovered and registered by PyTest. It is a good place to store fixtures so that they can be reused in the folder it is located in and any subfolders.</p>
 <p>It does not need to be imported.</p>
 <p>If a fixture appears in many <code>conftest.py</code> files then the closest <code>conftest.py</code> file to the test is used.</p>
-<p>Example is: <code>02_py_coffee\02_fixtures\test_conftest_2</code> demonstrating that the closest <code>conftest.py</code> fixture value is used. </p>
+<p>Example is: <code>python -m pytest -vs .\tests\02_py_coffee\02_fixtures\01_conftest\test_conftest_2\</code> demonstrating that the closest <code>conftest.py</code> fixture value is used. </p>
 <h2 id="parametrization">Parametrization<a class="headerlink" href="#parametrization" title="Permanent link">&para;</a></h2>
 <p>We may want to run a test for a range of values, e.g, we may want to test our <code>add()</code> for a range of values.</p>
 <p>Rather than do some Pythonic looping over a test, we can use the <code>@pytest.mark.parametrize()</code> to decorate the test and supply our values in this decorator.</p>
 <p>A decorator is a function that wraps another function and any values passed into the deocrator are available to the inner function by the closure created.</p>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>tests\03_indian_pythonista\ip_04_parametrize\tests\test_sample.py</code></li>
-<li><code>python -m pytest -vs -k TestClassSetUp</code></li>
+<li><code>python -m pytest tests/03_indian_pythonista/ip_04_parametrize/tests/test_sample.py</code></li>
+<li><code>python -m pytest -vs -k TestClassSetUp</code> in <code>00_check_setup\test_01_setup::TestClassSetUp</code></li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>n and expected are variable names that take values of supplied list
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>@pytest.mark.parametrize(&quot;n, expected&quot;, [(1, 2), (3, 4)])
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>class TestClass:
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    def test_simple_case(self, n, expected):
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        assert n + 1 == expected
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    def test_weird_simple_case(self, n, expected):
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        assert (n * 1) + 1 == expected
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>n and expected are variable names that take values of supplied list
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>@pytest.mark.parametrize(&quot;n, expected&quot;, [(1, 2), (3, 4)])
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>class TestClass:
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    def test_simple_case(self, n, expected):
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        assert n + 1 == expected
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    def test_weird_simple_case(self, n, expected):
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        assert (n * 1) + 1 == expected
 </span></code></pre></div>
 <h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <p><img alt="parametrization" src="../../images/workshop/parametrization-example.png" /></p>
@@ -1895,17 +1961,17 @@
 <p>To create a report in the console, we can use <code>python -m coverage report -m</code> or <code>coverage report -m</code>.</p>
 <p>To create an html report in <code>htmlcov</code> folder, we can use <code>python -m coverage html</code> and the report is <code>index.html</code></p>
 <p>We can omit tests using a <code>.coveragerc</code> file:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[run]
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>omit = 
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    */tests/00_check_set_up/*
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    ...
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[run]
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>omit = 
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    */tests/00_check_set_up/*
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    ...
 </span></code></pre></div>
 <p>Some command line options:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>--cov=src: Tells pytest-cov to measure coverage for the src folder.
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>--cov-report=term and --cov-report=html: Generate terminal and HTML coverage reports.
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>--cov-branch: Measures branch coverage as well as line coverage.
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>--cov-config=none: Specifies that no external config file will be read, but coverage will still run.
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>--cov-omit=src/legacy/*,src/migrations/*: Specifies the directories you want to omit from the coverage report.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>--cov=src: Tells pytest-cov to measure coverage for the src folder.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>--cov-report=term and --cov-report=html: Generate terminal and HTML coverage reports.
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>--cov-branch: Measures branch coverage as well as line coverage.
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>--cov-config=none: Specifies that no external config file will be read, but coverage will still run.
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>--cov-omit=src/legacy/*,src/migrations/*: Specifies the directories you want to omit from the coverage report.
 </span></code></pre></div>
 <p>100% code coverage? - <a href="https://edbennett.github.io/python-testing-ci/07-coverage/index.html">https://edbennett.github.io/python-testing-ci/07-coverage/index.html</a></p>
 <p><a href="https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/">https://pytest-with-eric.com/coverage/python-coverage-omit-subfolder/</a> for more ways and deeper information.</p>
@@ -1913,33 +1979,33 @@
 <p>Ideally, all tests are independent of each other and randomising the order should not change the results of the test.</p>
 <p>Randomising tests are a good way to test this.</p>
 <p>We create our own local plugin version in the Udemy Course and the pytest_collect_modifyitems is a hook that can be used for filtering, ordering and randomising:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># A pytest hook to for modifying collected items
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>def pytest_collection_modifyitems(items, config):
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    # we can sort order of items (tests) as needed
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    # can be used to sort by fixtures used if one is say expensive in time
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    # items.sort(key=lambda item: &quot;expensive&quot; in item.fixturenames)
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    random.shuffle(items)a
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    return items
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># A pytest hook to for modifying collected items
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>def pytest_collection_modifyitems(items, config):
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    # we can sort order of items (tests) as needed
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    # can be used to sort by fixtures used if one is say expensive in time
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    # items.sort(key=lambda item: &quot;expensive&quot; in item.fixturenames)
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    random.shuffle(items)a
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    return items
 </span></code></pre></div>
 <p>We can filter and order tests:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># Deselecting/skipping tests based on certain criteria
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>def pytest_collection_modifyitems(items, config):
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    selected = []
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    deselected = []
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    for test in items:
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        if &quot;custom_expensive_marker&quot; in all_markers:
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>            deselected.append(test)
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        else:
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>            selected.append(test)
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    # Update the deselected tests
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    config.hook.pytest_deselected(items=deselected)
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    # Update the selected tests
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    items[:] = selected
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a># Deselecting/skipping tests based on certain criteria
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>def pytest_collection_modifyitems(items, config):
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    selected = []
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    deselected = []
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    for test in items:
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        if &quot;custom_expensive_marker&quot; in all_markers:
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>            deselected.append(test)
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        else:
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>            selected.append(test)
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    # Update the deselected tests
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    config.hook.pytest_deselected(items=deselected)
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    # Update the selected tests
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>    items[:] = selected
 </span></code></pre></div>
 <h3 id="pytest-xdist">pytest-xdist<a class="headerlink" href="#pytest-xdist" title="Permanent link">&para;</a></h3>
 <p>Using <code>python -m pytest -vs .\tests\00_check_setup\Xtest_09_xdist.py -n auto</code> with there being 4 tests in this test file, the overhead to set up 4 workers is around 2 seconds.</p>
@@ -1947,6 +2013,7 @@
 <p>This is one of the most effective ways to speed up test along with using fixtures to 'cache' values if they are long running.</p>
 <p>The file has X at beginning to avoid being called when we do a general pytest run as this would slow things down.</p>
 <p>This does show how we can call any file for a test run. We just need <code>test_</code> etc if we want PyTest to discover the tests.</p>
+<p>!!!By running separate workers, we will get multiple CSV outputs. If you are processing them, you will need to batch them accordingly as they wille ach contain the tests they run. Some tests, if dependent on others may fail if they are in a different thread. Dependent tests are an anti-pattern anyway. <em>Better to log directly to the database.</em> See <a href="https://pytest-cookbook.com/pytest/pytest_full_stack_customise/">https://pytest-cookbook.com/pytest/pytest_full_stack_customise/</a> on how to do this.</p>
 <p><img alt="xdist" src="../../images/workshop/xdist-output.png" /></p>
 <p>Running with n=1, the test took around 21s.
 Running with n=4, the test took around 8s.

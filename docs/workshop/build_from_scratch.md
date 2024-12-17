@@ -2,10 +2,6 @@
 
 We have already seen the BASIC demo and the minimum we need to use pytest is a `tests`folder with test files `test_*.py` and pytest installed. This will enable us to do `python -m pytest` to run tests.
 
-We will cover how to use the plugins in PyTest 102.
-
-*We will leave this til the end if we have time as a way of testing what we have learnt*.
-
 To build the PFS framework we can add the following:
 
 ## src
@@ -25,7 +21,7 @@ Installation of `pytest` with `pip install pytest`.
 
 ## Playwright
 
-Installation of Playwright`pip install playwright` and also `plyawright install` to load browsers for headed tests.
+Installation of Playwright `pip install playwright` and also `plyawright install` to load browsers for headed tests. 
 
 ## pytest.ini
 
@@ -35,7 +31,7 @@ We can use the one in PFS deleting unwanted entries.
 
 ## log folder
 
-Folder to store `pytest.log` file for logging messages as defined in `pytest.ini`.
+Folder to store `pytest.log` file for logging messages as defined in `pytest.ini`. PyTest will create the log file if not present when it runs.
 
 ```
 # for log file - pytest uses these whenever logger used
@@ -58,6 +54,8 @@ In PFS, the logging location is `log` so we create this folder.
 ## utils folder
 
 Utility functions are stored in `utils`.
+
+Some of these are used in PFS tests.
 
 ## config folder
 
@@ -100,11 +98,13 @@ A `.coverage` report file is produced in the root of the project.
 
 ## pytest-xdist
 
-To speed up tests we `pip install pytest-xdist`.
+To speed up tests we `pip install pytest-xdist`. 
+
+We will cover this in PyTest 102.
 
 ## screenshots folder
 
-If we are using some image, video and traceback Playwright features, we cann add a `screenshots` folder, (or any name we choose).
+If we are using some image, video and traceback Playwright features, we can add a `screenshots` folder, (or any name we choose).
 
 `test_08_download.py` uses the `screenshot` folder.
 
@@ -116,6 +116,6 @@ We don't need to add `__init__.py` in this folder or subfolders but if we don't,
 
 ## PFS
 
-With all of these, we have replicated PFS, although we may choose to add Rich and Pyboxen for colorisation etc.
+With all of these, we have replicated PFS.
 
 <br>
