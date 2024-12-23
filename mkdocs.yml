@@ -102,7 +102,8 @@ nav:
       - "Docker PyTest Image": "docker/docker_flask_pdb.md"
       - "Docker To Go": "docker/docker_to_go.md"
       - "Advanced Docker": "docker/docker_advanced.md"
-  # - "Django Testing": "django_testing/index.md"
+  - "Django Testing": "django_testing/index.md"
+  - "AI Knowledge Systems": "ai_knowledge_systems/index.md"
   - "About Craig":
       - "Services": "craig/services.md"
       - "CV": "craig/cv.md"
