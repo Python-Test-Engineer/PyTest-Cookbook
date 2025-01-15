@@ -11,25 +11,23 @@
       
       
       
-        <link rel="prev" href="../../toolbox/manage_docker_with_python/">
+      
+        <link rel="next" href="../workshop/welcome/">
       
       
-        <link rel="next" href="../pytest_docker_plugin/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>Docker Postgres - PyTest Cookbook</title>
+        <title>Conf42 - PyTest Cookbook</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../assets/css/custom.css">
+      <link rel="stylesheet" href="../assets/css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker_postgress_pgadmin_adminer" class="md-skip">
+        <a href="#repo_for_conf42_talk" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href=".." title="PyTest Cookbook" class="md-header__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -114,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker Postgres
+              Conf42
             
           </span>
         </div>
@@ -227,7 +225,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
+    <a href=".." title="PyTest Cookbook" class="md-nav__button md-logo" aria-label="PyTest Cookbook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -254,10 +252,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../conf42/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -266,6 +273,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -312,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/welcome/" class="md-nav__link">
+      <a href="../workshop/welcome/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/final_project/" class="md-nav__link">
+      <a href="../workshop/final_project/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -354,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/build_from_scratch/" class="md-nav__link">
+      <a href="../workshop/build_from_scratch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -375,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/pytest_101/" class="md-nav__link">
+      <a href="../workshop/pytest_101/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -396,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/pytest_102/" class="md-nav__link">
+      <a href="../workshop/pytest_102/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workshop/afterwards/" class="md-nav__link">
+      <a href="../workshop/afterwards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -465,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../learn/" class="md-nav__link">
+      <a href="../learn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/" class="md-nav__link">
+      <a href="../pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_full_stack_customise/" class="md-nav__link">
+      <a href="../pytest/pytest_full_stack_customise/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_tests/" class="md-nav__link">
+      <a href="../pytest/pytest_tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_test_management/" class="md-nav__link">
+      <a href="../pytest/pytest_test_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_docker/" class="md-nav__link">
+      <a href="../pytest/pytest_docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_allure/" class="md-nav__link">
+      <a href="../pytest/pytest_allure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_cheat_sheet/" class="md-nav__link">
+      <a href="../pytest/pytest_cheat_sheet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -667,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytest/pytest_cheat2/" class="md-nav__link">
+      <a href="../pytest/pytest_cheat2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/asides/" class="md-nav__link">
+      <a href="../asides/asides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/pluggy/" class="md-nav__link">
+      <a href="../asides/pluggy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/mocking/" class="md-nav__link">
+      <a href="../asides/mocking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -793,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../asides/decorators/" class="md-nav__link">
+      <a href="../asides/decorators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/toolbox_index/" class="md-nav__link">
+      <a href="../toolbox/toolbox_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/allure_windows_setup/" class="md-nav__link">
+      <a href="../toolbox/allure_windows_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/pydantic_dts/" class="md-nav__link">
+      <a href="../toolbox/pydantic_dts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/visual_regression/" class="md-nav__link">
+      <a href="../toolbox/visual_regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/docker_postgres_yoyo_pytest/" class="md-nav__link">
+      <a href="../toolbox/docker_postgres_yoyo_pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/git_essentials/" class="md-nav__link">
+      <a href="../toolbox/git_essentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/rich_pyboxen/" class="md-nav__link">
+      <a href="../toolbox/rich_pyboxen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/hatch/" class="md-nav__link">
+      <a href="../toolbox/hatch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,19 +1036,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1054,7 +1060,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -1068,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker_index/" class="md-nav__link">
+      <a href="../docker/docker_index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1089,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../toolbox/manage_docker_with_python/" class="md-nav__link">
+      <a href="../toolbox/manage_docker_with_python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,19 +1113,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../docker/docker_postgres_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1125,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1141,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest_docker_plugin/" class="md-nav__link">
+      <a href="../docker/pytest_docker_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker_flask_pdb/" class="md-nav__link">
+      <a href="../docker/docker_flask_pdb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker_to_go/" class="md-nav__link">
+      <a href="../docker/docker_to_go/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1204,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker_advanced/" class="md-nav__link">
+      <a href="../docker/docker_advanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1232,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django_testing/" class="md-nav__link">
+      <a href="../django_testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1252,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai_knowledge_systems/" class="md-nav__link">
+      <a href="../ai_knowledge_systems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1307,7 +1303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/services/" class="md-nav__link">
+      <a href="../craig/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1328,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/cv/" class="md-nav__link">
+      <a href="../craig/cv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1349,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/courses/" class="md-nav__link">
+      <a href="../craig/courses/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craig/contact/" class="md-nav__link">
+      <a href="../craig/contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1427,26 +1423,8 @@
   
 
 
-<h1 id="docker_postgress_pgadmin_adminer">Docker Postgress PgAdmin Adminer<a class="headerlink" href="#docker_postgress_pgadmin_adminer" title="Permanent link">&para;</a></h1>
-<p>It has both PgAdmin and Adminer as Postgress clients.</p>
-<p>There are range of SQL Crud files included so that you have Python-Docker-Postgres working.</p>
-<p>I had some issues with this type of set up but came up with my own docker-compose file.</p>
-<p><a href="https://www.youtube.com/watch?v=mipRKPHwlBk&amp;list=PLsszRSbzjyvmgwrK911sdv03peQlGirym">YouTube Video</a></p>
-<p>The repo is here: <a href="https://github.com/Python-Test-Engineer/yt-docker-postgres-pgadmin-adminer-python-sql">GitHub</a></p>
-<p>There are a number of ways to set up a volume - named or bind mount.</p>
-<p>The latter use a folder within your project, whereas a named volume is managed by Docker and persists after the container is stopped.</p>
-<p>The repo has docker-compose.yaml files for both types.</p>
-<p>Bind mount volume:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>volumes:
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   - ./db-data/:/var/lib/postgresql/data/
-</span></code></pre></div>
-Named volume:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>volumes:
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   - data:/var/lib/postgresql/data/
-</span></code></pre></div></p>
-<p>Additonally, this video looks at setting up scripts automatically:
-<a href="https://www.youtube.com/watch?v=EtWTa27G4wE">https://www.youtube.com/watch?v=EtWTa27G4wE</a>.</p>
-<p><br></p>
+<h1 id="repo_for_conf42_talk">Repo for Conf42 Talk:<a class="headerlink" href="#repo_for_conf42_talk" title="Permanent link">&para;</a></h1>
+<p>https://github.com/Python-Test-Engineer/conf42-ai-agents</p>
 
 
 
@@ -1513,10 +1491,10 @@ Named volume:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
