@@ -1,5 +1,9 @@
 # The Pytest Cookbook - *recipes with videos and repos*
 
+## Repo for Conf42 Talk: 
+
+https://github.com/Python-Test-Engineer/conf42-ai-agents
+
 ## Motivation
 
 I really enjoy coming a across a resource that helps me understand a subject and that has a repo of the code that works 'out of the box' and additionally a video explainer rather than just an article.
