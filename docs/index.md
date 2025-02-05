@@ -2,7 +2,9 @@
 
 ## Repo for Conf42 Talk: 
 
-https://github.com/Python-Test-Engineer/conf42-ai-agents
+[https://github.com/Python-Test-Engineer/conf42-ai-agents](https://github.com/Python-Test-Engineer/conf42-ai-agents) or
+
+[https://pytest-cookbook.com/](https://pytest-cookbook.com/)
 
 ## Motivation
 
