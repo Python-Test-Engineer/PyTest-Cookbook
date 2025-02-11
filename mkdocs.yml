@@ -62,7 +62,7 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - "Conf42": "conf42.md"
+  - "Talks": "talks.md"
   - "PyCon IRE 2024":
       - "Welcome": "workshop/welcome.md"
       - "Final Project": "workshop/final_project.md"
