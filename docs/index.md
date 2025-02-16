@@ -1,6 +1,11 @@
-# The Pytest Cookbook - *recipes with videos and repos*
+
+# Repo for DjangoCongress JP 22nd Feb 2025
+
+## [https://github.com/Python-Test-Engineer/django-jpn](https://github.com/Python-Test-Engineer/django-jpn)
 
 
+
+## The Pytest Cookbook - *recipes with videos and repos*
 
 ## Motivation
 
