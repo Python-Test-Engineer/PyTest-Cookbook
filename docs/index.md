@@ -1,11 +1,13 @@
 
-# Repo for DjangoCongress JP 22nd Feb 2025
+## BrightonPy Feb 2025
 
-## [https://github.com/Python-Test-Engineer/django-jpn](https://github.com/Python-Test-Engineer/django-jpn)
+[https://github.com/Python-Test-Engineer/btnpy](https://github.com/Python-Test-Engineer/btnpy)
 
+## DjangoCongress Japan 
 
+[https://github.com/Python-Test-Engineer/django-jpn](https://github.com/Python-Test-Engineer/django-jpn)
 
-## The Pytest Cookbook - *recipes with videos and repos*
+# The Pytest Cookbook - *recipes with videos and repos*
 
 ## Motivation
 
