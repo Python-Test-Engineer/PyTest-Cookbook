@@ -1,7 +1,7 @@
 
 ## BrightonPy Feb 2025
 
-[https://github.com/Python-Test-Engineer/btnpy](https://github.com/Python-Test-Engineer/btnpy)
+Repo and slides: [https://github.com/Python-Test-Engineer/btnpy](https://github.com/Python-Test-Engineer/btnpy)
 
 ## DjangoCongress Japan 
 
