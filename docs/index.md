@@ -1,11 +1,14 @@
 
-## BrightonPy Feb 2025
 
-[https://github.com/Python-Test-Engineer/btnpy](https://github.com/Python-Test-Engineer/btnpy)
 
-## DjangoCongress Japan 
 
-[https://github.com/Python-Test-Engineer/django-jpn](https://github.com/Python-Test-Engineer/django-jpn)
+
+# DjangoCongress Europe 2025
+
+
+## Repo: [https://github.com/Python-Test-Engineer/django-con-eu](https://github.com/Python-Test-Engineer/django-con-eu)
+
+<br>
 
 # The Pytest Cookbook - *recipes with videos and repos*
 
