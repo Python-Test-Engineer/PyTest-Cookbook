@@ -1,6 +1,11 @@
 
 # Talks and Workshops 
 
+# DjangoCongress Europe 2025
+
+## Repo: [https://github.com/Python-Test-Engineer/django-con-eu](https://github.com/Python-Test-Engineer/django-con-eu)
+
+<br>
 Pycon Ireland Nov 2024: Getting started with Pytest - 2 hr workshop.
 
 Conf42: Implementing Agentic AI Solutions in Python from scratch - 50 minute talk.

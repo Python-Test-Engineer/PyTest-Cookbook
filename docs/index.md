@@ -1,10 +1,5 @@
 
-
-
-
-
 # DjangoCongress Europe 2025
-
 
 ## Repo: [https://github.com/Python-Test-Engineer/django-con-eu](https://github.com/Python-Test-Engineer/django-con-eu)
 
